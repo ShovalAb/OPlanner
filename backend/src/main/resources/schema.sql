@@ -1,0 +1,7 @@
+
+-- Study plan
+DROP TABLE IF EXISTS STUDY_PLAN;
+CREATE TABLE  STUDY_PLAN(
+  ID int auto_increment primary key NOT NULL,
+  PLAN_NAME VARCHAR(100) NOT NULL
+);
