@@ -13,3 +13,9 @@
   border-color: #282c34;
   width: 200px;
 }
+
+.chosenTable {
+  background-color: lightgreen;
+  border-width: 5px;
+  margin-top: 50px;
+}

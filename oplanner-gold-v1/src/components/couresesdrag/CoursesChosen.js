@@ -23,7 +23,7 @@ const CoursesChosen = ({courses, refresher, setRefresher}) => {
 
     return (
         <div>
-            <table>
+            <table className="chosenTable">
                 <tbody>
                     {courses.map(displayChosenCourses)}
                 </tbody>

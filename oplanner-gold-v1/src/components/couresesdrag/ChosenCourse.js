@@ -3,8 +3,8 @@ import React from "react";
 const ChosenCourse = ({course, refresher, setRefresher}) => {
     // console.log(10)
     const toggleChosen = (event, id) => {
-        console.log(event)
-        console.log(id)
+        // console.log(event)
+        // console.log(id)
         course.chosen = !course.chosen
         setRefresher(refresher + 1)
     }

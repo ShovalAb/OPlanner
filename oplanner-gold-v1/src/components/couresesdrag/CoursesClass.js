@@ -10,8 +10,8 @@ const CoursesClass = ({coursesClass, refresher, setRefresher}) => {
     }
 
     const toggleChosen = (event, id) => {
-        console.log(event)
-        console.log(id)
+        // console.log(event)
+        // console.log(id)
         for (let i = 0; i < coursesClass.courses.length; i++) {
             if (coursesClass.courses[i].id == id) {
                 coursesClass.courses[i].chosen = (!coursesClass.courses[i].chosen)
