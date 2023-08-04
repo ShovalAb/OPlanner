@@ -25,8 +25,9 @@ const PlanPage = () => {
 
     return (
         <div>
-            <div>HelloPlanPageeee</div>
-            <div>Planning Study Plan of {routeParams.studyPlanId}</div>
+            <div>
+                <h1>Planning Study Plan #{routeParams.studyPlanId}</h1>
+            </div>
             <CoursesDrag courses={courses}></CoursesDrag>
         </div>
     )

@@ -11,7 +11,6 @@ import PlanPage from './components/planpage/PlanPage';
 function App() {
   return (
     <div className="App">
-      <Header/>
       <Routes>
         <Route path ="/" element={<Layout/>}>
         <Route path ="/" element={<Home/>}/>
