@@ -6,6 +6,7 @@ import Layout from './components/Layout';
 import { Route, Routes } from 'react-router-dom';
 import Home from './components/home/Home';
 import Header from './components/header/Header';
+import FinalStudyPlan from './components/Final/FinalStudyPlans';
 
 function App() {
   return (
@@ -16,6 +17,12 @@ function App() {
         <Route path ="/" element={<Home/>}/>
         </Route>
       </Routes>
+      {/* <Routes>
+
+      <Route path ="/final" element={<Layout/>}></Route>
+        <Route> path ="/final" element={<FinalStudyPlan/>}
+        </Route>
+        </Routes> */}
     </div>
   );
 }

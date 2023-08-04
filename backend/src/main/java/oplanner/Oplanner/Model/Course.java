@@ -4,7 +4,6 @@ import java.util.Objects;
 import org.springframework.data.annotation.Id;
 
 public class Course {
-    
 	@Id
     private int id; 
     private String courseName;

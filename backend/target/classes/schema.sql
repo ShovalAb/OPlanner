@@ -40,4 +40,12 @@ CREATE TABLE  Credits_Requirement(
   credits_Number int NOT NULL
 );
 
+-- Course In Study Plan
+DROP TABLE IF EXISTS Course_In_Study_Plan;
+CREATE TABLE  Course_In_Study_Plan(
+  id int auto_increment primary key NOT NULL,
+  course int NOT NULL,
+  study_Plan_Id int NOT NULL,
+  department VARCHAR(100) NOT NULL
+);
 
