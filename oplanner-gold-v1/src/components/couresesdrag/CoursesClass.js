@@ -10,8 +10,8 @@ const CoursesClass = ({coursesClass}) => {
     const listCourses = (course) => {
         return (
             <tr>
-                <td>
-                    <p>{course.name}</p>
+                <td className="aCourseClass">
+                    <p>{course.name} ({course.nakazCount})</p>
                 </td>
             </tr>
         )
@@ -19,7 +19,7 @@ const CoursesClass = ({coursesClass}) => {
 
     return (
         <div>
-            <button onClick={toggleFunc}>{coursesClass.groupName}</button>
+            <button className="toggleButtonClass" onClick={toggleFunc}>{coursesClass.groupName}</button>
             {open && (<div className="toggle">{coursesClass.courses.map(listCourses)}</div>)}
         </div>
     )
