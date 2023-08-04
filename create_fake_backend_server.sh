@@ -1,1 +1,1 @@
-python3 -m http.server 10000
+python3 fake_http_server.py 10000

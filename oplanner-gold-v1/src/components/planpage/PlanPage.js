@@ -1,16 +1,22 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-import api from '../../api/axiosConfig'
+import api from '../../api/axiosConfig';
 
 const PlanPage = () => {
     const routeParams = useParams();
-    const getCourses = async () => {
+    const [courses, setCourses] = useState();
+    const getCourses = async (studyPlanId) => {
         try {
-            const response = await api.get('/api/courseGroup/')
+            const response = await api.get('/api/courseGroup/' + studyPlanId.toString())
+            console.log(response.data)
+            setCourses(response.data)
         } catch (error) {
             console.log(error)
         }
     }
+    useEffect(() => {
+        getCourses(routeParams.studyPlanId);
+    },[])
     return (
         <div>
             <div>HelloPlanPageeee</div>
