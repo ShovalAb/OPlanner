@@ -8,6 +8,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import oplanner.Oplanner.Model.StudyPlan;
 
 @RestController
+@CrossOrigin(allowedHeaders = "*", origins = "*")
 @RequestMapping("/api/studyplan")
 public class StudyPlanController {
     private final StudyPlanRepository studyPlans;
@@ -16,7 +17,6 @@ public class StudyPlanController {
         this.studyPlans = studyPlans;
     }
 
-    @CrossOrigin(allowedHeaders = "*", origins = "*")
     @GetMapping
     public Iterable<StudyPlan> findAll(){
         return studyPlans.findAll();
