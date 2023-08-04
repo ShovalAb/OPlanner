@@ -14,8 +14,8 @@ const Header = () => {
     return (
         <Navbar>
             <Container fluid>
-                <NavbarBrand herf="/" style={{"color": 'gold'}}>
-                    <FontAwesomeIcon icon={faVideoSlash}/> gold
+                <NavbarBrand herf="/" style={{"color": 'blue'}}>
+                    <FontAwesomeIcon/> OPlanner
                 </NavbarBrand>
                 <NavbarToggle aria-controls="navbarScroll"/>
                 <NavbarCollapse id="navbarScroll">
@@ -24,8 +24,6 @@ const Header = () => {
                         style={{maxHeight: '100px'}}
                         navbarScroll
                     >
-                    <NavLink className ="nav-link" to="/">Home</NavLink>
-                    <NavLink className ="nav-link" to="/watchList">Watch List</NavLink>      
                 </Nav>
                 <Button variant="outline-info" className="me-2">Login</Button>
                 <Button variant="outline-info">Register</Button>

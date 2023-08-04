@@ -3,7 +3,8 @@ import React from "react";
 const FinalStudyPlan = () => {
     return(
         <div>
-        Welcome!!
+            Final Study Plan
+            
         </div>
     )
 }
