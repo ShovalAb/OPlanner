@@ -1,11 +1,7 @@
 package oplanner.Oplanner.Model;
 
-// import lombok.AllArgsConstructor;
 import lombok.Data;
-// import lombok.NoArgsConstructor;
-
 import java.util.Objects;
-
 import org.springframework.data.annotation.Id;
 
 @Data
