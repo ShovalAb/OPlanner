@@ -8,11 +8,25 @@ const PlanPage = () => {
     const routeParams = useParams();
     const [courses, setCourses] = useState();
 
+    const setCoursesChosenState = (courses) => {
+
+        for (let i = 0; i < courses.length; i++) {
+            var coursesClass = courses[i];
+            for (let j = 0; j < coursesClass.courses.length; j++) {
+                coursesClass.courses[j].chosen = false;
+                // if (coursesClass.courses[j].id == 20406) {
+                //     coursesClass.courses[j].chosen = true;
+                // }
+            }
+        }
+        return courses
+    }
+
     const getCourses = async (studyPlanId) => {
         try {
             const response = await api.get('/api/courseGroup/' + studyPlanId.toString())
             console.log('Got from server ' + response.data)
-            setCourses(response.data)
+            setCourses(setCoursesChosenState(response.data))
         } catch (error) {
             //console.log("Plan " + studyPlanId.toString() + " doesn't exist!")
             console.log(error)

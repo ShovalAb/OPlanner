@@ -1,14 +1,20 @@
 import createPalette from "@mui/material/styles/createPalette";
-import React from "react";
+import React, { useState } from "react";
 import CoursesClass from "./CoursesClass";
-
+import CoursesChosen from "./CoursesChosen";
 
 const CoursesDrag = ({courses}) => {
+    const [refresher, setRefresher] = useState(0);
+
+    const refresh = (n) => {
+        setRefresher(n);
+    }
+
     const createCoursesClass = (coursesClass) => {
         return (
             <tr key={coursesClass.groupName}>
                 <td>
-                    <CoursesClass coursesClass={coursesClass}></CoursesClass>
+                    <CoursesClass coursesClass={coursesClass} refresher={refresher} setRefresher={refresh}></CoursesClass>
                 </td>
             </tr>
         )
@@ -17,11 +23,16 @@ const CoursesDrag = ({courses}) => {
     if (courses != null) {
         return (
             <div className="plan-page-courses-drag">
-                <table>
-                    <tbody>
-                        {courses.map(createCoursesClass)}
-                    </tbody>
-                </table>
+                <div>
+                    <table>
+                        <tbody>
+                            {courses.map(createCoursesClass)}
+                        </tbody>
+                    </table>
+                </div>
+                <div>
+                      <CoursesChosen courses={courses} refresher={refresher} setRefresher={refresh}></CoursesChosen>
+                </div>
             </div>
         )
     }
