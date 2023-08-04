@@ -43,11 +43,11 @@ public class Dependency {
 		this.id = id;
 	}
 
-    public void setPlanID(int dependentCourse){
+    public void setDependentCourse(int dependentCourse){
         this.dependentCourse = dependentCourse;
     }
 
-        public void setCourseID(int baseCourse){
+    public void setBaseCourse(int baseCourse){
         this.baseCourse = baseCourse;
     }
 
@@ -55,11 +55,11 @@ public class Dependency {
 		return id;
 	}
 
-    public int getPlanID(){
+    public int getDependentCourse(){
         return dependentCourse;
     }
 
-        public int getCourseID(){
+        public int getBaseCourse(){
         return baseCourse;
     }
 

@@ -13,9 +13,9 @@ public class MandatoryRequirement{
 
     public MandatoryRequirement(){}
 
-    public MandatoryRequirement(int planID, int courseID){
-        this.planId = planID;
-        this.courseId = courseID;
+    public MandatoryRequirement(int planId, int courseId){
+        this.planId = planId;
+        this.courseId = courseId;
     }
 
     @Override
@@ -48,7 +48,7 @@ public class MandatoryRequirement{
         this.planId = id;
     }
 
-        public void setCourseID(int id){
+        public void setCourseId(int id){
         this.courseId = id;
     }
 
@@ -56,11 +56,11 @@ public class MandatoryRequirement{
 		return id;
 	}
 
-    public int getPlanID(){
+    public int getPlanId(){
         return planId;
     }
 
-        public int getCourseID(){
+        public int getCourseId(){
         return courseId;
     }
 
