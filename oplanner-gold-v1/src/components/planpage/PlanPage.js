@@ -9,6 +9,8 @@ const PlanPage = () => {
     const [courses, setCourses] = useState();
     const [coursesMust, setCoursesMust] = useState();
     const [coursesDepen, setCoursesDepen] = useState();
+    const [nakazReq, setNakazReq] = useState();
+
 
     const getCourseById = (courseId) => {
         for (let i = 0; i < courses.length; i++) {
@@ -70,6 +72,8 @@ const PlanPage = () => {
             console.log(response.data)
             setCoursesMust(response.data["courses-must"])
             setCoursesDepen(response.data["courses-depen"])
+            setNakazReq(response.data["nakaz-req"])
+            
             if (response.data.ok) {
                 // ok = 1, the program is validated
                 console.log("Yay, the program is valid!")
@@ -89,7 +93,7 @@ const PlanPage = () => {
             </div>
             <CoursesDrag courses={courses}></CoursesDrag>
             <button className="buttonValidate" onClick={e => validateCourses(routeParams.studyPlanId,courses)}>Validate Study Plan</button>
-            <MissingCourses coursesDepen={coursesDepen} coursesMust={coursesMust} getCourseById={getCourseById}></MissingCourses>
+            <MissingCourses coursesDepen={coursesDepen} coursesMust={coursesMust} nakazReq={nakazReq} getCourseById={getCourseById}></MissingCourses>
         </div>
     )
 }

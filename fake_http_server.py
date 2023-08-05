@@ -16,9 +16,9 @@ class CORSRequestHandler (SimpleHTTPRequestHandler):
         print("Got from client - " + post_body.decode())
         self.end_headers()
         if "20406" in post_body.decode():
-            self.wfile.write(b'{"ok":1,"courses-must":[]}')
+            self.wfile.write(b'{"ok":1,"courses-must":[],"courses-depen":[],"nakaz-req":[]}')
         else:
-            self.wfile.write(b'{"ok":0,"courses-must":[20406,20407],"courses-depen":[[20406,20416]]}')
+            self.wfile.write(b'{"ok":0,"courses-must":[20406,20407],"courses-depen":[[20406,20416]],"nakaz-req":[{"groupName":"Math","Razui":80,"Mazui":74}]}')
 
 
     def end_headers (self):
