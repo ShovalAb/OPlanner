@@ -8,11 +8,11 @@ public class Dependency {
     @Id
     private int id; 
     private int dependentCourse;
-    private int baseCourse;
+    private int[] baseCourse;
 
     public Dependency(){}
 
-    public Dependency(int dependentCourse, int baseCourse){
+    public Dependency(int dependentCourse, int [] baseCourse){
         this.dependentCourse = dependentCourse;
         this.baseCourse = baseCourse;
     }
@@ -47,7 +47,7 @@ public class Dependency {
         this.dependentCourse = dependentCourse;
     }
 
-    public void setBaseCourse(int baseCourse){
+    public void setBaseCourse(int [] baseCourse){
         this.baseCourse = baseCourse;
     }
 
@@ -59,7 +59,7 @@ public class Dependency {
         return dependentCourse;
     }
 
-        public int getBaseCourse(){
+        public int[] getBaseCourse(){
         return baseCourse;
     }
 

@@ -9,7 +9,7 @@ CREATE TABLE  STUDY_PLAN(
 -- Course 
 DROP TABLE IF EXISTS Course;
 CREATE TABLE  Course(
-  id int primary key NOT NULL,
+  id int auto_increment primary key NOT NULL,
   course_Name VARCHAR(100) NOT NULL,
   credits_Type VARCHAR(100) NOT NULL,
   credits_Number int NOT NULL
@@ -20,7 +20,7 @@ DROP TABLE IF EXISTS Dependency;
 CREATE TABLE  Dependency(
   id int auto_increment primary key NOT NULL,
   dependent_course int NOT NULL,
-  base_course int NOT NULL
+  base_course int array[10] NOT NULL
 );
 
 -- MandatoryRequirement
@@ -28,7 +28,7 @@ DROP TABLE IF EXISTS Mandatory_Requirement;
 CREATE TABLE  Mandatory_Requirement(
   id int auto_increment primary key NOT NULL,
   plan_Id int NOT NULL,
-  course_Id int NOT NULL
+  course_Id int array[10] NOT NULL
   );
 
 -- CreditsRequirement
@@ -48,4 +48,6 @@ CREATE TABLE  Course_In_Study_Plan(
   study_Plan_Id int NOT NULL,
   department VARCHAR(100) NOT NULL
 );
+
+
 

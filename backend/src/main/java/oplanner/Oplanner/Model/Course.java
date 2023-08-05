@@ -2,17 +2,23 @@ package oplanner.Oplanner.Model;
 
 import java.util.Objects;
 import org.springframework.data.annotation.Id;
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class Course {
 	@Id
+	@JsonProperty("id")
     private int id; 
+	@JsonProperty("courseName")
     private String courseName;
+	@JsonProperty("creditsType")
     private String creditsType;
+	@JsonProperty("creditsNumber")
     private int creditsNumber;
 
     public Course(){}
 
     public Course(String name, String type, int number){
+		// this.id = id;
         this.courseName = name;
 		this.creditsType = type;
 		this.creditsNumber = number;
