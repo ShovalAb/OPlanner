@@ -11,4 +11,11 @@ public interface CourseRepository extends CrudRepository<Course, Integer> {
             Where plan_id = :planId
             """)
     Course[] findByPlanId(int planId);
+
+    @Query("""
+            SELECT *
+            FROM course
+            Where plan_number = :planNumber
+            """)
+    Course findByCourseNumber (int planNumber);
 }
