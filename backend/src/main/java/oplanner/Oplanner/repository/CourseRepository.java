@@ -8,7 +8,7 @@ public interface CourseRepository extends CrudRepository<Course, Integer> {
     @Query("""
             SELECT *
             FROM course
-            Where id = :id
+            Where plan_id = :planId
             """)
-    Course findById(int id);
+    Course[] findByPlanId(int planId);
 }
