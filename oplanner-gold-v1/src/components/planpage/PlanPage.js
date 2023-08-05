@@ -37,12 +37,34 @@ const PlanPage = () => {
         getCourses(routeParams.studyPlanId);
     },[])
 
+    const validateCourses = async (studyPlanId, courses) => {
+        try {
+
+            var coursesChosen = Array()
+            for (let i = 0; i < courses.length; i++) {
+                const coursesClass = courses[i];
+                for (let j = 0; j < coursesClass.courses.length; j++) {
+                    const course = coursesClass.courses[j];
+                    if (course.chosen) {
+                        coursesChosen.push(course.id)
+                    }   
+                }                
+            }
+
+            const response = await api.post('/api/verifyPlan', {'planId':studyPlanId, 'courses':coursesChosen})
+            console.log(response.data)
+        } catch (error) {
+            console.log(error)
+        }
+    }
+
     return (
         <div>
             <div>
                 <h1>Planning Study Plan #{routeParams.studyPlanId}</h1>
             </div>
             <CoursesDrag courses={courses}></CoursesDrag>
+            <button className="buttonValidate" onClick={e => validateCourses(routeParams.studyPlanId,courses)}>Validate Study Plan</button>
         </div>
     )
 }
