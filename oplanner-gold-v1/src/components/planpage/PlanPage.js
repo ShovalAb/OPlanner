@@ -10,6 +10,18 @@ const PlanPage = () => {
     const [coursesMust, setCoursesMust] = useState();
     const [coursesDepen, setCoursesDepen] = useState();
 
+    const getCourseById = (courseId) => {
+        for (let i = 0; i < courses.length; i++) {
+            const coursesClass = courses[i];
+            for (let j = 0; j < coursesClass.courses.length; j++) {
+                const course = coursesClass.courses[j];
+                if (course.id == courseId) {
+                    return (course)
+                }
+            }
+        }
+        return null;
+    }
 
     const setCoursesChosenState = (courses) => {
 
@@ -77,7 +89,7 @@ const PlanPage = () => {
             </div>
             <CoursesDrag courses={courses}></CoursesDrag>
             <button className="buttonValidate" onClick={e => validateCourses(routeParams.studyPlanId,courses)}>Validate Study Plan</button>
-            <MissingCourses coursesDepen={coursesDepen} coursesMust={coursesMust} coursesData={courses}></MissingCourses>
+            <MissingCourses coursesDepen={coursesDepen} coursesMust={coursesMust} getCourseById={getCourseById}></MissingCourses>
         </div>
     )
 }

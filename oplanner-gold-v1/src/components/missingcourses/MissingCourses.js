@@ -1,6 +1,6 @@
 import React from "react";
 
-const MissingCourses = ({coursesData, coursesMust, coursesDepen}) => {
+const MissingCourses = ({coursesMust, coursesDepen, getCourseById}) => {
     const missingMustCourse = (course) => {
         return (
             <p key={course.id}>{course.name} ({course.id})</p>
@@ -8,16 +8,13 @@ const MissingCourses = ({coursesData, coursesMust, coursesDepen}) => {
     }
 
     const allMissingMustCourses = (courseMustId) => {
-        for (let j = 0; j < coursesData.length; j++) {
-            const coursesClass = coursesData[j];
-            for (let k = 0; k < coursesClass.courses.length; k++) {
-                const course = coursesClass.courses[k];
-                if (course.id == courseMustId) {
-                      return (missingMustCourse(course))
-                }
-            }
+        const course = getCourseById(courseMustId)
+        if (course != null) {
+            return (missingMustCourse(course))
         }
+        return null;
     }
+
     if (coursesMust && coursesDepen) {
         if (coursesMust.length > 0 || coursesDepen.length > 0) {
             return (
