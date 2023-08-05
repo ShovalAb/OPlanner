@@ -54,6 +54,11 @@ const MissingCourses = ({coursesMust, coursesDepen, nakazReq, getCourseById}) =>
                 </div>
             )
         }
+        return (
+            <div>
+                <h2 className="validateOK">All good! your plan match all of the criteria!</h2>
+            </div>
+        )
     }
     return null;
 }

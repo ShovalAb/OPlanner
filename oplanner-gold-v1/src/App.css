@@ -19,3 +19,11 @@
   border-width: 5px;
   margin-top: 50px;
 }
+
+.validateOK {
+  color: green;
+}
+
+b {
+  color: red;
+}
