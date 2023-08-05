@@ -9,11 +9,11 @@ public class MandatoryRequirement{
     @Id
     private int id;
     private int planId;
-    private int courseId;
+    private int [] courseId;
 
     public MandatoryRequirement(){}
 
-    public MandatoryRequirement(int planId, int courseId){
+    public MandatoryRequirement(int planId, int [] courseId){
         this.planId = planId;
         this.courseId = courseId;
     }
@@ -48,8 +48,8 @@ public class MandatoryRequirement{
         this.planId = id;
     }
 
-        public void setCourseId(int id){
-        this.courseId = id;
+        public void setCourseId(int [] courseId){
+        this.courseId = courseId;
     }
 
     public int getId() {
@@ -60,7 +60,7 @@ public class MandatoryRequirement{
         return planId;
     }
 
-        public int getCourseId(){
+        public int [] getCourseId(){
         return courseId;
     }
 

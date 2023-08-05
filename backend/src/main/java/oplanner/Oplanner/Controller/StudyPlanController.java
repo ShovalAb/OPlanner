@@ -11,16 +11,21 @@ import oplanner.Oplanner.Model.StudyPlan;
 @CrossOrigin(allowedHeaders = "*", origins = "*")
 @RequestMapping("/api/studyplan")
 public class StudyPlanController {
-    private final StudyPlanRepository studyPlans;
+    private final StudyPlanRepository studyPlan;
 
-    public StudyPlanController(StudyPlanRepository studyPlans){
-        this.studyPlans = studyPlans;
+    public StudyPlanController(StudyPlanRepository studyPlan){
+        this.studyPlan = studyPlan;
     }
 
     @GetMapping
     public Iterable<StudyPlan> findAll(){
-        return studyPlans.findAll();
+        return studyPlan.findAll();
     }
+    // public StudyPlan findById(){
+    //     return studyPlan.findPlanById(1);
+    // }
+
+    
 
 
 }
