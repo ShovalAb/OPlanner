@@ -10,6 +10,7 @@ public class Course {
     private int id; 
 	@JsonProperty("courseName")
     private String courseName;
+	private int courseNumber;
 	@JsonProperty("creditsType")
     private String creditsType;
 	@JsonProperty("creditsNumber")
@@ -17,27 +18,25 @@ public class Course {
 
     public Course(){}
 
-    public Course(String name, String type, int number){
+    public Course(String name, int number, String type, int creditsNumber){
 		// this.id = id;
         this.courseName = name;
+		this.courseNumber = number;
 		this.creditsType = type;
-		this.creditsNumber = number;
+		this.creditsNumber = creditsNumber;
     }
 
     @Override
 	public int hashCode() {
 
-		return Objects.hash(id, courseName, creditsType, creditsNumber);
+		return Objects.hash(id, courseName, courseNumber, creditsType, creditsNumber);
 	}
 
     @Override
 	public boolean equals(Object o) {
 		if (o == null || getClass() != o.getClass()) return false;
         Course course = (Course) o; 
-		return Objects.equals(id, course.id) &&
-			Objects.equals(courseName, course.courseName) &&
-            Objects.equals(creditsType, course.creditsType) &&
-			Objects.equals(creditsNumber, course.creditsNumber)
+		return Objects.equals(id, course.id)
             ;
 	}
 
@@ -46,6 +45,7 @@ public class Course {
 		return "Course {" +
 			"id=" + id +
 			", Course Name='" + courseName +
+			", Course Number='" + courseNumber +
 			", Credits Type='" + creditsType +
 			", Credits Number='" + creditsNumber +
 			'}';
@@ -59,12 +59,16 @@ public class Course {
 		this.courseName = name;
 	}
 
+		public void setCourseNamber(int number) {
+		this.courseNumber = number;
+	}
+
 	public void setCreditsType(String type) {
 		this.creditsType = type;
 	}
 
-	public void setCreditsNumber(int number) {
-		this.creditsNumber = number;
+	public void setCreditsNumber(int CreditNumber) {
+		this.creditsNumber = CreditNumber;
 	}
 
 	public int getId() {
@@ -73,6 +77,10 @@ public class Course {
 
 	public String getCourseName() {
 		return courseName;
+	}
+
+	public int getCourseNumber() {
+		return courseNumber;
 	}
 
 	public String getCreditsType() {

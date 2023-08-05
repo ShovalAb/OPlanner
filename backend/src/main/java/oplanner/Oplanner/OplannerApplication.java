@@ -30,7 +30,7 @@ public class OplannerApplication {
 			studyPlan.save(new StudyPlan("Math"));
 			int [] intarr = {1,2};
 			dep.save(new Dependency(2,intarr));
-			course.save(new Course("Infi", "base", 4));
+			course.save(new Course("Infi",3067, "base", 4));
 		};
 	}
 }

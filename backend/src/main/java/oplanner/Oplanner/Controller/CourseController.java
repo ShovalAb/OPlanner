@@ -22,5 +22,10 @@ public class CourseController {
     public Iterable<Course> findAll(){
         return course.findAll();
     }
+
+    @GetMapping
+    public Course[] findByCourseId(int planId){
+        return course.findByPlanId(planId);
+    }
     
 }
