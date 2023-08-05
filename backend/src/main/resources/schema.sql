@@ -11,7 +11,7 @@ DROP TABLE IF EXISTS Course;
 CREATE TABLE  Course(
   id int auto_increment primary key NOT NULL,
   course_Name VARCHAR(100) NOT NULL,
-  course_Number int NOT NULL
+  course_Number int NOT NULL,
   credits_Type VARCHAR(100) NOT NULL,
   credits_Number int NOT NULL
 );

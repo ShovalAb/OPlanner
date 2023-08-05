@@ -23,9 +23,9 @@ public class CourseController {
         return course.findAll();
     }
 
-    @GetMapping
-    public Course[] findByCourseId(int planId){
-        return course.findByPlanId(planId);
-    }
+    // @GetMapping
+    // public Course[] findByCourseId(int planId){
+    //     return course.findByPlanId(planId);
+    // }
     
 }
