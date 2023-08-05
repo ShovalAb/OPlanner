@@ -2,11 +2,14 @@ import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import api from '../../api/axiosConfig';
 import CoursesDrag from '../couresesdrag/CoursesDrag'
-
+import MissingCourses from "../missingcourses/MissingCourses";
 
 const PlanPage = () => {
     const routeParams = useParams();
     const [courses, setCourses] = useState();
+    const [coursesMust, setCoursesMust] = useState();
+    const [coursesDepen, setCoursesDepen] = useState();
+
 
     const setCoursesChosenState = (courses) => {
 
@@ -47,12 +50,21 @@ const PlanPage = () => {
                     const course = coursesClass.courses[j];
                     if (course.chosen) {
                         coursesChosen.push(course.id)
-                    }   
-                }                
+                    }
+                }            
             }
 
             const response = await api.post('/api/verifyPlan', {'planId':studyPlanId, 'courses':coursesChosen})
             console.log(response.data)
+            setCoursesMust(response.data["courses-must"])
+            setCoursesDepen(response.data["courses-depen"])
+            if (response.data.ok) {
+                // ok = 1, the program is validated
+                console.log("Yay, the program is valid!")
+            } else {
+                console.log("Ooof, the program is invalid!")
+            }
+
         } catch (error) {
             console.log(error)
         }
@@ -65,6 +77,7 @@ const PlanPage = () => {
             </div>
             <CoursesDrag courses={courses}></CoursesDrag>
             <button className="buttonValidate" onClick={e => validateCourses(routeParams.studyPlanId,courses)}>Validate Study Plan</button>
+            <MissingCourses coursesDepen={coursesDepen} coursesMust={coursesMust} coursesData={courses}></MissingCourses>
         </div>
     )
 }

@@ -15,7 +15,11 @@ class CORSRequestHandler (SimpleHTTPRequestHandler):
         post_body = self.rfile.read(content_len)
         print("Got from client - " + post_body.decode())
         self.end_headers()
-        self.wfile.write(b'{"ok":1,"courses-must":[]}')
+        if "20406" in post_body.decode():
+            self.wfile.write(b'{"ok":1,"courses-must":[]}')
+        else:
+            self.wfile.write(b'{"ok":0,"courses-must":[20406,20407],"courses-depen":[]}')
+
 
     def end_headers (self):
         self.send_header('Access-Control-Allow-Origin', '*')
