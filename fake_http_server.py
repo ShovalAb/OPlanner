@@ -18,7 +18,7 @@ class CORSRequestHandler (SimpleHTTPRequestHandler):
         if "20406" in post_body.decode():
             self.wfile.write(b'{"ok":1,"courses-must":[]}')
         else:
-            self.wfile.write(b'{"ok":0,"courses-must":[20406,20407],"courses-depen":[]}')
+            self.wfile.write(b'{"ok":0,"courses-must":[20406,20407],"courses-depen":[[20406,20416]]}')
 
 
     def end_headers (self):
