@@ -8,12 +8,12 @@ public class CreditsRequirement {
      @Id
     private int id;
     private int planId;
-    private String creditsType;
+    private String [] creditsType;
     private int creditsNumber;
 
     public CreditsRequirement(){}
 
-    public CreditsRequirement(int planID, int courseId, String creditsType, int creditsNumber){
+    public CreditsRequirement(int planID, int courseId, String [] creditsType, int creditsNumber){
         this.planId = planID;
         this.creditsType = creditsType;
         this.creditsNumber = creditsNumber;
@@ -51,7 +51,7 @@ public class CreditsRequirement {
         planId = id;
     }
 
-    public void setCreditsType(String type) {
+    public void setCreditsType(String [] type) {
 		this.creditsType = type;
 	}
 
@@ -67,7 +67,7 @@ public class CreditsRequirement {
         return planId;
     }
     
-    public String getCreditsType() {
+    public String[] getCreditsType() {
 		return creditsType;
 	}
 
