@@ -3,6 +3,7 @@ import { useParams } from "react-router-dom";
 import api from '../../api/axiosConfig';
 import CoursesDrag from '../couresesdrag/CoursesDrag'
 import MissingCourses from "../missingcourses/MissingCourses";
+import SummaryButton from "./SummaryButton";
 
 const PlanPage = () => {
     const routeParams = useParams();
@@ -10,6 +11,7 @@ const PlanPage = () => {
     const [coursesMust, setCoursesMust] = useState();
     const [coursesDepen, setCoursesDepen] = useState();
     const [nakazReq, setNakazReq] = useState();
+    const [planReady, setPlanReady] = useState(false);
 
 
     const getCourseById = (courseId) => {
@@ -80,8 +82,10 @@ const PlanPage = () => {
             if (response.data.ok) {
                 // ok = 1, the program is validated
                 console.log("Yay, the program is valid!")
+                setPlanReady(true)
             } else {
                 console.log("Ooof, the program is invalid!")
+                setPlanReady(false)
             }
 
         } catch (error) {
@@ -97,6 +101,7 @@ const PlanPage = () => {
             <CoursesDrag courses={courses}></CoursesDrag>
             <button className="buttonValidate" onClick={e => validateCourses(routeParams.studyPlanId,courses)}>Validate Study Plan</button>
             <MissingCourses coursesDepen={coursesDepen} coursesMust={coursesMust} nakazReq={nakazReq} getCourseById={getCourseById}></MissingCourses>
+            <SummaryButton planReady={planReady}></SummaryButton>
         </div>
     )
 }
