@@ -1,6 +1,5 @@
 package oplanner.Oplanner.Controller;
 
-import org.springframework.web.bind.annotation.RestController;
 
 import jakarta.websocket.server.PathParam;
 import oplanner.Oplanner.Model.Course;
@@ -8,7 +7,7 @@ import oplanner.Oplanner.Model.StudyPlan;
 import oplanner.Oplanner.repository.CourseRepository;
 import oplanner.Oplanner.Response.CoursesByCreditsType;
 
-
+import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;

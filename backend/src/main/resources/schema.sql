@@ -36,7 +36,7 @@ CREATE TABLE  Mandatory_Requirement(
 DROP TABLE IF EXISTS Credits_Requirement;
 CREATE TABLE  Credits_Requirement(
   id int auto_increment primary key NOT NULL,
-  plan_Id int NOT NULL,
+  plan_id int NOT NULL,
   credits_Type VARCHAR(100) array[3] NOT NULL,
   credits_Number int NOT NULL
 );
