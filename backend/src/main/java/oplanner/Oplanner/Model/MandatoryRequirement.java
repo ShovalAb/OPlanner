@@ -60,7 +60,7 @@ public class MandatoryRequirement{
         return planId;
     }
 
-        public int [] getCourseId(){
+    public int[] getCourseId(){
         return courseId;
     }
 
