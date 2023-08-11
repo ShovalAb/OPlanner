@@ -19,12 +19,12 @@ import java.util.*;
 
 @RestController
 @CrossOrigin(allowedHeaders = "*", origins = "*")
-@RequestMapping("/api/validate")
+@RequestMapping("/api/verifyPlan")
 public class ValidateController {
     private Logic logic = new Logic();
 
     @PostMapping
-    public Course [] validateStudyPlan (@RequestBody Course[] selectedCourses){
-        return logic.validate(selectedCourses);
+    public Course [] validateStudyPlan (@RequestBody String id ,Course[] selectedCourses){
+        return logic.validate(id, selectedCourses);
     }
 }
