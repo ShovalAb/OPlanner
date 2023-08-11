@@ -56,7 +56,11 @@ public class Course {
 	}
 
 	public void setCourseName(String name) {
-		this.courseName = name;
+		this.name = name;
+	}
+
+	public void setCourseNumber(int number) {
+		this.number = number;
 	}
 
 	public void setCreditsType(String type) {
@@ -72,7 +76,11 @@ public class Course {
 	}
 
 	public String getCourseName() {
-		return courseName;
+		return name;
+	}
+
+	public int getCourseNumber() {
+		return number;
 	}
 
 	public String getCreditsType() {
