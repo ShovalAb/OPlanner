@@ -8,9 +8,32 @@ class CORSRequestHandler (SimpleHTTPRequestHandler):
         self.send_response(200, "ok")
         self.end_headers()
 
+    def do_POST(self):
+        self.send_response(200, "ok")
+        self.send_header('Content-Type', 'application/json')
+        content_len = int(self.headers.get('Content-Length'))
+        post_body = self.rfile.read(content_len)
+        print("Got from client - " + post_body.decode())
+        self.end_headers()
+        if "20406" in post_body.decode():
+            self.wfile.write(b'{"ok":1,"courses-must":[],"courses-depen":[],"nakaz-req":[]}')
+        else:
+            self.wfile.write(b'{"ok":0,"courses-must":[20406,20407],"courses-depen":[[20406,20416]],"nakaz-req":[{"groupName":"Math","Razui":80,"Mazui":74}]}')
+
+
+    def do_GET(self):
+        print(self.path)
+        if self.path == '/api/studyplan?planId=1':
+            self.send_response(200, 'ok')
+            self.end_headers()
+            self.wfile.write(open('./api/courseGroup/1', 'rb').read())
+        else:
+            SimpleHTTPRequestHandler.do_GET(self)
+
     def end_headers (self):
         self.send_header('Access-Control-Allow-Origin', '*')
         self.send_header('Access-Control-Allow-Methods',"GET, PUT, POST, DELETE, OPTIONS")
+        self.send_header('Access-Control-Allow-Headers', 'Content-Type')
         SimpleHTTPRequestHandler.end_headers(self)
 
 if __name__ == '__main__':
