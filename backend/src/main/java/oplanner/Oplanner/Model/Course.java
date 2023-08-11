@@ -9,8 +9,8 @@ public class Course {
 	@JsonProperty("id")
     private int id; 
 	@JsonProperty("courseName")
-    private String courseName;
-	private int courseNumber;
+    private String name;
+	private int number;
 	@JsonProperty("creditsType")
     private String creditsType;
 	@JsonProperty("creditsNumber")
@@ -20,8 +20,8 @@ public class Course {
 
     public Course(String name, int number, String type, int creditsNumber){
 		// this.id = id;
-        this.courseName = name;
-		this.courseNumber = number;
+        this.name = name;
+		this.number = number;
 		this.creditsType = type;
 		this.creditsNumber = creditsNumber;
     }
@@ -29,7 +29,7 @@ public class Course {
     @Override
 	public int hashCode() {
 
-		return Objects.hash(id, courseName, courseNumber, creditsType, creditsNumber);
+		return Objects.hash(id, name, number, creditsType, creditsNumber);
 	}
 
     @Override
@@ -44,8 +44,8 @@ public class Course {
 	public String toString() {
 		return "Course {" +
 			"id=" + id +
-			", Course Name='" + courseName +
-			", Course Number='" + courseNumber +
+			", Course Name='" + name +
+			", Course Number='" + number +
 			", Credits Type='" + creditsType +
 			", Credits Number='" + creditsNumber +
 			'}';
@@ -57,10 +57,6 @@ public class Course {
 
 	public void setCourseName(String name) {
 		this.courseName = name;
-	}
-
-		public void setCourseNamber(int number) {
-		this.courseNumber = number;
 	}
 
 	public void setCreditsType(String type) {
@@ -77,10 +73,6 @@ public class Course {
 
 	public String getCourseName() {
 		return courseName;
-	}
-
-	public int getCourseNumber() {
-		return courseNumber;
 	}
 
 	public String getCreditsType() {

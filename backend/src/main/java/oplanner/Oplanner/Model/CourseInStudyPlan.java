@@ -6,7 +6,7 @@ public class CourseInStudyPlan {
     @Id
     private int id; 
     private int courseId;
-    private int studyPlanId;
+    private int planId;
     private String department;
 
 
@@ -14,14 +14,14 @@ public class CourseInStudyPlan {
 
     public CourseInStudyPlan(int courseId, int studyPlanId, String department){
         this.courseId = courseId;
-        this.studyPlanId = studyPlanId;
+        this.planId = studyPlanId;
         this.department = department;
     }
 
     @Override
 	public int hashCode() {
 
-		return Objects.hash(id, courseId, studyPlanId, department);
+		return Objects.hash(id, courseId, planId, department);
 	}
 
     @Override
@@ -36,7 +36,7 @@ public class CourseInStudyPlan {
 		return "Credits Requirement {" +
 			"id=" + id +
 			", course id'" + courseId +
-            ", study Plan id'" + studyPlanId +
+            ", study Plan id'" + planId +
             ", department'" + department +
 			'}';
 	}
@@ -49,8 +49,8 @@ public class CourseInStudyPlan {
         this.courseId = courseId;
     }
 
-    public void setStudyPlanId(int studyPlanId) {
-		this.studyPlanId = studyPlanId;
+    public void setPlanId(int studyPlanId) {
+		this.planId = studyPlanId;
 	}
 
 	public void setDepartment(String department) {
@@ -65,8 +65,8 @@ public class CourseInStudyPlan {
         return courseId;
     }
     
-    public int getStudyPlanId() {
-		return studyPlanId;
+    public int getPlanId() {
+		return planId;
 	}
 
 	public String getDepartment() {

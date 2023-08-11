@@ -8,7 +8,7 @@ public interface StudyPlanRepository extends CrudRepository<StudyPlan, Integer> 
     @Query("""
             SELECT *
             FROM study_plan
-            Where id = :id
+            WHERE id = :id
             """)
     StudyPlan findPlanById(int id);
 }
