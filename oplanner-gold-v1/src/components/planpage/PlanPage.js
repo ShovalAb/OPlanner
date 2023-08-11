@@ -46,7 +46,7 @@ const PlanPage = () => {
             const params = {
                 planId : studyPlanId,
             }
-            const response = await api.get('/api/studyplan', {params})
+            const response = await api.get('/api/course', {params})
             console.log('Got from server ' + response.data)
             setCourses(setCoursesChosenState(response.data))
         } catch (error) {
