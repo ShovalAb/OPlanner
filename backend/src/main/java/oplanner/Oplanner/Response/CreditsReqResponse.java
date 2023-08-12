@@ -1,13 +1,13 @@
 package oplanner.Oplanner.Response;
 
-public class CreditsReq {
+public class CreditsReqResponse {
 
     private final String creditsType;
     private final int currentCredits;
     private final int neededCredits;  
 
 
-    public CreditsReq(String creditsType, int currentCredits, int neededCredits){
+    public CreditsReqResponse(String creditsType, int currentCredits, int neededCredits){
         this.creditsType = creditsType;
         this.currentCredits = currentCredits;
         this.neededCredits = neededCredits;
