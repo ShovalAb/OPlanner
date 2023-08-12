@@ -17,18 +17,18 @@ const PlanPage = () => {
 
 
     const getCourseByNumber = (courseNumber) => {
-        console.log("Trying to find - " + courseNumber)
+        // console.log("Trying to find - " + courseNumber)
         for (let i = 0; i < courses.length; i++) {
             const coursesClass = courses[i];
             for (let j = 0; j < coursesClass.courses.length; j++) {
                 const course = coursesClass.courses[j];
                 if (course.courseNumber == courseNumber) {
-                    console.log("Found it!")
+                    // console.log("Found it!")
                     return (course)
                 }
             }
         }
-        console.log("Didn't Found it")
+        // console.log("Didn't Found it")
         return null;
     }
 
@@ -76,7 +76,7 @@ const PlanPage = () => {
     }
 
     const updateCreditReqNum = async () => {
-        console.log("HEREEEE")
+        // console.log("HEREEEE")
         try {
             const coursesChosen = collectChosenCourses();
             const response = await api.post('/api/creditsReq', {'planId':routeParams.studyPlanId, 'courses':coursesChosen})
