@@ -8,6 +8,7 @@ public class CreditsRequirement {
      @Id
     private int id;
     private int planId;
+    private String department;
     private String creditsType;
     private int creditsNumber;
 
@@ -15,6 +16,7 @@ public class CreditsRequirement {
 
     public CreditsRequirement(int planID, int courseId,String creditsType, int creditsNumber){
         this.planId = planID;
+        this.department = department;
         this.creditsType = creditsType;
         this.creditsNumber = creditsNumber;
     }
@@ -22,7 +24,7 @@ public class CreditsRequirement {
     @Override
 	public int hashCode() {
 
-		return Objects.hash(id, planId, creditsType, creditsNumber);
+		return Objects.hash(id, planId, department, creditsType, creditsNumber);
 	}
 
     @Override
@@ -37,6 +39,7 @@ public class CreditsRequirement {
 		return "Credits Requirement {" +
 			"id=" + id +
 			", plan id'" + planId +
+            ", department'" + department +
             ", credits type'" + creditsType +
             ", credits number'" + creditsNumber +
 			'}';
@@ -65,6 +68,10 @@ public class CreditsRequirement {
     public int getPlanID(){
         return planId;
     }
+
+    public String getDepartment() {
+		return department;
+	}
     
     public String getCreditsType() {
 		return creditsType;

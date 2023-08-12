@@ -1,6 +1,7 @@
 package oplanner.Oplanner.Model;
 
-import java.util.*;
+import java.util.List;
+import java.util.Objects;
 
 import org.springframework.data.annotation.Id;
 
@@ -10,7 +11,6 @@ public class Dependency {
     private int dependentCourse;
     private List<Integer> baseCourse;
 
-    public Dependency(){}
 
     public Dependency(int dependentCourse, List<Integer> baseCourse){
         this.dependentCourse = dependentCourse;
@@ -62,8 +62,5 @@ public class Dependency {
         public List<Integer> getBaseCourse(){
         return baseCourse;
     }
-
-
-
 
 }

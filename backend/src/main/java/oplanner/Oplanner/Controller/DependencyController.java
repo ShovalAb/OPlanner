@@ -18,8 +18,8 @@ public class DependencyController {
     }
 
     @GetMapping
-    public Iterable<Dependency> findAll(){
-        return dep.findAll();
+    public Dependency [] findAll(){
+        return dep.findByCourseId(3067);
     }
     
 }

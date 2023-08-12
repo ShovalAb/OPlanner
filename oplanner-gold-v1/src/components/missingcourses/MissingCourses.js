@@ -1,55 +1,88 @@
 import React from "react";
 
-const MissingCourses = ({coursesMust, coursesDepen, nakazReq, getCourseById}) => {
+const MissingCourses = ({coursesMust, coursesDepen, nakazReq, getCourseByNumber}) => {
     const missingMustCourse = (course) => {
         return (
-            <p key={course.id}><b>{course.name} ({course.id})</b></p>
+            <p key={course.courseNumber}><b>{course.courseName} ({course.courseNumber})</b></p>
         )
     }
 
-    const allMissingMustCourses = (courseMustId) => {
-        const course = getCourseById(courseMustId)
+    const allMissingMustCourses = (courseMustNumber) => {
+        // console.log("Course Must number - " + courseMustNumber)
+        const course = getCourseByNumber(courseMustNumber)
         if (course != null) {
             return (missingMustCourse(course))
         }
         return null;
     }
 
-    const missingDepenCourse = (preCourseMissing, course) => {
+    const preCoursesdetails = (preCourses) => {
+        const coursesDetails = Array()
+        for (let i = 0; i < preCourses.length; i++) {
+            coursesDetails.push(preCourses[i].courseName + "(" + preCourses[i].courseNumber + ")")
+        }
+        return coursesDetails.join(", ")
+    }    
+
+    const missingDepenCourses = (courseDep, preCourses) => {
         return (
-            <p key={course.id}><b>{course.name}({course.id})</b> needs the course <b>{preCourseMissing.name}({preCourseMissing.id})</b>!</p>
+            <p key={courseDep.courseNumber}><b>{courseDep.courseName}({courseDep.courseNumber})</b> needs the courses <b>{preCoursesdetails(preCourses)}</b>!</p>
         )
     }
 
-    const allMissingDepenCourses = (courseIds) => {
-        const preCourse = getCourseById(courseIds[0])
-        const course = getCourseById(courseIds[1])
+    const allMissingDepenCourses = (depObj) => {
+        const courseDepNum = depObj.course
+        const courseNums = depObj.dep
 
-        if (course != null && preCourse != null) {
-            return (missingDepenCourse(preCourse, course))
+        const courseDep = getCourseByNumber(courseDepNum)
+
+        const preCourses = Array()
+        for (let i = 0; i < courseNums.length; i++) {
+            const preCourse = getCourseByNumber(courseNums[i]);
+            if (preCourse != null) {
+                preCourses.push(preCourse)
+            }
+            
+        }
+
+        if (courseDep != null && preCourses.length != 0) {
+            return (missingDepenCourses(courseDep, preCourses))
         }
         return null;
     }
 
     const allMissingNakazReq = (nakazReqIssue) => {
+        if (nakazReqIssue.neededCredits > nakazReqIssue.currentCredits) {
+            
+            return (
+                <div key={nakazReqIssue["creditsType"]}>
+                <p><b>{nakazReqIssue["neededCredits"]}</b> nakaz of <b>{nakazReqIssue["creditsType"]}</b> are needed, In your plan there are only <b>{nakazReqIssue["currentCredits"]}</b></p>
+                </div>
+            )
+        }
         return (
-            <div key={nakazReqIssue["groupName"]}>
-            <p><b>{nakazReqIssue["Razui"]}</b> nakaz of <b>{nakazReqIssue["groupName"]}</b> are needed.</p>
-            <p>In your plan there are only <b>{nakazReqIssue["Mazui"]}</b></p>
-            </div>
-        )
+            <React.Fragment key={nakazReqIssue.creditsType}></React.Fragment>
+        );
     }
 
-    console.log("YYYY" + coursesMust + coursesDepen)
-    if (coursesMust && coursesDepen) {
-        if (coursesMust.length > 0 || coursesDepen.length > 0) {
+    const creditsReqUnsat = (creditsReq) => {
+        for (let i = 0; i < creditsReq.length; i++) {
+            if(creditsReq[i].neededCredits > creditsReq[i].currentCredits) {
+                return true
+            }
+        }
+        return false
+    }
+
+    if (coursesMust && coursesDepen && nakazReq) {
+        if (coursesMust.length > 0 || coursesDepen.length > 0 || creditsReqUnsat(nakazReq)) {
             return (
                 <div>
                     <h2>Must</h2>
                     <>{coursesMust.map(allMissingMustCourses)}</>
                     <h2>Dependencies</h2>
                     <>{coursesDepen.map(allMissingDepenCourses)}</>
-                    <h2>Nakaz Requirements</h2>
+                    <h2>Credit Requirements</h2>
                     <>{nakazReq.map(allMissingNakazReq)}</>
                 </div>
             )

@@ -4,8 +4,10 @@ import api from '../../api/axiosConfig';
 import CoursesDrag from '../couresesdrag/CoursesDrag'
 import MissingCourses from "../missingcourses/MissingCourses";
 import SummaryButton from "./SummaryButton";
+import CreditReqTable from "./CreditReqTable";
 
 const PlanPage = () => {
+    console.log("D")
     const routeParams = useParams();
     const [courses, setCourses] = useState();
     const [coursesMust, setCoursesMust] = useState();
@@ -14,16 +16,19 @@ const PlanPage = () => {
     const [planReady, setPlanReady] = useState(false);
 
 
-    const getCourseById = (courseId) => {
+    const getCourseByNumber = (courseNumber) => {
+        // console.log("Trying to find - " + courseNumber)
         for (let i = 0; i < courses.length; i++) {
             const coursesClass = courses[i];
             for (let j = 0; j < coursesClass.courses.length; j++) {
                 const course = coursesClass.courses[j];
-                if (course.id == courseId) {
+                if (course.courseNumber == courseNumber) {
+                    // console.log("Found it!")
                     return (course)
                 }
             }
         }
+        // console.log("Didn't Found it")
         return null;
     }
 
@@ -33,9 +38,6 @@ const PlanPage = () => {
             var coursesClass = courses[i];
             for (let j = 0; j < coursesClass.courses.length; j++) {
                 coursesClass.courses[j].chosen = false;
-                // if (coursesClass.courses[j].id == 20406) {
-                //     coursesClass.courses[j].chosen = true;
-                // }
             }
         }
         return courses
@@ -59,25 +61,41 @@ const PlanPage = () => {
         getCourses(routeParams.studyPlanId);
     },[])
 
+    const collectChosenCourses = () => {
+        var coursesChosen = Array()
+        for (let i = 0; i < courses.length; i++) {
+            const coursesClass = courses[i];
+            for (let j = 0; j < coursesClass.courses.length; j++) {
+                const course = coursesClass.courses[j];
+                if (course.chosen) {
+                    coursesChosen.push(course.courseNumber)
+                }
+            }            
+        }
+        return coursesChosen;
+    }
+
+    const updateCreditReqNum = async () => {
+        // console.log("HEREEEE")
+        try {
+            const coursesChosen = collectChosenCourses();
+            const response = await api.post('/api/creditsReq', {'planId':routeParams.studyPlanId, 'courses':coursesChosen})
+            console.log(response.data)
+            setNakazReq(response.data["creditsReqResponse"])
+            
+        } catch (error) {
+            console.log(error)
+        }
+    }
+
     const validateCourses = async (studyPlanId, courses) => {
         try {
-
-            var coursesChosen = Array()
-            for (let i = 0; i < courses.length; i++) {
-                const coursesClass = courses[i];
-                for (let j = 0; j < coursesClass.courses.length; j++) {
-                    const course = coursesClass.courses[j];
-                    if (course.chosen) {
-                        coursesChosen.push(course.id)
-                    }
-                }            
-            }
-
+            const coursesChosen = collectChosenCourses();
             const response = await api.post('/api/verifyPlan', {'planId':studyPlanId, 'courses':coursesChosen})
             console.log(response.data)
-            setCoursesMust(response.data["courses-must"])
-            setCoursesDepen(response.data["courses-depen"])
-            setNakazReq(response.data["nakaz-req"])
+            setCoursesMust(response.data["coursesMust"])
+            setCoursesDepen(response.data["coursesDepen"])
+            setNakazReq(response.data["creditsReqResponse"])
             
             if (response.data.ok) {
                 // ok = 1, the program is validated
@@ -98,9 +116,10 @@ const PlanPage = () => {
             <div>
                 <h1>Planning Study Plan #{routeParams.studyPlanId}</h1>
             </div>
-            <CoursesDrag courses={courses}></CoursesDrag>
+            <CreditReqTable creditReq={nakazReq}></CreditReqTable>
+            <CoursesDrag courses={courses} updateCreditReqNum={updateCreditReqNum}></CoursesDrag>
             <button className="buttonValidate" onClick={e => validateCourses(routeParams.studyPlanId,courses)}>Validate Study Plan</button>
-            <MissingCourses coursesDepen={coursesDepen} coursesMust={coursesMust} nakazReq={nakazReq} getCourseById={getCourseById}></MissingCourses>
+            <MissingCourses coursesDepen={coursesDepen} coursesMust={coursesMust} nakazReq={nakazReq} getCourseByNumber={getCourseByNumber}></MissingCourses>
             <SummaryButton planReady={planReady}></SummaryButton>
         </div>
     )

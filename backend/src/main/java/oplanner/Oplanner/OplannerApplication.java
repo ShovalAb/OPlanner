@@ -4,13 +4,18 @@ import oplanner.Oplanner.Model.Course;
 import oplanner.Oplanner.Model.CourseInStudyPlan;
 import oplanner.Oplanner.Model.CreditsRequirement;
 import oplanner.Oplanner.Model.Dependency;
+import oplanner.Oplanner.Model.MandatoryRequirement;
 import oplanner.Oplanner.Model.StudyPlan;
 import oplanner.Oplanner.repository.CourseInStudyPlanRepository;
 import oplanner.Oplanner.repository.CourseRepository;
 import oplanner.Oplanner.repository.CreditsRequirementRepository;
 import oplanner.Oplanner.repository.DependencyRepository;
+import oplanner.Oplanner.repository.MandatoryRequirementRepository;
 import oplanner.Oplanner.repository.StudyPlanRepository;
-import org.springframework.beans.factory.annotation.Autowired;
+
+import java.util.ArrayList;
+import java.util.List;
+
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

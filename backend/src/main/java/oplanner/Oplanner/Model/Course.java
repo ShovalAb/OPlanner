@@ -25,7 +25,7 @@ public class Course {
     @Override
 	public int hashCode() {
 
-		return Objects.hash(id, name, number, creditsType, creditsNumber);
+		return Objects.hash(id, name, number, department, creditsType, creditsNumber);
 	}
 
     @Override
@@ -42,6 +42,7 @@ public class Course {
 			"id=" + id +
 			", Course Name='" + name +
 			", Course Number='" + number +
+			", Course Department='" + department +
 			", Credits Type='" + creditsType +
 			", Credits Number='" + creditsNumber +
 			'}';
