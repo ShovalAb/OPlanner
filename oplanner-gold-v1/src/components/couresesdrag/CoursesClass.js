@@ -34,7 +34,7 @@ const CoursesClass = ({coursesClass, refresher, setRefresher}) => {
 
     return (
         <div>
-            <button className="toggleButtonClass" onClick={toggleFunc}>{coursesClass.creditType}</button>
+            <button className="toggleButtonClass" onClick={toggleFunc}>{coursesClass.creditsType}</button>
             {open && (
                 <div className="toggle">
                     <table>
