@@ -2,8 +2,8 @@ import React from "react";
 
 const CreditReqRow = (creditReq) => {
     return (
-        <tr key={creditReq.creditType}>
-            <td>{creditReq.creditType}</td>
+        <tr key={creditReq.creditsType}>
+            <td>{creditReq.creditsType}</td>
             <td>{creditReq.neededCredits}</td>
             <td>{creditReq.currentCredits}</td>
         </tr>
