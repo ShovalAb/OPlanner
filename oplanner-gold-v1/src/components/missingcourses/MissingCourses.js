@@ -52,24 +52,37 @@ const MissingCourses = ({coursesMust, coursesDepen, nakazReq, getCourseByNumber}
     }
 
     const allMissingNakazReq = (nakazReqIssue) => {
+        if (nakazReqIssue.neededCredits > nakazReqIssue.currentCredits) {
+            
+            return (
+                <div key={nakazReqIssue["creditsType"]}>
+                <p><b>{nakazReqIssue["neededCredits"]}</b> nakaz of <b>{nakazReqIssue["creditsType"]}</b> are needed, In your plan there are only <b>{nakazReqIssue["currentCredits"]}</b></p>
+                </div>
+            )
+        }
         return (
-            <div key={nakazReqIssue["creditsType"]}>
-            <p><b>{nakazReqIssue["neededCredits"]}</b> nakaz of <b>{nakazReqIssue["creditsType"]}</b> are needed.</p>
-            <p>In your plan there are only <b>{nakazReqIssue["currentCredits"]}</b></p>
-            </div>
-        )
+            <React.Fragment key={nakazReqIssue.creditsType}></React.Fragment>
+        );
     }
 
-    console.log("YYYY" + coursesMust + coursesDepen)
-    if (coursesMust && coursesDepen) {
-        if (coursesMust.length > 0 || coursesDepen.length > 0) {
+    const creditsReqUnsat = (creditsReq) => {
+        for (let i = 0; i < creditsReq.length; i++) {
+            if(creditsReq[i].neededCredits > creditsReq[i].currentCredits) {
+                return true
+            }
+        }
+        return false
+    }
+
+    if (coursesMust && coursesDepen && nakazReq) {
+        if (coursesMust.length > 0 || coursesDepen.length > 0 || creditsReqUnsat(nakazReq)) {
             return (
                 <div>
                     <h2>Must</h2>
                     <>{coursesMust.map(allMissingMustCourses)}</>
                     <h2>Dependencies</h2>
                     <>{coursesDepen.map(allMissingDepenCourses)}</>
-                    <h2>Nakaz Requirements</h2>
+                    <h2>Credit Requirements</h2>
                     <>{nakazReq.map(allMissingNakazReq)}</>
                 </div>
             )
