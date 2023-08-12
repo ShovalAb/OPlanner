@@ -13790,3 +13790,1000 @@ Caused by: java.sql.SQLSyntaxErrorException: You have an error in your SQL synta
 2023-08-12T18:00:43.819+03:00  INFO 70566 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
 2023-08-12T18:00:43.820+03:00  INFO 70566 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
 2023-08-12T18:00:43.832+03:00  INFO 70566 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 12 ms
+2023-08-12T18:40:02.303+03:00  INFO 93367 --- [restartedMain] oplanner.Oplanner.OplannerApplication    : Starting OplannerApplication using Java 17.0.7 with PID 93367 (/Users/shovalabudaram/projects/OplannerClient/backend/target/classes started by shovalabudaram in /Users/shovalabudaram/projects/OplannerClient)
+2023-08-12T18:40:02.304+03:00  INFO 93367 --- [restartedMain] oplanner.Oplanner.OplannerApplication    : No active profile set, falling back to 1 default profile: "default"
+2023-08-12T18:40:02.338+03:00  INFO 93367 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-08-12T18:40:02.338+03:00  INFO 93367 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2023-08-12T18:40:02.622+03:00  INFO 93367 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
+2023-08-12T18:40:02.656+03:00  INFO 93367 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 31 ms. Found 6 JDBC repository interfaces.
+2023-08-12T18:40:02.956+03:00  INFO 93367 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2023-08-12T18:40:02.965+03:00  INFO 93367 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-08-12T18:40:02.965+03:00  INFO 93367 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.11]
+2023-08-12T18:40:02.999+03:00  INFO 93367 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-08-12T18:40:02.999+03:00  INFO 93367 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 661 ms
+2023-08-12T18:40:03.196+03:00  INFO 93367 --- [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:mysql://localhost:3306/oplanner'
+2023-08-12T18:40:03.257+03:00  INFO 93367 --- [restartedMain] o.f.c.internal.license.VersionPrinter    : Flyway Community Edition 9.16.3 by Redgate
+2023-08-12T18:40:03.257+03:00  INFO 93367 --- [restartedMain] o.f.c.internal.license.VersionPrinter    : See release notes here: https://rd.gt/416ObMi
+2023-08-12T18:40:03.257+03:00  INFO 93367 --- [restartedMain] o.f.c.internal.license.VersionPrinter    : 
+2023-08-12T18:40:03.284+03:00  INFO 93367 --- [restartedMain] o.f.c.i.database.base.BaseDatabaseType   : Database: jdbc:mysql://localhost:3306/oplanner (MySQL 8.0)
+2023-08-12T18:40:03.306+03:00  INFO 93367 --- [restartedMain] o.f.core.internal.command.DbValidate     : Successfully validated 0 migrations (execution time 00:00.006s)
+2023-08-12T18:40:03.306+03:00  WARN 93367 --- [restartedMain] o.f.core.internal.command.DbValidate     : No migrations found. Are your locations set up correctly?
+2023-08-12T18:40:03.318+03:00  INFO 93367 --- [restartedMain] o.f.core.internal.command.DbMigrate      : Current version of schema `oplanner`: << Empty Schema >>
+2023-08-12T18:40:03.319+03:00  INFO 93367 --- [restartedMain] o.f.core.internal.command.DbMigrate      : Schema `oplanner` is up to date. No migration necessary.
+2023-08-12T18:40:03.435+03:00  INFO 93367 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2023-08-12T18:40:03.635+03:00  INFO 93367 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2023-08-12T18:40:03.641+03:00  INFO 93367 --- [restartedMain] oplanner.Oplanner.OplannerApplication    : Started OplannerApplication in 1.527 seconds (process running for 1.811)
+2023-08-12T18:40:57.339+03:00  INFO 93367 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-08-12T18:40:57.340+03:00  INFO 93367 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-08-12T18:40:57.346+03:00  INFO 93367 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 6 ms
+2023-08-12T18:43:22.023+03:00  INFO 93367 --- [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2023-08-12T18:43:22.062+03:00  INFO 93367 --- [Thread-4] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2023-08-12T18:43:22.066+03:00  INFO 93367 --- [Thread-4] o.a.c.c.C.[Tomcat].[localhost].[/]       : Destroying Spring FrameworkServlet 'dispatcherServlet'
+2023-08-12T18:43:22.117+03:00  INFO 93367 --- [restartedMain] oplanner.Oplanner.OplannerApplication    : Starting OplannerApplication using Java 17.0.7 with PID 93367 (/Users/shovalabudaram/projects/OplannerClient/backend/target/classes started by shovalabudaram in /Users/shovalabudaram/projects/OplannerClient)
+2023-08-12T18:43:22.117+03:00  INFO 93367 --- [restartedMain] oplanner.Oplanner.OplannerApplication    : No active profile set, falling back to 1 default profile: "default"
+2023-08-12T18:43:22.227+03:00  INFO 93367 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
+2023-08-12T18:43:22.235+03:00  INFO 93367 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 6 ms. Found 6 JDBC repository interfaces.
+2023-08-12T18:43:22.281+03:00  INFO 93367 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2023-08-12T18:43:22.281+03:00  INFO 93367 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-08-12T18:43:22.281+03:00  INFO 93367 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.11]
+2023-08-12T18:43:22.287+03:00  INFO 93367 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-08-12T18:43:22.287+03:00  INFO 93367 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 168 ms
+2023-08-12T18:43:22.299+03:00  INFO 93367 --- [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:mysql://localhost:3306/oplanner'
+2023-08-12T18:43:22.320+03:00  INFO 93367 --- [restartedMain] o.f.c.i.database.base.BaseDatabaseType   : Database: jdbc:mysql://localhost:3306/oplanner (MySQL 8.0)
+2023-08-12T18:43:22.331+03:00  INFO 93367 --- [restartedMain] o.f.core.internal.command.DbValidate     : Successfully validated 0 migrations (execution time 00:00.004s)
+2023-08-12T18:43:22.331+03:00  WARN 93367 --- [restartedMain] o.f.core.internal.command.DbValidate     : No migrations found. Are your locations set up correctly?
+2023-08-12T18:43:22.337+03:00  INFO 93367 --- [restartedMain] o.f.core.internal.command.DbMigrate      : Current version of schema `oplanner`: << Empty Schema >>
+2023-08-12T18:43:22.337+03:00  INFO 93367 --- [restartedMain] o.f.core.internal.command.DbMigrate      : Schema `oplanner` is up to date. No migration necessary.
+2023-08-12T18:43:22.372+03:00  INFO 93367 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2023-08-12T18:43:22.427+03:00  INFO 93367 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2023-08-12T18:43:22.428+03:00  INFO 93367 --- [restartedMain] oplanner.Oplanner.OplannerApplication    : Started OplannerApplication in 0.324 seconds (process running for 200.599)
+2023-08-12T18:43:22.430+03:00  INFO 93367 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2023-08-12T18:43:34.352+03:00  INFO 93367 --- [http-nio-8080-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-08-12T18:43:34.353+03:00  INFO 93367 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-08-12T18:43:34.357+03:00  INFO 93367 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 4 ms
+2023-08-12T20:37:29.752+03:00  INFO 93367 --- [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2023-08-12T20:37:29.769+03:00  INFO 93367 --- [Thread-7] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2023-08-12T20:37:29.770+03:00  INFO 93367 --- [Thread-7] o.a.c.c.C.[Tomcat].[localhost].[/]       : Destroying Spring FrameworkServlet 'dispatcherServlet'
+2023-08-12T20:37:29.860+03:00  INFO 93367 --- [restartedMain] oplanner.Oplanner.OplannerApplication    : Starting OplannerApplication using Java 17.0.7 with PID 93367 (/Users/shovalabudaram/projects/OplannerClient/backend/target/classes started by shovalabudaram in /Users/shovalabudaram/projects/OplannerClient)
+2023-08-12T20:37:29.861+03:00  INFO 93367 --- [restartedMain] oplanner.Oplanner.OplannerApplication    : No active profile set, falling back to 1 default profile: "default"
+2023-08-12T20:37:29.945+03:00  INFO 93367 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
+2023-08-12T20:37:29.952+03:00  INFO 93367 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 6 ms. Found 6 JDBC repository interfaces.
+2023-08-12T20:37:30.033+03:00  INFO 93367 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2023-08-12T20:37:30.034+03:00  INFO 93367 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-08-12T20:37:30.034+03:00  INFO 93367 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.11]
+2023-08-12T20:37:30.041+03:00  INFO 93367 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-08-12T20:37:30.041+03:00  INFO 93367 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 173 ms
+2023-08-12T20:37:30.117+03:00  INFO 93367 --- [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:mysql://localhost:3306/oplanner'
+2023-08-12T20:37:30.142+03:00  INFO 93367 --- [restartedMain] o.f.c.i.database.base.BaseDatabaseType   : Database: jdbc:mysql://localhost:3306/oplanner (MySQL 8.0)
+2023-08-12T20:37:30.217+03:00  INFO 93367 --- [restartedMain] o.f.core.internal.command.DbValidate     : Successfully validated 0 migrations (execution time 00:00.006s)
+2023-08-12T20:37:30.217+03:00  WARN 93367 --- [restartedMain] o.f.core.internal.command.DbValidate     : No migrations found. Are your locations set up correctly?
+2023-08-12T20:37:30.222+03:00  INFO 93367 --- [restartedMain] o.f.core.internal.command.DbMigrate      : Current version of schema `oplanner`: << Empty Schema >>
+2023-08-12T20:37:30.222+03:00  INFO 93367 --- [restartedMain] o.f.core.internal.command.DbMigrate      : Schema `oplanner` is up to date. No migration necessary.
+2023-08-12T20:37:30.249+03:00  INFO 93367 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2023-08-12T20:37:30.330+03:00  INFO 93367 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2023-08-12T20:37:30.332+03:00  INFO 93367 --- [restartedMain] oplanner.Oplanner.OplannerApplication    : Started OplannerApplication in 0.489 seconds (process running for 6119.614)
+2023-08-12T20:37:30.333+03:00  INFO 93367 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2023-08-12T20:37:32.155+03:00  INFO 93367 --- [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2023-08-12T20:37:32.165+03:00  INFO 93367 --- [Thread-11] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2023-08-12T20:37:32.215+03:00  INFO 93367 --- [restartedMain] oplanner.Oplanner.OplannerApplication    : Starting OplannerApplication using Java 17.0.7 with PID 93367 (/Users/shovalabudaram/projects/OplannerClient/backend/target/classes started by shovalabudaram in /Users/shovalabudaram/projects/OplannerClient)
+2023-08-12T20:37:32.215+03:00  INFO 93367 --- [restartedMain] oplanner.Oplanner.OplannerApplication    : No active profile set, falling back to 1 default profile: "default"
+2023-08-12T20:37:32.260+03:00  INFO 93367 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
+2023-08-12T20:37:32.265+03:00  INFO 93367 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 5 ms. Found 6 JDBC repository interfaces.
+2023-08-12T20:37:32.291+03:00  INFO 93367 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2023-08-12T20:37:32.291+03:00  INFO 93367 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-08-12T20:37:32.291+03:00  INFO 93367 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.11]
+2023-08-12T20:37:32.296+03:00  INFO 93367 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-08-12T20:37:32.296+03:00  INFO 93367 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 80 ms
+2023-08-12T20:37:32.305+03:00  INFO 93367 --- [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:mysql://localhost:3306/oplanner'
+2023-08-12T20:37:32.322+03:00  INFO 93367 --- [restartedMain] o.f.c.i.database.base.BaseDatabaseType   : Database: jdbc:mysql://localhost:3306/oplanner (MySQL 8.0)
+2023-08-12T20:37:32.336+03:00  INFO 93367 --- [restartedMain] o.f.core.internal.command.DbValidate     : Successfully validated 0 migrations (execution time 00:00.003s)
+2023-08-12T20:37:32.336+03:00  WARN 93367 --- [restartedMain] o.f.core.internal.command.DbValidate     : No migrations found. Are your locations set up correctly?
+2023-08-12T20:37:32.342+03:00  INFO 93367 --- [restartedMain] o.f.core.internal.command.DbMigrate      : Current version of schema `oplanner`: << Empty Schema >>
+2023-08-12T20:37:32.343+03:00  INFO 93367 --- [restartedMain] o.f.core.internal.command.DbMigrate      : Schema `oplanner` is up to date. No migration necessary.
+2023-08-12T20:37:32.369+03:00  INFO 93367 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2023-08-12T20:37:32.427+03:00  INFO 93367 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2023-08-12T20:37:32.428+03:00  INFO 93367 --- [restartedMain] oplanner.Oplanner.OplannerApplication    : Started OplannerApplication in 0.224 seconds (process running for 6121.711)
+2023-08-12T20:37:32.429+03:00  INFO 93367 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2023-08-12T20:37:33.845+03:00  INFO 93367 --- [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2023-08-12T20:37:33.851+03:00  INFO 93367 --- [Thread-15] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2023-08-12T20:37:33.904+03:00  INFO 93367 --- [restartedMain] oplanner.Oplanner.OplannerApplication    : Starting OplannerApplication using Java 17.0.7 with PID 93367 (/Users/shovalabudaram/projects/OplannerClient/backend/target/classes started by shovalabudaram in /Users/shovalabudaram/projects/OplannerClient)
+2023-08-12T20:37:33.904+03:00  INFO 93367 --- [restartedMain] oplanner.Oplanner.OplannerApplication    : No active profile set, falling back to 1 default profile: "default"
+2023-08-12T20:37:33.955+03:00  INFO 93367 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
+2023-08-12T20:37:33.959+03:00  INFO 93367 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 3 ms. Found 6 JDBC repository interfaces.
+2023-08-12T20:37:33.983+03:00  INFO 93367 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2023-08-12T20:37:33.984+03:00  INFO 93367 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-08-12T20:37:33.984+03:00  INFO 93367 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.11]
+2023-08-12T20:37:33.988+03:00  INFO 93367 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-08-12T20:37:33.988+03:00  INFO 93367 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 83 ms
+2023-08-12T20:37:33.997+03:00  INFO 93367 --- [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:mysql://localhost:3306/oplanner'
+2023-08-12T20:37:34.015+03:00  INFO 93367 --- [restartedMain] o.f.c.i.database.base.BaseDatabaseType   : Database: jdbc:mysql://localhost:3306/oplanner (MySQL 8.0)
+2023-08-12T20:37:34.022+03:00  INFO 93367 --- [restartedMain] o.f.core.internal.command.DbValidate     : Successfully validated 0 migrations (execution time 00:00.002s)
+2023-08-12T20:37:34.022+03:00  WARN 93367 --- [restartedMain] o.f.core.internal.command.DbValidate     : No migrations found. Are your locations set up correctly?
+2023-08-12T20:37:34.026+03:00  INFO 93367 --- [restartedMain] o.f.core.internal.command.DbMigrate      : Current version of schema `oplanner`: << Empty Schema >>
+2023-08-12T20:37:34.027+03:00  INFO 93367 --- [restartedMain] o.f.core.internal.command.DbMigrate      : Schema `oplanner` is up to date. No migration necessary.
+2023-08-12T20:37:34.055+03:00  INFO 93367 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2023-08-12T20:37:34.104+03:00  INFO 93367 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2023-08-12T20:37:34.105+03:00  INFO 93367 --- [restartedMain] oplanner.Oplanner.OplannerApplication    : Started OplannerApplication in 0.215 seconds (process running for 6123.388)
+2023-08-12T20:37:34.106+03:00  INFO 93367 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2023-08-12T20:37:35.519+03:00  INFO 93367 --- [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2023-08-12T20:37:35.524+03:00  INFO 93367 --- [Thread-19] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2023-08-12T20:37:35.564+03:00  INFO 93367 --- [restartedMain] oplanner.Oplanner.OplannerApplication    : Starting OplannerApplication using Java 17.0.7 with PID 93367 (/Users/shovalabudaram/projects/OplannerClient/backend/target/classes started by shovalabudaram in /Users/shovalabudaram/projects/OplannerClient)
+2023-08-12T20:37:35.565+03:00  INFO 93367 --- [restartedMain] oplanner.Oplanner.OplannerApplication    : No active profile set, falling back to 1 default profile: "default"
+2023-08-12T20:37:35.617+03:00  INFO 93367 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
+2023-08-12T20:37:35.622+03:00  INFO 93367 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 5 ms. Found 6 JDBC repository interfaces.
+2023-08-12T20:37:35.655+03:00  INFO 93367 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2023-08-12T20:37:35.656+03:00  INFO 93367 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-08-12T20:37:35.656+03:00  INFO 93367 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.11]
+2023-08-12T20:37:35.660+03:00  INFO 93367 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-08-12T20:37:35.660+03:00  INFO 93367 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 94 ms
+2023-08-12T20:37:35.670+03:00  INFO 93367 --- [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:mysql://localhost:3306/oplanner'
+2023-08-12T20:37:35.686+03:00  INFO 93367 --- [restartedMain] o.f.c.i.database.base.BaseDatabaseType   : Database: jdbc:mysql://localhost:3306/oplanner (MySQL 8.0)
+2023-08-12T20:37:35.701+03:00  INFO 93367 --- [restartedMain] o.f.core.internal.command.DbValidate     : Successfully validated 0 migrations (execution time 00:00.009s)
+2023-08-12T20:37:35.701+03:00  WARN 93367 --- [restartedMain] o.f.core.internal.command.DbValidate     : No migrations found. Are your locations set up correctly?
+2023-08-12T20:37:35.706+03:00  INFO 93367 --- [restartedMain] o.f.core.internal.command.DbMigrate      : Current version of schema `oplanner`: << Empty Schema >>
+2023-08-12T20:37:35.706+03:00  INFO 93367 --- [restartedMain] o.f.core.internal.command.DbMigrate      : Schema `oplanner` is up to date. No migration necessary.
+2023-08-12T20:37:35.779+03:00  INFO 93367 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2023-08-12T20:37:35.841+03:00  INFO 93367 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2023-08-12T20:37:35.843+03:00  INFO 93367 --- [restartedMain] oplanner.Oplanner.OplannerApplication    : Started OplannerApplication in 0.288 seconds (process running for 6125.126)
+2023-08-12T20:37:35.844+03:00  INFO 93367 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2023-08-12T20:37:38.264+03:00  INFO 93367 --- [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2023-08-12T20:37:38.269+03:00  INFO 93367 --- [Thread-23] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2023-08-12T20:37:38.324+03:00  INFO 93367 --- [restartedMain] oplanner.Oplanner.OplannerApplication    : Starting OplannerApplication using Java 17.0.7 with PID 93367 (/Users/shovalabudaram/projects/OplannerClient/backend/target/classes started by shovalabudaram in /Users/shovalabudaram/projects/OplannerClient)
+2023-08-12T20:37:38.324+03:00  INFO 93367 --- [restartedMain] oplanner.Oplanner.OplannerApplication    : No active profile set, falling back to 1 default profile: "default"
+2023-08-12T20:37:38.367+03:00  INFO 93367 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
+2023-08-12T20:37:38.371+03:00  INFO 93367 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 3 ms. Found 6 JDBC repository interfaces.
+2023-08-12T20:37:38.395+03:00  INFO 93367 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2023-08-12T20:37:38.395+03:00  INFO 93367 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-08-12T20:37:38.395+03:00  INFO 93367 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.11]
+2023-08-12T20:37:38.399+03:00  INFO 93367 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-08-12T20:37:38.400+03:00  INFO 93367 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 75 ms
+2023-08-12T20:37:38.408+03:00  INFO 93367 --- [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:mysql://localhost:3306/oplanner'
+2023-08-12T20:37:38.425+03:00  INFO 93367 --- [restartedMain] o.f.c.i.database.base.BaseDatabaseType   : Database: jdbc:mysql://localhost:3306/oplanner (MySQL 8.0)
+2023-08-12T20:37:38.436+03:00  INFO 93367 --- [restartedMain] o.f.core.internal.command.DbValidate     : Successfully validated 0 migrations (execution time 00:00.002s)
+2023-08-12T20:37:38.436+03:00  WARN 93367 --- [restartedMain] o.f.core.internal.command.DbValidate     : No migrations found. Are your locations set up correctly?
+2023-08-12T20:37:38.441+03:00  INFO 93367 --- [restartedMain] o.f.core.internal.command.DbMigrate      : Current version of schema `oplanner`: << Empty Schema >>
+2023-08-12T20:37:38.441+03:00  INFO 93367 --- [restartedMain] o.f.core.internal.command.DbMigrate      : Schema `oplanner` is up to date. No migration necessary.
+2023-08-12T20:37:38.467+03:00  INFO 93367 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2023-08-12T20:37:38.511+03:00  INFO 93367 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2023-08-12T20:37:38.512+03:00  INFO 93367 --- [restartedMain] oplanner.Oplanner.OplannerApplication    : Started OplannerApplication in 0.199 seconds (process running for 6127.796)
+2023-08-12T20:37:38.512+03:00  INFO 93367 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2023-08-12T20:37:48.012+03:00  INFO 93367 --- [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2023-08-12T20:37:48.022+03:00  INFO 93367 --- [Thread-27] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2023-08-12T20:37:48.080+03:00  INFO 93367 --- [restartedMain] oplanner.Oplanner.OplannerApplication    : Starting OplannerApplication using Java 17.0.7 with PID 93367 (/Users/shovalabudaram/projects/OplannerClient/backend/target/classes started by shovalabudaram in /Users/shovalabudaram/projects/OplannerClient)
+2023-08-12T20:37:48.080+03:00  INFO 93367 --- [restartedMain] oplanner.Oplanner.OplannerApplication    : No active profile set, falling back to 1 default profile: "default"
+2023-08-12T20:37:48.133+03:00  INFO 93367 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
+2023-08-12T20:37:48.137+03:00  INFO 93367 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 4 ms. Found 6 JDBC repository interfaces.
+2023-08-12T20:37:48.166+03:00  INFO 93367 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2023-08-12T20:37:48.166+03:00  INFO 93367 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-08-12T20:37:48.166+03:00  INFO 93367 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.11]
+2023-08-12T20:37:48.171+03:00  INFO 93367 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-08-12T20:37:48.171+03:00  INFO 93367 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 90 ms
+2023-08-12T20:37:48.182+03:00  INFO 93367 --- [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:mysql://localhost:3306/oplanner'
+2023-08-12T20:37:48.201+03:00  INFO 93367 --- [restartedMain] o.f.c.i.database.base.BaseDatabaseType   : Database: jdbc:mysql://localhost:3306/oplanner (MySQL 8.0)
+2023-08-12T20:37:48.209+03:00  INFO 93367 --- [restartedMain] o.f.core.internal.command.DbValidate     : Successfully validated 0 migrations (execution time 00:00.003s)
+2023-08-12T20:37:48.209+03:00  WARN 93367 --- [restartedMain] o.f.core.internal.command.DbValidate     : No migrations found. Are your locations set up correctly?
+2023-08-12T20:37:48.228+03:00  INFO 93367 --- [restartedMain] o.f.core.internal.command.DbMigrate      : Current version of schema `oplanner`: << Empty Schema >>
+2023-08-12T20:37:48.229+03:00  INFO 93367 --- [restartedMain] o.f.core.internal.command.DbMigrate      : Schema `oplanner` is up to date. No migration necessary.
+2023-08-12T20:37:48.255+03:00  INFO 93367 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2023-08-12T20:37:48.299+03:00  INFO 93367 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2023-08-12T20:37:48.300+03:00  INFO 93367 --- [restartedMain] oplanner.Oplanner.OplannerApplication    : Started OplannerApplication in 0.227 seconds (process running for 6137.585)
+2023-08-12T20:37:48.300+03:00  INFO 93367 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2023-08-12T20:37:49.716+03:00  INFO 93367 --- [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2023-08-12T20:37:49.721+03:00  INFO 93367 --- [Thread-31] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2023-08-12T20:37:49.755+03:00  INFO 93367 --- [restartedMain] oplanner.Oplanner.OplannerApplication    : Starting OplannerApplication using Java 17.0.7 with PID 93367 (/Users/shovalabudaram/projects/OplannerClient/backend/target/classes started by shovalabudaram in /Users/shovalabudaram/projects/OplannerClient)
+2023-08-12T20:37:49.755+03:00  INFO 93367 --- [restartedMain] oplanner.Oplanner.OplannerApplication    : No active profile set, falling back to 1 default profile: "default"
+2023-08-12T20:37:49.791+03:00  INFO 93367 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
+2023-08-12T20:37:49.796+03:00  INFO 93367 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 4 ms. Found 6 JDBC repository interfaces.
+2023-08-12T20:37:49.817+03:00  INFO 93367 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2023-08-12T20:37:49.818+03:00  INFO 93367 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-08-12T20:37:49.818+03:00  INFO 93367 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.11]
+2023-08-12T20:37:49.823+03:00  INFO 93367 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-08-12T20:37:49.823+03:00  INFO 93367 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 67 ms
+2023-08-12T20:37:49.833+03:00  INFO 93367 --- [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:mysql://localhost:3306/oplanner'
+2023-08-12T20:37:49.850+03:00  INFO 93367 --- [restartedMain] o.f.c.i.database.base.BaseDatabaseType   : Database: jdbc:mysql://localhost:3306/oplanner (MySQL 8.0)
+2023-08-12T20:37:49.857+03:00  INFO 93367 --- [restartedMain] o.f.core.internal.command.DbValidate     : Successfully validated 0 migrations (execution time 00:00.002s)
+2023-08-12T20:37:49.857+03:00  WARN 93367 --- [restartedMain] o.f.core.internal.command.DbValidate     : No migrations found. Are your locations set up correctly?
+2023-08-12T20:37:49.863+03:00  INFO 93367 --- [restartedMain] o.f.core.internal.command.DbMigrate      : Current version of schema `oplanner`: << Empty Schema >>
+2023-08-12T20:37:49.863+03:00  INFO 93367 --- [restartedMain] o.f.core.internal.command.DbMigrate      : Schema `oplanner` is up to date. No migration necessary.
+2023-08-12T20:37:49.888+03:00  INFO 93367 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2023-08-12T20:37:49.929+03:00  INFO 93367 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2023-08-12T20:37:49.930+03:00  INFO 93367 --- [restartedMain] oplanner.Oplanner.OplannerApplication    : Started OplannerApplication in 0.181 seconds (process running for 6139.215)
+2023-08-12T20:37:49.930+03:00  INFO 93367 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2023-08-12T20:37:54.382+03:00  INFO 93367 --- [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2023-08-12T20:37:54.392+03:00  INFO 93367 --- [Thread-35] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2023-08-12T20:37:54.448+03:00  INFO 93367 --- [restartedMain] oplanner.Oplanner.OplannerApplication    : Starting OplannerApplication using Java 17.0.7 with PID 93367 (/Users/shovalabudaram/projects/OplannerClient/backend/target/classes started by shovalabudaram in /Users/shovalabudaram/projects/OplannerClient)
+2023-08-12T20:37:54.448+03:00  INFO 93367 --- [restartedMain] oplanner.Oplanner.OplannerApplication    : No active profile set, falling back to 1 default profile: "default"
+2023-08-12T20:37:54.494+03:00  INFO 93367 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
+2023-08-12T20:37:54.498+03:00  INFO 93367 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 3 ms. Found 6 JDBC repository interfaces.
+2023-08-12T20:37:54.529+03:00  INFO 93367 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2023-08-12T20:37:54.529+03:00  INFO 93367 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-08-12T20:37:54.529+03:00  INFO 93367 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.11]
+2023-08-12T20:37:54.534+03:00  INFO 93367 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-08-12T20:37:54.534+03:00  INFO 93367 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 85 ms
+2023-08-12T20:37:54.541+03:00  INFO 93367 --- [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:mysql://localhost:3306/oplanner'
+2023-08-12T20:37:54.555+03:00  INFO 93367 --- [restartedMain] o.f.c.i.database.base.BaseDatabaseType   : Database: jdbc:mysql://localhost:3306/oplanner (MySQL 8.0)
+2023-08-12T20:37:54.585+03:00  INFO 93367 --- [restartedMain] o.f.core.internal.command.DbValidate     : Successfully validated 0 migrations (execution time 00:00.003s)
+2023-08-12T20:37:54.585+03:00  WARN 93367 --- [restartedMain] o.f.core.internal.command.DbValidate     : No migrations found. Are your locations set up correctly?
+2023-08-12T20:37:54.589+03:00  INFO 93367 --- [restartedMain] o.f.core.internal.command.DbMigrate      : Current version of schema `oplanner`: << Empty Schema >>
+2023-08-12T20:37:54.590+03:00  INFO 93367 --- [restartedMain] o.f.core.internal.command.DbMigrate      : Schema `oplanner` is up to date. No migration necessary.
+2023-08-12T20:37:54.622+03:00  INFO 93367 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2023-08-12T20:37:54.710+03:00  INFO 93367 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2023-08-12T20:37:54.712+03:00  INFO 93367 --- [restartedMain] oplanner.Oplanner.OplannerApplication    : Started OplannerApplication in 0.272 seconds (process running for 6143.997)
+2023-08-12T20:37:54.712+03:00  INFO 93367 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2023-08-12T20:37:58.125+03:00  INFO 93367 --- [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2023-08-12T20:37:58.140+03:00  INFO 93367 --- [Thread-39] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2023-08-12T20:37:58.192+03:00  INFO 93367 --- [restartedMain] oplanner.Oplanner.OplannerApplication    : Starting OplannerApplication using Java 17.0.7 with PID 93367 (/Users/shovalabudaram/projects/OplannerClient/backend/target/classes started by shovalabudaram in /Users/shovalabudaram/projects/OplannerClient)
+2023-08-12T20:37:58.192+03:00  INFO 93367 --- [restartedMain] oplanner.Oplanner.OplannerApplication    : No active profile set, falling back to 1 default profile: "default"
+2023-08-12T20:37:58.231+03:00  INFO 93367 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
+2023-08-12T20:37:58.235+03:00  INFO 93367 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 4 ms. Found 6 JDBC repository interfaces.
+2023-08-12T20:37:58.256+03:00  INFO 93367 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2023-08-12T20:37:58.257+03:00  INFO 93367 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-08-12T20:37:58.257+03:00  INFO 93367 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.11]
+2023-08-12T20:37:58.261+03:00  INFO 93367 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-08-12T20:37:58.261+03:00  INFO 93367 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 68 ms
+2023-08-12T20:37:58.270+03:00  INFO 93367 --- [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:mysql://localhost:3306/oplanner'
+2023-08-12T20:37:58.283+03:00  INFO 93367 --- [restartedMain] o.f.c.i.database.base.BaseDatabaseType   : Database: jdbc:mysql://localhost:3306/oplanner (MySQL 8.0)
+2023-08-12T20:37:58.291+03:00  INFO 93367 --- [restartedMain] o.f.core.internal.command.DbValidate     : Successfully validated 0 migrations (execution time 00:00.002s)
+2023-08-12T20:37:58.291+03:00  WARN 93367 --- [restartedMain] o.f.core.internal.command.DbValidate     : No migrations found. Are your locations set up correctly?
+2023-08-12T20:37:58.297+03:00  INFO 93367 --- [restartedMain] o.f.core.internal.command.DbMigrate      : Current version of schema `oplanner`: << Empty Schema >>
+2023-08-12T20:37:58.297+03:00  INFO 93367 --- [restartedMain] o.f.core.internal.command.DbMigrate      : Schema `oplanner` is up to date. No migration necessary.
+2023-08-12T20:37:58.319+03:00  INFO 93367 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2023-08-12T20:37:58.355+03:00  INFO 93367 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2023-08-12T20:37:58.356+03:00  INFO 93367 --- [restartedMain] oplanner.Oplanner.OplannerApplication    : Started OplannerApplication in 0.171 seconds (process running for 6147.642)
+2023-08-12T20:37:58.357+03:00  INFO 93367 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2023-08-12T20:38:55.385+03:00  INFO 93367 --- [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2023-08-12T20:38:55.399+03:00  INFO 93367 --- [Thread-43] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2023-08-12T20:38:55.459+03:00  INFO 93367 --- [restartedMain] oplanner.Oplanner.OplannerApplication    : Starting OplannerApplication using Java 17.0.7 with PID 93367 (/Users/shovalabudaram/projects/OplannerClient/backend/target/classes started by shovalabudaram in /Users/shovalabudaram/projects/OplannerClient)
+2023-08-12T20:38:55.459+03:00  INFO 93367 --- [restartedMain] oplanner.Oplanner.OplannerApplication    : No active profile set, falling back to 1 default profile: "default"
+2023-08-12T20:38:55.522+03:00  INFO 93367 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
+2023-08-12T20:38:55.528+03:00  INFO 93367 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 5 ms. Found 6 JDBC repository interfaces.
+2023-08-12T20:38:55.559+03:00  INFO 93367 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2023-08-12T20:38:55.559+03:00  INFO 93367 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-08-12T20:38:55.559+03:00  INFO 93367 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.11]
+2023-08-12T20:38:55.563+03:00  INFO 93367 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-08-12T20:38:55.563+03:00  INFO 93367 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 103 ms
+2023-08-12T20:38:55.576+03:00  INFO 93367 --- [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:mysql://localhost:3306/oplanner'
+2023-08-12T20:38:55.594+03:00  INFO 93367 --- [restartedMain] o.f.c.i.database.base.BaseDatabaseType   : Database: jdbc:mysql://localhost:3306/oplanner (MySQL 8.0)
+2023-08-12T20:38:55.666+03:00  INFO 93367 --- [restartedMain] o.f.core.internal.command.DbValidate     : Successfully validated 0 migrations (execution time 00:00.003s)
+2023-08-12T20:38:55.667+03:00  WARN 93367 --- [restartedMain] o.f.core.internal.command.DbValidate     : No migrations found. Are your locations set up correctly?
+2023-08-12T20:38:55.671+03:00  INFO 93367 --- [restartedMain] o.f.core.internal.command.DbMigrate      : Current version of schema `oplanner`: << Empty Schema >>
+2023-08-12T20:38:55.672+03:00  INFO 93367 --- [restartedMain] o.f.core.internal.command.DbMigrate      : Schema `oplanner` is up to date. No migration necessary.
+2023-08-12T20:38:55.710+03:00  INFO 93367 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2023-08-12T20:38:55.772+03:00  INFO 93367 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2023-08-12T20:38:55.773+03:00  INFO 93367 --- [restartedMain] oplanner.Oplanner.OplannerApplication    : Started OplannerApplication in 0.322 seconds (process running for 6205.061)
+2023-08-12T20:38:55.774+03:00  INFO 93367 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2023-08-12T20:38:59.208+03:00  INFO 93367 --- [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2023-08-12T20:38:59.215+03:00  INFO 93367 --- [Thread-47] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2023-08-12T20:38:59.260+03:00  INFO 93367 --- [restartedMain] oplanner.Oplanner.OplannerApplication    : Starting OplannerApplication using Java 17.0.7 with PID 93367 (/Users/shovalabudaram/projects/OplannerClient/backend/target/classes started by shovalabudaram in /Users/shovalabudaram/projects/OplannerClient)
+2023-08-12T20:38:59.260+03:00  INFO 93367 --- [restartedMain] oplanner.Oplanner.OplannerApplication    : No active profile set, falling back to 1 default profile: "default"
+2023-08-12T20:38:59.294+03:00  INFO 93367 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
+2023-08-12T20:38:59.298+03:00  INFO 93367 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 3 ms. Found 6 JDBC repository interfaces.
+2023-08-12T20:38:59.318+03:00  INFO 93367 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2023-08-12T20:38:59.318+03:00  INFO 93367 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-08-12T20:38:59.318+03:00  INFO 93367 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.11]
+2023-08-12T20:38:59.322+03:00  INFO 93367 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-08-12T20:38:59.322+03:00  INFO 93367 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 61 ms
+2023-08-12T20:38:59.334+03:00  INFO 93367 --- [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:mysql://localhost:3306/oplanner'
+2023-08-12T20:38:59.350+03:00  INFO 93367 --- [restartedMain] o.f.c.i.database.base.BaseDatabaseType   : Database: jdbc:mysql://localhost:3306/oplanner (MySQL 8.0)
+2023-08-12T20:38:59.363+03:00  INFO 93367 --- [restartedMain] o.f.core.internal.command.DbValidate     : Successfully validated 0 migrations (execution time 00:00.002s)
+2023-08-12T20:38:59.363+03:00  WARN 93367 --- [restartedMain] o.f.core.internal.command.DbValidate     : No migrations found. Are your locations set up correctly?
+2023-08-12T20:38:59.368+03:00  INFO 93367 --- [restartedMain] o.f.core.internal.command.DbMigrate      : Current version of schema `oplanner`: << Empty Schema >>
+2023-08-12T20:38:59.369+03:00  INFO 93367 --- [restartedMain] o.f.core.internal.command.DbMigrate      : Schema `oplanner` is up to date. No migration necessary.
+2023-08-12T20:38:59.406+03:00  INFO 93367 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2023-08-12T20:38:59.447+03:00  INFO 93367 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2023-08-12T20:38:59.448+03:00  INFO 93367 --- [restartedMain] oplanner.Oplanner.OplannerApplication    : Started OplannerApplication in 0.195 seconds (process running for 6208.735)
+2023-08-12T20:38:59.448+03:00  INFO 93367 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2023-08-12T20:39:02.887+03:00  INFO 93367 --- [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2023-08-12T20:39:02.894+03:00  INFO 93367 --- [Thread-51] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2023-08-12T20:39:02.940+03:00  INFO 93367 --- [restartedMain] oplanner.Oplanner.OplannerApplication    : Starting OplannerApplication using Java 17.0.7 with PID 93367 (/Users/shovalabudaram/projects/OplannerClient/backend/target/classes started by shovalabudaram in /Users/shovalabudaram/projects/OplannerClient)
+2023-08-12T20:39:02.940+03:00  INFO 93367 --- [restartedMain] oplanner.Oplanner.OplannerApplication    : No active profile set, falling back to 1 default profile: "default"
+2023-08-12T20:39:02.978+03:00  INFO 93367 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
+2023-08-12T20:39:02.982+03:00  INFO 93367 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 3 ms. Found 6 JDBC repository interfaces.
+2023-08-12T20:39:03.006+03:00  INFO 93367 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2023-08-12T20:39:03.006+03:00  INFO 93367 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-08-12T20:39:03.006+03:00  INFO 93367 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.11]
+2023-08-12T20:39:03.010+03:00  INFO 93367 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-08-12T20:39:03.010+03:00  INFO 93367 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 69 ms
+2023-08-12T20:39:03.017+03:00  INFO 93367 --- [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:mysql://localhost:3306/oplanner'
+2023-08-12T20:39:03.031+03:00  INFO 93367 --- [restartedMain] o.f.c.i.database.base.BaseDatabaseType   : Database: jdbc:mysql://localhost:3306/oplanner (MySQL 8.0)
+2023-08-12T20:39:03.037+03:00  INFO 93367 --- [restartedMain] o.f.core.internal.command.DbValidate     : Successfully validated 0 migrations (execution time 00:00.002s)
+2023-08-12T20:39:03.037+03:00  WARN 93367 --- [restartedMain] o.f.core.internal.command.DbValidate     : No migrations found. Are your locations set up correctly?
+2023-08-12T20:39:03.043+03:00  INFO 93367 --- [restartedMain] o.f.core.internal.command.DbMigrate      : Current version of schema `oplanner`: << Empty Schema >>
+2023-08-12T20:39:03.043+03:00  INFO 93367 --- [restartedMain] o.f.core.internal.command.DbMigrate      : Schema `oplanner` is up to date. No migration necessary.
+2023-08-12T20:39:03.068+03:00  INFO 93367 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2023-08-12T20:39:03.102+03:00  INFO 93367 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2023-08-12T20:39:03.103+03:00  INFO 93367 --- [restartedMain] oplanner.Oplanner.OplannerApplication    : Started OplannerApplication in 0.169 seconds (process running for 6212.391)
+2023-08-12T20:39:03.104+03:00  INFO 93367 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2023-08-12T20:39:05.530+03:00  INFO 93367 --- [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2023-08-12T20:39:05.536+03:00  INFO 93367 --- [Thread-55] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2023-08-12T20:39:05.578+03:00  INFO 93367 --- [restartedMain] oplanner.Oplanner.OplannerApplication    : Starting OplannerApplication using Java 17.0.7 with PID 93367 (/Users/shovalabudaram/projects/OplannerClient/backend/target/classes started by shovalabudaram in /Users/shovalabudaram/projects/OplannerClient)
+2023-08-12T20:39:05.579+03:00  INFO 93367 --- [restartedMain] oplanner.Oplanner.OplannerApplication    : No active profile set, falling back to 1 default profile: "default"
+2023-08-12T20:39:05.610+03:00  INFO 93367 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
+2023-08-12T20:39:05.614+03:00  INFO 93367 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 3 ms. Found 6 JDBC repository interfaces.
+2023-08-12T20:39:05.633+03:00  INFO 93367 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2023-08-12T20:39:05.633+03:00  INFO 93367 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-08-12T20:39:05.633+03:00  INFO 93367 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.11]
+2023-08-12T20:39:05.637+03:00  INFO 93367 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-08-12T20:39:05.637+03:00  INFO 93367 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 58 ms
+2023-08-12T20:39:05.646+03:00  INFO 93367 --- [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:mysql://localhost:3306/oplanner'
+2023-08-12T20:39:05.661+03:00  INFO 93367 --- [restartedMain] o.f.c.i.database.base.BaseDatabaseType   : Database: jdbc:mysql://localhost:3306/oplanner (MySQL 8.0)
+2023-08-12T20:39:05.667+03:00  INFO 93367 --- [restartedMain] o.f.core.internal.command.DbValidate     : Successfully validated 0 migrations (execution time 00:00.002s)
+2023-08-12T20:39:05.667+03:00  WARN 93367 --- [restartedMain] o.f.core.internal.command.DbValidate     : No migrations found. Are your locations set up correctly?
+2023-08-12T20:39:05.672+03:00  INFO 93367 --- [restartedMain] o.f.core.internal.command.DbMigrate      : Current version of schema `oplanner`: << Empty Schema >>
+2023-08-12T20:39:05.672+03:00  INFO 93367 --- [restartedMain] o.f.core.internal.command.DbMigrate      : Schema `oplanner` is up to date. No migration necessary.
+2023-08-12T20:39:05.697+03:00  INFO 93367 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2023-08-12T20:39:05.738+03:00  INFO 93367 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2023-08-12T20:39:05.739+03:00  INFO 93367 --- [restartedMain] oplanner.Oplanner.OplannerApplication    : Started OplannerApplication in 0.167 seconds (process running for 6215.026)
+2023-08-12T20:39:05.739+03:00  INFO 93367 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2023-08-12T20:39:08.165+03:00  INFO 93367 --- [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2023-08-12T20:39:08.171+03:00  INFO 93367 --- [Thread-59] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2023-08-12T20:39:08.215+03:00  INFO 93367 --- [restartedMain] oplanner.Oplanner.OplannerApplication    : Starting OplannerApplication using Java 17.0.7 with PID 93367 (/Users/shovalabudaram/projects/OplannerClient/backend/target/classes started by shovalabudaram in /Users/shovalabudaram/projects/OplannerClient)
+2023-08-12T20:39:08.215+03:00  INFO 93367 --- [restartedMain] oplanner.Oplanner.OplannerApplication    : No active profile set, falling back to 1 default profile: "default"
+2023-08-12T20:39:08.246+03:00  INFO 93367 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
+2023-08-12T20:39:08.250+03:00  INFO 93367 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 3 ms. Found 6 JDBC repository interfaces.
+2023-08-12T20:39:08.269+03:00  INFO 93367 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2023-08-12T20:39:08.269+03:00  INFO 93367 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-08-12T20:39:08.269+03:00  INFO 93367 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.11]
+2023-08-12T20:39:08.273+03:00  INFO 93367 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-08-12T20:39:08.273+03:00  INFO 93367 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 57 ms
+2023-08-12T20:39:08.281+03:00  INFO 93367 --- [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:mysql://localhost:3306/oplanner'
+2023-08-12T20:39:08.294+03:00  INFO 93367 --- [restartedMain] o.f.c.i.database.base.BaseDatabaseType   : Database: jdbc:mysql://localhost:3306/oplanner (MySQL 8.0)
+2023-08-12T20:39:08.300+03:00  INFO 93367 --- [restartedMain] o.f.core.internal.command.DbValidate     : Successfully validated 0 migrations (execution time 00:00.001s)
+2023-08-12T20:39:08.300+03:00  WARN 93367 --- [restartedMain] o.f.core.internal.command.DbValidate     : No migrations found. Are your locations set up correctly?
+2023-08-12T20:39:08.305+03:00  INFO 93367 --- [restartedMain] o.f.core.internal.command.DbMigrate      : Current version of schema `oplanner`: << Empty Schema >>
+2023-08-12T20:39:08.305+03:00  INFO 93367 --- [restartedMain] o.f.core.internal.command.DbMigrate      : Schema `oplanner` is up to date. No migration necessary.
+2023-08-12T20:39:08.328+03:00  INFO 93367 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2023-08-12T20:39:08.365+03:00  INFO 93367 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2023-08-12T20:39:08.366+03:00  INFO 93367 --- [restartedMain] oplanner.Oplanner.OplannerApplication    : Started OplannerApplication in 0.158 seconds (process running for 6217.654)
+2023-08-12T20:39:08.367+03:00  INFO 93367 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2023-08-12T20:39:09.780+03:00  INFO 93367 --- [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2023-08-12T20:39:09.785+03:00  INFO 93367 --- [Thread-63] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2023-08-12T20:39:09.826+03:00  INFO 93367 --- [restartedMain] oplanner.Oplanner.OplannerApplication    : Starting OplannerApplication using Java 17.0.7 with PID 93367 (/Users/shovalabudaram/projects/OplannerClient/backend/target/classes started by shovalabudaram in /Users/shovalabudaram/projects/OplannerClient)
+2023-08-12T20:39:09.827+03:00  INFO 93367 --- [restartedMain] oplanner.Oplanner.OplannerApplication    : No active profile set, falling back to 1 default profile: "default"
+2023-08-12T20:39:09.865+03:00  INFO 93367 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
+2023-08-12T20:39:09.868+03:00  INFO 93367 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 3 ms. Found 6 JDBC repository interfaces.
+2023-08-12T20:39:09.891+03:00  INFO 93367 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2023-08-12T20:39:09.892+03:00  INFO 93367 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-08-12T20:39:09.892+03:00  INFO 93367 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.11]
+2023-08-12T20:39:09.895+03:00  INFO 93367 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-08-12T20:39:09.896+03:00  INFO 93367 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 69 ms
+2023-08-12T20:39:09.903+03:00  INFO 93367 --- [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:mysql://localhost:3306/oplanner'
+2023-08-12T20:39:09.916+03:00  INFO 93367 --- [restartedMain] o.f.c.i.database.base.BaseDatabaseType   : Database: jdbc:mysql://localhost:3306/oplanner (MySQL 8.0)
+2023-08-12T20:39:09.922+03:00  INFO 93367 --- [restartedMain] o.f.core.internal.command.DbValidate     : Successfully validated 0 migrations (execution time 00:00.002s)
+2023-08-12T20:39:09.923+03:00  WARN 93367 --- [restartedMain] o.f.core.internal.command.DbValidate     : No migrations found. Are your locations set up correctly?
+2023-08-12T20:39:09.928+03:00  INFO 93367 --- [restartedMain] o.f.core.internal.command.DbMigrate      : Current version of schema `oplanner`: << Empty Schema >>
+2023-08-12T20:39:09.928+03:00  INFO 93367 --- [restartedMain] o.f.core.internal.command.DbMigrate      : Schema `oplanner` is up to date. No migration necessary.
+2023-08-12T20:39:09.950+03:00  INFO 93367 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2023-08-12T20:39:09.986+03:00  INFO 93367 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2023-08-12T20:39:09.987+03:00  INFO 93367 --- [restartedMain] oplanner.Oplanner.OplannerApplication    : Started OplannerApplication in 0.167 seconds (process running for 6219.274)
+2023-08-12T20:39:09.987+03:00  INFO 93367 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2023-08-12T20:39:13.425+03:00  INFO 93367 --- [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2023-08-12T20:39:13.432+03:00  INFO 93367 --- [Thread-67] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2023-08-12T20:39:13.476+03:00  INFO 93367 --- [restartedMain] oplanner.Oplanner.OplannerApplication    : Starting OplannerApplication using Java 17.0.7 with PID 93367 (/Users/shovalabudaram/projects/OplannerClient/backend/target/classes started by shovalabudaram in /Users/shovalabudaram/projects/OplannerClient)
+2023-08-12T20:39:13.476+03:00  INFO 93367 --- [restartedMain] oplanner.Oplanner.OplannerApplication    : No active profile set, falling back to 1 default profile: "default"
+2023-08-12T20:39:13.523+03:00  INFO 93367 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
+2023-08-12T20:39:13.529+03:00  INFO 93367 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 6 ms. Found 6 JDBC repository interfaces.
+2023-08-12T20:39:13.562+03:00  INFO 93367 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2023-08-12T20:39:13.562+03:00  INFO 93367 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-08-12T20:39:13.562+03:00  INFO 93367 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.11]
+2023-08-12T20:39:13.566+03:00  INFO 93367 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-08-12T20:39:13.566+03:00  INFO 93367 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 89 ms
+2023-08-12T20:39:13.581+03:00  INFO 93367 --- [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:mysql://localhost:3306/oplanner'
+2023-08-12T20:39:13.601+03:00  INFO 93367 --- [restartedMain] o.f.c.i.database.base.BaseDatabaseType   : Database: jdbc:mysql://localhost:3306/oplanner (MySQL 8.0)
+2023-08-12T20:39:13.610+03:00  INFO 93367 --- [restartedMain] o.f.core.internal.command.DbValidate     : Successfully validated 0 migrations (execution time 00:00.004s)
+2023-08-12T20:39:13.610+03:00  WARN 93367 --- [restartedMain] o.f.core.internal.command.DbValidate     : No migrations found. Are your locations set up correctly?
+2023-08-12T20:39:13.615+03:00  INFO 93367 --- [restartedMain] o.f.core.internal.command.DbMigrate      : Current version of schema `oplanner`: << Empty Schema >>
+2023-08-12T20:39:13.615+03:00  INFO 93367 --- [restartedMain] o.f.core.internal.command.DbMigrate      : Schema `oplanner` is up to date. No migration necessary.
+2023-08-12T20:39:13.640+03:00  INFO 93367 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2023-08-12T20:39:13.694+03:00  INFO 93367 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2023-08-12T20:39:13.695+03:00  INFO 93367 --- [restartedMain] oplanner.Oplanner.OplannerApplication    : Started OplannerApplication in 0.227 seconds (process running for 6222.983)
+2023-08-12T20:39:13.696+03:00  INFO 93367 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2023-08-12T20:39:17.138+03:00  INFO 93367 --- [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2023-08-12T20:39:17.146+03:00  INFO 93367 --- [Thread-71] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2023-08-12T20:39:17.191+03:00  INFO 93367 --- [restartedMain] oplanner.Oplanner.OplannerApplication    : Starting OplannerApplication using Java 17.0.7 with PID 93367 (/Users/shovalabudaram/projects/OplannerClient/backend/target/classes started by shovalabudaram in /Users/shovalabudaram/projects/OplannerClient)
+2023-08-12T20:39:17.191+03:00  INFO 93367 --- [restartedMain] oplanner.Oplanner.OplannerApplication    : No active profile set, falling back to 1 default profile: "default"
+2023-08-12T20:39:17.224+03:00  INFO 93367 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
+2023-08-12T20:39:17.228+03:00  INFO 93367 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 3 ms. Found 6 JDBC repository interfaces.
+2023-08-12T20:39:17.245+03:00  INFO 93367 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2023-08-12T20:39:17.246+03:00  INFO 93367 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-08-12T20:39:17.246+03:00  INFO 93367 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.11]
+2023-08-12T20:39:17.249+03:00  INFO 93367 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-08-12T20:39:17.249+03:00  INFO 93367 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 57 ms
+2023-08-12T20:39:17.261+03:00  INFO 93367 --- [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:mysql://localhost:3306/oplanner'
+2023-08-12T20:39:17.274+03:00  INFO 93367 --- [restartedMain] o.f.c.i.database.base.BaseDatabaseType   : Database: jdbc:mysql://localhost:3306/oplanner (MySQL 8.0)
+2023-08-12T20:39:17.281+03:00  INFO 93367 --- [restartedMain] o.f.core.internal.command.DbValidate     : Successfully validated 0 migrations (execution time 00:00.002s)
+2023-08-12T20:39:17.281+03:00  WARN 93367 --- [restartedMain] o.f.core.internal.command.DbValidate     : No migrations found. Are your locations set up correctly?
+2023-08-12T20:39:17.286+03:00  INFO 93367 --- [restartedMain] o.f.core.internal.command.DbMigrate      : Current version of schema `oplanner`: << Empty Schema >>
+2023-08-12T20:39:17.286+03:00  INFO 93367 --- [restartedMain] o.f.core.internal.command.DbMigrate      : Schema `oplanner` is up to date. No migration necessary.
+2023-08-12T20:39:17.311+03:00  INFO 93367 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2023-08-12T20:39:17.368+03:00  INFO 93367 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2023-08-12T20:39:17.370+03:00  INFO 93367 --- [restartedMain] oplanner.Oplanner.OplannerApplication    : Started OplannerApplication in 0.184 seconds (process running for 6226.657)
+2023-08-12T20:39:17.370+03:00  INFO 93367 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2023-08-12T20:39:19.781+03:00  INFO 93367 --- [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2023-08-12T20:39:19.785+03:00  INFO 93367 --- [Thread-75] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2023-08-12T20:39:19.822+03:00  INFO 93367 --- [restartedMain] oplanner.Oplanner.OplannerApplication    : Starting OplannerApplication using Java 17.0.7 with PID 93367 (/Users/shovalabudaram/projects/OplannerClient/backend/target/classes started by shovalabudaram in /Users/shovalabudaram/projects/OplannerClient)
+2023-08-12T20:39:19.822+03:00  INFO 93367 --- [restartedMain] oplanner.Oplanner.OplannerApplication    : No active profile set, falling back to 1 default profile: "default"
+2023-08-12T20:39:19.859+03:00  INFO 93367 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
+2023-08-12T20:39:19.862+03:00  INFO 93367 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 3 ms. Found 6 JDBC repository interfaces.
+2023-08-12T20:39:19.885+03:00  INFO 93367 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2023-08-12T20:39:19.886+03:00  INFO 93367 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-08-12T20:39:19.886+03:00  INFO 93367 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.11]
+2023-08-12T20:39:19.889+03:00  INFO 93367 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-08-12T20:39:19.889+03:00  INFO 93367 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 66 ms
+2023-08-12T20:39:19.897+03:00  INFO 93367 --- [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:mysql://localhost:3306/oplanner'
+2023-08-12T20:39:19.912+03:00  INFO 93367 --- [restartedMain] o.f.c.i.database.base.BaseDatabaseType   : Database: jdbc:mysql://localhost:3306/oplanner (MySQL 8.0)
+2023-08-12T20:39:19.918+03:00  INFO 93367 --- [restartedMain] o.f.core.internal.command.DbValidate     : Successfully validated 0 migrations (execution time 00:00.001s)
+2023-08-12T20:39:19.918+03:00  WARN 93367 --- [restartedMain] o.f.core.internal.command.DbValidate     : No migrations found. Are your locations set up correctly?
+2023-08-12T20:39:19.922+03:00  INFO 93367 --- [restartedMain] o.f.core.internal.command.DbMigrate      : Current version of schema `oplanner`: << Empty Schema >>
+2023-08-12T20:39:19.922+03:00  INFO 93367 --- [restartedMain] o.f.core.internal.command.DbMigrate      : Schema `oplanner` is up to date. No migration necessary.
+2023-08-12T20:39:19.945+03:00  INFO 93367 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2023-08-12T20:39:19.978+03:00  INFO 93367 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2023-08-12T20:39:19.979+03:00  INFO 93367 --- [restartedMain] oplanner.Oplanner.OplannerApplication    : Started OplannerApplication in 0.161 seconds (process running for 6229.266)
+2023-08-12T20:39:19.979+03:00  INFO 93367 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2023-08-12T20:39:22.400+03:00  INFO 93367 --- [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2023-08-12T20:39:22.408+03:00  INFO 93367 --- [Thread-79] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2023-08-12T20:39:22.455+03:00  INFO 93367 --- [restartedMain] oplanner.Oplanner.OplannerApplication    : Starting OplannerApplication using Java 17.0.7 with PID 93367 (/Users/shovalabudaram/projects/OplannerClient/backend/target/classes started by shovalabudaram in /Users/shovalabudaram/projects/OplannerClient)
+2023-08-12T20:39:22.455+03:00  INFO 93367 --- [restartedMain] oplanner.Oplanner.OplannerApplication    : No active profile set, falling back to 1 default profile: "default"
+2023-08-12T20:39:22.487+03:00  INFO 93367 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
+2023-08-12T20:39:22.490+03:00  INFO 93367 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 3 ms. Found 6 JDBC repository interfaces.
+2023-08-12T20:39:22.510+03:00  INFO 93367 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2023-08-12T20:39:22.510+03:00  INFO 93367 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-08-12T20:39:22.510+03:00  INFO 93367 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.11]
+2023-08-12T20:39:22.514+03:00  INFO 93367 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-08-12T20:39:22.514+03:00  INFO 93367 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 58 ms
+2023-08-12T20:39:22.523+03:00  INFO 93367 --- [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:mysql://localhost:3306/oplanner'
+2023-08-12T20:39:22.537+03:00  INFO 93367 --- [restartedMain] o.f.c.i.database.base.BaseDatabaseType   : Database: jdbc:mysql://localhost:3306/oplanner (MySQL 8.0)
+2023-08-12T20:39:22.545+03:00  INFO 93367 --- [restartedMain] o.f.core.internal.command.DbValidate     : Successfully validated 0 migrations (execution time 00:00.002s)
+2023-08-12T20:39:22.545+03:00  WARN 93367 --- [restartedMain] o.f.core.internal.command.DbValidate     : No migrations found. Are your locations set up correctly?
+2023-08-12T20:39:22.549+03:00  INFO 93367 --- [restartedMain] o.f.core.internal.command.DbMigrate      : Current version of schema `oplanner`: << Empty Schema >>
+2023-08-12T20:39:22.549+03:00  INFO 93367 --- [restartedMain] o.f.core.internal.command.DbMigrate      : Schema `oplanner` is up to date. No migration necessary.
+2023-08-12T20:39:22.572+03:00  INFO 93367 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2023-08-12T20:39:22.606+03:00  INFO 93367 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2023-08-12T20:39:22.607+03:00  INFO 93367 --- [restartedMain] oplanner.Oplanner.OplannerApplication    : Started OplannerApplication in 0.157 seconds (process running for 6231.895)
+2023-08-12T20:39:22.608+03:00  INFO 93367 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2023-08-12T20:39:32.101+03:00  INFO 93367 --- [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2023-08-12T20:39:32.109+03:00  INFO 93367 --- [Thread-83] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2023-08-12T20:39:32.199+03:00  INFO 93367 --- [restartedMain] oplanner.Oplanner.OplannerApplication    : Starting OplannerApplication using Java 17.0.7 with PID 93367 (/Users/shovalabudaram/projects/OplannerClient/backend/target/classes started by shovalabudaram in /Users/shovalabudaram/projects/OplannerClient)
+2023-08-12T20:39:32.199+03:00  INFO 93367 --- [restartedMain] oplanner.Oplanner.OplannerApplication    : No active profile set, falling back to 1 default profile: "default"
+2023-08-12T20:39:32.262+03:00  INFO 93367 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
+2023-08-12T20:39:32.267+03:00  INFO 93367 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 5 ms. Found 6 JDBC repository interfaces.
+2023-08-12T20:39:32.294+03:00  INFO 93367 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2023-08-12T20:39:32.295+03:00  INFO 93367 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-08-12T20:39:32.295+03:00  INFO 93367 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.11]
+2023-08-12T20:39:32.299+03:00  INFO 93367 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-08-12T20:39:32.299+03:00  INFO 93367 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 99 ms
+2023-08-12T20:39:32.311+03:00  INFO 93367 --- [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:mysql://localhost:3306/oplanner'
+2023-08-12T20:39:32.342+03:00  INFO 93367 --- [restartedMain] o.f.c.i.database.base.BaseDatabaseType   : Database: jdbc:mysql://localhost:3306/oplanner (MySQL 8.0)
+2023-08-12T20:39:32.373+03:00  INFO 93367 --- [restartedMain] o.f.core.internal.command.DbValidate     : Successfully validated 0 migrations (execution time 00:00.005s)
+2023-08-12T20:39:32.373+03:00  WARN 93367 --- [restartedMain] o.f.core.internal.command.DbValidate     : No migrations found. Are your locations set up correctly?
+2023-08-12T20:39:32.382+03:00  INFO 93367 --- [restartedMain] o.f.core.internal.command.DbMigrate      : Current version of schema `oplanner`: << Empty Schema >>
+2023-08-12T20:39:32.382+03:00  INFO 93367 --- [restartedMain] o.f.core.internal.command.DbMigrate      : Schema `oplanner` is up to date. No migration necessary.
+2023-08-12T20:39:32.426+03:00  INFO 93367 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2023-08-12T20:39:32.480+03:00  INFO 93367 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2023-08-12T20:39:32.482+03:00  INFO 93367 --- [restartedMain] oplanner.Oplanner.OplannerApplication    : Started OplannerApplication in 0.292 seconds (process running for 6241.769)
+2023-08-12T20:39:32.482+03:00  INFO 93367 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2023-08-12T20:39:33.895+03:00  INFO 93367 --- [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2023-08-12T20:39:33.900+03:00  INFO 93367 --- [Thread-87] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2023-08-12T20:39:33.937+03:00  INFO 93367 --- [restartedMain] oplanner.Oplanner.OplannerApplication    : Starting OplannerApplication using Java 17.0.7 with PID 93367 (/Users/shovalabudaram/projects/OplannerClient/backend/target/classes started by shovalabudaram in /Users/shovalabudaram/projects/OplannerClient)
+2023-08-12T20:39:33.937+03:00  INFO 93367 --- [restartedMain] oplanner.Oplanner.OplannerApplication    : No active profile set, falling back to 1 default profile: "default"
+2023-08-12T20:39:33.967+03:00  INFO 93367 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
+2023-08-12T20:39:33.971+03:00  INFO 93367 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 3 ms. Found 6 JDBC repository interfaces.
+2023-08-12T20:39:33.989+03:00  INFO 93367 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2023-08-12T20:39:33.989+03:00  INFO 93367 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-08-12T20:39:33.989+03:00  INFO 93367 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.11]
+2023-08-12T20:39:33.992+03:00  INFO 93367 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-08-12T20:39:33.992+03:00  INFO 93367 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 54 ms
+2023-08-12T20:39:34.001+03:00  INFO 93367 --- [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:mysql://localhost:3306/oplanner'
+2023-08-12T20:39:34.015+03:00  INFO 93367 --- [restartedMain] o.f.c.i.database.base.BaseDatabaseType   : Database: jdbc:mysql://localhost:3306/oplanner (MySQL 8.0)
+2023-08-12T20:39:34.021+03:00  INFO 93367 --- [restartedMain] o.f.core.internal.command.DbValidate     : Successfully validated 0 migrations (execution time 00:00.002s)
+2023-08-12T20:39:34.021+03:00  WARN 93367 --- [restartedMain] o.f.core.internal.command.DbValidate     : No migrations found. Are your locations set up correctly?
+2023-08-12T20:39:34.026+03:00  INFO 93367 --- [restartedMain] o.f.core.internal.command.DbMigrate      : Current version of schema `oplanner`: << Empty Schema >>
+2023-08-12T20:39:34.027+03:00  INFO 93367 --- [restartedMain] o.f.core.internal.command.DbMigrate      : Schema `oplanner` is up to date. No migration necessary.
+2023-08-12T20:39:34.050+03:00  INFO 93367 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2023-08-12T20:39:34.089+03:00  INFO 93367 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2023-08-12T20:39:34.091+03:00  INFO 93367 --- [restartedMain] oplanner.Oplanner.OplannerApplication    : Started OplannerApplication in 0.158 seconds (process running for 6243.378)
+2023-08-12T20:39:34.091+03:00  INFO 93367 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2023-08-12T20:39:37.525+03:00  INFO 93367 --- [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2023-08-12T20:39:37.532+03:00  INFO 93367 --- [Thread-91] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2023-08-12T20:39:37.581+03:00  INFO 93367 --- [restartedMain] oplanner.Oplanner.OplannerApplication    : Starting OplannerApplication using Java 17.0.7 with PID 93367 (/Users/shovalabudaram/projects/OplannerClient/backend/target/classes started by shovalabudaram in /Users/shovalabudaram/projects/OplannerClient)
+2023-08-12T20:39:37.581+03:00  INFO 93367 --- [restartedMain] oplanner.Oplanner.OplannerApplication    : No active profile set, falling back to 1 default profile: "default"
+2023-08-12T20:39:37.616+03:00  INFO 93367 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
+2023-08-12T20:39:37.619+03:00  INFO 93367 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 3 ms. Found 6 JDBC repository interfaces.
+2023-08-12T20:39:37.638+03:00  INFO 93367 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2023-08-12T20:39:37.639+03:00  INFO 93367 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-08-12T20:39:37.639+03:00  INFO 93367 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.11]
+2023-08-12T20:39:37.642+03:00  INFO 93367 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-08-12T20:39:37.643+03:00  INFO 93367 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 62 ms
+2023-08-12T20:39:37.651+03:00  INFO 93367 --- [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:mysql://localhost:3306/oplanner'
+2023-08-12T20:39:37.664+03:00  INFO 93367 --- [restartedMain] o.f.c.i.database.base.BaseDatabaseType   : Database: jdbc:mysql://localhost:3306/oplanner (MySQL 8.0)
+2023-08-12T20:39:37.671+03:00  INFO 93367 --- [restartedMain] o.f.core.internal.command.DbValidate     : Successfully validated 0 migrations (execution time 00:00.001s)
+2023-08-12T20:39:37.672+03:00  WARN 93367 --- [restartedMain] o.f.core.internal.command.DbValidate     : No migrations found. Are your locations set up correctly?
+2023-08-12T20:39:37.677+03:00  INFO 93367 --- [restartedMain] o.f.core.internal.command.DbMigrate      : Current version of schema `oplanner`: << Empty Schema >>
+2023-08-12T20:39:37.678+03:00  INFO 93367 --- [restartedMain] o.f.core.internal.command.DbMigrate      : Schema `oplanner` is up to date. No migration necessary.
+2023-08-12T20:39:37.702+03:00  INFO 93367 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2023-08-12T20:39:37.753+03:00  INFO 93367 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2023-08-12T20:39:37.754+03:00  INFO 93367 --- [restartedMain] oplanner.Oplanner.OplannerApplication    : Started OplannerApplication in 0.179 seconds (process running for 6247.042)
+2023-08-12T20:39:37.755+03:00  INFO 93367 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2023-08-12T20:39:39.171+03:00  INFO 93367 --- [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2023-08-12T20:39:39.176+03:00  INFO 93367 --- [Thread-95] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2023-08-12T20:39:39.219+03:00  INFO 93367 --- [restartedMain] oplanner.Oplanner.OplannerApplication    : Starting OplannerApplication using Java 17.0.7 with PID 93367 (/Users/shovalabudaram/projects/OplannerClient/backend/target/classes started by shovalabudaram in /Users/shovalabudaram/projects/OplannerClient)
+2023-08-12T20:39:39.219+03:00  INFO 93367 --- [restartedMain] oplanner.Oplanner.OplannerApplication    : No active profile set, falling back to 1 default profile: "default"
+2023-08-12T20:39:39.255+03:00  INFO 93367 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
+2023-08-12T20:39:39.258+03:00  INFO 93367 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 3 ms. Found 6 JDBC repository interfaces.
+2023-08-12T20:39:39.279+03:00  INFO 93367 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2023-08-12T20:39:39.279+03:00  INFO 93367 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-08-12T20:39:39.279+03:00  INFO 93367 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.11]
+2023-08-12T20:39:39.283+03:00  INFO 93367 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-08-12T20:39:39.283+03:00  INFO 93367 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 63 ms
+2023-08-12T20:39:39.291+03:00  INFO 93367 --- [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:mysql://localhost:3306/oplanner'
+2023-08-12T20:39:39.304+03:00  INFO 93367 --- [restartedMain] o.f.c.i.database.base.BaseDatabaseType   : Database: jdbc:mysql://localhost:3306/oplanner (MySQL 8.0)
+2023-08-12T20:39:39.310+03:00  INFO 93367 --- [restartedMain] o.f.core.internal.command.DbValidate     : Successfully validated 0 migrations (execution time 00:00.001s)
+2023-08-12T20:39:39.310+03:00  WARN 93367 --- [restartedMain] o.f.core.internal.command.DbValidate     : No migrations found. Are your locations set up correctly?
+2023-08-12T20:39:39.315+03:00  INFO 93367 --- [restartedMain] o.f.core.internal.command.DbMigrate      : Current version of schema `oplanner`: << Empty Schema >>
+2023-08-12T20:39:39.315+03:00  INFO 93367 --- [restartedMain] o.f.core.internal.command.DbMigrate      : Schema `oplanner` is up to date. No migration necessary.
+2023-08-12T20:39:39.338+03:00  INFO 93367 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2023-08-12T20:39:39.380+03:00  INFO 93367 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2023-08-12T20:39:39.381+03:00  INFO 93367 --- [restartedMain] oplanner.Oplanner.OplannerApplication    : Started OplannerApplication in 0.167 seconds (process running for 6248.669)
+2023-08-12T20:39:39.381+03:00  INFO 93367 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2023-08-12T20:39:40.795+03:00  INFO 93367 --- [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2023-08-12T20:39:40.804+03:00  INFO 93367 --- [Thread-99] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2023-08-12T20:39:40.855+03:00  INFO 93367 --- [restartedMain] oplanner.Oplanner.OplannerApplication    : Starting OplannerApplication using Java 17.0.7 with PID 93367 (/Users/shovalabudaram/projects/OplannerClient/backend/target/classes started by shovalabudaram in /Users/shovalabudaram/projects/OplannerClient)
+2023-08-12T20:39:40.855+03:00  INFO 93367 --- [restartedMain] oplanner.Oplanner.OplannerApplication    : No active profile set, falling back to 1 default profile: "default"
+2023-08-12T20:39:40.884+03:00  INFO 93367 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
+2023-08-12T20:39:40.887+03:00  INFO 93367 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 3 ms. Found 6 JDBC repository interfaces.
+2023-08-12T20:39:40.904+03:00  INFO 93367 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2023-08-12T20:39:40.904+03:00  INFO 93367 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-08-12T20:39:40.904+03:00  INFO 93367 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.11]
+2023-08-12T20:39:40.908+03:00  INFO 93367 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-08-12T20:39:40.908+03:00  INFO 93367 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 52 ms
+2023-08-12T20:39:40.916+03:00  INFO 93367 --- [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:mysql://localhost:3306/oplanner'
+2023-08-12T20:39:40.931+03:00  INFO 93367 --- [restartedMain] o.f.c.i.database.base.BaseDatabaseType   : Database: jdbc:mysql://localhost:3306/oplanner (MySQL 8.0)
+2023-08-12T20:39:40.954+03:00  INFO 93367 --- [restartedMain] o.f.core.internal.command.DbValidate     : Successfully validated 0 migrations (execution time 00:00.001s)
+2023-08-12T20:39:40.954+03:00  WARN 93367 --- [restartedMain] o.f.core.internal.command.DbValidate     : No migrations found. Are your locations set up correctly?
+2023-08-12T20:39:40.959+03:00  INFO 93367 --- [restartedMain] o.f.core.internal.command.DbMigrate      : Current version of schema `oplanner`: << Empty Schema >>
+2023-08-12T20:39:40.959+03:00  INFO 93367 --- [restartedMain] o.f.core.internal.command.DbMigrate      : Schema `oplanner` is up to date. No migration necessary.
+2023-08-12T20:39:40.982+03:00  INFO 93367 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2023-08-12T20:39:41.014+03:00  INFO 93367 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2023-08-12T20:39:41.015+03:00  INFO 93367 --- [restartedMain] oplanner.Oplanner.OplannerApplication    : Started OplannerApplication in 0.167 seconds (process running for 6250.303)
+2023-08-12T20:39:41.016+03:00  INFO 93367 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2023-08-12T20:39:43.442+03:00  INFO 93367 --- [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2023-08-12T20:39:43.453+03:00  INFO 93367 --- [Thread-103] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2023-08-12T20:39:43.512+03:00  INFO 93367 --- [restartedMain] oplanner.Oplanner.OplannerApplication    : Starting OplannerApplication using Java 17.0.7 with PID 93367 (/Users/shovalabudaram/projects/OplannerClient/backend/target/classes started by shovalabudaram in /Users/shovalabudaram/projects/OplannerClient)
+2023-08-12T20:39:43.512+03:00  INFO 93367 --- [restartedMain] oplanner.Oplanner.OplannerApplication    : No active profile set, falling back to 1 default profile: "default"
+2023-08-12T20:39:43.545+03:00  INFO 93367 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
+2023-08-12T20:39:43.548+03:00  INFO 93367 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 3 ms. Found 6 JDBC repository interfaces.
+2023-08-12T20:39:43.564+03:00  INFO 93367 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2023-08-12T20:39:43.564+03:00  INFO 93367 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-08-12T20:39:43.564+03:00  INFO 93367 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.11]
+2023-08-12T20:39:43.568+03:00  INFO 93367 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-08-12T20:39:43.568+03:00  INFO 93367 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 55 ms
+2023-08-12T20:39:43.577+03:00  INFO 93367 --- [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:mysql://localhost:3306/oplanner'
+2023-08-12T20:39:43.589+03:00  INFO 93367 --- [restartedMain] o.f.c.i.database.base.BaseDatabaseType   : Database: jdbc:mysql://localhost:3306/oplanner (MySQL 8.0)
+2023-08-12T20:39:43.596+03:00  INFO 93367 --- [restartedMain] o.f.core.internal.command.DbValidate     : Successfully validated 0 migrations (execution time 00:00.001s)
+2023-08-12T20:39:43.596+03:00  WARN 93367 --- [restartedMain] o.f.core.internal.command.DbValidate     : No migrations found. Are your locations set up correctly?
+2023-08-12T20:39:43.600+03:00  INFO 93367 --- [restartedMain] o.f.core.internal.command.DbMigrate      : Current version of schema `oplanner`: << Empty Schema >>
+2023-08-12T20:39:43.600+03:00  INFO 93367 --- [restartedMain] o.f.core.internal.command.DbMigrate      : Schema `oplanner` is up to date. No migration necessary.
+2023-08-12T20:39:43.625+03:00  INFO 93367 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2023-08-12T20:39:43.660+03:00  INFO 93367 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2023-08-12T20:39:43.661+03:00  INFO 93367 --- [restartedMain] oplanner.Oplanner.OplannerApplication    : Started OplannerApplication in 0.155 seconds (process running for 6252.949)
+2023-08-12T20:39:43.661+03:00  INFO 93367 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2023-08-12T20:39:49.122+03:00  INFO 93367 --- [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2023-08-12T20:39:49.133+03:00  INFO 93367 --- [Thread-107] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2023-08-12T20:39:49.190+03:00  INFO 93367 --- [restartedMain] oplanner.Oplanner.OplannerApplication    : Starting OplannerApplication using Java 17.0.7 with PID 93367 (/Users/shovalabudaram/projects/OplannerClient/backend/target/classes started by shovalabudaram in /Users/shovalabudaram/projects/OplannerClient)
+2023-08-12T20:39:49.190+03:00  INFO 93367 --- [restartedMain] oplanner.Oplanner.OplannerApplication    : No active profile set, falling back to 1 default profile: "default"
+2023-08-12T20:39:49.226+03:00  INFO 93367 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
+2023-08-12T20:39:49.229+03:00  INFO 93367 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 3 ms. Found 6 JDBC repository interfaces.
+2023-08-12T20:39:49.246+03:00  INFO 93367 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2023-08-12T20:39:49.247+03:00  INFO 93367 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-08-12T20:39:49.247+03:00  INFO 93367 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.11]
+2023-08-12T20:39:49.250+03:00  INFO 93367 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-08-12T20:39:49.250+03:00  INFO 93367 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 59 ms
+2023-08-12T20:39:49.259+03:00  INFO 93367 --- [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:mysql://localhost:3306/oplanner'
+2023-08-12T20:39:49.271+03:00  INFO 93367 --- [restartedMain] o.f.c.i.database.base.BaseDatabaseType   : Database: jdbc:mysql://localhost:3306/oplanner (MySQL 8.0)
+2023-08-12T20:39:49.279+03:00  INFO 93367 --- [restartedMain] o.f.core.internal.command.DbValidate     : Successfully validated 0 migrations (execution time 00:00.002s)
+2023-08-12T20:39:49.279+03:00  WARN 93367 --- [restartedMain] o.f.core.internal.command.DbValidate     : No migrations found. Are your locations set up correctly?
+2023-08-12T20:39:49.283+03:00  INFO 93367 --- [restartedMain] o.f.core.internal.command.DbMigrate      : Current version of schema `oplanner`: << Empty Schema >>
+2023-08-12T20:39:49.283+03:00  INFO 93367 --- [restartedMain] o.f.core.internal.command.DbMigrate      : Schema `oplanner` is up to date. No migration necessary.
+2023-08-12T20:39:49.307+03:00  INFO 93367 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2023-08-12T20:39:49.341+03:00  INFO 93367 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2023-08-12T20:39:49.343+03:00  INFO 93367 --- [restartedMain] oplanner.Oplanner.OplannerApplication    : Started OplannerApplication in 0.158 seconds (process running for 6258.63)
+2023-08-12T20:39:49.343+03:00  INFO 93367 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2023-08-12T20:40:25.076+03:00  INFO 93367 --- [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2023-08-12T20:40:25.080+03:00  INFO 93367 --- [Thread-111] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2023-08-12T20:40:25.124+03:00  INFO 93367 --- [restartedMain] oplanner.Oplanner.OplannerApplication    : Starting OplannerApplication using Java 17.0.7 with PID 93367 (/Users/shovalabudaram/projects/OplannerClient/backend/target/classes started by shovalabudaram in /Users/shovalabudaram/projects/OplannerClient)
+2023-08-12T20:40:25.124+03:00  INFO 93367 --- [restartedMain] oplanner.Oplanner.OplannerApplication    : No active profile set, falling back to 1 default profile: "default"
+2023-08-12T20:40:25.164+03:00  INFO 93367 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
+2023-08-12T20:40:25.168+03:00  INFO 93367 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 3 ms. Found 6 JDBC repository interfaces.
+2023-08-12T20:40:25.190+03:00  INFO 93367 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2023-08-12T20:40:25.190+03:00  INFO 93367 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-08-12T20:40:25.190+03:00  INFO 93367 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.11]
+2023-08-12T20:40:25.194+03:00  INFO 93367 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-08-12T20:40:25.194+03:00  INFO 93367 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 70 ms
+2023-08-12T20:40:25.203+03:00  INFO 93367 --- [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:mysql://localhost:3306/oplanner'
+2023-08-12T20:40:25.218+03:00  INFO 93367 --- [restartedMain] o.f.c.i.database.base.BaseDatabaseType   : Database: jdbc:mysql://localhost:3306/oplanner (MySQL 8.0)
+2023-08-12T20:40:25.274+03:00  INFO 93367 --- [restartedMain] o.f.core.internal.command.DbValidate     : Successfully validated 0 migrations (execution time 00:00.003s)
+2023-08-12T20:40:25.274+03:00  WARN 93367 --- [restartedMain] o.f.core.internal.command.DbValidate     : No migrations found. Are your locations set up correctly?
+2023-08-12T20:40:25.282+03:00  INFO 93367 --- [restartedMain] o.f.core.internal.command.DbMigrate      : Current version of schema `oplanner`: << Empty Schema >>
+2023-08-12T20:40:25.283+03:00  INFO 93367 --- [restartedMain] o.f.core.internal.command.DbMigrate      : Schema `oplanner` is up to date. No migration necessary.
+2023-08-12T20:40:25.312+03:00  INFO 93367 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2023-08-12T20:40:25.356+03:00  INFO 93367 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2023-08-12T20:40:25.359+03:00  INFO 93367 --- [restartedMain] oplanner.Oplanner.OplannerApplication    : Started OplannerApplication in 0.242 seconds (process running for 6294.647)
+2023-08-12T20:40:25.362+03:00  INFO 93367 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2023-08-12T20:43:00.439+03:00  INFO 93367 --- [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2023-08-12T20:43:00.456+03:00  INFO 93367 --- [Thread-115] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2023-08-12T20:43:00.541+03:00  INFO 93367 --- [restartedMain] oplanner.Oplanner.OplannerApplication    : Starting OplannerApplication using Java 17.0.7 with PID 93367 (/Users/shovalabudaram/projects/OplannerClient/backend/target/classes started by shovalabudaram in /Users/shovalabudaram/projects/OplannerClient)
+2023-08-12T20:43:00.541+03:00  INFO 93367 --- [restartedMain] oplanner.Oplanner.OplannerApplication    : No active profile set, falling back to 1 default profile: "default"
+2023-08-12T20:43:00.580+03:00  INFO 93367 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
+2023-08-12T20:43:00.584+03:00  INFO 93367 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 3 ms. Found 6 JDBC repository interfaces.
+2023-08-12T20:43:00.605+03:00  INFO 93367 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2023-08-12T20:43:00.605+03:00  INFO 93367 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-08-12T20:43:00.605+03:00  INFO 93367 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.11]
+2023-08-12T20:43:00.609+03:00  INFO 93367 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-08-12T20:43:00.609+03:00  INFO 93367 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 67 ms
+2023-08-12T20:43:00.637+03:00  INFO 93367 --- [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:mysql://localhost:3306/oplanner'
+2023-08-12T20:43:00.650+03:00  INFO 93367 --- [restartedMain] o.f.c.i.database.base.BaseDatabaseType   : Database: jdbc:mysql://localhost:3306/oplanner (MySQL 8.0)
+2023-08-12T20:43:00.660+03:00  INFO 93367 --- [restartedMain] o.f.core.internal.command.DbValidate     : Successfully validated 0 migrations (execution time 00:00.002s)
+2023-08-12T20:43:00.660+03:00  WARN 93367 --- [restartedMain] o.f.core.internal.command.DbValidate     : No migrations found. Are your locations set up correctly?
+2023-08-12T20:43:00.664+03:00  INFO 93367 --- [restartedMain] o.f.core.internal.command.DbMigrate      : Current version of schema `oplanner`: << Empty Schema >>
+2023-08-12T20:43:00.665+03:00  INFO 93367 --- [restartedMain] o.f.core.internal.command.DbMigrate      : Schema `oplanner` is up to date. No migration necessary.
+2023-08-12T20:43:00.688+03:00  INFO 93367 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2023-08-12T20:43:00.722+03:00  INFO 93367 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2023-08-12T20:43:00.723+03:00  INFO 93367 --- [restartedMain] oplanner.Oplanner.OplannerApplication    : Started OplannerApplication in 0.188 seconds (process running for 6450.014)
+2023-08-12T20:43:00.723+03:00  INFO 93367 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2023-08-12T20:45:06.389+03:00  INFO 93367 --- [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2023-08-12T20:45:06.398+03:00  INFO 93367 --- [Thread-119] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2023-08-12T20:45:06.491+03:00  INFO 93367 --- [restartedMain] oplanner.Oplanner.OplannerApplication    : Starting OplannerApplication using Java 17.0.7 with PID 93367 (/Users/shovalabudaram/projects/OplannerClient/backend/target/classes started by shovalabudaram in /Users/shovalabudaram/projects/OplannerClient)
+2023-08-12T20:45:06.491+03:00  INFO 93367 --- [restartedMain] oplanner.Oplanner.OplannerApplication    : No active profile set, falling back to 1 default profile: "default"
+2023-08-12T20:45:06.532+03:00  INFO 93367 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
+2023-08-12T20:45:06.536+03:00  INFO 93367 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 3 ms. Found 6 JDBC repository interfaces.
+2023-08-12T20:45:06.557+03:00  INFO 93367 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2023-08-12T20:45:06.558+03:00  INFO 93367 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-08-12T20:45:06.558+03:00  INFO 93367 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.11]
+2023-08-12T20:45:06.561+03:00  INFO 93367 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-08-12T20:45:06.561+03:00  INFO 93367 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 69 ms
+2023-08-12T20:45:06.574+03:00  INFO 93367 --- [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:mysql://localhost:3306/oplanner'
+2023-08-12T20:45:06.612+03:00  INFO 93367 --- [restartedMain] o.f.c.i.database.base.BaseDatabaseType   : Database: jdbc:mysql://localhost:3306/oplanner (MySQL 8.0)
+2023-08-12T20:45:06.622+03:00  INFO 93367 --- [restartedMain] o.f.core.internal.command.DbValidate     : Successfully validated 0 migrations (execution time 00:00.002s)
+2023-08-12T20:45:06.622+03:00  WARN 93367 --- [restartedMain] o.f.core.internal.command.DbValidate     : No migrations found. Are your locations set up correctly?
+2023-08-12T20:45:06.626+03:00  INFO 93367 --- [restartedMain] o.f.core.internal.command.DbMigrate      : Current version of schema `oplanner`: << Empty Schema >>
+2023-08-12T20:45:06.626+03:00  INFO 93367 --- [restartedMain] o.f.core.internal.command.DbMigrate      : Schema `oplanner` is up to date. No migration necessary.
+2023-08-12T20:45:06.650+03:00  INFO 93367 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2023-08-12T20:45:06.687+03:00  INFO 93367 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2023-08-12T20:45:06.689+03:00  INFO 93367 --- [restartedMain] oplanner.Oplanner.OplannerApplication    : Started OplannerApplication in 0.205 seconds (process running for 6575.981)
+2023-08-12T20:45:06.689+03:00  INFO 93367 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2023-08-12T20:45:17.194+03:00  INFO 93367 --- [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2023-08-12T20:45:17.206+03:00  INFO 93367 --- [Thread-123] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2023-08-12T20:45:17.262+03:00  INFO 93367 --- [restartedMain] oplanner.Oplanner.OplannerApplication    : Starting OplannerApplication using Java 17.0.7 with PID 93367 (/Users/shovalabudaram/projects/OplannerClient/backend/target/classes started by shovalabudaram in /Users/shovalabudaram/projects/OplannerClient)
+2023-08-12T20:45:17.262+03:00  INFO 93367 --- [restartedMain] oplanner.Oplanner.OplannerApplication    : No active profile set, falling back to 1 default profile: "default"
+2023-08-12T20:45:17.293+03:00  INFO 93367 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
+2023-08-12T20:45:17.296+03:00  INFO 93367 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 3 ms. Found 6 JDBC repository interfaces.
+2023-08-12T20:45:17.313+03:00  INFO 93367 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2023-08-12T20:45:17.314+03:00  INFO 93367 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-08-12T20:45:17.314+03:00  INFO 93367 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.11]
+2023-08-12T20:45:17.317+03:00  INFO 93367 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-08-12T20:45:17.317+03:00  INFO 93367 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 54 ms
+2023-08-12T20:45:17.325+03:00  INFO 93367 --- [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:mysql://localhost:3306/oplanner'
+2023-08-12T20:45:17.338+03:00  INFO 93367 --- [restartedMain] o.f.c.i.database.base.BaseDatabaseType   : Database: jdbc:mysql://localhost:3306/oplanner (MySQL 8.0)
+2023-08-12T20:45:17.346+03:00  INFO 93367 --- [restartedMain] o.f.core.internal.command.DbValidate     : Successfully validated 0 migrations (execution time 00:00.002s)
+2023-08-12T20:45:17.346+03:00  WARN 93367 --- [restartedMain] o.f.core.internal.command.DbValidate     : No migrations found. Are your locations set up correctly?
+2023-08-12T20:45:17.350+03:00  INFO 93367 --- [restartedMain] o.f.core.internal.command.DbMigrate      : Current version of schema `oplanner`: << Empty Schema >>
+2023-08-12T20:45:17.350+03:00  INFO 93367 --- [restartedMain] o.f.core.internal.command.DbMigrate      : Schema `oplanner` is up to date. No migration necessary.
+2023-08-12T20:45:17.372+03:00  INFO 93367 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2023-08-12T20:45:17.406+03:00  INFO 93367 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2023-08-12T20:45:17.407+03:00  INFO 93367 --- [restartedMain] oplanner.Oplanner.OplannerApplication    : Started OplannerApplication in 0.151 seconds (process running for 6586.7)
+2023-08-12T20:45:17.408+03:00  INFO 93367 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2023-08-12T20:45:18.820+03:00  INFO 93367 --- [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2023-08-12T20:45:18.824+03:00  INFO 93367 --- [Thread-127] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2023-08-12T20:45:18.862+03:00  INFO 93367 --- [restartedMain] oplanner.Oplanner.OplannerApplication    : Starting OplannerApplication using Java 17.0.7 with PID 93367 (/Users/shovalabudaram/projects/OplannerClient/backend/target/classes started by shovalabudaram in /Users/shovalabudaram/projects/OplannerClient)
+2023-08-12T20:45:18.862+03:00  INFO 93367 --- [restartedMain] oplanner.Oplanner.OplannerApplication    : No active profile set, falling back to 1 default profile: "default"
+2023-08-12T20:45:18.908+03:00  INFO 93367 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
+2023-08-12T20:45:18.911+03:00  INFO 93367 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 3 ms. Found 6 JDBC repository interfaces.
+2023-08-12T20:45:18.931+03:00  INFO 93367 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2023-08-12T20:45:18.931+03:00  INFO 93367 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-08-12T20:45:18.931+03:00  INFO 93367 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.11]
+2023-08-12T20:45:18.934+03:00  INFO 93367 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-08-12T20:45:18.935+03:00  INFO 93367 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 72 ms
+2023-08-12T20:45:18.943+03:00  INFO 93367 --- [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:mysql://localhost:3306/oplanner'
+2023-08-12T20:45:18.957+03:00  INFO 93367 --- [restartedMain] o.f.c.i.database.base.BaseDatabaseType   : Database: jdbc:mysql://localhost:3306/oplanner (MySQL 8.0)
+2023-08-12T20:45:18.964+03:00  INFO 93367 --- [restartedMain] o.f.core.internal.command.DbValidate     : Successfully validated 0 migrations (execution time 00:00.002s)
+2023-08-12T20:45:18.964+03:00  WARN 93367 --- [restartedMain] o.f.core.internal.command.DbValidate     : No migrations found. Are your locations set up correctly?
+2023-08-12T20:45:18.972+03:00  INFO 93367 --- [restartedMain] o.f.core.internal.command.DbMigrate      : Current version of schema `oplanner`: << Empty Schema >>
+2023-08-12T20:45:18.972+03:00  INFO 93367 --- [restartedMain] o.f.core.internal.command.DbMigrate      : Schema `oplanner` is up to date. No migration necessary.
+2023-08-12T20:45:18.999+03:00  INFO 93367 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2023-08-12T20:45:19.032+03:00  INFO 93367 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2023-08-12T20:45:19.033+03:00  INFO 93367 --- [restartedMain] oplanner.Oplanner.OplannerApplication    : Started OplannerApplication in 0.176 seconds (process running for 6588.326)
+2023-08-12T20:45:19.034+03:00  INFO 93367 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2023-08-12T20:45:20.446+03:00  INFO 93367 --- [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2023-08-12T20:45:20.450+03:00  INFO 93367 --- [Thread-131] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2023-08-12T20:45:20.491+03:00  INFO 93367 --- [restartedMain] oplanner.Oplanner.OplannerApplication    : Starting OplannerApplication using Java 17.0.7 with PID 93367 (/Users/shovalabudaram/projects/OplannerClient/backend/target/classes started by shovalabudaram in /Users/shovalabudaram/projects/OplannerClient)
+2023-08-12T20:45:20.492+03:00  INFO 93367 --- [restartedMain] oplanner.Oplanner.OplannerApplication    : No active profile set, falling back to 1 default profile: "default"
+2023-08-12T20:45:20.520+03:00  INFO 93367 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
+2023-08-12T20:45:20.524+03:00  INFO 93367 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 3 ms. Found 6 JDBC repository interfaces.
+2023-08-12T20:45:20.542+03:00  INFO 93367 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2023-08-12T20:45:20.542+03:00  INFO 93367 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-08-12T20:45:20.542+03:00  INFO 93367 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.11]
+2023-08-12T20:45:20.546+03:00  INFO 93367 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-08-12T20:45:20.546+03:00  INFO 93367 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 54 ms
+2023-08-12T20:45:20.557+03:00  INFO 93367 --- [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:mysql://localhost:3306/oplanner'
+2023-08-12T20:45:20.572+03:00  INFO 93367 --- [restartedMain] o.f.c.i.database.base.BaseDatabaseType   : Database: jdbc:mysql://localhost:3306/oplanner (MySQL 8.0)
+2023-08-12T20:45:20.580+03:00  INFO 93367 --- [restartedMain] o.f.core.internal.command.DbValidate     : Successfully validated 0 migrations (execution time 00:00.004s)
+2023-08-12T20:45:20.580+03:00  WARN 93367 --- [restartedMain] o.f.core.internal.command.DbValidate     : No migrations found. Are your locations set up correctly?
+2023-08-12T20:45:20.588+03:00  INFO 93367 --- [restartedMain] o.f.core.internal.command.DbMigrate      : Current version of schema `oplanner`: << Empty Schema >>
+2023-08-12T20:45:20.589+03:00  INFO 93367 --- [restartedMain] o.f.core.internal.command.DbMigrate      : Schema `oplanner` is up to date. No migration necessary.
+2023-08-12T20:45:20.615+03:00  INFO 93367 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2023-08-12T20:45:20.653+03:00  INFO 93367 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2023-08-12T20:45:20.654+03:00  INFO 93367 --- [restartedMain] oplanner.Oplanner.OplannerApplication    : Started OplannerApplication in 0.169 seconds (process running for 6589.947)
+2023-08-12T20:45:20.655+03:00  INFO 93367 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2023-08-12T20:45:29.135+03:00  INFO 93367 --- [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2023-08-12T20:45:29.139+03:00  INFO 93367 --- [Thread-135] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2023-08-12T20:45:29.182+03:00  INFO 93367 --- [restartedMain] oplanner.Oplanner.OplannerApplication    : Starting OplannerApplication using Java 17.0.7 with PID 93367 (/Users/shovalabudaram/projects/OplannerClient/backend/target/classes started by shovalabudaram in /Users/shovalabudaram/projects/OplannerClient)
+2023-08-12T20:45:29.182+03:00  INFO 93367 --- [restartedMain] oplanner.Oplanner.OplannerApplication    : No active profile set, falling back to 1 default profile: "default"
+2023-08-12T20:45:29.219+03:00  INFO 93367 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
+2023-08-12T20:45:29.222+03:00  INFO 93367 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 3 ms. Found 6 JDBC repository interfaces.
+2023-08-12T20:45:29.240+03:00  INFO 93367 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2023-08-12T20:45:29.241+03:00  INFO 93367 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-08-12T20:45:29.241+03:00  INFO 93367 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.11]
+2023-08-12T20:45:29.244+03:00  INFO 93367 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-08-12T20:45:29.244+03:00  INFO 93367 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 61 ms
+2023-08-12T20:45:29.252+03:00  INFO 93367 --- [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:mysql://localhost:3306/oplanner'
+2023-08-12T20:45:29.265+03:00  INFO 93367 --- [restartedMain] o.f.c.i.database.base.BaseDatabaseType   : Database: jdbc:mysql://localhost:3306/oplanner (MySQL 8.0)
+2023-08-12T20:45:29.273+03:00  INFO 93367 --- [restartedMain] o.f.core.internal.command.DbValidate     : Successfully validated 0 migrations (execution time 00:00.002s)
+2023-08-12T20:45:29.273+03:00  WARN 93367 --- [restartedMain] o.f.core.internal.command.DbValidate     : No migrations found. Are your locations set up correctly?
+2023-08-12T20:45:29.277+03:00  INFO 93367 --- [restartedMain] o.f.core.internal.command.DbMigrate      : Current version of schema `oplanner`: << Empty Schema >>
+2023-08-12T20:45:29.277+03:00  INFO 93367 --- [restartedMain] o.f.core.internal.command.DbMigrate      : Schema `oplanner` is up to date. No migration necessary.
+2023-08-12T20:45:29.298+03:00  INFO 93367 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2023-08-12T20:45:29.332+03:00  INFO 93367 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2023-08-12T20:45:29.333+03:00  INFO 93367 --- [restartedMain] oplanner.Oplanner.OplannerApplication    : Started OplannerApplication in 0.156 seconds (process running for 6598.626)
+2023-08-12T20:45:29.333+03:00  INFO 93367 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2023-08-12T20:45:31.761+03:00  INFO 93367 --- [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2023-08-12T20:45:31.767+03:00  INFO 93367 --- [Thread-139] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2023-08-12T20:45:31.813+03:00  INFO 93367 --- [restartedMain] oplanner.Oplanner.OplannerApplication    : Starting OplannerApplication using Java 17.0.7 with PID 93367 (/Users/shovalabudaram/projects/OplannerClient/backend/target/classes started by shovalabudaram in /Users/shovalabudaram/projects/OplannerClient)
+2023-08-12T20:45:31.813+03:00  INFO 93367 --- [restartedMain] oplanner.Oplanner.OplannerApplication    : No active profile set, falling back to 1 default profile: "default"
+2023-08-12T20:45:31.841+03:00  INFO 93367 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
+2023-08-12T20:45:31.845+03:00  INFO 93367 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 3 ms. Found 6 JDBC repository interfaces.
+2023-08-12T20:45:31.862+03:00  INFO 93367 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2023-08-12T20:45:31.863+03:00  INFO 93367 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-08-12T20:45:31.863+03:00  INFO 93367 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.11]
+2023-08-12T20:45:31.866+03:00  INFO 93367 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-08-12T20:45:31.866+03:00  INFO 93367 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 52 ms
+2023-08-12T20:45:31.874+03:00  INFO 93367 --- [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:mysql://localhost:3306/oplanner'
+2023-08-12T20:45:31.887+03:00  INFO 93367 --- [restartedMain] o.f.c.i.database.base.BaseDatabaseType   : Database: jdbc:mysql://localhost:3306/oplanner (MySQL 8.0)
+2023-08-12T20:45:31.893+03:00  INFO 93367 --- [restartedMain] o.f.core.internal.command.DbValidate     : Successfully validated 0 migrations (execution time 00:00.002s)
+2023-08-12T20:45:31.894+03:00  WARN 93367 --- [restartedMain] o.f.core.internal.command.DbValidate     : No migrations found. Are your locations set up correctly?
+2023-08-12T20:45:31.898+03:00  INFO 93367 --- [restartedMain] o.f.core.internal.command.DbMigrate      : Current version of schema `oplanner`: << Empty Schema >>
+2023-08-12T20:45:31.898+03:00  INFO 93367 --- [restartedMain] o.f.core.internal.command.DbMigrate      : Schema `oplanner` is up to date. No migration necessary.
+2023-08-12T20:45:31.921+03:00  INFO 93367 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2023-08-12T20:45:31.953+03:00  INFO 93367 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2023-08-12T20:45:31.954+03:00  INFO 93367 --- [restartedMain] oplanner.Oplanner.OplannerApplication    : Started OplannerApplication in 0.146 seconds (process running for 6601.246)
+2023-08-12T20:45:31.954+03:00  INFO 93367 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2023-08-12T20:45:33.363+03:00  INFO 93367 --- [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2023-08-12T20:45:33.374+03:00  INFO 93367 --- [Thread-143] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2023-08-12T20:45:33.430+03:00  INFO 93367 --- [restartedMain] oplanner.Oplanner.OplannerApplication    : Starting OplannerApplication using Java 17.0.7 with PID 93367 (/Users/shovalabudaram/projects/OplannerClient/backend/target/classes started by shovalabudaram in /Users/shovalabudaram/projects/OplannerClient)
+2023-08-12T20:45:33.430+03:00  INFO 93367 --- [restartedMain] oplanner.Oplanner.OplannerApplication    : No active profile set, falling back to 1 default profile: "default"
+2023-08-12T20:45:33.462+03:00  INFO 93367 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
+2023-08-12T20:45:33.469+03:00  INFO 93367 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 6 ms. Found 6 JDBC repository interfaces.
+2023-08-12T20:45:33.489+03:00  INFO 93367 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2023-08-12T20:45:33.489+03:00  INFO 93367 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-08-12T20:45:33.489+03:00  INFO 93367 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.11]
+2023-08-12T20:45:33.494+03:00  INFO 93367 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-08-12T20:45:33.494+03:00  INFO 93367 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 63 ms
+2023-08-12T20:45:33.503+03:00  INFO 93367 --- [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:mysql://localhost:3306/oplanner'
+2023-08-12T20:45:33.519+03:00  INFO 93367 --- [restartedMain] o.f.c.i.database.base.BaseDatabaseType   : Database: jdbc:mysql://localhost:3306/oplanner (MySQL 8.0)
+2023-08-12T20:45:33.527+03:00  INFO 93367 --- [restartedMain] o.f.core.internal.command.DbValidate     : Successfully validated 0 migrations (execution time 00:00.002s)
+2023-08-12T20:45:33.527+03:00  WARN 93367 --- [restartedMain] o.f.core.internal.command.DbValidate     : No migrations found. Are your locations set up correctly?
+2023-08-12T20:45:33.532+03:00  INFO 93367 --- [restartedMain] o.f.core.internal.command.DbMigrate      : Current version of schema `oplanner`: << Empty Schema >>
+2023-08-12T20:45:33.533+03:00  INFO 93367 --- [restartedMain] o.f.core.internal.command.DbMigrate      : Schema `oplanner` is up to date. No migration necessary.
+2023-08-12T20:45:33.560+03:00  INFO 93367 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2023-08-12T20:45:33.594+03:00  INFO 93367 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2023-08-12T20:45:33.595+03:00  INFO 93367 --- [restartedMain] oplanner.Oplanner.OplannerApplication    : Started OplannerApplication in 0.173 seconds (process running for 6602.888)
+2023-08-12T20:45:33.596+03:00  INFO 93367 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2023-08-12T20:45:35.010+03:00  INFO 93367 --- [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2023-08-12T20:45:35.014+03:00  INFO 93367 --- [Thread-147] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2023-08-12T20:45:35.053+03:00  INFO 93367 --- [restartedMain] oplanner.Oplanner.OplannerApplication    : Starting OplannerApplication using Java 17.0.7 with PID 93367 (/Users/shovalabudaram/projects/OplannerClient/backend/target/classes started by shovalabudaram in /Users/shovalabudaram/projects/OplannerClient)
+2023-08-12T20:45:35.053+03:00  INFO 93367 --- [restartedMain] oplanner.Oplanner.OplannerApplication    : No active profile set, falling back to 1 default profile: "default"
+2023-08-12T20:45:35.086+03:00  INFO 93367 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
+2023-08-12T20:45:35.089+03:00  INFO 93367 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 2 ms. Found 6 JDBC repository interfaces.
+2023-08-12T20:45:35.105+03:00  INFO 93367 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2023-08-12T20:45:35.105+03:00  INFO 93367 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-08-12T20:45:35.105+03:00  INFO 93367 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.11]
+2023-08-12T20:45:35.109+03:00  INFO 93367 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-08-12T20:45:35.109+03:00  INFO 93367 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 55 ms
+2023-08-12T20:45:35.116+03:00  INFO 93367 --- [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:mysql://localhost:3306/oplanner'
+2023-08-12T20:45:35.130+03:00  INFO 93367 --- [restartedMain] o.f.c.i.database.base.BaseDatabaseType   : Database: jdbc:mysql://localhost:3306/oplanner (MySQL 8.0)
+2023-08-12T20:45:35.145+03:00  INFO 93367 --- [restartedMain] o.f.core.internal.command.DbValidate     : Successfully validated 0 migrations (execution time 00:00.009s)
+2023-08-12T20:45:35.145+03:00  WARN 93367 --- [restartedMain] o.f.core.internal.command.DbValidate     : No migrations found. Are your locations set up correctly?
+2023-08-12T20:45:35.155+03:00  INFO 93367 --- [restartedMain] o.f.core.internal.command.DbMigrate      : Current version of schema `oplanner`: << Empty Schema >>
+2023-08-12T20:45:35.155+03:00  INFO 93367 --- [restartedMain] o.f.core.internal.command.DbMigrate      : Schema `oplanner` is up to date. No migration necessary.
+2023-08-12T20:45:35.178+03:00  INFO 93367 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2023-08-12T20:45:35.240+03:00  INFO 93367 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2023-08-12T20:45:35.244+03:00  INFO 93367 --- [restartedMain] oplanner.Oplanner.OplannerApplication    : Started OplannerApplication in 0.195 seconds (process running for 6604.536)
+2023-08-12T20:45:35.245+03:00  INFO 93367 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2023-08-12T20:45:37.690+03:00  INFO 93367 --- [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2023-08-12T20:45:37.699+03:00  INFO 93367 --- [Thread-151] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2023-08-12T20:45:37.754+03:00  INFO 93367 --- [restartedMain] oplanner.Oplanner.OplannerApplication    : Starting OplannerApplication using Java 17.0.7 with PID 93367 (/Users/shovalabudaram/projects/OplannerClient/backend/target/classes started by shovalabudaram in /Users/shovalabudaram/projects/OplannerClient)
+2023-08-12T20:45:37.754+03:00  INFO 93367 --- [restartedMain] oplanner.Oplanner.OplannerApplication    : No active profile set, falling back to 1 default profile: "default"
+2023-08-12T20:45:37.782+03:00  INFO 93367 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
+2023-08-12T20:45:37.786+03:00  INFO 93367 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 3 ms. Found 6 JDBC repository interfaces.
+2023-08-12T20:45:37.801+03:00  INFO 93367 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2023-08-12T20:45:37.802+03:00  INFO 93367 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-08-12T20:45:37.802+03:00  INFO 93367 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.11]
+2023-08-12T20:45:37.805+03:00  INFO 93367 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-08-12T20:45:37.805+03:00  INFO 93367 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 50 ms
+2023-08-12T20:45:37.815+03:00  INFO 93367 --- [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:mysql://localhost:3306/oplanner'
+2023-08-12T20:45:37.827+03:00  INFO 93367 --- [restartedMain] o.f.c.i.database.base.BaseDatabaseType   : Database: jdbc:mysql://localhost:3306/oplanner (MySQL 8.0)
+2023-08-12T20:45:37.833+03:00  INFO 93367 --- [restartedMain] o.f.core.internal.command.DbValidate     : Successfully validated 0 migrations (execution time 00:00.001s)
+2023-08-12T20:45:37.833+03:00  WARN 93367 --- [restartedMain] o.f.core.internal.command.DbValidate     : No migrations found. Are your locations set up correctly?
+2023-08-12T20:45:37.838+03:00  INFO 93367 --- [restartedMain] o.f.core.internal.command.DbMigrate      : Current version of schema `oplanner`: << Empty Schema >>
+2023-08-12T20:45:37.839+03:00  INFO 93367 --- [restartedMain] o.f.core.internal.command.DbMigrate      : Schema `oplanner` is up to date. No migration necessary.
+2023-08-12T20:45:37.861+03:00  INFO 93367 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2023-08-12T20:45:37.890+03:00  INFO 93367 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2023-08-12T20:45:37.891+03:00  INFO 93367 --- [restartedMain] oplanner.Oplanner.OplannerApplication    : Started OplannerApplication in 0.143 seconds (process running for 6607.184)
+2023-08-12T20:45:37.892+03:00  INFO 93367 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2023-08-12T20:45:48.403+03:00  INFO 93367 --- [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2023-08-12T20:45:48.412+03:00  INFO 93367 --- [Thread-155] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2023-08-12T20:45:48.463+03:00  INFO 93367 --- [restartedMain] oplanner.Oplanner.OplannerApplication    : Starting OplannerApplication using Java 17.0.7 with PID 93367 (/Users/shovalabudaram/projects/OplannerClient/backend/target/classes started by shovalabudaram in /Users/shovalabudaram/projects/OplannerClient)
+2023-08-12T20:45:48.463+03:00  INFO 93367 --- [restartedMain] oplanner.Oplanner.OplannerApplication    : No active profile set, falling back to 1 default profile: "default"
+2023-08-12T20:45:48.497+03:00  INFO 93367 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
+2023-08-12T20:45:48.501+03:00  INFO 93367 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 3 ms. Found 6 JDBC repository interfaces.
+2023-08-12T20:45:48.517+03:00  INFO 93367 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2023-08-12T20:45:48.517+03:00  INFO 93367 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-08-12T20:45:48.517+03:00  INFO 93367 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.11]
+2023-08-12T20:45:48.521+03:00  INFO 93367 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-08-12T20:45:48.521+03:00  INFO 93367 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 57 ms
+2023-08-12T20:45:48.528+03:00  INFO 93367 --- [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:mysql://localhost:3306/oplanner'
+2023-08-12T20:45:48.542+03:00  INFO 93367 --- [restartedMain] o.f.c.i.database.base.BaseDatabaseType   : Database: jdbc:mysql://localhost:3306/oplanner (MySQL 8.0)
+2023-08-12T20:45:48.548+03:00  INFO 93367 --- [restartedMain] o.f.core.internal.command.DbValidate     : Successfully validated 0 migrations (execution time 00:00.002s)
+2023-08-12T20:45:48.548+03:00  WARN 93367 --- [restartedMain] o.f.core.internal.command.DbValidate     : No migrations found. Are your locations set up correctly?
+2023-08-12T20:45:48.552+03:00  INFO 93367 --- [restartedMain] o.f.core.internal.command.DbMigrate      : Current version of schema `oplanner`: << Empty Schema >>
+2023-08-12T20:45:48.553+03:00  INFO 93367 --- [restartedMain] o.f.core.internal.command.DbMigrate      : Schema `oplanner` is up to date. No migration necessary.
+2023-08-12T20:45:48.572+03:00  INFO 93367 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2023-08-12T20:45:48.605+03:00  INFO 93367 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2023-08-12T20:45:48.606+03:00  INFO 93367 --- [restartedMain] oplanner.Oplanner.OplannerApplication    : Started OplannerApplication in 0.148 seconds (process running for 6617.899)
+2023-08-12T20:45:48.606+03:00  INFO 93367 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2023-08-12T20:45:50.022+03:00  INFO 93367 --- [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2023-08-12T20:45:50.026+03:00  INFO 93367 --- [Thread-159] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2023-08-12T20:45:50.066+03:00  INFO 93367 --- [restartedMain] oplanner.Oplanner.OplannerApplication    : Starting OplannerApplication using Java 17.0.7 with PID 93367 (/Users/shovalabudaram/projects/OplannerClient/backend/target/classes started by shovalabudaram in /Users/shovalabudaram/projects/OplannerClient)
+2023-08-12T20:45:50.066+03:00  INFO 93367 --- [restartedMain] oplanner.Oplanner.OplannerApplication    : No active profile set, falling back to 1 default profile: "default"
+2023-08-12T20:45:50.092+03:00  INFO 93367 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
+2023-08-12T20:45:50.095+03:00  INFO 93367 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 2 ms. Found 6 JDBC repository interfaces.
+2023-08-12T20:45:50.112+03:00  INFO 93367 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2023-08-12T20:45:50.113+03:00  INFO 93367 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-08-12T20:45:50.113+03:00  INFO 93367 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.11]
+2023-08-12T20:45:50.116+03:00  INFO 93367 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-08-12T20:45:50.117+03:00  INFO 93367 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 50 ms
+2023-08-12T20:45:50.125+03:00  INFO 93367 --- [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:mysql://localhost:3306/oplanner'
+2023-08-12T20:45:50.139+03:00  INFO 93367 --- [restartedMain] o.f.c.i.database.base.BaseDatabaseType   : Database: jdbc:mysql://localhost:3306/oplanner (MySQL 8.0)
+2023-08-12T20:45:50.144+03:00  INFO 93367 --- [restartedMain] o.f.core.internal.command.DbValidate     : Successfully validated 0 migrations (execution time 00:00.002s)
+2023-08-12T20:45:50.145+03:00  WARN 93367 --- [restartedMain] o.f.core.internal.command.DbValidate     : No migrations found. Are your locations set up correctly?
+2023-08-12T20:45:50.148+03:00  INFO 93367 --- [restartedMain] o.f.core.internal.command.DbMigrate      : Current version of schema `oplanner`: << Empty Schema >>
+2023-08-12T20:45:50.149+03:00  INFO 93367 --- [restartedMain] o.f.core.internal.command.DbMigrate      : Schema `oplanner` is up to date. No migration necessary.
+2023-08-12T20:45:50.168+03:00  INFO 93367 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2023-08-12T20:45:50.201+03:00  INFO 93367 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2023-08-12T20:45:50.203+03:00  INFO 93367 --- [restartedMain] oplanner.Oplanner.OplannerApplication    : Started OplannerApplication in 0.142 seconds (process running for 6619.496)
+2023-08-12T20:45:50.203+03:00  INFO 93367 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2023-08-12T20:45:52.623+03:00  INFO 93367 --- [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2023-08-12T20:45:52.633+03:00  INFO 93367 --- [Thread-163] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2023-08-12T20:45:52.685+03:00  INFO 93367 --- [restartedMain] oplanner.Oplanner.OplannerApplication    : Starting OplannerApplication using Java 17.0.7 with PID 93367 (/Users/shovalabudaram/projects/OplannerClient/backend/target/classes started by shovalabudaram in /Users/shovalabudaram/projects/OplannerClient)
+2023-08-12T20:45:52.685+03:00  INFO 93367 --- [restartedMain] oplanner.Oplanner.OplannerApplication    : No active profile set, falling back to 1 default profile: "default"
+2023-08-12T20:45:52.714+03:00  INFO 93367 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
+2023-08-12T20:45:52.718+03:00  INFO 93367 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 3 ms. Found 6 JDBC repository interfaces.
+2023-08-12T20:45:52.733+03:00  INFO 93367 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2023-08-12T20:45:52.733+03:00  INFO 93367 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-08-12T20:45:52.733+03:00  INFO 93367 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.11]
+2023-08-12T20:45:52.737+03:00  INFO 93367 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-08-12T20:45:52.737+03:00  INFO 93367 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 51 ms
+2023-08-12T20:45:52.758+03:00  INFO 93367 --- [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:mysql://localhost:3306/oplanner'
+2023-08-12T20:45:52.774+03:00  INFO 93367 --- [restartedMain] o.f.c.i.database.base.BaseDatabaseType   : Database: jdbc:mysql://localhost:3306/oplanner (MySQL 8.0)
+2023-08-12T20:45:52.781+03:00  INFO 93367 --- [restartedMain] o.f.core.internal.command.DbValidate     : Successfully validated 0 migrations (execution time 00:00.002s)
+2023-08-12T20:45:52.781+03:00  WARN 93367 --- [restartedMain] o.f.core.internal.command.DbValidate     : No migrations found. Are your locations set up correctly?
+2023-08-12T20:45:52.786+03:00  INFO 93367 --- [restartedMain] o.f.core.internal.command.DbMigrate      : Current version of schema `oplanner`: << Empty Schema >>
+2023-08-12T20:45:52.786+03:00  INFO 93367 --- [restartedMain] o.f.core.internal.command.DbMigrate      : Schema `oplanner` is up to date. No migration necessary.
+2023-08-12T20:45:52.810+03:00  INFO 93367 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2023-08-12T20:45:52.842+03:00  INFO 93367 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2023-08-12T20:45:52.843+03:00  INFO 93367 --- [restartedMain] oplanner.Oplanner.OplannerApplication    : Started OplannerApplication in 0.163 seconds (process running for 6622.136)
+2023-08-12T20:45:52.844+03:00  INFO 93367 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2023-08-12T20:46:05.379+03:00  INFO 93367 --- [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2023-08-12T20:46:05.386+03:00  INFO 93367 --- [Thread-167] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2023-08-12T20:46:05.438+03:00  INFO 93367 --- [restartedMain] oplanner.Oplanner.OplannerApplication    : Starting OplannerApplication using Java 17.0.7 with PID 93367 (/Users/shovalabudaram/projects/OplannerClient/backend/target/classes started by shovalabudaram in /Users/shovalabudaram/projects/OplannerClient)
+2023-08-12T20:46:05.438+03:00  INFO 93367 --- [restartedMain] oplanner.Oplanner.OplannerApplication    : No active profile set, falling back to 1 default profile: "default"
+2023-08-12T20:46:05.476+03:00  INFO 93367 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
+2023-08-12T20:46:05.480+03:00  INFO 93367 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 3 ms. Found 6 JDBC repository interfaces.
+2023-08-12T20:46:05.499+03:00  INFO 93367 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2023-08-12T20:46:05.499+03:00  INFO 93367 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-08-12T20:46:05.499+03:00  INFO 93367 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.11]
+2023-08-12T20:46:05.503+03:00  INFO 93367 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-08-12T20:46:05.503+03:00  INFO 93367 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 63 ms
+2023-08-12T20:46:05.512+03:00  INFO 93367 --- [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:mysql://localhost:3306/oplanner'
+2023-08-12T20:46:05.526+03:00  INFO 93367 --- [restartedMain] o.f.c.i.database.base.BaseDatabaseType   : Database: jdbc:mysql://localhost:3306/oplanner (MySQL 8.0)
+2023-08-12T20:46:05.532+03:00  INFO 93367 --- [restartedMain] o.f.core.internal.command.DbValidate     : Successfully validated 0 migrations (execution time 00:00.001s)
+2023-08-12T20:46:05.532+03:00  WARN 93367 --- [restartedMain] o.f.core.internal.command.DbValidate     : No migrations found. Are your locations set up correctly?
+2023-08-12T20:46:05.538+03:00  INFO 93367 --- [restartedMain] o.f.core.internal.command.DbMigrate      : Current version of schema `oplanner`: << Empty Schema >>
+2023-08-12T20:46:05.538+03:00  INFO 93367 --- [restartedMain] o.f.core.internal.command.DbMigrate      : Schema `oplanner` is up to date. No migration necessary.
+2023-08-12T20:46:05.561+03:00  INFO 93367 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2023-08-12T20:46:05.597+03:00  INFO 93367 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2023-08-12T20:46:05.598+03:00  INFO 93367 --- [restartedMain] oplanner.Oplanner.OplannerApplication    : Started OplannerApplication in 0.165 seconds (process running for 6634.892)
+2023-08-12T20:46:05.599+03:00  INFO 93367 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2023-08-12T20:46:07.013+03:00  INFO 93367 --- [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2023-08-12T20:46:07.018+03:00  INFO 93367 --- [Thread-171] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2023-08-12T20:46:07.058+03:00  INFO 93367 --- [restartedMain] oplanner.Oplanner.OplannerApplication    : Starting OplannerApplication using Java 17.0.7 with PID 93367 (/Users/shovalabudaram/projects/OplannerClient/backend/target/classes started by shovalabudaram in /Users/shovalabudaram/projects/OplannerClient)
+2023-08-12T20:46:07.058+03:00  INFO 93367 --- [restartedMain] oplanner.Oplanner.OplannerApplication    : No active profile set, falling back to 1 default profile: "default"
+2023-08-12T20:46:07.085+03:00  INFO 93367 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
+2023-08-12T20:46:07.088+03:00  INFO 93367 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 2 ms. Found 6 JDBC repository interfaces.
+2023-08-12T20:46:07.104+03:00  INFO 93367 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2023-08-12T20:46:07.104+03:00  INFO 93367 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-08-12T20:46:07.104+03:00  INFO 93367 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.11]
+2023-08-12T20:46:07.108+03:00  INFO 93367 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-08-12T20:46:07.108+03:00  INFO 93367 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 49 ms
+2023-08-12T20:46:07.115+03:00  INFO 93367 --- [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:mysql://localhost:3306/oplanner'
+2023-08-12T20:46:07.165+03:00  INFO 93367 --- [restartedMain] o.f.c.i.database.base.BaseDatabaseType   : Database: jdbc:mysql://localhost:3306/oplanner (MySQL 8.0)
+2023-08-12T20:46:07.174+03:00  INFO 93367 --- [restartedMain] o.f.core.internal.command.DbValidate     : Successfully validated 0 migrations (execution time 00:00.002s)
+2023-08-12T20:46:07.174+03:00  WARN 93367 --- [restartedMain] o.f.core.internal.command.DbValidate     : No migrations found. Are your locations set up correctly?
+2023-08-12T20:46:07.177+03:00  INFO 93367 --- [restartedMain] o.f.core.internal.command.DbMigrate      : Current version of schema `oplanner`: << Empty Schema >>
+2023-08-12T20:46:07.178+03:00  INFO 93367 --- [restartedMain] o.f.core.internal.command.DbMigrate      : Schema `oplanner` is up to date. No migration necessary.
+2023-08-12T20:46:07.207+03:00  INFO 93367 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2023-08-12T20:46:07.235+03:00  INFO 93367 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2023-08-12T20:46:07.236+03:00  INFO 93367 --- [restartedMain] oplanner.Oplanner.OplannerApplication    : Started OplannerApplication in 0.184 seconds (process running for 6636.53)
+2023-08-12T20:46:07.237+03:00  INFO 93367 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2023-08-12T20:46:08.650+03:00  INFO 93367 --- [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2023-08-12T20:46:08.660+03:00  INFO 93367 --- [Thread-175] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2023-08-12T20:46:08.716+03:00  INFO 93367 --- [restartedMain] oplanner.Oplanner.OplannerApplication    : Starting OplannerApplication using Java 17.0.7 with PID 93367 (/Users/shovalabudaram/projects/OplannerClient/backend/target/classes started by shovalabudaram in /Users/shovalabudaram/projects/OplannerClient)
+2023-08-12T20:46:08.716+03:00  INFO 93367 --- [restartedMain] oplanner.Oplanner.OplannerApplication    : No active profile set, falling back to 1 default profile: "default"
+2023-08-12T20:46:08.746+03:00  INFO 93367 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
+2023-08-12T20:46:08.749+03:00  INFO 93367 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 2 ms. Found 6 JDBC repository interfaces.
+2023-08-12T20:46:08.765+03:00  INFO 93367 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2023-08-12T20:46:08.765+03:00  INFO 93367 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-08-12T20:46:08.765+03:00  INFO 93367 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.11]
+2023-08-12T20:46:08.768+03:00  INFO 93367 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-08-12T20:46:08.769+03:00  INFO 93367 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 53 ms
+2023-08-12T20:46:08.778+03:00  INFO 93367 --- [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:mysql://localhost:3306/oplanner'
+2023-08-12T20:46:08.791+03:00  INFO 93367 --- [restartedMain] o.f.c.i.database.base.BaseDatabaseType   : Database: jdbc:mysql://localhost:3306/oplanner (MySQL 8.0)
+2023-08-12T20:46:08.797+03:00  INFO 93367 --- [restartedMain] o.f.core.internal.command.DbValidate     : Successfully validated 0 migrations (execution time 00:00.001s)
+2023-08-12T20:46:08.797+03:00  WARN 93367 --- [restartedMain] o.f.core.internal.command.DbValidate     : No migrations found. Are your locations set up correctly?
+2023-08-12T20:46:08.800+03:00  INFO 93367 --- [restartedMain] o.f.core.internal.command.DbMigrate      : Current version of schema `oplanner`: << Empty Schema >>
+2023-08-12T20:46:08.801+03:00  INFO 93367 --- [restartedMain] o.f.core.internal.command.DbMigrate      : Schema `oplanner` is up to date. No migration necessary.
+2023-08-12T20:46:08.825+03:00  INFO 93367 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2023-08-12T20:46:08.858+03:00  INFO 93367 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2023-08-12T20:46:08.859+03:00  INFO 93367 --- [restartedMain] oplanner.Oplanner.OplannerApplication    : Started OplannerApplication in 0.148 seconds (process running for 6638.152)
+2023-08-12T20:46:08.859+03:00  INFO 93367 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2023-08-12T20:46:35.533+03:00  INFO 93367 --- [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 2 class path changes (1 addition, 1 deletion, 0 modifications)
+2023-08-12T20:46:35.539+03:00  INFO 93367 --- [Thread-179] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2023-08-12T20:46:35.591+03:00  INFO 93367 --- [restartedMain] oplanner.Oplanner.OplannerApplication    : Starting OplannerApplication using Java 17.0.7 with PID 93367 (/Users/shovalabudaram/projects/OplannerClient/backend/target/classes started by shovalabudaram in /Users/shovalabudaram/projects/OplannerClient)
+2023-08-12T20:46:35.591+03:00  INFO 93367 --- [restartedMain] oplanner.Oplanner.OplannerApplication    : No active profile set, falling back to 1 default profile: "default"
+2023-08-12T20:46:35.629+03:00  INFO 93367 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
+2023-08-12T20:46:35.632+03:00  INFO 93367 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 3 ms. Found 6 JDBC repository interfaces.
+2023-08-12T20:46:35.649+03:00  INFO 93367 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2023-08-12T20:46:35.650+03:00  INFO 93367 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-08-12T20:46:35.650+03:00  INFO 93367 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.11]
+2023-08-12T20:46:35.653+03:00  INFO 93367 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-08-12T20:46:35.653+03:00  INFO 93367 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 61 ms
+2023-08-12T20:46:35.660+03:00  INFO 93367 --- [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:mysql://localhost:3306/oplanner'
+2023-08-12T20:46:35.674+03:00  INFO 93367 --- [restartedMain] o.f.c.i.database.base.BaseDatabaseType   : Database: jdbc:mysql://localhost:3306/oplanner (MySQL 8.0)
+2023-08-12T20:46:35.682+03:00  INFO 93367 --- [restartedMain] o.f.core.internal.command.DbValidate     : Successfully validated 0 migrations (execution time 00:00.003s)
+2023-08-12T20:46:35.682+03:00  WARN 93367 --- [restartedMain] o.f.core.internal.command.DbValidate     : No migrations found. Are your locations set up correctly?
+2023-08-12T20:46:35.689+03:00  INFO 93367 --- [restartedMain] o.f.core.internal.command.DbMigrate      : Current version of schema `oplanner`: << Empty Schema >>
+2023-08-12T20:46:35.689+03:00  INFO 93367 --- [restartedMain] o.f.core.internal.command.DbMigrate      : Schema `oplanner` is up to date. No migration necessary.
+2023-08-12T20:46:35.721+03:00  INFO 93367 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2023-08-12T20:46:35.755+03:00  INFO 93367 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2023-08-12T20:46:35.756+03:00  INFO 93367 --- [restartedMain] oplanner.Oplanner.OplannerApplication    : Started OplannerApplication in 0.171 seconds (process running for 6665.05)
+2023-08-12T20:46:35.756+03:00  INFO 93367 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2023-08-12T20:46:55.376+03:00  INFO 93367 --- [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2023-08-12T20:46:55.385+03:00  INFO 93367 --- [Thread-183] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2023-08-12T20:46:55.439+03:00  INFO 93367 --- [restartedMain] oplanner.Oplanner.OplannerApplication    : Starting OplannerApplication using Java 17.0.7 with PID 93367 (/Users/shovalabudaram/projects/OplannerClient/backend/target/classes started by shovalabudaram in /Users/shovalabudaram/projects/OplannerClient)
+2023-08-12T20:46:55.440+03:00  INFO 93367 --- [restartedMain] oplanner.Oplanner.OplannerApplication    : No active profile set, falling back to 1 default profile: "default"
+2023-08-12T20:46:55.472+03:00  INFO 93367 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
+2023-08-12T20:46:55.475+03:00  INFO 93367 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 2 ms. Found 6 JDBC repository interfaces.
+2023-08-12T20:46:55.491+03:00  INFO 93367 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2023-08-12T20:46:55.491+03:00  INFO 93367 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-08-12T20:46:55.491+03:00  INFO 93367 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.11]
+2023-08-12T20:46:55.495+03:00  INFO 93367 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-08-12T20:46:55.495+03:00  INFO 93367 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 55 ms
+2023-08-12T20:46:55.504+03:00  INFO 93367 --- [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:mysql://localhost:3306/oplanner'
+2023-08-12T20:46:55.520+03:00  INFO 93367 --- [restartedMain] o.f.c.i.database.base.BaseDatabaseType   : Database: jdbc:mysql://localhost:3306/oplanner (MySQL 8.0)
+2023-08-12T20:46:55.526+03:00  INFO 93367 --- [restartedMain] o.f.core.internal.command.DbValidate     : Successfully validated 0 migrations (execution time 00:00.001s)
+2023-08-12T20:46:55.526+03:00  WARN 93367 --- [restartedMain] o.f.core.internal.command.DbValidate     : No migrations found. Are your locations set up correctly?
+2023-08-12T20:46:55.530+03:00  INFO 93367 --- [restartedMain] o.f.core.internal.command.DbMigrate      : Current version of schema `oplanner`: << Empty Schema >>
+2023-08-12T20:46:55.530+03:00  INFO 93367 --- [restartedMain] o.f.core.internal.command.DbMigrate      : Schema `oplanner` is up to date. No migration necessary.
+2023-08-12T20:46:55.558+03:00  INFO 93367 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2023-08-12T20:46:55.587+03:00  INFO 93367 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2023-08-12T20:46:55.588+03:00  INFO 93367 --- [restartedMain] oplanner.Oplanner.OplannerApplication    : Started OplannerApplication in 0.156 seconds (process running for 6684.882)
+2023-08-12T20:46:55.588+03:00  INFO 93367 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged

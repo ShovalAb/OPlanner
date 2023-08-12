@@ -8,11 +8,7 @@ public interface CreditsRequirementRepository extends CrudRepository<CreditsRequ
     @Query("""
             SELECT * 
             FROM credits_requirement
-<<<<<<< HEAD
-            WHERE plna_id = :planId
-=======
             WHERE plan_id = :planId
->>>>>>> shoval
             """)
     CreditsRequirement[] findByPlanId(int planId);
 }

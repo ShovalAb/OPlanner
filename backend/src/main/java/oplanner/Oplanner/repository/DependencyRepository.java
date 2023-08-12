@@ -7,7 +7,7 @@ import oplanner.Oplanner.Model.Dependency;
 public interface DependencyRepository extends CrudRepository<Dependency, Integer> {
     @Query("""
             SELECT *
-            FROM dependency
+            FROM Dependency
             WHERE dependent_course = :courseId
             """)
     Dependency[] findByCourseId(int courseId);

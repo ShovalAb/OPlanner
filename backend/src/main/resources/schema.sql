@@ -2,7 +2,7 @@
 -- Study plan
 DROP TABLE IF EXISTS Study_Plan;
 
-CREATE TABLE  Study_Plan(
+CREATE TABLE  study_plan(
   id int auto_increment primary key NOT NULL,
   plan_name VARCHAR(100) NOT NULL
 );
@@ -28,18 +28,18 @@ CREATE TABLE  Dependency(
 );
 
 -- MandatoryRequirement
-DROP TABLE IF EXISTS Mandatory_Requirement;
+DROP TABLE IF EXISTS mandatory_requirement;
 
-CREATE TABLE  Mandatory_Requirement(
+CREATE TABLE  mandatory_requirement(
   id int auto_increment primary key NOT NULL,
   plan_id int NOT NULL,
   course_number VARCHAR(100) NOT NULL
   );
 
 -- CreditsRequirement
-DROP TABLE IF EXISTS Credits_Requirement;
+DROP TABLE IF EXISTS credits_requirement;
 
-CREATE TABLE  Credits_Requirement(
+CREATE TABLE  credits_requirement(
   id int auto_increment primary key NOT NULL,
   plan_id int NOT NULL,
   credits_type VARCHAR(100) NOT NULL,
@@ -47,18 +47,18 @@ CREATE TABLE  Credits_Requirement(
 );
 
 -- Course In Study Plan
-DROP TABLE IF EXISTS Course_In_Study_Plan;
+DROP TABLE IF EXISTS course_in_study_plan;
 
-CREATE TABLE  Course_In_Study_Plan(
+CREATE TABLE  course_in_study_plan(
   id int auto_increment primary key NOT NULL,
   course_number int NOT NULL,
   plan_Id int NOT NULL
 );
 
 -- Credits types
-DROP TABLE IF EXISTS Credit_Types;
+DROP TABLE IF EXISTS credit_types;
 
-CREATE TABLE  Credit_Types(
+CREATE TABLE  credit_types(
   id int auto_increment primary key NOT NULL,
   credits_type VARCHAR(100) NOT NULL,
   sub_type VARCHAR(100) NOT NULL

@@ -47,7 +47,7 @@ public class OplannerApplication {
 	// @PostConstruct
 	// public void createTables() {
 	// 	ResourceDatabasePopulator populator = new ResourceDatabasePopulator();
-	// 	populator.addScript(new ClassPathResource("db/schema.sql")); 
+	// 	populator.addScript(new ClassPathResource("schema.sql")); 
 	// 	DataSourceInitializer dataSourceInitializer = new DataSourceInitializer();
 	// 	dataSourceInitializer.setDataSource(dataSource);
 	// 	dataSourceInitializer.setDatabasePopulator(populator);
