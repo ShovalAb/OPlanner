@@ -4499,3 +4499,752 @@
 2023-08-12T15:22:37.600+03:00  INFO 38327 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
 2023-08-12T15:22:37.601+03:00  INFO 38327 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
 2023-08-12T15:22:37.605+03:00  INFO 38327 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 4 ms
+2023-08-12T15:55:13.341+03:00  INFO 38327 --- [restartedMain] oplanner.Oplanner.OplannerApplication    : Starting OplannerApplication using Java 17.0.7 with PID 38327 (/Users/shovalabudaram/projects/OplannerClient/backend/target/classes started by shovalabudaram in /Users/shovalabudaram/projects/OplannerClient)
+2023-08-12T15:55:13.341+03:00  INFO 38327 --- [restartedMain] oplanner.Oplanner.OplannerApplication    : No active profile set, falling back to 1 default profile: "default"
+2023-08-12T15:55:13.386+03:00  INFO 38327 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
+2023-08-12T15:55:13.389+03:00  INFO 38327 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 3 ms. Found 6 JDBC repository interfaces.
+2023-08-12T15:55:13.410+03:00  INFO 38327 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2023-08-12T15:55:13.411+03:00  INFO 38327 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-08-12T15:55:13.411+03:00  INFO 38327 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.11]
+2023-08-12T15:55:13.415+03:00  INFO 38327 --- [restartedMain] o.a.c.c.C.[Tomcat-4].[localhost].[/]     : Initializing Spring embedded WebApplicationContext
+2023-08-12T15:55:13.415+03:00  INFO 38327 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 73 ms
+2023-08-12T15:55:13.433+03:00  INFO 38327 --- [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:mysql://localhost:3306/oplanner'
+2023-08-12T15:55:13.531+03:00  INFO 38327 --- [restartedMain] o.f.c.i.database.base.BaseDatabaseType   : Database: jdbc:mysql://localhost:3306/oplanner (MySQL 8.0)
+2023-08-12T15:55:13.551+03:00  INFO 38327 --- [restartedMain] o.f.core.internal.command.DbValidate     : Successfully validated 0 migrations (execution time 00:00.004s)
+2023-08-12T15:55:13.551+03:00  WARN 38327 --- [restartedMain] o.f.core.internal.command.DbValidate     : No migrations found. Are your locations set up correctly?
+2023-08-12T15:55:13.561+03:00  INFO 38327 --- [restartedMain] o.f.core.internal.command.DbMigrate      : Current version of schema `oplanner`: << Empty Schema >>
+2023-08-12T15:55:13.562+03:00  INFO 38327 --- [restartedMain] o.f.core.internal.command.DbMigrate      : Schema `oplanner` is up to date. No migration necessary.
+2023-08-12T15:55:13.599+03:00  INFO 38327 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2023-08-12T15:55:13.642+03:00  INFO 38327 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2023-08-12T15:55:13.643+03:00  INFO 38327 --- [restartedMain] oplanner.Oplanner.OplannerApplication    : Started OplannerApplication in 0.31 seconds (process running for 4872.852)
+2023-08-12T15:55:13.644+03:00  INFO 38327 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation delta:
+
+
+==========================
+CONDITION EVALUATION DELTA
+==========================
+
+
+Positive matches:
+-----------------
+
+    None
+
+
+Negative matches:
+-----------------
+
+   DataSourceAutoConfiguration.PooledDataSourceConfiguration:
+      Did not match:
+         - @ConditionalOnMissingBean (types: javax.sql.DataSource,javax.sql.XADataSource; SearchStrategy: all) found beans of type 'javax.sql.DataSource' dataSource (OnBeanCondition)
+      Matched:
+         - AnyNestedCondition 1 matched 1 did not; NestedCondition on DataSourceAutoConfiguration.PooledDataSourceCondition.PooledDataSourceAvailable PooledDataSource found supported DataSource; NestedCondition on DataSourceAutoConfiguration.PooledDataSourceCondition.ExplicitType @ConditionalOnProperty (spring.datasource.type) did not find property 'type' (DataSourceAutoConfiguration.PooledDataSourceCondition)
+
+   DevToolsDataSourceAutoConfiguration:
+      Did not match:
+         - DevTools DataSource Condition did not find an auto-configured DataSource (DevToolsDataSourceAutoConfiguration.DevToolsDataSourceCondition)
+      Matched:
+         - Devtools devtools enabled. (OnEnabledDevToolsCondition)
+
+
+Exclusions:
+-----------
+
+    None
+
+
+Unconditional classes:
+----------------------
+
+    None
+
+
+
+2023-08-12T15:55:16.064+03:00  INFO 38327 --- [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 28 class path changes (0 additions, 5 deletions, 23 modifications)
+2023-08-12T15:55:16.068+03:00  INFO 38327 --- [Thread-1224] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2023-08-12T16:13:13.257+03:00  INFO 59588 --- [restartedMain] oplanner.Oplanner.OplannerApplication    : Starting OplannerApplication using Java 17.0.7 with PID 59588 (/Users/shovalabudaram/projects/OplannerClient/backend/target/classes started by shovalabudaram in /Users/shovalabudaram/projects/OplannerClient)
+2023-08-12T16:13:13.257+03:00  INFO 59588 --- [restartedMain] oplanner.Oplanner.OplannerApplication    : No active profile set, falling back to 1 default profile: "default"
+2023-08-12T16:13:13.311+03:00  INFO 59588 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
+2023-08-12T16:13:13.317+03:00  INFO 59588 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 5 ms. Found 6 JDBC repository interfaces.
+2023-08-12T16:13:13.345+03:00  INFO 59588 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2023-08-12T16:13:13.346+03:00  INFO 59588 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-08-12T16:13:13.346+03:00  INFO 59588 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.11]
+2023-08-12T16:13:13.398+03:00  INFO 59588 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-08-12T16:13:13.399+03:00  INFO 59588 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 140 ms
+2023-08-12T16:13:13.417+03:00  INFO 59588 --- [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:mysql://localhost:3306/oplanner'
+2023-08-12T16:13:13.501+03:00  INFO 59588 --- [restartedMain] o.f.c.i.database.base.BaseDatabaseType   : Database: jdbc:mysql://localhost:3306/oplanner (MySQL 8.0)
+2023-08-12T16:13:13.509+03:00  INFO 59588 --- [restartedMain] o.f.core.internal.command.DbValidate     : Successfully validated 0 migrations (execution time 00:00.002s)
+2023-08-12T16:13:13.510+03:00  WARN 59588 --- [restartedMain] o.f.core.internal.command.DbValidate     : No migrations found. Are your locations set up correctly?
+2023-08-12T16:13:13.515+03:00  INFO 59588 --- [restartedMain] o.f.core.internal.command.DbMigrate      : Current version of schema `oplanner`: << Empty Schema >>
+2023-08-12T16:13:13.517+03:00  INFO 59588 --- [restartedMain] o.f.core.internal.command.DbMigrate      : Schema `oplanner` is up to date. No migration necessary.
+2023-08-12T16:13:13.543+03:00  INFO 59588 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2023-08-12T16:13:13.591+03:00  INFO 59588 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2023-08-12T16:13:13.593+03:00  INFO 59588 --- [restartedMain] oplanner.Oplanner.OplannerApplication    : Started OplannerApplication in 0.367 seconds (process running for 667.156)
+2023-08-12T16:13:13.593+03:00  INFO 59588 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2023-08-12T16:13:31.170+03:00  INFO 59588 --- [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2023-08-12T16:13:31.174+03:00  INFO 59588 --- [Thread-31] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2023-08-12T16:13:31.213+03:00  INFO 59588 --- [restartedMain] oplanner.Oplanner.OplannerApplication    : Starting OplannerApplication using Java 17.0.7 with PID 59588 (/Users/shovalabudaram/projects/OplannerClient/backend/target/classes started by shovalabudaram in /Users/shovalabudaram/projects/OplannerClient)
+2023-08-12T16:13:31.214+03:00  INFO 59588 --- [restartedMain] oplanner.Oplanner.OplannerApplication    : No active profile set, falling back to 1 default profile: "default"
+2023-08-12T16:13:31.261+03:00  INFO 59588 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
+2023-08-12T16:13:31.266+03:00  INFO 59588 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 4 ms. Found 6 JDBC repository interfaces.
+2023-08-12T16:13:31.298+03:00  INFO 59588 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2023-08-12T16:13:31.299+03:00  INFO 59588 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-08-12T16:13:31.299+03:00  INFO 59588 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.11]
+2023-08-12T16:13:31.305+03:00  INFO 59588 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-08-12T16:13:31.305+03:00  INFO 59588 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 90 ms
+2023-08-12T16:13:31.328+03:00  INFO 59588 --- [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:mysql://localhost:3306/oplanner'
+2023-08-12T16:13:31.401+03:00  INFO 59588 --- [restartedMain] o.f.c.i.database.base.BaseDatabaseType   : Database: jdbc:mysql://localhost:3306/oplanner (MySQL 8.0)
+2023-08-12T16:13:31.409+03:00  INFO 59588 --- [restartedMain] o.f.core.internal.command.DbValidate     : Successfully validated 0 migrations (execution time 00:00.002s)
+2023-08-12T16:13:31.409+03:00  WARN 59588 --- [restartedMain] o.f.core.internal.command.DbValidate     : No migrations found. Are your locations set up correctly?
+2023-08-12T16:13:31.414+03:00  INFO 59588 --- [restartedMain] o.f.core.internal.command.DbMigrate      : Current version of schema `oplanner`: << Empty Schema >>
+2023-08-12T16:13:31.415+03:00  INFO 59588 --- [restartedMain] o.f.core.internal.command.DbMigrate      : Schema `oplanner` is up to date. No migration necessary.
+2023-08-12T16:13:31.440+03:00  INFO 59588 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2023-08-12T16:13:31.481+03:00  INFO 59588 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2023-08-12T16:13:31.482+03:00  INFO 59588 --- [restartedMain] oplanner.Oplanner.OplannerApplication    : Started OplannerApplication in 0.276 seconds (process running for 685.046)
+2023-08-12T16:13:31.483+03:00  INFO 59588 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2023-08-12T16:13:44.515+03:00  INFO 59588 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-08-12T16:13:44.515+03:00  INFO 59588 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-08-12T16:13:44.516+03:00  INFO 59588 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 0 ms
+2023-08-12T16:14:58.778+03:00  INFO 59588 --- [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2023-08-12T16:14:58.792+03:00  INFO 59588 --- [Thread-35] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2023-08-12T16:14:58.793+03:00  INFO 59588 --- [Thread-35] o.a.c.c.C.[Tomcat].[localhost].[/]       : Destroying Spring FrameworkServlet 'dispatcherServlet'
+2023-08-12T16:14:58.851+03:00  INFO 59588 --- [restartedMain] oplanner.Oplanner.OplannerApplication    : Starting OplannerApplication using Java 17.0.7 with PID 59588 (/Users/shovalabudaram/projects/OplannerClient/backend/target/classes started by shovalabudaram in /Users/shovalabudaram/projects/OplannerClient)
+2023-08-12T16:14:58.851+03:00  INFO 59588 --- [restartedMain] oplanner.Oplanner.OplannerApplication    : No active profile set, falling back to 1 default profile: "default"
+2023-08-12T16:14:58.920+03:00  INFO 59588 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
+2023-08-12T16:14:58.926+03:00  INFO 59588 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 5 ms. Found 6 JDBC repository interfaces.
+2023-08-12T16:14:58.953+03:00  INFO 59588 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2023-08-12T16:14:58.954+03:00  INFO 59588 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-08-12T16:14:58.954+03:00  INFO 59588 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.11]
+2023-08-12T16:14:58.958+03:00  INFO 59588 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-08-12T16:14:58.958+03:00  INFO 59588 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 106 ms
+2023-08-12T16:14:58.970+03:00  INFO 59588 --- [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:mysql://localhost:3306/oplanner'
+2023-08-12T16:14:58.991+03:00  WARN 59588 --- [restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'oplannerApplication': Invocation of init method failed
+2023-08-12T16:14:58.992+03:00  INFO 59588 --- [restartedMain] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2023-08-12T16:14:58.994+03:00  INFO 59588 --- [restartedMain] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2023-08-12T16:14:59.003+03:00 ERROR 59588 --- [restartedMain] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'oplannerApplication': Invocation of init method failed
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor.postProcessBeforeInitialization(InitDestroyAnnotationBeanPostProcessor.java:222) ~[spring-beans-6.0.11.jar:6.0.11]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyBeanPostProcessorsBeforeInitialization(AbstractAutowireCapableBeanFactory.java:419) ~[spring-beans-6.0.11.jar:6.0.11]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1762) ~[spring-beans-6.0.11.jar:6.0.11]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:598) ~[spring-beans-6.0.11.jar:6.0.11]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:520) ~[spring-beans-6.0.11.jar:6.0.11]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:326) ~[spring-beans-6.0.11.jar:6.0.11]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-6.0.11.jar:6.0.11]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:324) ~[spring-beans-6.0.11.jar:6.0.11]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200) ~[spring-beans-6.0.11.jar:6.0.11]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:973) ~[spring-beans-6.0.11.jar:6.0.11]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:942) ~[spring-context-6.0.11.jar:6.0.11]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:608) ~[spring-context-6.0.11.jar:6.0.11]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146) ~[spring-boot-3.1.2.jar:3.1.2]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:734) ~[spring-boot-3.1.2.jar:3.1.2]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:436) ~[spring-boot-3.1.2.jar:3.1.2]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:312) ~[spring-boot-3.1.2.jar:3.1.2]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1306) ~[spring-boot-3.1.2.jar:3.1.2]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1295) ~[spring-boot-3.1.2.jar:3.1.2]
+	at oplanner.Oplanner.OplannerApplication.main(OplannerApplication.java:39) ~[classes/:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568) ~[na:na]
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:50) ~[spring-boot-devtools-3.1.2.jar:3.1.2]
+Caused by: org.springframework.jdbc.datasource.init.ScriptStatementFailedException: Failed to execute SQL script statement #1 of class path resource [db/schema.sql]: CREATE TABLE Study_Plan( id int auto_increment primary key NOT NULL, plan_name VARCHAR(100) NOT NULL )
+	at org.springframework.jdbc.datasource.init.ScriptUtils.executeSqlScript(ScriptUtils.java:282) ~[spring-jdbc-6.0.11.jar:6.0.11]
+	at org.springframework.jdbc.datasource.init.ResourceDatabasePopulator.populate(ResourceDatabasePopulator.java:254) ~[spring-jdbc-6.0.11.jar:6.0.11]
+	at org.springframework.jdbc.datasource.init.DatabasePopulatorUtils.execute(DatabasePopulatorUtils.java:54) ~[spring-jdbc-6.0.11.jar:6.0.11]
+	at org.springframework.jdbc.datasource.init.DataSourceInitializer.execute(DataSourceInitializer.java:111) ~[spring-jdbc-6.0.11.jar:6.0.11]
+	at org.springframework.jdbc.datasource.init.DataSourceInitializer.afterPropertiesSet(DataSourceInitializer.java:96) ~[spring-jdbc-6.0.11.jar:6.0.11]
+	at oplanner.Oplanner.OplannerApplication.createTables(OplannerApplication.java:57) ~[classes/:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568) ~[na:na]
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor$LifecycleMethod.invoke(InitDestroyAnnotationBeanPostProcessor.java:457) ~[spring-beans-6.0.11.jar:6.0.11]
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor$LifecycleMetadata.invokeInitMethods(InitDestroyAnnotationBeanPostProcessor.java:401) ~[spring-beans-6.0.11.jar:6.0.11]
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor.postProcessBeforeInitialization(InitDestroyAnnotationBeanPostProcessor.java:219) ~[spring-beans-6.0.11.jar:6.0.11]
+	... 23 common frames omitted
+Caused by: java.sql.SQLSyntaxErrorException: Table 'study_plan' already exists
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:120) ~[mysql-connector-java-8.0.30.jar:8.0.30]
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122) ~[mysql-connector-java-8.0.30.jar:8.0.30]
+	at com.mysql.cj.jdbc.StatementImpl.executeInternal(StatementImpl.java:763) ~[mysql-connector-java-8.0.30.jar:8.0.30]
+	at com.mysql.cj.jdbc.StatementImpl.execute(StatementImpl.java:648) ~[mysql-connector-java-8.0.30.jar:8.0.30]
+	at org.springframework.jdbc.datasource.init.ScriptUtils.executeSqlScript(ScriptUtils.java:261) ~[spring-jdbc-6.0.11.jar:6.0.11]
+	... 35 common frames omitted
+
+2023-08-12T16:15:00.435+03:00  INFO 59588 --- [restartedMain] oplanner.Oplanner.OplannerApplication    : Starting OplannerApplication using Java 17.0.7 with PID 59588 (/Users/shovalabudaram/projects/OplannerClient/backend/target/classes started by shovalabudaram in /Users/shovalabudaram/projects/OplannerClient)
+2023-08-12T16:15:00.435+03:00  INFO 59588 --- [restartedMain] oplanner.Oplanner.OplannerApplication    : No active profile set, falling back to 1 default profile: "default"
+2023-08-12T16:15:00.483+03:00  INFO 59588 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
+2023-08-12T16:15:00.486+03:00  INFO 59588 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 3 ms. Found 6 JDBC repository interfaces.
+2023-08-12T16:15:00.510+03:00  INFO 59588 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2023-08-12T16:15:00.511+03:00  INFO 59588 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-08-12T16:15:00.511+03:00  INFO 59588 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.11]
+2023-08-12T16:15:00.515+03:00  INFO 59588 --- [restartedMain] o.a.c.c.C.[Tomcat-1].[localhost].[/]     : Initializing Spring embedded WebApplicationContext
+2023-08-12T16:15:00.515+03:00  INFO 59588 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 78 ms
+2023-08-12T16:15:00.524+03:00  INFO 59588 --- [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:mysql://localhost:3306/oplanner'
+2023-08-12T16:15:00.538+03:00  WARN 59588 --- [restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'oplannerApplication': Invocation of init method failed
+2023-08-12T16:15:00.538+03:00  INFO 59588 --- [restartedMain] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2023-08-12T16:15:00.540+03:00  INFO 59588 --- [restartedMain] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2023-08-12T16:15:00.540+03:00 ERROR 59588 --- [restartedMain] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'oplannerApplication': Invocation of init method failed
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor.postProcessBeforeInitialization(InitDestroyAnnotationBeanPostProcessor.java:222) ~[spring-beans-6.0.11.jar:6.0.11]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyBeanPostProcessorsBeforeInitialization(AbstractAutowireCapableBeanFactory.java:419) ~[spring-beans-6.0.11.jar:6.0.11]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1762) ~[spring-beans-6.0.11.jar:6.0.11]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:598) ~[spring-beans-6.0.11.jar:6.0.11]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:520) ~[spring-beans-6.0.11.jar:6.0.11]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:326) ~[spring-beans-6.0.11.jar:6.0.11]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-6.0.11.jar:6.0.11]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:324) ~[spring-beans-6.0.11.jar:6.0.11]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200) ~[spring-beans-6.0.11.jar:6.0.11]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:973) ~[spring-beans-6.0.11.jar:6.0.11]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:942) ~[spring-context-6.0.11.jar:6.0.11]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:608) ~[spring-context-6.0.11.jar:6.0.11]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146) ~[spring-boot-3.1.2.jar:3.1.2]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:734) ~[spring-boot-3.1.2.jar:3.1.2]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:436) ~[spring-boot-3.1.2.jar:3.1.2]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:312) ~[spring-boot-3.1.2.jar:3.1.2]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1306) ~[spring-boot-3.1.2.jar:3.1.2]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1295) ~[spring-boot-3.1.2.jar:3.1.2]
+	at oplanner.Oplanner.OplannerApplication.main(OplannerApplication.java:39) ~[classes/:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568) ~[na:na]
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:50) ~[spring-boot-devtools-3.1.2.jar:3.1.2]
+Caused by: org.springframework.jdbc.datasource.init.ScriptStatementFailedException: Failed to execute SQL script statement #1 of class path resource [db/schema.sql]: CREATE TABLE Study_Plan( id int auto_increment primary key NOT NULL, plan_name VARCHAR(100) NOT NULL )
+	at org.springframework.jdbc.datasource.init.ScriptUtils.executeSqlScript(ScriptUtils.java:282) ~[spring-jdbc-6.0.11.jar:6.0.11]
+	at org.springframework.jdbc.datasource.init.ResourceDatabasePopulator.populate(ResourceDatabasePopulator.java:254) ~[spring-jdbc-6.0.11.jar:6.0.11]
+	at org.springframework.jdbc.datasource.init.DatabasePopulatorUtils.execute(DatabasePopulatorUtils.java:54) ~[spring-jdbc-6.0.11.jar:6.0.11]
+	at org.springframework.jdbc.datasource.init.DataSourceInitializer.execute(DataSourceInitializer.java:111) ~[spring-jdbc-6.0.11.jar:6.0.11]
+	at org.springframework.jdbc.datasource.init.DataSourceInitializer.afterPropertiesSet(DataSourceInitializer.java:96) ~[spring-jdbc-6.0.11.jar:6.0.11]
+	at oplanner.Oplanner.OplannerApplication.createTables(OplannerApplication.java:57) ~[classes/:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568) ~[na:na]
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor$LifecycleMethod.invoke(InitDestroyAnnotationBeanPostProcessor.java:457) ~[spring-beans-6.0.11.jar:6.0.11]
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor$LifecycleMetadata.invokeInitMethods(InitDestroyAnnotationBeanPostProcessor.java:401) ~[spring-beans-6.0.11.jar:6.0.11]
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor.postProcessBeforeInitialization(InitDestroyAnnotationBeanPostProcessor.java:219) ~[spring-beans-6.0.11.jar:6.0.11]
+	... 23 common frames omitted
+Caused by: java.sql.SQLSyntaxErrorException: Table 'study_plan' already exists
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:120) ~[mysql-connector-java-8.0.30.jar:8.0.30]
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122) ~[mysql-connector-java-8.0.30.jar:8.0.30]
+	at com.mysql.cj.jdbc.StatementImpl.executeInternal(StatementImpl.java:763) ~[mysql-connector-java-8.0.30.jar:8.0.30]
+	at com.mysql.cj.jdbc.StatementImpl.execute(StatementImpl.java:648) ~[mysql-connector-java-8.0.30.jar:8.0.30]
+	at org.springframework.jdbc.datasource.init.ScriptUtils.executeSqlScript(ScriptUtils.java:261) ~[spring-jdbc-6.0.11.jar:6.0.11]
+	... 35 common frames omitted
+
+2023-08-12T16:15:01.975+03:00  INFO 59588 --- [restartedMain] oplanner.Oplanner.OplannerApplication    : Starting OplannerApplication using Java 17.0.7 with PID 59588 (/Users/shovalabudaram/projects/OplannerClient/backend/target/classes started by shovalabudaram in /Users/shovalabudaram/projects/OplannerClient)
+2023-08-12T16:15:01.975+03:00  INFO 59588 --- [restartedMain] oplanner.Oplanner.OplannerApplication    : No active profile set, falling back to 1 default profile: "default"
+2023-08-12T16:15:02.019+03:00  INFO 59588 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
+2023-08-12T16:15:02.023+03:00  INFO 59588 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 3 ms. Found 6 JDBC repository interfaces.
+2023-08-12T16:15:02.044+03:00  INFO 59588 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2023-08-12T16:15:02.044+03:00  INFO 59588 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-08-12T16:15:02.044+03:00  INFO 59588 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.11]
+2023-08-12T16:15:02.049+03:00  INFO 59588 --- [restartedMain] o.a.c.c.C.[Tomcat-2].[localhost].[/]     : Initializing Spring embedded WebApplicationContext
+2023-08-12T16:15:02.049+03:00  INFO 59588 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 73 ms
+2023-08-12T16:15:02.057+03:00  INFO 59588 --- [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:mysql://localhost:3306/oplanner'
+2023-08-12T16:15:02.070+03:00  WARN 59588 --- [restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'oplannerApplication': Invocation of init method failed
+2023-08-12T16:15:02.070+03:00  INFO 59588 --- [restartedMain] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2023-08-12T16:15:02.072+03:00  INFO 59588 --- [restartedMain] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2023-08-12T16:15:02.073+03:00 ERROR 59588 --- [restartedMain] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'oplannerApplication': Invocation of init method failed
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor.postProcessBeforeInitialization(InitDestroyAnnotationBeanPostProcessor.java:222) ~[spring-beans-6.0.11.jar:6.0.11]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyBeanPostProcessorsBeforeInitialization(AbstractAutowireCapableBeanFactory.java:419) ~[spring-beans-6.0.11.jar:6.0.11]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1762) ~[spring-beans-6.0.11.jar:6.0.11]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:598) ~[spring-beans-6.0.11.jar:6.0.11]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:520) ~[spring-beans-6.0.11.jar:6.0.11]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:326) ~[spring-beans-6.0.11.jar:6.0.11]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-6.0.11.jar:6.0.11]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:324) ~[spring-beans-6.0.11.jar:6.0.11]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200) ~[spring-beans-6.0.11.jar:6.0.11]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:973) ~[spring-beans-6.0.11.jar:6.0.11]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:942) ~[spring-context-6.0.11.jar:6.0.11]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:608) ~[spring-context-6.0.11.jar:6.0.11]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146) ~[spring-boot-3.1.2.jar:3.1.2]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:734) ~[spring-boot-3.1.2.jar:3.1.2]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:436) ~[spring-boot-3.1.2.jar:3.1.2]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:312) ~[spring-boot-3.1.2.jar:3.1.2]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1306) ~[spring-boot-3.1.2.jar:3.1.2]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1295) ~[spring-boot-3.1.2.jar:3.1.2]
+	at oplanner.Oplanner.OplannerApplication.main(OplannerApplication.java:39) ~[classes/:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568) ~[na:na]
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:50) ~[spring-boot-devtools-3.1.2.jar:3.1.2]
+Caused by: org.springframework.jdbc.datasource.init.ScriptStatementFailedException: Failed to execute SQL script statement #1 of class path resource [db/schema.sql]: CREATE TABLE Study_Plan( id int auto_increment primary key NOT NULL, plan_name VARCHAR(100) NOT NULL )
+	at org.springframework.jdbc.datasource.init.ScriptUtils.executeSqlScript(ScriptUtils.java:282) ~[spring-jdbc-6.0.11.jar:6.0.11]
+	at org.springframework.jdbc.datasource.init.ResourceDatabasePopulator.populate(ResourceDatabasePopulator.java:254) ~[spring-jdbc-6.0.11.jar:6.0.11]
+	at org.springframework.jdbc.datasource.init.DatabasePopulatorUtils.execute(DatabasePopulatorUtils.java:54) ~[spring-jdbc-6.0.11.jar:6.0.11]
+	at org.springframework.jdbc.datasource.init.DataSourceInitializer.execute(DataSourceInitializer.java:111) ~[spring-jdbc-6.0.11.jar:6.0.11]
+	at org.springframework.jdbc.datasource.init.DataSourceInitializer.afterPropertiesSet(DataSourceInitializer.java:96) ~[spring-jdbc-6.0.11.jar:6.0.11]
+	at oplanner.Oplanner.OplannerApplication.createTables(OplannerApplication.java:57) ~[classes/:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568) ~[na:na]
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor$LifecycleMethod.invoke(InitDestroyAnnotationBeanPostProcessor.java:457) ~[spring-beans-6.0.11.jar:6.0.11]
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor$LifecycleMetadata.invokeInitMethods(InitDestroyAnnotationBeanPostProcessor.java:401) ~[spring-beans-6.0.11.jar:6.0.11]
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor.postProcessBeforeInitialization(InitDestroyAnnotationBeanPostProcessor.java:219) ~[spring-beans-6.0.11.jar:6.0.11]
+	... 23 common frames omitted
+Caused by: java.sql.SQLSyntaxErrorException: Table 'study_plan' already exists
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:120) ~[mysql-connector-java-8.0.30.jar:8.0.30]
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122) ~[mysql-connector-java-8.0.30.jar:8.0.30]
+	at com.mysql.cj.jdbc.StatementImpl.executeInternal(StatementImpl.java:763) ~[mysql-connector-java-8.0.30.jar:8.0.30]
+	at com.mysql.cj.jdbc.StatementImpl.execute(StatementImpl.java:648) ~[mysql-connector-java-8.0.30.jar:8.0.30]
+	at org.springframework.jdbc.datasource.init.ScriptUtils.executeSqlScript(ScriptUtils.java:261) ~[spring-jdbc-6.0.11.jar:6.0.11]
+	... 35 common frames omitted
+
+2023-08-12T16:15:03.498+03:00  INFO 59588 --- [restartedMain] oplanner.Oplanner.OplannerApplication    : Starting OplannerApplication using Java 17.0.7 with PID 59588 (/Users/shovalabudaram/projects/OplannerClient/backend/target/classes started by shovalabudaram in /Users/shovalabudaram/projects/OplannerClient)
+2023-08-12T16:15:03.498+03:00  INFO 59588 --- [restartedMain] oplanner.Oplanner.OplannerApplication    : No active profile set, falling back to 1 default profile: "default"
+2023-08-12T16:15:03.537+03:00  INFO 59588 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
+2023-08-12T16:15:03.540+03:00  INFO 59588 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 3 ms. Found 6 JDBC repository interfaces.
+2023-08-12T16:15:03.563+03:00  INFO 59588 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2023-08-12T16:15:03.563+03:00  INFO 59588 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-08-12T16:15:03.563+03:00  INFO 59588 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.11]
+2023-08-12T16:15:03.570+03:00  INFO 59588 --- [restartedMain] o.a.c.c.C.[Tomcat-3].[localhost].[/]     : Initializing Spring embedded WebApplicationContext
+2023-08-12T16:15:03.570+03:00  INFO 59588 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 71 ms
+2023-08-12T16:15:03.581+03:00  INFO 59588 --- [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:mysql://localhost:3306/oplanner'
+2023-08-12T16:15:03.598+03:00  WARN 59588 --- [restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'oplannerApplication': Invocation of init method failed
+2023-08-12T16:15:03.598+03:00  INFO 59588 --- [restartedMain] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2023-08-12T16:15:03.600+03:00  INFO 59588 --- [restartedMain] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2023-08-12T16:15:03.601+03:00 ERROR 59588 --- [restartedMain] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'oplannerApplication': Invocation of init method failed
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor.postProcessBeforeInitialization(InitDestroyAnnotationBeanPostProcessor.java:222) ~[spring-beans-6.0.11.jar:6.0.11]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyBeanPostProcessorsBeforeInitialization(AbstractAutowireCapableBeanFactory.java:419) ~[spring-beans-6.0.11.jar:6.0.11]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1762) ~[spring-beans-6.0.11.jar:6.0.11]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:598) ~[spring-beans-6.0.11.jar:6.0.11]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:520) ~[spring-beans-6.0.11.jar:6.0.11]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:326) ~[spring-beans-6.0.11.jar:6.0.11]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-6.0.11.jar:6.0.11]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:324) ~[spring-beans-6.0.11.jar:6.0.11]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200) ~[spring-beans-6.0.11.jar:6.0.11]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:973) ~[spring-beans-6.0.11.jar:6.0.11]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:942) ~[spring-context-6.0.11.jar:6.0.11]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:608) ~[spring-context-6.0.11.jar:6.0.11]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146) ~[spring-boot-3.1.2.jar:3.1.2]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:734) ~[spring-boot-3.1.2.jar:3.1.2]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:436) ~[spring-boot-3.1.2.jar:3.1.2]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:312) ~[spring-boot-3.1.2.jar:3.1.2]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1306) ~[spring-boot-3.1.2.jar:3.1.2]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1295) ~[spring-boot-3.1.2.jar:3.1.2]
+	at oplanner.Oplanner.OplannerApplication.main(OplannerApplication.java:39) ~[classes/:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568) ~[na:na]
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:50) ~[spring-boot-devtools-3.1.2.jar:3.1.2]
+Caused by: org.springframework.jdbc.datasource.init.ScriptStatementFailedException: Failed to execute SQL script statement #1 of class path resource [db/schema.sql]: CREATE TABLE Study_Plan( id int auto_increment primary key NOT NULL, plan_name VARCHAR(100) NOT NULL )
+	at org.springframework.jdbc.datasource.init.ScriptUtils.executeSqlScript(ScriptUtils.java:282) ~[spring-jdbc-6.0.11.jar:6.0.11]
+	at org.springframework.jdbc.datasource.init.ResourceDatabasePopulator.populate(ResourceDatabasePopulator.java:254) ~[spring-jdbc-6.0.11.jar:6.0.11]
+	at org.springframework.jdbc.datasource.init.DatabasePopulatorUtils.execute(DatabasePopulatorUtils.java:54) ~[spring-jdbc-6.0.11.jar:6.0.11]
+	at org.springframework.jdbc.datasource.init.DataSourceInitializer.execute(DataSourceInitializer.java:111) ~[spring-jdbc-6.0.11.jar:6.0.11]
+	at org.springframework.jdbc.datasource.init.DataSourceInitializer.afterPropertiesSet(DataSourceInitializer.java:96) ~[spring-jdbc-6.0.11.jar:6.0.11]
+	at oplanner.Oplanner.OplannerApplication.createTables(OplannerApplication.java:57) ~[classes/:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568) ~[na:na]
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor$LifecycleMethod.invoke(InitDestroyAnnotationBeanPostProcessor.java:457) ~[spring-beans-6.0.11.jar:6.0.11]
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor$LifecycleMetadata.invokeInitMethods(InitDestroyAnnotationBeanPostProcessor.java:401) ~[spring-beans-6.0.11.jar:6.0.11]
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor.postProcessBeforeInitialization(InitDestroyAnnotationBeanPostProcessor.java:219) ~[spring-beans-6.0.11.jar:6.0.11]
+	... 23 common frames omitted
+Caused by: java.sql.SQLSyntaxErrorException: Table 'study_plan' already exists
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:120) ~[mysql-connector-java-8.0.30.jar:8.0.30]
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122) ~[mysql-connector-java-8.0.30.jar:8.0.30]
+	at com.mysql.cj.jdbc.StatementImpl.executeInternal(StatementImpl.java:763) ~[mysql-connector-java-8.0.30.jar:8.0.30]
+	at com.mysql.cj.jdbc.StatementImpl.execute(StatementImpl.java:648) ~[mysql-connector-java-8.0.30.jar:8.0.30]
+	at org.springframework.jdbc.datasource.init.ScriptUtils.executeSqlScript(ScriptUtils.java:261) ~[spring-jdbc-6.0.11.jar:6.0.11]
+	... 35 common frames omitted
+
+2023-08-12T16:15:05.033+03:00  INFO 59588 --- [restartedMain] oplanner.Oplanner.OplannerApplication    : Starting OplannerApplication using Java 17.0.7 with PID 59588 (/Users/shovalabudaram/projects/OplannerClient/backend/target/classes started by shovalabudaram in /Users/shovalabudaram/projects/OplannerClient)
+2023-08-12T16:15:05.033+03:00  INFO 59588 --- [restartedMain] oplanner.Oplanner.OplannerApplication    : No active profile set, falling back to 1 default profile: "default"
+2023-08-12T16:15:05.083+03:00  INFO 59588 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
+2023-08-12T16:15:05.087+03:00  INFO 59588 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 3 ms. Found 6 JDBC repository interfaces.
+2023-08-12T16:15:05.110+03:00  INFO 59588 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2023-08-12T16:15:05.110+03:00  INFO 59588 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-08-12T16:15:05.110+03:00  INFO 59588 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.11]
+2023-08-12T16:15:05.115+03:00  INFO 59588 --- [restartedMain] o.a.c.c.C.[Tomcat-4].[localhost].[/]     : Initializing Spring embedded WebApplicationContext
+2023-08-12T16:15:05.115+03:00  INFO 59588 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 81 ms
+2023-08-12T16:15:05.123+03:00  INFO 59588 --- [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:mysql://localhost:3306/oplanner'
+2023-08-12T16:15:05.138+03:00  WARN 59588 --- [restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'oplannerApplication': Invocation of init method failed
+2023-08-12T16:15:05.138+03:00  INFO 59588 --- [restartedMain] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2023-08-12T16:15:05.140+03:00  INFO 59588 --- [restartedMain] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2023-08-12T16:15:05.141+03:00 ERROR 59588 --- [restartedMain] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'oplannerApplication': Invocation of init method failed
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor.postProcessBeforeInitialization(InitDestroyAnnotationBeanPostProcessor.java:222) ~[spring-beans-6.0.11.jar:6.0.11]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyBeanPostProcessorsBeforeInitialization(AbstractAutowireCapableBeanFactory.java:419) ~[spring-beans-6.0.11.jar:6.0.11]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1762) ~[spring-beans-6.0.11.jar:6.0.11]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:598) ~[spring-beans-6.0.11.jar:6.0.11]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:520) ~[spring-beans-6.0.11.jar:6.0.11]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:326) ~[spring-beans-6.0.11.jar:6.0.11]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-6.0.11.jar:6.0.11]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:324) ~[spring-beans-6.0.11.jar:6.0.11]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200) ~[spring-beans-6.0.11.jar:6.0.11]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:973) ~[spring-beans-6.0.11.jar:6.0.11]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:942) ~[spring-context-6.0.11.jar:6.0.11]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:608) ~[spring-context-6.0.11.jar:6.0.11]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146) ~[spring-boot-3.1.2.jar:3.1.2]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:734) ~[spring-boot-3.1.2.jar:3.1.2]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:436) ~[spring-boot-3.1.2.jar:3.1.2]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:312) ~[spring-boot-3.1.2.jar:3.1.2]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1306) ~[spring-boot-3.1.2.jar:3.1.2]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1295) ~[spring-boot-3.1.2.jar:3.1.2]
+	at oplanner.Oplanner.OplannerApplication.main(OplannerApplication.java:39) ~[classes/:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568) ~[na:na]
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:50) ~[spring-boot-devtools-3.1.2.jar:3.1.2]
+Caused by: org.springframework.jdbc.datasource.init.ScriptStatementFailedException: Failed to execute SQL script statement #1 of class path resource [db/schema.sql]: CREATE TABLE Study_Plan( id int auto_increment primary key NOT NULL, plan_name VARCHAR(100) NOT NULL )
+	at org.springframework.jdbc.datasource.init.ScriptUtils.executeSqlScript(ScriptUtils.java:282) ~[spring-jdbc-6.0.11.jar:6.0.11]
+	at org.springframework.jdbc.datasource.init.ResourceDatabasePopulator.populate(ResourceDatabasePopulator.java:254) ~[spring-jdbc-6.0.11.jar:6.0.11]
+	at org.springframework.jdbc.datasource.init.DatabasePopulatorUtils.execute(DatabasePopulatorUtils.java:54) ~[spring-jdbc-6.0.11.jar:6.0.11]
+	at org.springframework.jdbc.datasource.init.DataSourceInitializer.execute(DataSourceInitializer.java:111) ~[spring-jdbc-6.0.11.jar:6.0.11]
+	at org.springframework.jdbc.datasource.init.DataSourceInitializer.afterPropertiesSet(DataSourceInitializer.java:96) ~[spring-jdbc-6.0.11.jar:6.0.11]
+	at oplanner.Oplanner.OplannerApplication.createTables(OplannerApplication.java:57) ~[classes/:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568) ~[na:na]
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor$LifecycleMethod.invoke(InitDestroyAnnotationBeanPostProcessor.java:457) ~[spring-beans-6.0.11.jar:6.0.11]
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor$LifecycleMetadata.invokeInitMethods(InitDestroyAnnotationBeanPostProcessor.java:401) ~[spring-beans-6.0.11.jar:6.0.11]
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor.postProcessBeforeInitialization(InitDestroyAnnotationBeanPostProcessor.java:219) ~[spring-beans-6.0.11.jar:6.0.11]
+	... 23 common frames omitted
+Caused by: java.sql.SQLSyntaxErrorException: Table 'study_plan' already exists
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:120) ~[mysql-connector-java-8.0.30.jar:8.0.30]
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122) ~[mysql-connector-java-8.0.30.jar:8.0.30]
+	at com.mysql.cj.jdbc.StatementImpl.executeInternal(StatementImpl.java:763) ~[mysql-connector-java-8.0.30.jar:8.0.30]
+	at com.mysql.cj.jdbc.StatementImpl.execute(StatementImpl.java:648) ~[mysql-connector-java-8.0.30.jar:8.0.30]
+	at org.springframework.jdbc.datasource.init.ScriptUtils.executeSqlScript(ScriptUtils.java:261) ~[spring-jdbc-6.0.11.jar:6.0.11]
+	... 35 common frames omitted
+
+2023-08-12T16:15:07.595+03:00  INFO 59588 --- [restartedMain] oplanner.Oplanner.OplannerApplication    : Starting OplannerApplication using Java 17.0.7 with PID 59588 (/Users/shovalabudaram/projects/OplannerClient/backend/target/classes started by shovalabudaram in /Users/shovalabudaram/projects/OplannerClient)
+2023-08-12T16:15:07.596+03:00  INFO 59588 --- [restartedMain] oplanner.Oplanner.OplannerApplication    : No active profile set, falling back to 1 default profile: "default"
+2023-08-12T16:15:07.645+03:00  INFO 59588 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
+2023-08-12T16:15:07.650+03:00  INFO 59588 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 4 ms. Found 6 JDBC repository interfaces.
+2023-08-12T16:15:07.674+03:00  INFO 59588 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2023-08-12T16:15:07.675+03:00  INFO 59588 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-08-12T16:15:07.675+03:00  INFO 59588 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.11]
+2023-08-12T16:15:07.678+03:00  INFO 59588 --- [restartedMain] o.a.c.c.C.[Tomcat-5].[localhost].[/]     : Initializing Spring embedded WebApplicationContext
+2023-08-12T16:15:07.678+03:00  INFO 59588 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 81 ms
+2023-08-12T16:15:07.687+03:00  INFO 59588 --- [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:mysql://localhost:3306/oplanner'
+2023-08-12T16:15:07.702+03:00  WARN 59588 --- [restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'oplannerApplication': Invocation of init method failed
+2023-08-12T16:15:07.703+03:00  INFO 59588 --- [restartedMain] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2023-08-12T16:15:07.705+03:00  INFO 59588 --- [restartedMain] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2023-08-12T16:15:07.705+03:00 ERROR 59588 --- [restartedMain] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'oplannerApplication': Invocation of init method failed
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor.postProcessBeforeInitialization(InitDestroyAnnotationBeanPostProcessor.java:222) ~[spring-beans-6.0.11.jar:6.0.11]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyBeanPostProcessorsBeforeInitialization(AbstractAutowireCapableBeanFactory.java:419) ~[spring-beans-6.0.11.jar:6.0.11]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1762) ~[spring-beans-6.0.11.jar:6.0.11]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:598) ~[spring-beans-6.0.11.jar:6.0.11]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:520) ~[spring-beans-6.0.11.jar:6.0.11]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:326) ~[spring-beans-6.0.11.jar:6.0.11]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-6.0.11.jar:6.0.11]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:324) ~[spring-beans-6.0.11.jar:6.0.11]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200) ~[spring-beans-6.0.11.jar:6.0.11]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:973) ~[spring-beans-6.0.11.jar:6.0.11]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:942) ~[spring-context-6.0.11.jar:6.0.11]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:608) ~[spring-context-6.0.11.jar:6.0.11]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146) ~[spring-boot-3.1.2.jar:3.1.2]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:734) ~[spring-boot-3.1.2.jar:3.1.2]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:436) ~[spring-boot-3.1.2.jar:3.1.2]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:312) ~[spring-boot-3.1.2.jar:3.1.2]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1306) ~[spring-boot-3.1.2.jar:3.1.2]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1295) ~[spring-boot-3.1.2.jar:3.1.2]
+	at oplanner.Oplanner.OplannerApplication.main(OplannerApplication.java:39) ~[classes/:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568) ~[na:na]
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:50) ~[spring-boot-devtools-3.1.2.jar:3.1.2]
+Caused by: org.springframework.jdbc.datasource.init.ScriptStatementFailedException: Failed to execute SQL script statement #1 of class path resource [db/schema.sql]: CREATE TABLE Study_Plan( id int auto_increment primary key NOT NULL, plan_name VARCHAR(100) NOT NULL )
+	at org.springframework.jdbc.datasource.init.ScriptUtils.executeSqlScript(ScriptUtils.java:282) ~[spring-jdbc-6.0.11.jar:6.0.11]
+	at org.springframework.jdbc.datasource.init.ResourceDatabasePopulator.populate(ResourceDatabasePopulator.java:254) ~[spring-jdbc-6.0.11.jar:6.0.11]
+	at org.springframework.jdbc.datasource.init.DatabasePopulatorUtils.execute(DatabasePopulatorUtils.java:54) ~[spring-jdbc-6.0.11.jar:6.0.11]
+	at org.springframework.jdbc.datasource.init.DataSourceInitializer.execute(DataSourceInitializer.java:111) ~[spring-jdbc-6.0.11.jar:6.0.11]
+	at org.springframework.jdbc.datasource.init.DataSourceInitializer.afterPropertiesSet(DataSourceInitializer.java:96) ~[spring-jdbc-6.0.11.jar:6.0.11]
+	at oplanner.Oplanner.OplannerApplication.createTables(OplannerApplication.java:57) ~[classes/:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568) ~[na:na]
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor$LifecycleMethod.invoke(InitDestroyAnnotationBeanPostProcessor.java:457) ~[spring-beans-6.0.11.jar:6.0.11]
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor$LifecycleMetadata.invokeInitMethods(InitDestroyAnnotationBeanPostProcessor.java:401) ~[spring-beans-6.0.11.jar:6.0.11]
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor.postProcessBeforeInitialization(InitDestroyAnnotationBeanPostProcessor.java:219) ~[spring-beans-6.0.11.jar:6.0.11]
+	... 23 common frames omitted
+Caused by: java.sql.SQLSyntaxErrorException: Table 'study_plan' already exists
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:120) ~[mysql-connector-java-8.0.30.jar:8.0.30]
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122) ~[mysql-connector-java-8.0.30.jar:8.0.30]
+	at com.mysql.cj.jdbc.StatementImpl.executeInternal(StatementImpl.java:763) ~[mysql-connector-java-8.0.30.jar:8.0.30]
+	at com.mysql.cj.jdbc.StatementImpl.execute(StatementImpl.java:648) ~[mysql-connector-java-8.0.30.jar:8.0.30]
+	at org.springframework.jdbc.datasource.init.ScriptUtils.executeSqlScript(ScriptUtils.java:261) ~[spring-jdbc-6.0.11.jar:6.0.11]
+	... 35 common frames omitted
+
+2023-08-12T16:16:03.946+03:00  INFO 59588 --- [restartedMain] oplanner.Oplanner.OplannerApplication    : Starting OplannerApplication using Java 17.0.7 with PID 59588 (/Users/shovalabudaram/projects/OplannerClient/backend/target/classes started by shovalabudaram in /Users/shovalabudaram/projects/OplannerClient)
+2023-08-12T16:16:03.947+03:00  INFO 59588 --- [restartedMain] oplanner.Oplanner.OplannerApplication    : No active profile set, falling back to 1 default profile: "default"
+2023-08-12T16:16:04.011+03:00  INFO 59588 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
+2023-08-12T16:16:04.016+03:00  INFO 59588 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 4 ms. Found 6 JDBC repository interfaces.
+2023-08-12T16:16:04.049+03:00  INFO 59588 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2023-08-12T16:16:04.052+03:00  INFO 59588 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-08-12T16:16:04.052+03:00  INFO 59588 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.11]
+2023-08-12T16:16:04.057+03:00  INFO 59588 --- [restartedMain] o.a.c.c.C.[Tomcat-6].[localhost].[/]     : Initializing Spring embedded WebApplicationContext
+2023-08-12T16:16:04.058+03:00  INFO 59588 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 108 ms
+2023-08-12T16:16:04.091+03:00  INFO 59588 --- [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:mysql://localhost:3306/oplanner'
+2023-08-12T16:16:04.110+03:00  INFO 59588 --- [restartedMain] o.f.c.i.database.base.BaseDatabaseType   : Database: jdbc:mysql://localhost:3306/oplanner (MySQL 8.0)
+2023-08-12T16:16:04.125+03:00  INFO 59588 --- [restartedMain] o.f.core.internal.command.DbValidate     : Successfully validated 0 migrations (execution time 00:00.005s)
+2023-08-12T16:16:04.125+03:00  WARN 59588 --- [restartedMain] o.f.core.internal.command.DbValidate     : No migrations found. Are your locations set up correctly?
+2023-08-12T16:16:04.135+03:00  INFO 59588 --- [restartedMain] o.f.core.internal.command.DbMigrate      : Current version of schema `oplanner`: << Empty Schema >>
+2023-08-12T16:16:04.136+03:00  INFO 59588 --- [restartedMain] o.f.core.internal.command.DbMigrate      : Schema `oplanner` is up to date. No migration necessary.
+2023-08-12T16:16:04.163+03:00  INFO 59588 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2023-08-12T16:16:04.203+03:00  INFO 59588 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2023-08-12T16:16:04.205+03:00  INFO 59588 --- [restartedMain] oplanner.Oplanner.OplannerApplication    : Started OplannerApplication in 0.277 seconds (process running for 837.768)
+2023-08-12T16:16:04.205+03:00  INFO 59588 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2023-08-12T16:16:08.649+03:00  INFO 59588 --- [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2023-08-12T16:16:08.657+03:00  INFO 59588 --- [Thread-39] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2023-08-12T16:16:11.143+03:00  INFO 59588 --- [restartedMain] oplanner.Oplanner.OplannerApplication    : Starting OplannerApplication using Java 17.0.7 with PID 59588 (/Users/shovalabudaram/projects/OplannerClient/backend/target/classes started by shovalabudaram in /Users/shovalabudaram/projects/OplannerClient)
+2023-08-12T16:16:11.144+03:00  INFO 59588 --- [restartedMain] oplanner.Oplanner.OplannerApplication    : No active profile set, falling back to 1 default profile: "default"
+2023-08-12T16:16:11.204+03:00  INFO 59588 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
+2023-08-12T16:16:11.208+03:00  INFO 59588 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 4 ms. Found 6 JDBC repository interfaces.
+2023-08-12T16:16:11.230+03:00  INFO 59588 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2023-08-12T16:16:11.231+03:00  INFO 59588 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-08-12T16:16:11.231+03:00  INFO 59588 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.11]
+2023-08-12T16:16:11.236+03:00  INFO 59588 --- [restartedMain] o.a.c.c.C.[Tomcat-6].[localhost].[/]     : Initializing Spring embedded WebApplicationContext
+2023-08-12T16:16:11.236+03:00  INFO 59588 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 91 ms
+2023-08-12T16:16:11.249+03:00  INFO 59588 --- [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:mysql://localhost:3306/oplanner'
+2023-08-12T16:16:11.269+03:00  INFO 59588 --- [restartedMain] o.f.c.i.database.base.BaseDatabaseType   : Database: jdbc:mysql://localhost:3306/oplanner (MySQL 8.0)
+2023-08-12T16:16:11.284+03:00  INFO 59588 --- [restartedMain] o.f.core.internal.command.DbValidate     : Successfully validated 0 migrations (execution time 00:00.009s)
+2023-08-12T16:16:11.284+03:00  WARN 59588 --- [restartedMain] o.f.core.internal.command.DbValidate     : No migrations found. Are your locations set up correctly?
+2023-08-12T16:16:11.301+03:00  INFO 59588 --- [restartedMain] o.f.core.internal.command.DbMigrate      : Current version of schema `oplanner`: << Empty Schema >>
+2023-08-12T16:16:11.301+03:00  INFO 59588 --- [restartedMain] o.f.core.internal.command.DbMigrate      : Schema `oplanner` is up to date. No migration necessary.
+2023-08-12T16:16:11.330+03:00  INFO 59588 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2023-08-12T16:16:11.368+03:00  INFO 59588 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2023-08-12T16:16:11.369+03:00  INFO 59588 --- [restartedMain] oplanner.Oplanner.OplannerApplication    : Started OplannerApplication in 0.241 seconds (process running for 844.932)
+2023-08-12T16:16:11.369+03:00  INFO 59588 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2023-08-12T16:16:14.807+03:00  INFO 59588 --- [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2023-08-12T16:16:14.814+03:00  INFO 59588 --- [Thread-67] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2023-08-12T16:16:14.855+03:00  INFO 59588 --- [restartedMain] oplanner.Oplanner.OplannerApplication    : Starting OplannerApplication using Java 17.0.7 with PID 59588 (/Users/shovalabudaram/projects/OplannerClient/backend/target/classes started by shovalabudaram in /Users/shovalabudaram/projects/OplannerClient)
+2023-08-12T16:16:14.855+03:00  INFO 59588 --- [restartedMain] oplanner.Oplanner.OplannerApplication    : No active profile set, falling back to 1 default profile: "default"
+2023-08-12T16:16:14.886+03:00  INFO 59588 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
+2023-08-12T16:16:14.890+03:00  INFO 59588 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 3 ms. Found 6 JDBC repository interfaces.
+2023-08-12T16:16:14.908+03:00  INFO 59588 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2023-08-12T16:16:14.909+03:00  INFO 59588 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-08-12T16:16:14.909+03:00  INFO 59588 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.11]
+2023-08-12T16:16:14.913+03:00  INFO 59588 --- [restartedMain] o.a.c.c.C.[Tomcat-6].[localhost].[/]     : Initializing Spring embedded WebApplicationContext
+2023-08-12T16:16:14.913+03:00  INFO 59588 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 57 ms
+2023-08-12T16:16:14.923+03:00  INFO 59588 --- [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:mysql://localhost:3306/oplanner'
+2023-08-12T16:16:14.937+03:00  INFO 59588 --- [restartedMain] o.f.c.i.database.base.BaseDatabaseType   : Database: jdbc:mysql://localhost:3306/oplanner (MySQL 8.0)
+2023-08-12T16:16:14.949+03:00  INFO 59588 --- [restartedMain] o.f.core.internal.command.DbValidate     : Successfully validated 0 migrations (execution time 00:00.007s)
+2023-08-12T16:16:14.949+03:00  WARN 59588 --- [restartedMain] o.f.core.internal.command.DbValidate     : No migrations found. Are your locations set up correctly?
+2023-08-12T16:16:14.953+03:00  INFO 59588 --- [restartedMain] o.f.core.internal.command.DbMigrate      : Current version of schema `oplanner`: << Empty Schema >>
+2023-08-12T16:16:14.953+03:00  INFO 59588 --- [restartedMain] o.f.core.internal.command.DbMigrate      : Schema `oplanner` is up to date. No migration necessary.
+2023-08-12T16:16:14.980+03:00  INFO 59588 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2023-08-12T16:16:15.016+03:00  INFO 59588 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2023-08-12T16:16:15.017+03:00  INFO 59588 --- [restartedMain] oplanner.Oplanner.OplannerApplication    : Started OplannerApplication in 0.168 seconds (process running for 848.58)
+2023-08-12T16:16:15.017+03:00  INFO 59588 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2023-08-12T16:16:16.435+03:00  INFO 59588 --- [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2023-08-12T16:16:16.442+03:00  INFO 59588 --- [Thread-73] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2023-08-12T16:16:16.489+03:00  INFO 59588 --- [restartedMain] oplanner.Oplanner.OplannerApplication    : Starting OplannerApplication using Java 17.0.7 with PID 59588 (/Users/shovalabudaram/projects/OplannerClient/backend/target/classes started by shovalabudaram in /Users/shovalabudaram/projects/OplannerClient)
+2023-08-12T16:16:16.489+03:00  INFO 59588 --- [restartedMain] oplanner.Oplanner.OplannerApplication    : No active profile set, falling back to 1 default profile: "default"
+2023-08-12T16:16:16.522+03:00  INFO 59588 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
+2023-08-12T16:16:16.525+03:00  INFO 59588 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 3 ms. Found 6 JDBC repository interfaces.
+2023-08-12T16:16:16.545+03:00  INFO 59588 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2023-08-12T16:16:16.545+03:00  INFO 59588 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-08-12T16:16:16.545+03:00  INFO 59588 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.11]
+2023-08-12T16:16:16.550+03:00  INFO 59588 --- [restartedMain] o.a.c.c.C.[Tomcat-6].[localhost].[/]     : Initializing Spring embedded WebApplicationContext
+2023-08-12T16:16:16.550+03:00  INFO 59588 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 61 ms
+2023-08-12T16:16:16.560+03:00  INFO 59588 --- [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:mysql://localhost:3306/oplanner'
+2023-08-12T16:16:16.582+03:00  INFO 59588 --- [restartedMain] o.f.c.i.database.base.BaseDatabaseType   : Database: jdbc:mysql://localhost:3306/oplanner (MySQL 8.0)
+2023-08-12T16:16:16.588+03:00  INFO 59588 --- [restartedMain] o.f.core.internal.command.DbValidate     : Successfully validated 0 migrations (execution time 00:00.002s)
+2023-08-12T16:16:16.588+03:00  WARN 59588 --- [restartedMain] o.f.core.internal.command.DbValidate     : No migrations found. Are your locations set up correctly?
+2023-08-12T16:16:16.593+03:00  INFO 59588 --- [restartedMain] o.f.core.internal.command.DbMigrate      : Current version of schema `oplanner`: << Empty Schema >>
+2023-08-12T16:16:16.594+03:00  INFO 59588 --- [restartedMain] o.f.core.internal.command.DbMigrate      : Schema `oplanner` is up to date. No migration necessary.
+2023-08-12T16:16:16.621+03:00  INFO 59588 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2023-08-12T16:16:16.660+03:00  INFO 59588 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2023-08-12T16:16:16.661+03:00  INFO 59588 --- [restartedMain] oplanner.Oplanner.OplannerApplication    : Started OplannerApplication in 0.178 seconds (process running for 850.224)
+2023-08-12T16:16:16.661+03:00  INFO 59588 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2023-08-12T16:17:31.799+03:00  INFO 59588 --- [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2023-08-12T16:17:31.808+03:00  INFO 59588 --- [Thread-77] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2023-08-12T16:17:31.895+03:00  INFO 59588 --- [restartedMain] oplanner.Oplanner.OplannerApplication    : Starting OplannerApplication using Java 17.0.7 with PID 59588 (/Users/shovalabudaram/projects/OplannerClient/backend/target/classes started by shovalabudaram in /Users/shovalabudaram/projects/OplannerClient)
+2023-08-12T16:17:31.896+03:00  INFO 59588 --- [restartedMain] oplanner.Oplanner.OplannerApplication    : No active profile set, falling back to 1 default profile: "default"
+2023-08-12T16:17:31.936+03:00  INFO 59588 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
+2023-08-12T16:17:31.940+03:00  INFO 59588 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 3 ms. Found 6 JDBC repository interfaces.
+2023-08-12T16:17:31.959+03:00  INFO 59588 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2023-08-12T16:17:31.960+03:00  INFO 59588 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-08-12T16:17:31.960+03:00  INFO 59588 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.11]
+2023-08-12T16:17:31.964+03:00  INFO 59588 --- [restartedMain] o.a.c.c.C.[Tomcat-6].[localhost].[/]     : Initializing Spring embedded WebApplicationContext
+2023-08-12T16:17:31.964+03:00  INFO 59588 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 68 ms
+2023-08-12T16:17:32.010+03:00  INFO 59588 --- [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:mysql://localhost:3306/oplanner'
+2023-08-12T16:17:32.031+03:00  INFO 59588 --- [restartedMain] o.f.c.i.database.base.BaseDatabaseType   : Database: jdbc:mysql://localhost:3306/oplanner (MySQL 8.0)
+2023-08-12T16:17:32.040+03:00  INFO 59588 --- [restartedMain] o.f.core.internal.command.DbValidate     : Successfully validated 0 migrations (execution time 00:00.002s)
+2023-08-12T16:17:32.040+03:00  WARN 59588 --- [restartedMain] o.f.core.internal.command.DbValidate     : No migrations found. Are your locations set up correctly?
+2023-08-12T16:17:32.047+03:00  INFO 59588 --- [restartedMain] o.f.core.internal.command.DbMigrate      : Current version of schema `oplanner`: << Empty Schema >>
+2023-08-12T16:17:32.047+03:00  INFO 59588 --- [restartedMain] o.f.core.internal.command.DbMigrate      : Schema `oplanner` is up to date. No migration necessary.
+2023-08-12T16:17:32.103+03:00  INFO 59588 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2023-08-12T16:17:32.156+03:00  INFO 59588 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2023-08-12T16:17:32.157+03:00  INFO 59588 --- [restartedMain] oplanner.Oplanner.OplannerApplication    : Started OplannerApplication in 0.276 seconds (process running for 925.721)
+2023-08-12T16:17:32.158+03:00  INFO 59588 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2023-08-12T16:17:33.559+03:00  INFO 59588 --- [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2023-08-12T16:17:33.566+03:00  INFO 59588 --- [Thread-81] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2023-08-12T16:17:33.612+03:00  INFO 59588 --- [restartedMain] oplanner.Oplanner.OplannerApplication    : Starting OplannerApplication using Java 17.0.7 with PID 59588 (/Users/shovalabudaram/projects/OplannerClient/backend/target/classes started by shovalabudaram in /Users/shovalabudaram/projects/OplannerClient)
+2023-08-12T16:17:33.612+03:00  INFO 59588 --- [restartedMain] oplanner.Oplanner.OplannerApplication    : No active profile set, falling back to 1 default profile: "default"
+2023-08-12T16:17:33.643+03:00  INFO 59588 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
+2023-08-12T16:17:33.647+03:00  INFO 59588 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 3 ms. Found 6 JDBC repository interfaces.
+2023-08-12T16:17:33.684+03:00  INFO 59588 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2023-08-12T16:17:33.685+03:00  INFO 59588 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-08-12T16:17:33.685+03:00  INFO 59588 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.11]
+2023-08-12T16:17:33.689+03:00  INFO 59588 --- [restartedMain] o.a.c.c.C.[Tomcat-6].[localhost].[/]     : Initializing Spring embedded WebApplicationContext
+2023-08-12T16:17:33.689+03:00  INFO 59588 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 76 ms
+2023-08-12T16:17:33.703+03:00  INFO 59588 --- [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:mysql://localhost:3306/oplanner'
+2023-08-12T16:17:33.718+03:00  INFO 59588 --- [restartedMain] o.f.c.i.database.base.BaseDatabaseType   : Database: jdbc:mysql://localhost:3306/oplanner (MySQL 8.0)
+2023-08-12T16:17:33.725+03:00  INFO 59588 --- [restartedMain] o.f.core.internal.command.DbValidate     : Successfully validated 0 migrations (execution time 00:00.002s)
+2023-08-12T16:17:33.725+03:00  WARN 59588 --- [restartedMain] o.f.core.internal.command.DbValidate     : No migrations found. Are your locations set up correctly?
+2023-08-12T16:17:33.732+03:00  INFO 59588 --- [restartedMain] o.f.core.internal.command.DbMigrate      : Current version of schema `oplanner`: << Empty Schema >>
+2023-08-12T16:17:33.733+03:00  INFO 59588 --- [restartedMain] o.f.core.internal.command.DbMigrate      : Schema `oplanner` is up to date. No migration necessary.
+2023-08-12T16:17:33.759+03:00  INFO 59588 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2023-08-12T16:17:33.799+03:00  INFO 59588 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2023-08-12T16:17:33.800+03:00  INFO 59588 --- [restartedMain] oplanner.Oplanner.OplannerApplication    : Started OplannerApplication in 0.194 seconds (process running for 927.364)
+2023-08-12T16:17:33.801+03:00  INFO 59588 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2023-08-12T16:17:47.337+03:00  INFO 59588 --- [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2023-08-12T16:17:47.344+03:00  INFO 59588 --- [Thread-85] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2023-08-12T16:17:47.382+03:00  INFO 59588 --- [restartedMain] oplanner.Oplanner.OplannerApplication    : Starting OplannerApplication using Java 17.0.7 with PID 59588 (/Users/shovalabudaram/projects/OplannerClient/backend/target/classes started by shovalabudaram in /Users/shovalabudaram/projects/OplannerClient)
+2023-08-12T16:17:47.382+03:00  INFO 59588 --- [restartedMain] oplanner.Oplanner.OplannerApplication    : No active profile set, falling back to 1 default profile: "default"
+2023-08-12T16:17:47.418+03:00  INFO 59588 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
+2023-08-12T16:17:47.423+03:00  INFO 59588 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 4 ms. Found 6 JDBC repository interfaces.
+2023-08-12T16:17:47.445+03:00  INFO 59588 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2023-08-12T16:17:47.445+03:00  INFO 59588 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-08-12T16:17:47.445+03:00  INFO 59588 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.11]
+2023-08-12T16:17:47.449+03:00  INFO 59588 --- [restartedMain] o.a.c.c.C.[Tomcat-6].[localhost].[/]     : Initializing Spring embedded WebApplicationContext
+2023-08-12T16:17:47.449+03:00  INFO 59588 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 66 ms
+2023-08-12T16:17:47.458+03:00  INFO 59588 --- [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:mysql://localhost:3306/oplanner'
+2023-08-12T16:17:47.473+03:00  INFO 59588 --- [restartedMain] o.f.c.i.database.base.BaseDatabaseType   : Database: jdbc:mysql://localhost:3306/oplanner (MySQL 8.0)
+2023-08-12T16:17:47.483+03:00  INFO 59588 --- [restartedMain] o.f.core.internal.command.DbValidate     : Successfully validated 0 migrations (execution time 00:00.002s)
+2023-08-12T16:17:47.483+03:00  WARN 59588 --- [restartedMain] o.f.core.internal.command.DbValidate     : No migrations found. Are your locations set up correctly?
+2023-08-12T16:17:47.487+03:00  INFO 59588 --- [restartedMain] o.f.core.internal.command.DbMigrate      : Current version of schema `oplanner`: << Empty Schema >>
+2023-08-12T16:17:47.487+03:00  INFO 59588 --- [restartedMain] o.f.core.internal.command.DbMigrate      : Schema `oplanner` is up to date. No migration necessary.
+2023-08-12T16:17:47.517+03:00  INFO 59588 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2023-08-12T16:17:47.575+03:00  INFO 59588 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2023-08-12T16:17:47.577+03:00  INFO 59588 --- [restartedMain] oplanner.Oplanner.OplannerApplication    : Started OplannerApplication in 0.2 seconds (process running for 941.14)
+2023-08-12T16:17:47.577+03:00  INFO 59588 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2023-08-12T16:17:50.004+03:00  INFO 59588 --- [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2023-08-12T16:17:50.017+03:00  INFO 59588 --- [Thread-89] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2023-08-12T16:17:50.069+03:00  INFO 59588 --- [restartedMain] oplanner.Oplanner.OplannerApplication    : Starting OplannerApplication using Java 17.0.7 with PID 59588 (/Users/shovalabudaram/projects/OplannerClient/backend/target/classes started by shovalabudaram in /Users/shovalabudaram/projects/OplannerClient)
+2023-08-12T16:17:50.069+03:00  INFO 59588 --- [restartedMain] oplanner.Oplanner.OplannerApplication    : No active profile set, falling back to 1 default profile: "default"
+2023-08-12T16:17:50.099+03:00  INFO 59588 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
+2023-08-12T16:17:50.102+03:00  INFO 59588 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 3 ms. Found 6 JDBC repository interfaces.
+2023-08-12T16:17:50.120+03:00  INFO 59588 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2023-08-12T16:17:50.120+03:00  INFO 59588 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-08-12T16:17:50.120+03:00  INFO 59588 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.11]
+2023-08-12T16:17:50.124+03:00  INFO 59588 --- [restartedMain] o.a.c.c.C.[Tomcat-6].[localhost].[/]     : Initializing Spring embedded WebApplicationContext
+2023-08-12T16:17:50.124+03:00  INFO 59588 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 55 ms
+2023-08-12T16:17:50.133+03:00  INFO 59588 --- [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:mysql://localhost:3306/oplanner'
+2023-08-12T16:17:50.147+03:00  INFO 59588 --- [restartedMain] o.f.c.i.database.base.BaseDatabaseType   : Database: jdbc:mysql://localhost:3306/oplanner (MySQL 8.0)
+2023-08-12T16:17:50.154+03:00  INFO 59588 --- [restartedMain] o.f.core.internal.command.DbValidate     : Successfully validated 0 migrations (execution time 00:00.002s)
+2023-08-12T16:17:50.154+03:00  WARN 59588 --- [restartedMain] o.f.core.internal.command.DbValidate     : No migrations found. Are your locations set up correctly?
+2023-08-12T16:17:50.159+03:00  INFO 59588 --- [restartedMain] o.f.core.internal.command.DbMigrate      : Current version of schema `oplanner`: << Empty Schema >>
+2023-08-12T16:17:50.159+03:00  INFO 59588 --- [restartedMain] o.f.core.internal.command.DbMigrate      : Schema `oplanner` is up to date. No migration necessary.
+2023-08-12T16:17:50.185+03:00  INFO 59588 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2023-08-12T16:17:50.217+03:00  INFO 59588 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2023-08-12T16:17:50.218+03:00  INFO 59588 --- [restartedMain] oplanner.Oplanner.OplannerApplication    : Started OplannerApplication in 0.156 seconds (process running for 943.781)
+2023-08-12T16:17:50.218+03:00  INFO 59588 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2023-08-12T16:18:11.854+03:00  INFO 59588 --- [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2023-08-12T16:18:11.860+03:00  INFO 59588 --- [Thread-93] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2023-08-12T16:18:11.902+03:00  INFO 59588 --- [restartedMain] oplanner.Oplanner.OplannerApplication    : Starting OplannerApplication using Java 17.0.7 with PID 59588 (/Users/shovalabudaram/projects/OplannerClient/backend/target/classes started by shovalabudaram in /Users/shovalabudaram/projects/OplannerClient)
+2023-08-12T16:18:11.902+03:00  INFO 59588 --- [restartedMain] oplanner.Oplanner.OplannerApplication    : No active profile set, falling back to 1 default profile: "default"
+2023-08-12T16:18:11.939+03:00  INFO 59588 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
+2023-08-12T16:18:11.942+03:00  INFO 59588 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 2 ms. Found 6 JDBC repository interfaces.
+2023-08-12T16:18:11.962+03:00  INFO 59588 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2023-08-12T16:18:11.962+03:00  INFO 59588 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-08-12T16:18:11.962+03:00  INFO 59588 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.11]
+2023-08-12T16:18:11.966+03:00  INFO 59588 --- [restartedMain] o.a.c.c.C.[Tomcat-6].[localhost].[/]     : Initializing Spring embedded WebApplicationContext
+2023-08-12T16:18:11.966+03:00  INFO 59588 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 63 ms
+2023-08-12T16:18:11.975+03:00  INFO 59588 --- [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:mysql://localhost:3306/oplanner'
+2023-08-12T16:18:11.990+03:00  INFO 59588 --- [restartedMain] o.f.c.i.database.base.BaseDatabaseType   : Database: jdbc:mysql://localhost:3306/oplanner (MySQL 8.0)
+2023-08-12T16:18:12.007+03:00  INFO 59588 --- [restartedMain] o.f.core.internal.command.DbValidate     : Successfully validated 0 migrations (execution time 00:00.002s)
+2023-08-12T16:18:12.007+03:00  WARN 59588 --- [restartedMain] o.f.core.internal.command.DbValidate     : No migrations found. Are your locations set up correctly?
+2023-08-12T16:18:12.014+03:00  INFO 59588 --- [restartedMain] o.f.core.internal.command.DbMigrate      : Current version of schema `oplanner`: << Empty Schema >>
+2023-08-12T16:18:12.014+03:00  INFO 59588 --- [restartedMain] o.f.core.internal.command.DbMigrate      : Schema `oplanner` is up to date. No migration necessary.
+2023-08-12T16:18:12.042+03:00  INFO 59588 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2023-08-12T16:18:12.101+03:00  INFO 59588 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2023-08-12T16:18:12.103+03:00  INFO 59588 --- [restartedMain] oplanner.Oplanner.OplannerApplication    : Started OplannerApplication in 0.207 seconds (process running for 965.667)
+2023-08-12T16:18:12.104+03:00  INFO 59588 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2023-08-12T16:18:21.586+03:00  INFO 59588 --- [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2023-08-12T16:18:21.593+03:00  INFO 59588 --- [Thread-97] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2023-08-12T16:18:21.638+03:00  INFO 59588 --- [restartedMain] oplanner.Oplanner.OplannerApplication    : Starting OplannerApplication using Java 17.0.7 with PID 59588 (/Users/shovalabudaram/projects/OplannerClient/backend/target/classes started by shovalabudaram in /Users/shovalabudaram/projects/OplannerClient)
+2023-08-12T16:18:21.638+03:00  INFO 59588 --- [restartedMain] oplanner.Oplanner.OplannerApplication    : No active profile set, falling back to 1 default profile: "default"
+2023-08-12T16:18:21.674+03:00  INFO 59588 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
+2023-08-12T16:18:21.677+03:00  INFO 59588 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 3 ms. Found 6 JDBC repository interfaces.
+2023-08-12T16:18:21.696+03:00  INFO 59588 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2023-08-12T16:18:21.697+03:00  INFO 59588 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-08-12T16:18:21.697+03:00  INFO 59588 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.11]
+2023-08-12T16:18:21.702+03:00  INFO 59588 --- [restartedMain] o.a.c.c.C.[Tomcat-6].[localhost].[/]     : Initializing Spring embedded WebApplicationContext
+2023-08-12T16:18:21.702+03:00  INFO 59588 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 63 ms
+2023-08-12T16:18:21.710+03:00  INFO 59588 --- [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:mysql://localhost:3306/oplanner'
+2023-08-12T16:18:21.725+03:00  INFO 59588 --- [restartedMain] o.f.c.i.database.base.BaseDatabaseType   : Database: jdbc:mysql://localhost:3306/oplanner (MySQL 8.0)
+2023-08-12T16:18:21.735+03:00  INFO 59588 --- [restartedMain] o.f.core.internal.command.DbValidate     : Successfully validated 0 migrations (execution time 00:00.002s)
+2023-08-12T16:18:21.735+03:00  WARN 59588 --- [restartedMain] o.f.core.internal.command.DbValidate     : No migrations found. Are your locations set up correctly?
+2023-08-12T16:18:21.739+03:00  INFO 59588 --- [restartedMain] o.f.core.internal.command.DbMigrate      : Current version of schema `oplanner`: << Empty Schema >>
+2023-08-12T16:18:21.739+03:00  INFO 59588 --- [restartedMain] o.f.core.internal.command.DbMigrate      : Schema `oplanner` is up to date. No migration necessary.
+2023-08-12T16:18:21.767+03:00  INFO 59588 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2023-08-12T16:18:21.805+03:00  INFO 59588 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2023-08-12T16:18:21.806+03:00  INFO 59588 --- [restartedMain] oplanner.Oplanner.OplannerApplication    : Started OplannerApplication in 0.173 seconds (process running for 975.369)
+2023-08-12T16:18:21.806+03:00  INFO 59588 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2023-08-12T16:18:28.267+03:00  INFO 59588 --- [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2023-08-12T16:18:28.272+03:00  INFO 59588 --- [Thread-101] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2023-08-12T16:18:28.311+03:00  INFO 59588 --- [restartedMain] oplanner.Oplanner.OplannerApplication    : Starting OplannerApplication using Java 17.0.7 with PID 59588 (/Users/shovalabudaram/projects/OplannerClient/backend/target/classes started by shovalabudaram in /Users/shovalabudaram/projects/OplannerClient)
+2023-08-12T16:18:28.311+03:00  INFO 59588 --- [restartedMain] oplanner.Oplanner.OplannerApplication    : No active profile set, falling back to 1 default profile: "default"
+2023-08-12T16:18:28.342+03:00  INFO 59588 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
+2023-08-12T16:18:28.345+03:00  INFO 59588 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 3 ms. Found 6 JDBC repository interfaces.
+2023-08-12T16:18:28.362+03:00  INFO 59588 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2023-08-12T16:18:28.362+03:00  INFO 59588 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-08-12T16:18:28.362+03:00  INFO 59588 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.11]
+2023-08-12T16:18:28.366+03:00  INFO 59588 --- [restartedMain] o.a.c.c.C.[Tomcat-6].[localhost].[/]     : Initializing Spring embedded WebApplicationContext
+2023-08-12T16:18:28.367+03:00  INFO 59588 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 56 ms
+2023-08-12T16:18:28.375+03:00  INFO 59588 --- [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:mysql://localhost:3306/oplanner'
+2023-08-12T16:18:28.390+03:00  INFO 59588 --- [restartedMain] o.f.c.i.database.base.BaseDatabaseType   : Database: jdbc:mysql://localhost:3306/oplanner (MySQL 8.0)
+2023-08-12T16:18:28.399+03:00  INFO 59588 --- [restartedMain] o.f.core.internal.command.DbValidate     : Successfully validated 0 migrations (execution time 00:00.002s)
+2023-08-12T16:18:28.399+03:00  WARN 59588 --- [restartedMain] o.f.core.internal.command.DbValidate     : No migrations found. Are your locations set up correctly?
+2023-08-12T16:18:28.403+03:00  INFO 59588 --- [restartedMain] o.f.core.internal.command.DbMigrate      : Current version of schema `oplanner`: << Empty Schema >>
+2023-08-12T16:18:28.403+03:00  INFO 59588 --- [restartedMain] o.f.core.internal.command.DbMigrate      : Schema `oplanner` is up to date. No migration necessary.
+2023-08-12T16:18:28.430+03:00  INFO 59588 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2023-08-12T16:18:28.460+03:00  INFO 59588 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2023-08-12T16:18:28.461+03:00  INFO 59588 --- [restartedMain] oplanner.Oplanner.OplannerApplication    : Started OplannerApplication in 0.155 seconds (process running for 982.024)
+2023-08-12T16:18:28.461+03:00  INFO 59588 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2023-08-12T16:18:41.999+03:00  INFO 59588 --- [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2023-08-12T16:18:42.005+03:00  INFO 59588 --- [Thread-105] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2023-08-12T16:18:42.051+03:00  INFO 59588 --- [restartedMain] oplanner.Oplanner.OplannerApplication    : Starting OplannerApplication using Java 17.0.7 with PID 59588 (/Users/shovalabudaram/projects/OplannerClient/backend/target/classes started by shovalabudaram in /Users/shovalabudaram/projects/OplannerClient)
+2023-08-12T16:18:42.051+03:00  INFO 59588 --- [restartedMain] oplanner.Oplanner.OplannerApplication    : No active profile set, falling back to 1 default profile: "default"
+2023-08-12T16:18:42.087+03:00  INFO 59588 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
+2023-08-12T16:18:42.091+03:00  INFO 59588 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 3 ms. Found 6 JDBC repository interfaces.
+2023-08-12T16:18:42.108+03:00  INFO 59588 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2023-08-12T16:18:42.108+03:00  INFO 59588 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-08-12T16:18:42.108+03:00  INFO 59588 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.11]
+2023-08-12T16:18:42.113+03:00  INFO 59588 --- [restartedMain] o.a.c.c.C.[Tomcat-6].[localhost].[/]     : Initializing Spring embedded WebApplicationContext
+2023-08-12T16:18:42.113+03:00  INFO 59588 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 62 ms
+2023-08-12T16:18:42.122+03:00  INFO 59588 --- [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:mysql://localhost:3306/oplanner'
+2023-08-12T16:18:42.137+03:00  INFO 59588 --- [restartedMain] o.f.c.i.database.base.BaseDatabaseType   : Database: jdbc:mysql://localhost:3306/oplanner (MySQL 8.0)
+2023-08-12T16:18:42.147+03:00  INFO 59588 --- [restartedMain] o.f.core.internal.command.DbValidate     : Successfully validated 0 migrations (execution time 00:00.004s)
+2023-08-12T16:18:42.147+03:00  WARN 59588 --- [restartedMain] o.f.core.internal.command.DbValidate     : No migrations found. Are your locations set up correctly?
+2023-08-12T16:18:42.152+03:00  INFO 59588 --- [restartedMain] o.f.core.internal.command.DbMigrate      : Current version of schema `oplanner`: << Empty Schema >>
+2023-08-12T16:18:42.152+03:00  INFO 59588 --- [restartedMain] o.f.core.internal.command.DbMigrate      : Schema `oplanner` is up to date. No migration necessary.
+2023-08-12T16:18:42.180+03:00  INFO 59588 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2023-08-12T16:18:42.214+03:00  INFO 59588 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2023-08-12T16:18:42.215+03:00  INFO 59588 --- [restartedMain] oplanner.Oplanner.OplannerApplication    : Started OplannerApplication in 0.172 seconds (process running for 995.779)
+2023-08-12T16:18:42.216+03:00  INFO 59588 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
