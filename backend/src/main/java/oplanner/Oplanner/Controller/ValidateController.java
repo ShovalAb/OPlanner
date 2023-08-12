@@ -37,7 +37,7 @@ public class ValidateController {
 
     @PostMapping
     public CheckStudyPlanRespone validateStudyPlan (@RequestBody Map<String,Object> selectedCourses){
-        int id = (int) selectedCourses.get("planId");
+        int id = Integer.parseInt(selectedCourses.get("planId").toString());
         List<Course> courses = new ArrayList<Course>();
         List<Integer> coursesNumber = (List<Integer>) selectedCourses.get("courses");
         for (int number : coursesNumber){

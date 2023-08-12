@@ -34,15 +34,15 @@ public class CheckStudyPlan {
 
     public CheckStudyPlanRespone checkStudyPlanRespone ()
     {
-        int[] d11 = {122, 123};
-        int[] d12 = {456, 457};
+        int[] d11 = {3065, 3067};
+        int[] d12 = {3066, 3067};
         DependencyResponse d1 = new DependencyResponse(d11);
         DependencyResponse d2 = new DependencyResponse (d12);
         DependencyResponse[] d = {d1, d2};
         CreditsReqResponse c1 = new CreditsReqResponse("Math", 40, 50);
         CreditsReqResponse c2 = new CreditsReqResponse("Comp", 20, 20);
         CreditsReqResponse[] c = {c1, c2};
-        int[] a = {1234, 3456, 2047, 2043};
+        int[] a = {3065, 3066};
         CheckStudyPlanRespone res = new CheckStudyPlanRespone(0, a, d, c);
         return res;
     }

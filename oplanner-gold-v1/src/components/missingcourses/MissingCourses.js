@@ -8,6 +8,7 @@ const MissingCourses = ({coursesMust, coursesDepen, nakazReq, getCourseByNumber}
     }
 
     const allMissingMustCourses = (courseMustNumber) => {
+        // console.log("Course Must number - " + courseMustNumber)
         const course = getCourseByNumber(courseMustNumber)
         if (course != null) {
             return (missingMustCourse(course))
@@ -21,7 +22,8 @@ const MissingCourses = ({coursesMust, coursesDepen, nakazReq, getCourseByNumber}
         )
     }
 
-    const allMissingDepenCourses = (courseNums) => {
+    const allMissingDepenCourses = (courseNumsObj) => {
+        const courseNums = courseNumsObj.dep
         const preCourse = getCourseByNumber(courseNums[0])
         const course = getCourseByNumber(courseNums[1])
 
