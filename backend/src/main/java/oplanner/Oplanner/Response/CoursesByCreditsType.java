@@ -5,7 +5,7 @@ import java.util.List;
 import oplanner.Oplanner.Model.Course;
 
 public class CoursesByCreditsType {
-      private String creditType;
+    private String creditType;
     private List<Course> courses;
 
     public CoursesByCreditsType(String creditType, List<Course> list) {
@@ -17,6 +17,10 @@ public class CoursesByCreditsType {
         courses.add(course);
     }
 
+    public String getCreditType(){
+        return creditType;
+    }
+    
     public List<Course> getCourses(){
         return courses;
     }

@@ -12,7 +12,7 @@ const ChosenCourse = ({course, refresher, setRefresher}) => {
     return (
         <tr onClick={e => toggleChosen(e, course.id)}>
             <td>
-                <p>{course.name}</p>
+                <p>{course.courseName}</p>
             </td>
         </tr>
     )

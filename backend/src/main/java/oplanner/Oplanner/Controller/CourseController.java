@@ -45,7 +45,7 @@ public class CourseController {
     }
 
     @RequestMapping(params="planId", method = RequestMethod.GET)
-    public Map<String, List<Course>> getCoursesByCreditsType (@RequestParam("planId") int planId){
+    public List<CoursesByCreditsType> getCoursesByCreditsType (@RequestParam("planId") int planId){
         Course [] results = course.findByPlanId(planId);
         Map<String, List<Course>> map = new HashMap<>();
         for (Course result : results){
@@ -55,12 +55,13 @@ public class CourseController {
             }
             map.get(creditType).add(result);
         }
-            // List<CoursesByCreditsType> response = new ArrayList<>();
-            // for (String creditType : map.keySet()) {
-            // response.add(new CoursesByCreditsType(creditType, map.get(creditType).getCourses()));
-            // }
+        List<CoursesByCreditsType> response = new ArrayList<>();
+        for (Map.Entry<String, List<Course>> entry : map.entrySet()) {
+            CoursesByCreditsType courseType = new CoursesByCreditsType(entry.getKey(), entry.getValue());
+            response.add(courseType);
+        }
 
-        return map;
+        return response;
     }
 
 

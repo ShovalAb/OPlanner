@@ -25,7 +25,7 @@ const CoursesClass = ({coursesClass, refresher, setRefresher}) => {
             return (
                 <tr key={course.id} onClick={e => toggleChosen(e, course.id)}>
                     <td className="aCourseClass">
-                        <p>{course.name} ({course.nakazCount})</p>
+                        <p>{course.courseName} ({course.creditsNumber})</p>
                     </td>
                 </tr>
             )
@@ -34,7 +34,7 @@ const CoursesClass = ({coursesClass, refresher, setRefresher}) => {
 
     return (
         <div>
-            <button className="toggleButtonClass" onClick={toggleFunc}>{coursesClass.groupName}</button>
+            <button className="toggleButtonClass" onClick={toggleFunc}>{coursesClass.creditType}</button>
             {open && (
                 <div className="toggle">
                     <table>
