@@ -18,7 +18,7 @@ class CORSRequestHandler (SimpleHTTPRequestHandler):
         if "20406" in post_body.decode():
             self.wfile.write(b'{"ok":1,"coursesMust":[],"coursesDepen":[],"creditsReq":[]}')
         else:
-            self.wfile.write(b'{"ok":0,"coursesMust":[20406,20407],"coursesDepen":[[20406,20416]],"creditsReq":[{"creditsType":"Math","neededCredits":80,"currentCredits":74}]}')
+            self.wfile.write(b'{"ok":0,"coursesMust":[3065,3066],"coursesDepen":[{"course":3066,"dep":[3065,3067]},{"course":3065,"dep":[3066,3067]}],"creditsReqResponse":[{"creditsType":"Math","currentCredits":40,"neededCredits":50},{"creditsType":"Comp","currentCredits":20,"neededCredits":20}]}')
 
 
     def do_GET(self):

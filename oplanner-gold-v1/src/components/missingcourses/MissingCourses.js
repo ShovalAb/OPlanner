@@ -16,19 +16,37 @@ const MissingCourses = ({coursesMust, coursesDepen, nakazReq, getCourseByNumber}
         return null;
     }
 
-    const missingDepenCourse = (preCourseMissing, course) => {
+    const preCoursesdetails = (preCourses) => {
+        const coursesDetails = Array()
+        for (let i = 0; i < preCourses.length; i++) {
+            coursesDetails.push(preCourses[i].courseName + "(" + preCourses[i].courseNumber + ")")
+        }
+        return coursesDetails.join(", ")
+    }    
+
+    const missingDepenCourses = (courseDep, preCourses) => {
         return (
-            <p key={course.courseNumber}><b>{course.courseName}({course.courseNumber})</b> needs the course <b>{preCourseMissing.courseName}({preCourseMissing.courseNumber})</b>!</p>
+            <p key={courseDep.courseNumber}><b>{courseDep.courseName}({courseDep.courseNumber})</b> needs the courses <b>{preCoursesdetails(preCourses)}</b>!</p>
         )
     }
 
-    const allMissingDepenCourses = (courseNumsObj) => {
-        const courseNums = courseNumsObj.dep
-        const preCourse = getCourseByNumber(courseNums[0])
-        const course = getCourseByNumber(courseNums[1])
+    const allMissingDepenCourses = (depObj) => {
+        const courseDepNum = depObj.course
+        const courseNums = depObj.dep
 
-        if (course != null && preCourse != null) {
-            return (missingDepenCourse(preCourse, course))
+        const courseDep = getCourseByNumber(courseDepNum)
+
+        const preCourses = Array()
+        for (let i = 0; i < courseNums.length; i++) {
+            const preCourse = getCourseByNumber(courseNums[i]);
+            if (preCourse != null) {
+                preCourses.push(preCourse)
+            }
+            
+        }
+
+        if (courseDep != null && preCourses.length != 0) {
+            return (missingDepenCourses(courseDep, preCourses))
         }
         return null;
     }
