@@ -9,7 +9,7 @@ Insert INTO Course (name, number, credits_type, credits_number) VALUES ("אלג�
 Insert INTO Course (name, number, credits_type, credits_number) VALUES ("אלגברה ליניארית 2", 20229, "מתמטיקה", 5);
 
 -- Insert data into Dependency table
-INSERT INTO Dependency (dependent_course, base_course) VALUES (2029, "20476, 20109");
+INSERT INTO Dependency (dependent_course, base_course) VALUES (20229, "20476, 20109");
 
 -- Insert data into Mandatory_Requirement table
 INSERT INTO Mandatory_Requirement (plan_id, course_number) VALUES (1, 20476);
