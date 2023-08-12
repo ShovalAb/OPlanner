@@ -3,7 +3,7 @@ import React, { useState } from "react";
 import CoursesClass from "./CoursesClass";
 import CoursesChosen from "./CoursesChosen";
 
-const CoursesDrag = ({courses}) => {
+const CoursesDrag = ({courses, updateCreditReqNum}) => {
     const [refresher, setRefresher] = useState(0);
 
     const refresh = (n) => {
@@ -31,7 +31,7 @@ const CoursesDrag = ({courses}) => {
                     </table>
                 </div>
                 <div>
-                      <CoursesChosen courses={courses} refresher={refresher} setRefresher={refresh}></CoursesChosen>
+                      <CoursesChosen courses={courses} refresher={refresher} setRefresher={refresh} updateCreditReqNum={updateCreditReqNum}></CoursesChosen>
                 </div>
             </div>
         )

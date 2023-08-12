@@ -72,10 +72,11 @@ const PlanPage = () => {
         return coursesChosen;
     }
 
-    const updateCreditReqNum = async (studyPlanId, courses) => {
+    const updateCreditReqNum = async () => {
+        console.log("HEREEEE")
         try {
             const coursesChosen = collectChosenCourses();
-            const response = await api.post('/api/creditsReq', {'planId':studyPlanId, 'courses':coursesChosen})
+            const response = await api.post('/api/creditsReq', {'planId':routeParams.studyPlanId, 'courses':coursesChosen})
             console.log(response.data)
             setNakazReq(response.data["creditsReq"])
             
@@ -113,7 +114,7 @@ const PlanPage = () => {
                 <h1>Planning Study Plan #{routeParams.studyPlanId}</h1>
             </div>
             <CreditReqTable creditReq={nakazReq}></CreditReqTable>
-            <CoursesDrag courses={courses}></CoursesDrag>
+            <CoursesDrag courses={courses} updateCreditReqNum={updateCreditReqNum}></CoursesDrag>
             <button className="buttonValidate" onClick={e => validateCourses(routeParams.studyPlanId,courses)}>Validate Study Plan</button>
             <MissingCourses coursesDepen={coursesDepen} coursesMust={coursesMust} nakazReq={nakazReq} getCourseByNumber={getCourseByNumber}></MissingCourses>
             <SummaryButton planReady={planReady}></SummaryButton>

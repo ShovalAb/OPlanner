@@ -2,12 +2,12 @@ import React from "react";
 import ChosenCourse from "./ChosenCourse";
 import { create } from "@mui/material/styles/createTransitions";
 
-const CoursesChosen = ({courses, refresher, setRefresher}) => {
+const CoursesChosen = ({courses, refresher, setRefresher, updateCreditReqNum}) => {
 
     const createChosenCourse = (course) => {
         if (course.chosen) {
             return (
-                <ChosenCourse key={course.courseNumber} course={course} refresher={refresher} setRefresher={setRefresher}></ChosenCourse>
+                <ChosenCourse key={course.courseNumber} course={course} refresher={refresher} setRefresher={setRefresher} updateCreditReqNum={updateCreditReqNum}></ChosenCourse>
             )
         }
         return null;
@@ -15,7 +15,7 @@ const CoursesChosen = ({courses, refresher, setRefresher}) => {
 
     const displayChosenCourses = (coursesClass) => {
         return (
-            <React.Fragment key={coursesClass.groupName}>
+            <React.Fragment key={coursesClass.creditType}>
                 {coursesClass.courses.map(createChosenCourse)}
             </React.Fragment>
         )

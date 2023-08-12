@@ -2,7 +2,7 @@ import React from "react";
 
 const CreditReqRow = (creditReq) => {
     return (
-        <tr>
+        <tr key={creditReq.creditType}>
             <td>{creditReq.creditType}</td>
             <td>{creditReq.neededCredits}</td>
             <td>{creditReq.currentCredits}</td>

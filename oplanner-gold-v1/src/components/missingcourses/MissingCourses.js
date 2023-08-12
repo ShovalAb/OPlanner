@@ -33,9 +33,9 @@ const MissingCourses = ({coursesMust, coursesDepen, nakazReq, getCourseByNumber}
 
     const allMissingNakazReq = (nakazReqIssue) => {
         return (
-            <div key={nakazReqIssue["groupName"]}>
-            <p><b>{nakazReqIssue["Razui"]}</b> nakaz of <b>{nakazReqIssue["groupName"]}</b> are needed.</p>
-            <p>In your plan there are only <b>{nakazReqIssue["Mazui"]}</b></p>
+            <div key={nakazReqIssue["creditsType"]}>
+            <p><b>{nakazReqIssue["neededCredits"]}</b> nakaz of <b>{nakazReqIssue["creditsType"]}</b> are needed.</p>
+            <p>In your plan there are only <b>{nakazReqIssue["currentCredits"]}</b></p>
             </div>
         )
     }
