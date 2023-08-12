@@ -6,30 +6,28 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class Course {
 	@Id
-	@JsonProperty("id")
     private int id; 
-	@JsonProperty("courseName")
     private String name;
 	private int number;
-	@JsonProperty("creditsType")
+	private String department;
     private String creditsType;
-	@JsonProperty("creditsNumber")
     private int creditsNumber;
 
     public Course(){}
 
-    public Course(String name, int number, String type, int creditsNumber){
+    public Course(String name, int number, String department ,String creditsType, int creditsNumber){
 		// this.id = id;
         this.name = name;
 		this.number = number;
-		this.creditsType = type;
+		this.department = department;
+		this.creditsType = creditsType;
 		this.creditsNumber = creditsNumber;
     }
 
     @Override
 	public int hashCode() {
 
-		return Objects.hash(id, name, number, creditsType, creditsNumber);
+		return Objects.hash(id, name, number, department, creditsType, creditsNumber);
 	}
 
     @Override
@@ -46,6 +44,7 @@ public class Course {
 			"id=" + id +
 			", Course Name='" + name +
 			", Course Number='" + number +
+			", Course Department='" + department +
 			", Credits Type='" + creditsType +
 			", Credits Number='" + creditsNumber +
 			'}';
@@ -81,6 +80,10 @@ public class Course {
 
 	public int getCourseNumber() {
 		return number;
+	}
+
+	public String getDepartment() {
+		return department;
 	}
 
 	public String getCreditsType() {

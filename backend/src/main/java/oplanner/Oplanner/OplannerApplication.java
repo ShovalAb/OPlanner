@@ -35,15 +35,14 @@ public class OplannerApplication {
 			studyPlan.save(new StudyPlan("computer science"));
 			int [] intarr = {1,2};
 			dep.save(new Dependency(2,intarr));
-			course.save(new Course("Infi",3067, "base", 4));
-			course.save(new Course("Liniar",3065, "base", 4));
-			course.save(new Course("Liniar 2",3066, "Advanced", 4));
-			courseSP.save(new CourseInStudyPlan(1, 2, "Math"));
-			courseSP.save(new CourseInStudyPlan(1, 1, "Must"));
-			creditsReq.save(new CreditsRequirement(1,1,"Computser Science",40));
-			creditsReq.save(new CreditsRequirement(1,1,"Advanced Computser Science",20));
+			course.save(new Course("Infi",3067, "Math","base", 4));
+			course.save(new Course("Liniar",3065, "Math", "base", 4));
+			course.save(new Course("Liniar 2",3066, "Math", "Advanced", 4));
+			courseSP.save(new CourseInStudyPlan(1, 2));
+			courseSP.save(new CourseInStudyPlan(1, 1));
+			creditsReq.save(new CreditsRequirement(1,"CS","Base",40));
+			creditsReq.save(new CreditsRequirement(1,"CS","Advanced",20));
 		};
 	}
-
 
 }
