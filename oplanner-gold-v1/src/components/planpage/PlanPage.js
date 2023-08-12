@@ -56,20 +56,35 @@ const PlanPage = () => {
         getCourses(routeParams.studyPlanId);
     },[])
 
+    const collectChosenCourses = () => {
+        var coursesChosen = Array()
+        for (let i = 0; i < courses.length; i++) {
+            const coursesClass = courses[i];
+            for (let j = 0; j < coursesClass.courses.length; j++) {
+                const course = coursesClass.courses[j];
+                if (course.chosen) {
+                    coursesChosen.push(course.courseNumber)
+                }
+            }            
+        }
+        return coursesChosen;
+    }
+
+    const updateCreditReqNum = async (studyPlanId, courses) => {
+        try {
+            const coursesChosen = collectChosenCourses();
+            const response = await api.post('/api/creditsReq', {'planId':studyPlanId, 'courses':coursesChosen})
+            console.log(response.data)
+            setNakazReq(response.data["creditsReq"])
+            
+        } catch (error) {
+            console.log(error)
+        }
+    }
+
     const validateCourses = async (studyPlanId, courses) => {
         try {
-
-            var coursesChosen = Array()
-            for (let i = 0; i < courses.length; i++) {
-                const coursesClass = courses[i];
-                for (let j = 0; j < coursesClass.courses.length; j++) {
-                    const course = coursesClass.courses[j];
-                    if (course.chosen) {
-                        coursesChosen.push(course.courseNumber)
-                    }
-                }            
-            }
-
+            const coursesChosen = collectChosenCourses();
             const response = await api.post('/api/verifyPlan', {'planId':studyPlanId, 'courses':coursesChosen})
             console.log(response.data)
             setCoursesMust(response.data["coursesMust"])
