@@ -9,19 +9,19 @@ public class MandatoryRequirement{
     @Id
     private int id;
     private int planId;
-    private int [] courseId;
+    private int [] courseNumber;
 
     public MandatoryRequirement(){}
 
     public MandatoryRequirement(int planId, int [] courseId){
         this.planId = planId;
-        this.courseId = courseId;
+        this.courseNumber = courseId;
     }
 
     @Override
 	public int hashCode() {
 
-		return Objects.hash(id, planId, courseId);
+		return Objects.hash(id, planId, courseNumber);
 	}
 
     @Override
@@ -36,7 +36,7 @@ public class MandatoryRequirement{
 		return "Mandatory Requirements {" +
 			"id=" + id +
 			", plan id'" + planId +
-            ", course id'" + courseId +
+            ", course id'" + courseNumber +
 			'}';
 	}
 
@@ -49,7 +49,7 @@ public class MandatoryRequirement{
     }
 
         public void setCourseId(int [] courseId){
-        this.courseId = courseId;
+        this.courseNumber = courseId;
     }
 
     public int getId() {
@@ -61,7 +61,7 @@ public class MandatoryRequirement{
     }
 
     public int[] getCourseId(){
-        return courseId;
+        return courseNumber;
     }
 
 

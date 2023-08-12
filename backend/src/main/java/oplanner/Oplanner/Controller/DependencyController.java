@@ -2,7 +2,6 @@ package oplanner.Oplanner.Controller;
 
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.bind.annotation.RequestMapping;
-
 import oplanner.Oplanner.Model.Dependency;
 import oplanner.Oplanner.repository.DependencyRepository;
 import org.springframework.web.bind.annotation.CrossOrigin;

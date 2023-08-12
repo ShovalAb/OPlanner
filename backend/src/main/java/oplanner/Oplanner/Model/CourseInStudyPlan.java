@@ -5,7 +5,7 @@ import org.springframework.data.annotation.Id;
 public class CourseInStudyPlan {
     @Id
     private int id; 
-    private int courseId;
+    private int courseNumber;
     private int planId;
     private String department;
 
@@ -13,7 +13,7 @@ public class CourseInStudyPlan {
     public CourseInStudyPlan(){}
 
     public CourseInStudyPlan(int courseId, int studyPlanId, String department){
-        this.courseId = courseId;
+        this.courseNumber = courseId;
         this.planId = studyPlanId;
         this.department = department;
     }
@@ -21,7 +21,7 @@ public class CourseInStudyPlan {
     @Override
 	public int hashCode() {
 
-		return Objects.hash(id, courseId, planId, department);
+		return Objects.hash(id, courseNumber, planId, department);
 	}
 
     @Override
@@ -35,7 +35,7 @@ public class CourseInStudyPlan {
 	public String toString() {
 		return "Credits Requirement {" +
 			"id=" + id +
-			", course id'" + courseId +
+			", course id'" + courseNumber +
             ", study Plan id'" + planId +
             ", department'" + department +
 			'}';
@@ -46,7 +46,7 @@ public class CourseInStudyPlan {
 	}
 
     public void setCourseId(int courseId){
-        this.courseId = courseId;
+        this.courseNumber = courseId;
     }
 
     public void setPlanId(int studyPlanId) {
@@ -62,7 +62,7 @@ public class CourseInStudyPlan {
 	}
 
     public int getCourseId(){
-        return courseId;
+        return courseNumber;
     }
     
     public int getPlanId() {

@@ -6,25 +6,23 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import oplanner.Oplanner.repository.StudyPlanRepository;
 import org.springframework.web.bind.annotation.CrossOrigin;
+
+import oplanner.Oplanner.Model.Dependency;
 import oplanner.Oplanner.Model.StudyPlan;
 
 @RestController
 @CrossOrigin(allowedHeaders = "*", origins = "*")
-@RequestMapping("/api/studyplan")
-public class StudyPlanController {
-    private final StudyPlanRepository studyPlan;
+@RequestMapping("/api/test")
+public class TestController {
+    private final DependencyController dep;
 
-    public StudyPlanController(StudyPlanRepository studyPlan){
-        this.studyPlan = studyPlan;
+    public TestController(DependencyController dep){
+        this.dep = dep;
     }
-
     @RequestMapping(method = RequestMethod.GET)
-    public Iterable<StudyPlan> findAll(){
-        return studyPlan.findAll();
+    public Iterable<Dependency> findAll(){
+        return dep.findAll();
     }
 
-    @RequestMapping(method = RequestMethod.GET, params = "planId")
-    public StudyPlan getById(@RequestParam("planId") int planId){
-        return studyPlan.findPlanById(planId);
-    }
+    
 }

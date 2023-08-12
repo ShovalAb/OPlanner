@@ -5,11 +5,11 @@ import java.util.List;
 import oplanner.Oplanner.Model.Course;
 
 public class CoursesByCreditsType {
-    private String creditType;
+    private String creditsType;
     private List<Course> courses;
 
     public CoursesByCreditsType(String creditType, List<Course> list) {
-        this.creditType = creditType;
+        this.creditsType = creditType;
         this.courses = list;
     }
 
@@ -17,8 +17,8 @@ public class CoursesByCreditsType {
         courses.add(course);
     }
 
-    public String getCreditType(){
-        return creditType;
+    public String getCreditsType(){
+        return creditsType;
     }
     
     public List<Course> getCourses(){
