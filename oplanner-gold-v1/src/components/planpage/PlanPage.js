@@ -4,8 +4,10 @@ import api from '../../api/axiosConfig';
 import CoursesDrag from '../couresesdrag/CoursesDrag'
 import MissingCourses from "../missingcourses/MissingCourses";
 import SummaryButton from "./SummaryButton";
+import CreditReqTable from "./CreditReqTable";
 
 const PlanPage = () => {
+    console.log("D")
     const routeParams = useParams();
     const [courses, setCourses] = useState();
     const [coursesMust, setCoursesMust] = useState();
@@ -110,6 +112,7 @@ const PlanPage = () => {
             <div>
                 <h1>Planning Study Plan #{routeParams.studyPlanId}</h1>
             </div>
+            <CreditReqTable creditReq={nakazReq}></CreditReqTable>
             <CoursesDrag courses={courses}></CoursesDrag>
             <button className="buttonValidate" onClick={e => validateCourses(routeParams.studyPlanId,courses)}>Validate Study Plan</button>
             <MissingCourses coursesDepen={coursesDepen} coursesMust={coursesMust} nakazReq={nakazReq} getCourseByNumber={getCourseByNumber}></MissingCourses>
