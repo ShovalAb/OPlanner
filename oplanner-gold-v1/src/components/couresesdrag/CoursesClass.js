@@ -9,11 +9,11 @@ const CoursesClass = ({coursesClass, refresher, setRefresher}) => {
         setOpen(!open)
     }
 
-    const toggleChosen = (event, id) => {
+    const toggleChosen = (event, courseNumber) => {
         // console.log(event)
         // console.log(id)
         for (let i = 0; i < coursesClass.courses.length; i++) {
-            if (coursesClass.courses[i].id == id) {
+            if (coursesClass.courses[i].courseNumber == courseNumber) {
                 coursesClass.courses[i].chosen = (!coursesClass.courses[i].chosen)
             }
         }
@@ -23,7 +23,7 @@ const CoursesClass = ({coursesClass, refresher, setRefresher}) => {
     const listCourses = (course) => {
         if (!course.chosen) {
             return (
-                <tr key={course.id} onClick={e => toggleChosen(e, course.id)}>
+                <tr key={course.courseNumber} onClick={e => toggleChosen(e, course.courseNumber)}>
                     <td className="aCourseClass">
                         <p>{course.courseName} ({course.creditsNumber})</p>
                     </td>

@@ -14,12 +14,12 @@ const PlanPage = () => {
     const [planReady, setPlanReady] = useState(false);
 
 
-    const getCourseById = (courseId) => {
+    const getCourseByNumber = (courseNumber) => {
         for (let i = 0; i < courses.length; i++) {
             const coursesClass = courses[i];
             for (let j = 0; j < coursesClass.courses.length; j++) {
                 const course = coursesClass.courses[j];
-                if (course.id == courseId) {
+                if (course.courseNumber == courseNumber) {
                     return (course)
                 }
             }
@@ -33,9 +33,6 @@ const PlanPage = () => {
             var coursesClass = courses[i];
             for (let j = 0; j < coursesClass.courses.length; j++) {
                 coursesClass.courses[j].chosen = false;
-                // if (coursesClass.courses[j].id == 20406) {
-                //     coursesClass.courses[j].chosen = true;
-                // }
             }
         }
         return courses
@@ -68,7 +65,7 @@ const PlanPage = () => {
                 for (let j = 0; j < coursesClass.courses.length; j++) {
                     const course = coursesClass.courses[j];
                     if (course.chosen) {
-                        coursesChosen.push(course.id)
+                        coursesChosen.push(course.courseNumber)
                     }
                 }            
             }
@@ -100,7 +97,7 @@ const PlanPage = () => {
             </div>
             <CoursesDrag courses={courses}></CoursesDrag>
             <button className="buttonValidate" onClick={e => validateCourses(routeParams.studyPlanId,courses)}>Validate Study Plan</button>
-            <MissingCourses coursesDepen={coursesDepen} coursesMust={coursesMust} nakazReq={nakazReq} getCourseById={getCourseById}></MissingCourses>
+            <MissingCourses coursesDepen={coursesDepen} coursesMust={coursesMust} nakazReq={nakazReq} getCourseByNumber={getCourseByNumber}></MissingCourses>
             <SummaryButton planReady={planReady}></SummaryButton>
         </div>
     )

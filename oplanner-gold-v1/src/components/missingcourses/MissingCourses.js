@@ -1,14 +1,14 @@
 import React from "react";
 
-const MissingCourses = ({coursesMust, coursesDepen, nakazReq, getCourseById}) => {
+const MissingCourses = ({coursesMust, coursesDepen, nakazReq, getCourseByNumber}) => {
     const missingMustCourse = (course) => {
         return (
-            <p key={course.id}><b>{course.name} ({course.id})</b></p>
+            <p key={course.courseNumber}><b>{course.courseName} ({course.courseNumber})</b></p>
         )
     }
 
-    const allMissingMustCourses = (courseMustId) => {
-        const course = getCourseById(courseMustId)
+    const allMissingMustCourses = (courseMustNumber) => {
+        const course = getCourseByNumber(courseMustNumber)
         if (course != null) {
             return (missingMustCourse(course))
         }
@@ -17,13 +17,13 @@ const MissingCourses = ({coursesMust, coursesDepen, nakazReq, getCourseById}) =>
 
     const missingDepenCourse = (preCourseMissing, course) => {
         return (
-            <p key={course.id}><b>{course.name}({course.id})</b> needs the course <b>{preCourseMissing.name}({preCourseMissing.id})</b>!</p>
+            <p key={course.courseNumber}><b>{course.courseName}({course.courseNumber})</b> needs the course <b>{preCourseMissing.courseName}({preCourseMissing.courseNumber})</b>!</p>
         )
     }
 
-    const allMissingDepenCourses = (courseIds) => {
-        const preCourse = getCourseById(courseIds[0])
-        const course = getCourseById(courseIds[1])
+    const allMissingDepenCourses = (courseNums) => {
+        const preCourse = getCourseByNumber(courseNums[0])
+        const course = getCourseByNumber(courseNums[1])
 
         if (course != null && preCourse != null) {
             return (missingDepenCourse(preCourse, course))

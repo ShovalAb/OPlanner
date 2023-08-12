@@ -7,7 +7,7 @@ const CoursesChosen = ({courses, refresher, setRefresher}) => {
     const createChosenCourse = (course) => {
         if (course.chosen) {
             return (
-                <ChosenCourse key={course.id} course={course} refresher={refresher} setRefresher={setRefresher}></ChosenCourse>
+                <ChosenCourse key={course.courseNumber} course={course} refresher={refresher} setRefresher={setRefresher}></ChosenCourse>
             )
         }
         return null;
