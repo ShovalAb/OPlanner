@@ -16,14 +16,14 @@ class CORSRequestHandler (SimpleHTTPRequestHandler):
         print("Got from client - " + post_body.decode())
         self.end_headers()
         if "20406" in post_body.decode():
-            self.wfile.write(b'{"ok":1,"courses-must":[],"courses-depen":[],"nakaz-req":[]}')
+            self.wfile.write(b'{"ok":1,"coursesMust":[],"coursesDepen":[],"creditsReq":[]}')
         else:
-            self.wfile.write(b'{"ok":0,"courses-must":[20406,20407],"courses-depen":[[20406,20416]],"nakaz-req":[{"groupName":"Math","Razui":80,"Mazui":74}]}')
+            self.wfile.write(b'{"ok":0,"coursesMust":[20406,20407],"coursesDepen":[[20406,20416]],"creditsReq":[{"creditType":"Math","neededCredits":80,"currentCredits":74}]}')
 
 
     def do_GET(self):
         print(self.path)
-        if self.path == '/api/studyplan?planId=1':
+        if self.path == '/api/course?planId=1':
             self.send_response(200, 'ok')
             self.end_headers()
             self.wfile.write(open('./api/courseGroup/1', 'rb').read())

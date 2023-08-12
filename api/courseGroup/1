@@ -1,1 +1,1 @@
-[{"groupName":"Math", "courses":[{"id":20406,"name":"Hedva a","type":"Math","nakazCount":6},{"id":20416,"name":"Hedva b","type":"Math","nakazCount":5}]},{"groupName":"Madmah-Must","courses":[{"id":20407,"name":"Manma","type":"Madmah","nakazCount":6}]}]
+[{"creditType":"Math", "courses":[{"courseNumber":20406,"courseName":"Hedva a","type":"Math","creditsNumber":6},{"courseNumber":20416,"courseName":"Hedva b","type":"Math","creditsNumber":5}]},{"creditType":"Madmah-Must","courses":[{"courseNumber":20407,"courseName":"Manma","type":"Madmah","creditsNumber":6}]}]
