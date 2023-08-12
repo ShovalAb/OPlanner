@@ -5,6 +5,7 @@ import org.springframework.web.bind.annotation.RestController;
 import oplanner.Oplanner.Model.Course;
 import oplanner.Oplanner.Response.CheckStudyPlanRespone;
 import oplanner.Oplanner.repository.CourseRepository;
+import oplanner.Oplanner.repository.DependencyRepository;
 import oplanner.Oplanner.repository.MandatoryRequirementRepository;
 
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -29,10 +30,12 @@ public class ValidateController {
     private Logic logic = new Logic();
     private final CourseRepository courseRepo;
     private final MandatoryRequirementRepository mr;
+    private final DependencyRepository depRepository;
     
-    public ValidateController (CourseRepository courseRepo, MandatoryRequirementRepository mr) {
+    public ValidateController (CourseRepository courseRepo, MandatoryRequirementRepository mr, DependencyRepository depRepository) {
         this.courseRepo = courseRepo;
         this.mr = mr;
+        this.depRepository = depRepository;
     }
 
     @PostMapping
@@ -43,7 +46,7 @@ public class ValidateController {
         for (int number : coursesNumber){
             courses.add(courseRepo.findByNumber(number));
         }
-        CheckStudyPlan checkStudyPlan = new CheckStudyPlan(id, courses, mr, courseRepo);
+        CheckStudyPlan checkStudyPlan = new CheckStudyPlan(id, courses, mr, courseRepo, depRepository);
         return checkStudyPlan.checkStudyPlanRespone();
     }
 }

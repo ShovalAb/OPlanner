@@ -1,18 +1,21 @@
 package oplanner.Oplanner.Response;
 import oplanner.Oplanner.Model.Dependency;
 import oplanner.Oplanner.Model.MandatoryRequirement;
+
+import java.util.List;
+
 import oplanner.Oplanner.Model.Course;
 
 
 public class CheckStudyPlanRespone {
     
     private final int ok;
-    private final int[] coursesMust;
-    private final DependencyResponse[] coursesDepen;
+    private final List<Integer>  coursesMust;
+    private final List<DependencyResponse> coursesDepen;
     private final CreditsReqResponse[] creditsReq;
     
 
-    public CheckStudyPlanRespone(int ok, int[] coursesMust, DependencyResponse[] coursesDepen, CreditsReqResponse[] creditsReq){
+    public CheckStudyPlanRespone(int ok, List<Integer> coursesMust, List<DependencyResponse> coursesDepen, CreditsReqResponse[] creditsReq){
         this.ok = ok;
         this.coursesMust = coursesMust;
         this.coursesDepen = coursesDepen;
@@ -23,11 +26,11 @@ public class CheckStudyPlanRespone {
 		return ok;
 	}
 
-    public int[] getCoursesMust() {
+    public List<Integer>  getCoursesMust() {
 		return coursesMust;
 	}
 
-    public DependencyResponse[]  getCoursesDepen() {
+    public List<DependencyResponse> getCoursesDepen() {
 		return coursesDepen;
 	}
 

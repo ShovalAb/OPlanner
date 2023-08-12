@@ -1,7 +1,10 @@
 package oplanner.Oplanner.Logic;
 
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
+
+import org.apache.tomcat.util.digester.SystemPropertySource;
 
 import oplanner.Oplanner.Model.Course;
 import oplanner.Oplanner.Model.CreditsRequirement;
@@ -21,36 +24,38 @@ public class CheckStudyPlan {
 
     private final int studyPlanId;
     private final List <Course>  courses;
-    private final MandatoryRequirementRepository mr;
-    private final CourseRepository course;
+    private final MandatoryRequirementRepository mrRepository;
+    private final CourseRepository courseRepository;
+    private final DependencyRepository depRepository;
 
-    public CheckStudyPlan(int studyPlanId, List <Course> courses, MandatoryRequirementRepository mr, CourseRepository course)
+    public CheckStudyPlan(int studyPlanId, List <Course> courses, MandatoryRequirementRepository mrRepository, CourseRepository courseRepository, DependencyRepository depRepository)
     {
         this.studyPlanId = studyPlanId;
         this.courses = courses;
-        this.mr = mr;
-        this.course = course;
+        this.mrRepository = mrRepository;
+        this.courseRepository = courseRepository;
+        this.depRepository = depRepository;
     }
 
     public CheckStudyPlanRespone checkStudyPlanRespone ()
     {
         int[] d11 = {3065, 3067};
         int[] d12 = {3066, 3067};
-        DependencyResponse d1 = new DependencyResponse(d11);
-        DependencyResponse d2 = new DependencyResponse (d12);
-        DependencyResponse[] d = {d1, d2};
+        // DependencyResponse d1 = new DependencyResponse(3066, d11);
+        // DependencyResponse d2 = new DependencyResponse(3065, d12);
+        List<DependencyResponse>  d = checkDependencies();
         CreditsReqResponse c1 = new CreditsReqResponse("Math", 40, 50);
         CreditsReqResponse c2 = new CreditsReqResponse("Comp", 20, 20);
         CreditsReqResponse[] c = {c1, c2};
-        int[] a = {3065, 3066};
+        List<Integer>  a = checkMandatoryRequirement();
         CheckStudyPlanRespone res = new CheckStudyPlanRespone(0, a, d, c);
         return res;
     }
 
-    public Course[] checkMandatoryRequirement ()
+    public List<Integer> checkMandatoryRequirement ()
     {
-        MandatoryRequirement [] mandatoryReq = mr.findByPlanId(studyPlanId);
-        Course[] missingCourses = new Course[0];
+        MandatoryRequirement [] mandatoryReq = mrRepository.findByPlanId(studyPlanId);
+        List<Integer>  missingCourses = new ArrayList<Integer> ();
         boolean found = false;
         for (MandatoryRequirement req : mandatoryReq)
         {
@@ -70,26 +75,45 @@ public class CheckStudyPlan {
             }
             else
             {
-                Course[] newArray = Arrays.copyOf(missingCourses, missingCourses.length + req.getCourseId().length);
-                for (int i=0; i < req.getCourseId().length; i++)
-                {
-                    newArray [missingCourses.length + i] = course.findByCourseNumber(req.getCourseId()[i]);
-                }
-                missingCourses = newArray;
+                missingCourses.add(req.getCourseId()[0]);
+
             }
 
         }
-
         return missingCourses;
     }
 
-    // public Dependency[] checkDependencies ()
-    // {
-    //     Dependency[] missingDependencies = new Dependency[0];
-    //     for (Course course : courses)
-    //     {
-    //         Dependency[] depForThisCourse = dep.findByCourseId(course.getId());
-    //     }
-    // }
+    public List<DependencyResponse> checkDependencies ()
+    {
+        List<DependencyResponse> missingDependencies = new ArrayList<DependencyResponse> ();
+        List<Integer> missingDependenciesForSpecificCourse = new ArrayList<Integer> ();
+        boolean foundDep = false;
+        boolean courseMissingDep = false;
+        for (Course course : courses)
+        {
+            courseMissingDep = false;
+            Dependency[] depForThisCourse = depRepository.findByCourseId(course.getCourseNumber());
+            for (Dependency dep : depForThisCourse)
+            {
+                foundDep = false;
+                for (int option : dep.getBaseCourse()){
+                    if (courses.contains(courseRepository.findByNumber(option))){
+                        foundDep = true;
+                    }
+                }
+                if (foundDep == false){
+                    missingDependenciesForSpecificCourse.add(dep.getBaseCourse().get(0));
+                    courseMissingDep = true;
+                } 
+            }
+            if (courseMissingDep == true){
+                DependencyResponse d = new DependencyResponse (course.getCourseNumber(),missingDependenciesForSpecificCourse );
+                missingDependencies.add(d);
+                missingDependenciesForSpecificCourse = new ArrayList<Integer> ();
+            }
+
+        }
+        return missingDependencies;
+    }
 }
 
