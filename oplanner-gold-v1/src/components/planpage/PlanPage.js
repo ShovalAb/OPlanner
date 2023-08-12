@@ -72,9 +72,9 @@ const PlanPage = () => {
 
             const response = await api.post('/api/verifyPlan', {'planId':studyPlanId, 'courses':coursesChosen})
             console.log(response.data)
-            setCoursesMust(response.data["courses-must"])
-            setCoursesDepen(response.data["courses-depen"])
-            setNakazReq(response.data["nakaz-req"])
+            setCoursesMust(response.data["coursesMust"])
+            setCoursesDepen(response.data["coursesDepen"])
+            setNakazReq(response.data["creditsReq"])
             
             if (response.data.ok) {
                 // ok = 1, the program is validated
