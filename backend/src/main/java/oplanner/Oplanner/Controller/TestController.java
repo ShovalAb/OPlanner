@@ -19,10 +19,11 @@ public class TestController {
     public TestController(DependencyController dep){
         this.dep = dep;
     }
-    @RequestMapping(method = RequestMethod.GET)
-    public Iterable<Dependency> findAll(){
-        return dep.findAll();
-    }
+    
+    // @RequestMapping(method = RequestMethod.GET)
+    // public Iterable<Dependency> findAll(){
+    //     return dep.findAll();
+    // }
 
     
 }

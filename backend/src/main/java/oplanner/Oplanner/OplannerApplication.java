@@ -37,8 +37,8 @@ import org.springframework.core.io.ClassPathResource;
 @RestController
 public class OplannerApplication {
 
-	@Autowired
-    private DataSource dataSource;
+	// @Autowired
+    // private DataSource dataSource;
 
 	public static void main(String[] args) {
 		SpringApplication.run(OplannerApplication.class, args)
