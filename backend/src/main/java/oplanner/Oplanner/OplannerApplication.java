@@ -41,20 +41,13 @@ public class OplannerApplication {
 
 	// @PostConstruct
 	// public void createTables() {
-    //     JdbcTemplate jdbcTemplate = new JdbcTemplate(dataSource);
-	// 	jdbcTemplate.execute("CREATE TABLE STUDY_PLAN (" +
-	// 	"ID int auto_increment primary key NOT NULL, " +
-	// 	"PLAN_NAME VARCHAR(100) NOT NULL)");
-    // }
-
-	// @PostConstruct
-	// public void createTables() {
-    // ResourceDatabasePopulator populator = new ResourceDatabasePopulator();
-    // populator.addScript(new ClassPathResource("db/schema.sql")); // Adjust the path as needed
-    // DataSourceInitializer dataSourceInitializer = new DataSourceInitializer();
-    // dataSourceInitializer.setDataSource(dataSource);
-    // dataSourceInitializer.setDatabasePopulator(populator);
-    // dataSourceInitializer.afterPropertiesSet();
+	// 	ResourceDatabasePopulator populator = new ResourceDatabasePopulator();
+	// 	populator.addScript(new ClassPathResource("db/schema.sql")); 
+	// 	DataSourceInitializer dataSourceInitializer = new DataSourceInitializer();
+	// 	dataSourceInitializer.setDataSource(dataSource);
+	// 	dataSourceInitializer.setDatabasePopulator(populator);
+	// 	dataSourceInitializer.afterPropertiesSet();
+	// }
 	
 	// @Bean
 	// CommandLineRunner commandLineRunner(StudyPlanRepository studyPlan, DependencyRepository dep, CourseRepository course, CourseInStudyPlanRepository courseSP, CreditsRequirementRepository creditsReq){

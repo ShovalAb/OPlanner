@@ -7,21 +7,19 @@ public class CourseInStudyPlan {
     private int id; 
     private int courseNumber;
     private int planId;
-    private String department;
 
 
     public CourseInStudyPlan(){}
 
-    public CourseInStudyPlan(int courseId, int studyPlanId, String department){
+    public CourseInStudyPlan(int courseId, int planId){
         this.courseNumber = courseId;
-        this.planId = studyPlanId;
-        this.department = department;
+        this.planId = planId;
     }
 
     @Override
 	public int hashCode() {
 
-		return Objects.hash(id, courseNumber, planId, department);
+		return Objects.hash(id, courseNumber, planId);
 	}
 
     @Override
@@ -37,7 +35,6 @@ public class CourseInStudyPlan {
 			"id=" + id +
 			", course id'" + courseNumber +
             ", study Plan id'" + planId +
-            ", department'" + department +
 			'}';
 	}
 
@@ -53,10 +50,6 @@ public class CourseInStudyPlan {
 		this.planId = studyPlanId;
 	}
 
-	public void setDepartment(String department) {
-		this.department = department;
-    }
-
     public int getId() {
 		return id;
 	}
@@ -67,10 +60,6 @@ public class CourseInStudyPlan {
     
     public int getPlanId() {
 		return planId;
-	}
-
-	public String getDepartment() {
-		return department;
 	}
 
 }

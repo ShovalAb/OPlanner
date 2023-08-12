@@ -42,11 +42,11 @@ public class CourseController {
         Course [] results = course.findByPlanId(planId);
         Map<String, List<Course>> map = new HashMap<>();
         for (Course result : results){
-            String creditType = result.getCreditsType();
-            if(!map.containsKey(creditType)){
-                map.put(creditType, new ArrayList<Course>());
+            String dep = result.getCreditsType();
+            if(!map.containsKey(dep)){
+                map.put(dep, new ArrayList<Course>());
             }
-            map.get(creditType).add(result);
+            map.get(dep).add(result);
         }
         List<CoursesByCreditsType> response = new ArrayList<>();
         for (Map.Entry<String, List<Course>> entry : map.entrySet()) {

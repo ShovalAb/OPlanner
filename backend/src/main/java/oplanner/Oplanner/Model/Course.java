@@ -6,23 +6,19 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class Course {
 	@Id
-	@JsonProperty("id")
     private int id; 
-	@JsonProperty("courseName")
     private String name;
 	private int number;
-	@JsonProperty("creditsType")
     private String creditsType;
-	@JsonProperty("creditsNumber")
     private int creditsNumber;
 
     public Course(){}
 
-    public Course(String name, int number, String type, int creditsNumber){
+    public Course(String name, int number, String creditsType, int creditsNumber){
 		// this.id = id;
         this.name = name;
 		this.number = number;
-		this.creditsType = type;
+		this.creditsType = creditsType;
 		this.creditsNumber = creditsNumber;
     }
 
@@ -36,7 +32,7 @@ public class Course {
 	public boolean equals(Object o) {
 		if (o == null || getClass() != o.getClass()) return false;
         Course course = (Course) o; 
-		return Objects.equals(id, course.id)
+		return Objects.equals(number, course.number)
             ;
 	}
 
@@ -82,6 +78,7 @@ public class Course {
 	public int getCourseNumber() {
 		return number;
 	}
+
 
 	public String getCreditsType() {
 		return creditsType;

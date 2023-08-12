@@ -13,7 +13,7 @@ public class CreditsRequirement {
 
     public CreditsRequirement(){}
 
-    public CreditsRequirement(int planID, int courseId, String creditsType, int creditsNumber){
+    public CreditsRequirement(int planID, int courseId,String creditsType, int creditsNumber){
         this.planId = planID;
         this.creditsType = creditsType;
         this.creditsNumber = creditsNumber;
@@ -39,7 +39,6 @@ public class CreditsRequirement {
 			", plan id'" + planId +
             ", credits type'" + creditsType +
             ", credits number'" + creditsNumber +
-
 			'}';
 	}
 

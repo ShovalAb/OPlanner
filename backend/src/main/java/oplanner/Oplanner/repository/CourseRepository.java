@@ -13,8 +13,8 @@ public interface CourseRepository extends CrudRepository<Course, Integer> {
     Course findByNumber(int number);
 
         @Query("""
-        SELECT c.*
-        FROM course as c join Course_In_Study_Plan as s
+        SELECT DISTINCT c.*
+        FROM course as c inner join Course_In_Study_Plan as s
         Where plan_Id = :planId
         """)
     Course[] findByPlanId(int planId);
