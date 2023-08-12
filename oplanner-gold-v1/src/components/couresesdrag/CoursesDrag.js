@@ -12,7 +12,7 @@ const CoursesDrag = ({courses}) => {
 
     const createCoursesClass = (coursesClass) => {
         return (
-            <tr key={coursesClass.groupName}>
+            <tr key={coursesClass.creditType}>
                 <td>
                     <CoursesClass coursesClass={coursesClass} refresher={refresher} setRefresher={refresh}></CoursesClass>
                 </td>
