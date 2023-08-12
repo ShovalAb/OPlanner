@@ -1,6 +1,7 @@
 package oplanner.Oplanner.Logic;
 
 import java.util.Arrays;
+import java.util.List;
 
 import oplanner.Oplanner.Model.Course;
 import oplanner.Oplanner.Model.CreditsRequirement;
@@ -18,18 +19,20 @@ import oplanner.Oplanner.repository.DependencyRepository;
 
 public class CheckStudyPlan {
 
+    private final int studyPlanId;
+    private final List <Course>  courses;
     private final MandatoryRequirementRepository mr;
-    private final DependencyRepository dep;
     private final CourseRepository course;
 
-    public CheckStudyPlan(int studyPlanId, Course[] courses, MandatoryRequirementRepository mr, DependencyRepository dep, CourseRepository course)
+    public CheckStudyPlan(int studyPlanId, List <Course> courses, MandatoryRequirementRepository mr, CourseRepository course)
     {
+        this.studyPlanId = studyPlanId;
+        this.courses = courses;
         this.mr = mr;
-        this.dep = dep;
         this.course = course;
     }
 
-    public CheckStudyPlanRespone checkStudyPlanRespone (int studyPlanId, Course[] courses)
+    public CheckStudyPlanRespone checkStudyPlanRespone ()
     {
         int[] d11 = {122, 123};
         int[] d12 = {456, 457};
@@ -44,7 +47,7 @@ public class CheckStudyPlan {
         return res;
     }
 
-    public Course[] checkMandatoryRequirement (int studyPlanId, Course[] courses)
+    public Course[] checkMandatoryRequirement ()
     {
         MandatoryRequirement [] mandatoryReq = mr.findByPlanId(studyPlanId);
         Course[] missingCourses = new Course[0];
@@ -80,7 +83,7 @@ public class CheckStudyPlan {
         return missingCourses;
     }
 
-    // public Dependency[] checkDependencies (int studyPlanId, Course[] courses)
+    // public Dependency[] checkDependencies ()
     // {
     //     Dependency[] missingDependencies = new Dependency[0];
     //     for (Course course : courses)

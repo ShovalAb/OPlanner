@@ -1,4 +1,8 @@
 package oplanner.Oplanner.Response;
+import oplanner.Oplanner.Model.Dependency;
+import oplanner.Oplanner.Model.MandatoryRequirement;
+import oplanner.Oplanner.Model.Course;
+
 
 public class CheckStudyPlanRespone {
     
@@ -27,7 +31,8 @@ public class CheckStudyPlanRespone {
 		return coursesDepen;
 	}
 
-    public CreditsReqResponse[] getCeditsReq() {
-		return creditsReq;
-	}
+    public CreditsReqResponse[] getCreditsReqResponse(){
+        return creditsReq;
+    }
+
 }
