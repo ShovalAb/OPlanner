@@ -40,4 +40,25 @@ public class CreditsController {
             return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).build();
         }
     }
+
+    /**
+     * Get credits requirements by course number.
+     *
+     * @param courseNumber Course number.
+     * @return Array of credits requirements for the given course number.
+     */
+    @RequestMapping(method = RequestMethod.GET, params = "courseNumber")
+    public ResponseEntity<CreditsRequirement[]> getByCourseId(@RequestParam("courseNumber") int courseNumber) {
+        try {
+            CreditsRequirement[] creditsRequirements = creditsRepository.findByPlanId(courseNumber);
+            if (creditsRequirements != null && creditsRequirements.length > 0) {
+                return ResponseEntity.ok(creditsRequirements);
+            } else {
+                return ResponseEntity.notFound().build();
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+            return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).build();
+        }
+    }
 }
