@@ -11,15 +11,19 @@ import org.springframework.web.bind.annotation.GetMapping;
 @CrossOrigin(allowedHeaders = "*", origins = "*")
 @RequestMapping("/api/dependency")
 public class DependencyController {
-        private final DependencyRepository dep;
+    private final DependencyRepository dependencyRepository;
 
-    public DependencyController(DependencyRepository dep){
-        this.dep = dep;
+    public DependencyController(DependencyRepository dependencyRepository) {
+        this.dependencyRepository = dependencyRepository;
     }
 
+    /**
+     * Get all dependencies.
+     *
+     * @return Iterable of all dependencies.
+     */
     @GetMapping
-    public Dependency [] findAll(){
-        return dep.findByCourseId(3067);
+    public Iterable<Dependency> findAll() {
+        return dependencyRepository.findAll();
     }
-    
 }

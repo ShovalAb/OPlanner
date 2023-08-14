@@ -5,82 +5,75 @@ import java.util.Objects;
 import org.springframework.data.annotation.Id;
 
 public class CreditsRequirement {
-     @Id
+    @Id
     private int id;
     private int planId;
-    private String department;
     private String creditsType;
     private int creditsNumber;
 
-    public CreditsRequirement(){}
+    // Constructors
+    public CreditsRequirement() {}
 
-    public CreditsRequirement(int planID, int courseId,String creditsType, int creditsNumber){
+    public CreditsRequirement(int planID, String creditsType, int creditsNumber) {
         this.planId = planID;
-        this.department = department;
         this.creditsType = creditsType;
         this.creditsNumber = creditsNumber;
     }
 
+    // Generated hashCode and equals methods
     @Override
-	public int hashCode() {
-
-		return Objects.hash(id, planId, department, creditsType, creditsNumber);
-	}
+    public int hashCode() {
+        return Objects.hash(id, planId, creditsType, creditsNumber);
+    }
 
     @Override
-	public boolean equals(Object o) {
-		if (o == null || getClass() != o.getClass()) return false;
+    public boolean equals(Object o) {
+        if (o == null || getClass() != o.getClass()) return false;
         CreditsRequirement creditsReq = (CreditsRequirement) o; 
-		return Objects.equals(id, creditsReq.id);
-	}
+        return Objects.equals(id, creditsReq.id);
+    }
 
+    // toString method for debugging
     @Override
-	public String toString() {
-		return "Credits Requirement {" +
-			"id=" + id +
-			", plan id'" + planId +
-            ", department'" + department +
+    public String toString() {
+        return "Credits Requirement {" +
+            "id=" + id +
+            ", plan id'" + planId +
             ", credits type'" + creditsType +
             ", credits number'" + creditsNumber +
-			'}';
-	}
+            '}';
+    }
 
+    // Getter and setter methods
     public void setId(int id) {
-		this.id = id;
-	}
+        this.id = id;
+    }
 
-    public void setPlanID(int id){
+    public void setPlanID(int id) {
         planId = id;
     }
 
     public void setCreditsType(String type) {
-		this.creditsType = type;
-	}
+        this.creditsType = type;
+    }
 
-	public void setCreditsNumber(int number) {
-		this.creditsNumber = number;
+    public void setCreditsNumber(int number) {
+        this.creditsNumber = number;
     }
 
     public int getId() {
-		return id;
-	}
+        return id;
+    }
 
-    public int getPlanID(){
+    public int getPlanID() {
         return planId;
     }
 
-    public String getDepartment() {
-		return department;
-	}
-    
     public String getCreditsType() {
-		return creditsType;
-	}
+        return creditsType;
+    }
 
-	public int getCreditsNumber() {
-		return creditsNumber;
-	}
-
-
-
+    public int getCreditsNumber() {
+        return creditsNumber;
+    }
 }

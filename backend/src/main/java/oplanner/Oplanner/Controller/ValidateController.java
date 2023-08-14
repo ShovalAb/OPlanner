@@ -11,11 +11,6 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.ResponseBody;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.http.ResponseEntity;
 
 import oplanner.Oplanner.Logic.CheckStudyPlan;
 import oplanner.Oplanner.Logic.Logic;
@@ -27,25 +22,35 @@ import java.util.*;
 @RequestMapping("/api/verifyPlan")
 public class ValidateController {
     private Logic logic = new Logic();
-    private final CourseRepository courseRepo;
-    private final MandatoryRequirementRepository mr;
-    private final DependencyRepository depRepository;
+    private final CourseRepository courseRepository;
+    private final MandatoryRequirementRepository mandatoryRequirementRepository;
+    private final DependencyRepository dependencyRepository;
     
-    public ValidateController (CourseRepository courseRepo, MandatoryRequirementRepository mr, DependencyRepository depRepository) {
-        this.courseRepo = courseRepo;
-        this.mr = mr;
-        this.depRepository = depRepository;
+    public ValidateController (
+            CourseRepository courseRepository, 
+            MandatoryRequirementRepository mandatoryRequirementRepository, 
+            DependencyRepository dependencyRepository) {
+        this.courseRepository = courseRepository;
+        this.mandatoryRequirementRepository = mandatoryRequirementRepository;
+        this.dependencyRepository = dependencyRepository;
     }
 
+    /**
+     * Validate a study plan.
+     *
+     * @param selectedCourses Map containing planId and courses list.
+     * @return CheckStudyPlanRespone containing validation results.
+     */
     @PostMapping
-    public CheckStudyPlanRespone validateStudyPlan (@RequestBody Map<String,Object> selectedCourses){
+    public CheckStudyPlanRespone validateStudyPlan (@RequestBody Map<String, Object> selectedCourses) {
         int id = Integer.parseInt(selectedCourses.get("planId").toString());
-        List<Course> courses = new ArrayList<Course>();
+        List<Course> courses = new ArrayList<>();
         List<Integer> coursesNumber = (List<Integer>) selectedCourses.get("courses");
         for (int number : coursesNumber){
-            courses.add(courseRepo.findByNumber(number));
+            courses.add(courseRepository.findByNumber(number));
         }
-        CheckStudyPlan checkStudyPlan = new CheckStudyPlan(id, courses, mr, courseRepo, depRepository);
+        CheckStudyPlan checkStudyPlan = new CheckStudyPlan(
+            id, courses, mandatoryRequirementRepository, courseRepository, dependencyRepository);
         return checkStudyPlan.checkStudyPlanRespone();
     }
 }
