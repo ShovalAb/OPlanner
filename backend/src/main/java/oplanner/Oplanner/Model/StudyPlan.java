@@ -12,48 +12,50 @@ public class StudyPlan {
     private int id; 
     private String planName;
 
-    public StudyPlan(){}
+    // Constructors
+    public StudyPlan() {}
 
-    public StudyPlan(String name){
+    public StudyPlan(String name) {
         planName = name;
     }
 
+    // Generated hashCode and equals methods
     @Override
-	public int hashCode() {
-
-		return Objects.hash(id, planName);
-	}
+    public int hashCode() {
+        return Objects.hash(id, planName);
+    }
 
     @Override
-	public boolean equals(Object o) {
-		if (o == null || getClass() != o.getClass()) return false;
+    public boolean equals(Object o) {
+        if (o == null || getClass() != o.getClass()) return false;
         StudyPlan studyPlan = (StudyPlan) o; 
-		return Objects.equals(id, studyPlan.id) &&
-			Objects.equals(planName, studyPlan.planName);
-	}
+        return Objects.equals(id, studyPlan.id) &&
+            Objects.equals(planName, studyPlan.planName);
+    }
 
+    // toString method for debugging
     @Override
-	public String toString() {
-		return "Study Plan {" +
-			"id=" + id +
-			", Plan Name='" + planName +
-			'}';
-	}
+    public String toString() {
+        return "Study Plan {" +
+            "id=" + id +
+            ", Plan Name='" + planName +
+            '}';
+    }
 
+    // Getter and setter methods
     public void setId(int id) {
-		this.id = id;
-	}
+        this.id = id;
+    }
 
-    public void setPlanName(String name){
+    public void setPlanName(String name) {
         planName = name;
     }
 
     public int getId() {
-		return id;
-	}
+        return id;
+    }
 
-    public String getPlanName(){
+    public String getPlanName() {
         return planName;
     }
-    
 }

@@ -12,19 +12,30 @@ import oplanner.Oplanner.Model.StudyPlan;
 @CrossOrigin(allowedHeaders = "*", origins = "*")
 @RequestMapping("/api/studyplan")
 public class StudyPlanController {
-    private final StudyPlanRepository studyPlan;
+    private final StudyPlanRepository studyPlanRepository;
 
-    public StudyPlanController(StudyPlanRepository studyPlan){
-        this.studyPlan = studyPlan;
+    public StudyPlanController(StudyPlanRepository studyPlanRepository) {
+        this.studyPlanRepository = studyPlanRepository;
     }
 
+    /**
+     * Get all study plans.
+     *
+     * @return Iterable of all study plans.
+     */
     @RequestMapping(method = RequestMethod.GET)
-    public Iterable<StudyPlan> findAll(){
-        return studyPlan.findAll();
+    public Iterable<StudyPlan> findAll() {
+        return studyPlanRepository.findAll();
     }
 
+    /**
+     * Get a study plan by its ID.
+     *
+     * @param planId Study plan ID.
+     * @return Study plan with the given ID.
+     */
     @RequestMapping(method = RequestMethod.GET, params = "planId")
-    public StudyPlan getById(@RequestParam("planId") int planId){
-        return studyPlan.findPlanById(planId);
+    public StudyPlan getById(@RequestParam("planId") int planId) {
+        return studyPlanRepository.findPlanById(planId);
     }
 }
