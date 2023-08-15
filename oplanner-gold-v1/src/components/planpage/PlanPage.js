@@ -63,14 +63,16 @@ const PlanPage = () => {
 
     const collectChosenCourses = () => {
         var coursesChosen = Array()
-        for (let i = 0; i < courses.length; i++) {
-            const coursesClass = courses[i];
-            for (let j = 0; j < coursesClass.courses.length; j++) {
-                const course = coursesClass.courses[j];
-                if (course.chosen) {
-                    coursesChosen.push(course.courseNumber)
-                }
-            }            
+        if (courses != undefined) {
+            for (let i = 0; i < courses.length; i++) {
+                const coursesClass = courses[i];
+                for (let j = 0; j < coursesClass.courses.length; j++) {
+                    const course = coursesClass.courses[j];
+                    if (course.chosen) {
+                        coursesChosen.push(course.courseNumber)
+                    }
+                }            
+            }
         }
         return coursesChosen;
     }
@@ -120,7 +122,7 @@ const PlanPage = () => {
             <CoursesDrag courses={courses} updateCreditReqNum={updateCreditReqNum}></CoursesDrag>
             <button className="buttonValidate" onClick={e => validateCourses(routeParams.studyPlanId,courses)}>Validate Study Plan</button>
             <MissingCourses coursesDepen={coursesDepen} coursesMust={coursesMust} nakazReq={nakazReq} getCourseByNumber={getCourseByNumber}></MissingCourses>
-            <SummaryButton planReady={planReady}></SummaryButton>
+            <SummaryButton planReady={planReady} courses={collectChosenCourses()}></SummaryButton>
         </div>
     )
 }

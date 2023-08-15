@@ -1,10 +1,18 @@
 import React from "react";
 import { Button } from "react-bootstrap";
+import { Link } from "react-router-dom";
 
-const SummaryButton = ({planReady}) => {
+const SummaryButton = ({planReady, courses}) => {
+
+    const saveCourses = () => {
+        localStorage.setItem('chosenCourses', JSON.stringify(courses));
+    }
+
     if (planReady) {
         return (
-            <Button>PLAN READY!!</Button>
+            <Link to="/finalstudyplan">
+                <Button onClick={saveCourses}>PLAN READY!!</Button>
+            </Link>
         )
     }
     return (
