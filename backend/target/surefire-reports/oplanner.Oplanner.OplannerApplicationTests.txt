@@ -1,0 +1,4 @@
+-------------------------------------------------------------------------------
+Test set: oplanner.Oplanner.OplannerApplicationTests
+-------------------------------------------------------------------------------
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 2.212 s - in oplanner.Oplanner.OplannerApplicationTests
