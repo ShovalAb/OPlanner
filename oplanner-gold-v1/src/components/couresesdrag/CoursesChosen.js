@@ -15,7 +15,7 @@ const CoursesChosen = ({courses, refresher, setRefresher, updateCreditReqNum}) =
 
     const displayChosenCourses = (coursesClass) => {
         return (
-            <React.Fragment key={coursesClass.creditType}>
+            <React.Fragment key={coursesClass.creditsType}>
                 {coursesClass.courses.map(createChosenCourse)}
             </React.Fragment>
         )
