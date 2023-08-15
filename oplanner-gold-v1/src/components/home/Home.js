@@ -1,12 +1,13 @@
 import React, {useState, useEffect} from "react";
 import StudyPlans from "../studyplans/StudyPlans";
 import api from '../../api/axiosConfig';
-
+import SubmitButton from "../studyplans/SubmitButton";
 
 const Home = () => {
 
     const [studyPlans, setStudyPlans] = useState();
-    
+    const [selectedStudyPlan, setSelectedStudyPlan] = useState();
+
     const getStudyPlans = async () => {
         try {
             const response = await api.get('/api/studyplan')
@@ -23,7 +24,8 @@ const Home = () => {
 
     return(
         <div>
-            <StudyPlans studyPlans={studyPlans}></StudyPlans>
+            <StudyPlans studyPlans={studyPlans} setSelectedStudyPlan={setSelectedStudyPlan}></StudyPlans>
+            <SubmitButton selectedStudyPlan={selectedStudyPlan}></SubmitButton>
         </div>
     )
 }
