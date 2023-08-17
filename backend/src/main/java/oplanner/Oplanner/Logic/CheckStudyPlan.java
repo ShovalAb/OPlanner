@@ -48,7 +48,7 @@ public class CheckStudyPlan {
         CreditsReqResponse c2 = new CreditsReqResponse("Comp", 20, 20);
         CreditsReqResponse[] c = {c1, c2};
         List<Integer>  a = checkMandatoryRequirement();
-        CheckStudyPlanRespone res = new CheckStudyPlanRespone(0, a, d, c);
+        CheckStudyPlanRespone res = new CheckStudyPlanRespone(1, a, d, c);
         return res;
     }
 

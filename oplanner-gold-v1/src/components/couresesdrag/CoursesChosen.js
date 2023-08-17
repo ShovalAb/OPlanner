@@ -1,6 +1,5 @@
 import React from "react";
 import ChosenCourse from "./ChosenCourse";
-import { create } from "@mui/material/styles/createTransitions";
 
 const CoursesChosen = ({courses, refresher, setRefresher, updateCreditReqNum}) => {
 
