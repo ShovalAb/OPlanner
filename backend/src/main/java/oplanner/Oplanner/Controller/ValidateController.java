@@ -4,6 +4,8 @@ import org.springframework.web.bind.annotation.RestController;
 import oplanner.Oplanner.Model.Course;
 import oplanner.Oplanner.Response.CheckStudyPlanRespone;
 import oplanner.Oplanner.repository.CourseRepository;
+import oplanner.Oplanner.repository.CreditTypesRepository;
+import oplanner.Oplanner.repository.CreditsRequirementRepository;
 import oplanner.Oplanner.repository.DependencyRepository;
 import oplanner.Oplanner.repository.MandatoryRequirementRepository;
 
@@ -25,14 +27,20 @@ public class ValidateController {
     private final CourseRepository courseRepository;
     private final MandatoryRequirementRepository mandatoryRequirementRepository;
     private final DependencyRepository dependencyRepository;
+    private final CreditsRequirementRepository creditsRepository;
+    private final CreditTypesRepository creditTypesRepository;
     
     public ValidateController (
             CourseRepository courseRepository, 
             MandatoryRequirementRepository mandatoryRequirementRepository, 
-            DependencyRepository dependencyRepository) {
+            DependencyRepository dependencyRepository,
+            CreditsRequirementRepository creditsRepository,
+            CreditTypesRepository creditTypesRepository) {
         this.courseRepository = courseRepository;
         this.mandatoryRequirementRepository = mandatoryRequirementRepository;
         this.dependencyRepository = dependencyRepository;
+        this.creditsRepository = creditsRepository;
+        this.creditTypesRepository = creditTypesRepository;
     }
 
     /**
@@ -50,7 +58,7 @@ public class ValidateController {
             courses.add(courseRepository.findByNumber(number));
         }
         CheckStudyPlan checkStudyPlan = new CheckStudyPlan(
-            id, courses, mandatoryRequirementRepository, courseRepository, dependencyRepository);
+            id, courses, mandatoryRequirementRepository, courseRepository, dependencyRepository, creditsRepository, creditTypesRepository);
         return checkStudyPlan.checkStudyPlanRespone();
     }
 }

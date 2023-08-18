@@ -12,10 +12,10 @@ public class CheckStudyPlanRespone {
     private final int ok;
     private final List<Integer>  coursesMust;
     private final List<DependencyResponse> coursesDepen;
-    private final CreditsReqResponse[] creditsReq;
+    private final List <CreditsReqResponse> creditsReq;
     
 
-    public CheckStudyPlanRespone(int ok, List<Integer> coursesMust, List<DependencyResponse> coursesDepen, CreditsReqResponse[] creditsReq){
+    public CheckStudyPlanRespone(int ok, List<Integer> coursesMust, List<DependencyResponse> coursesDepen, List <CreditsReqResponse> creditsReq){
         this.ok = ok;
         this.coursesMust = coursesMust;
         this.coursesDepen = coursesDepen;
@@ -34,7 +34,7 @@ public class CheckStudyPlanRespone {
 		return coursesDepen;
 	}
 
-    public CreditsReqResponse[] getCreditsReqResponse(){
+    public List <CreditsReqResponse> getCreditsReqResponse(){
         return creditsReq;
     }
 

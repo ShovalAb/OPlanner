@@ -7,6 +7,7 @@ import java.util.List;
 import org.apache.tomcat.util.digester.SystemPropertySource;
 
 import oplanner.Oplanner.Model.Course;
+import oplanner.Oplanner.Model.CreditType;
 import oplanner.Oplanner.Model.CreditsRequirement;
 import oplanner.Oplanner.Model.Dependency;
 import oplanner.Oplanner.Model.MandatoryRequirement;
@@ -15,6 +16,7 @@ import oplanner.Oplanner.Response.CheckStudyPlanRespone;
 import oplanner.Oplanner.Response.CreditsReqResponse;
 import oplanner.Oplanner.Response.DependencyResponse;
 import oplanner.Oplanner.repository.CourseRepository;
+import oplanner.Oplanner.repository.CreditTypesRepository;
 import oplanner.Oplanner.repository.CreditsRequirementRepository;
 import oplanner.Oplanner.repository.MandatoryRequirementRepository;
 import oplanner.Oplanner.repository.StudyPlanRepository;
@@ -27,35 +29,73 @@ public class CheckStudyPlan {
     private final MandatoryRequirementRepository mrRepository;
     private final CourseRepository courseRepository;
     private final DependencyRepository depRepository;
+    private final CreditsRequirementRepository creditsRepository;
+    private final CreditTypesRepository creditTypesRepository;
 
-    public CheckStudyPlan(int studyPlanId, List <Course> courses, MandatoryRequirementRepository mrRepository, CourseRepository courseRepository, DependencyRepository depRepository)
+    private final int OK = 1;
+    private final int notOk = 0;
+    private final int notValid = -1;
+
+
+
+    public CheckStudyPlan(int studyPlanId, List <Course> courses, MandatoryRequirementRepository mrRepository, CourseRepository courseRepository, DependencyRepository depRepository, CreditsRequirementRepository creditsRepository, CreditTypesRepository creditTypesRepository)
     {
         this.studyPlanId = studyPlanId;
         this.courses = courses;
         this.mrRepository = mrRepository;
         this.courseRepository = courseRepository;
         this.depRepository = depRepository;
+        this.creditsRepository = creditsRepository;
+        this.creditTypesRepository = creditTypesRepository;
     }
 
     public CheckStudyPlanRespone checkStudyPlanRespone ()
     {
-        int[] d11 = {3065, 3067};
-        int[] d12 = {3066, 3067};
-        // DependencyResponse d1 = new DependencyResponse(3066, d11);
-        // DependencyResponse d2 = new DependencyResponse(3065, d12);
-        List<DependencyResponse>  d = checkDependencies();
-        CreditsReqResponse c1 = new CreditsReqResponse("Math", 40, 50);
-        CreditsReqResponse c2 = new CreditsReqResponse("Comp", 20, 20);
-        CreditsReqResponse[] c = {c1, c2};
         List<Integer>  a = checkMandatoryRequirement();
-        CheckStudyPlanRespone res = new CheckStudyPlanRespone(1, a, d, c);
+        List<DependencyResponse>  b = checkDependencies();
+        List <CreditsReqResponse> c = checkCredits();
+        int ok = checkIfPlanOK(a, b, c);
+        CheckStudyPlanRespone res = new CheckStudyPlanRespone(ok, a, b, c);
         return res;
+    }
+
+    public int checkIfallCreditsReqValid (List <CreditsReqResponse> creditsReqResponses)
+    {
+        for (CreditsReqResponse creditReq : creditsReqResponses)
+        {
+            if (creditReq.getCurrentCredits() == notValid)
+            {
+                return notValid;
+            }
+            if (creditReq.getCurrentCredits() < creditReq.getNeededCredits())
+            {
+                return OK;
+            }
+        }
+        return notOk;
+    }
+
+    public int checkIfPlanOK (List<Integer> mandatoryReq, List<DependencyResponse> dep, List <CreditsReqResponse> creditsReq)
+    {
+        int temp = checkIfallCreditsReqValid(creditsReq);
+        if (temp == notValid)
+        {
+            return notValid;
+        }
+        if (mandatoryReq.isEmpty() && dep.isEmpty() && temp == OK)
+        {
+            return OK;
+        }
+        else 
+        {
+            return notOk;
+        }
     }
 
     public List<Integer> checkMandatoryRequirement ()
     {
         MandatoryRequirement [] mandatoryReq = mrRepository.findByPlanId(studyPlanId);
-        List<Integer>  missingCourses = new ArrayList<Integer> ();
+        List<Integer> missingCourses = new ArrayList<Integer> ();
         boolean found = false;
         for (MandatoryRequirement req : mandatoryReq)
         {
@@ -66,19 +106,13 @@ public class CheckStudyPlan {
                 {
                     if (c.getCourseNumber() == optionReq)
                         found = true;
-                        break;
                 }   
             }
-            if (found)
-            {
-                continue;
-            }
-            else
+            if (found == false)
             {
                 missingCourses.add(req.getCourseId()[0]);
 
             }
-
         }
         return missingCourses;
     }
@@ -114,6 +148,40 @@ public class CheckStudyPlan {
 
         }
         return missingDependencies;
+    }
+
+    public List <CreditsReqResponse> checkCredits ()
+    {
+        List<CreditsReqResponse> creditsReqResponse = new ArrayList <CreditsReqResponse> ();
+        CreditsRequirement[] creditsRequirements = creditsRepository.findByPlanId(studyPlanId);
+        int sumCurrentCredits;
+        for (CreditsRequirement req : creditsRequirements)
+        {
+            sumCurrentCredits = 0;
+            CreditType creditsType = creditTypesRepository.findByCreditType(req.getCreditsType());
+            if (creditsType == null)
+            {
+                CreditsReqResponse response = new CreditsReqResponse(req.getCreditsType(), -1, req.getCreditsNumber());
+                creditsReqResponse.add(response);
+            }
+            else 
+            {
+
+                List <String> creditsTypeOptions = creditsType.getSubType();
+                for (Course course : courses)
+                {
+                    if (creditsTypeOptions.contains(course.getCreditsType()))
+                    {
+                        sumCurrentCredits = sumCurrentCredits + course.getCreditsNumber();
+                    }
+                }
+
+                CreditsReqResponse response = new CreditsReqResponse(req.getCreditsType(), sumCurrentCredits, req.getCreditsNumber());
+                creditsReqResponse.add(response);
+            }
+        }
+
+        return creditsReqResponse;
     }
 }
 
