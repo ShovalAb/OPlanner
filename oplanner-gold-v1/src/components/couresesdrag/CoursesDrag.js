@@ -2,6 +2,8 @@ import createPalette from "@mui/material/styles/createPalette";
 import React, { useState } from "react";
 import CoursesClass from "./CoursesClass";
 import CoursesChosen from "./CoursesChosen";
+import CourseTable from "../coursetable/CourseTable";
+import CoursesPool from "./CoursesPool";
 
 const CoursesDrag = ({courses, updateCreditReqNum}) => {
     const [refresher, setRefresher] = useState(0);
@@ -24,14 +26,15 @@ const CoursesDrag = ({courses, updateCreditReqNum}) => {
         return (
             <div style={{ display: 'flex', justifyContent: 'center', marginTop: '20px' }}>
                  <div style={{ maxWidth: '800px', width: '50%', padding: '0 20px' }}>
-                    <table>
+                    {/* <table>
                         <tbody>
                             {courses.map(createCoursesClass)}
                         </tbody>
-                    </table>
+                    </table> */}
+                      <CoursesChosen courses={courses} refresher={refresher} setRefresher={refresh} updateCreditReqNum={updateCreditReqNum}></CoursesChosen>
                 </div>
                 <div style={{ maxWidth: '800px', width: '50%', padding: '0 20px' }}>
-                      <CoursesChosen courses={courses} refresher={refresher} setRefresher={refresh} updateCreditReqNum={updateCreditReqNum}></CoursesChosen>
+                    <CoursesPool courses={courses} refresher={refresher} setRefresher={refresh} updateCreditReqNum={updateCreditReqNum}></CoursesPool>
                 </div>
             </div>
         )

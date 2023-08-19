@@ -5,7 +5,7 @@ import CourseTable from "../coursetable/CourseTable";
 import { blue } from "@mui/material/colors";
 import TabsSidebar from "../coursetable/TabsSideBar";
 
-const CoursesChosen = ({courses, refresher, setRefresher, updateCreditReqNum}) => {
+const CoursesPool = ({courses, refresher, setRefresher, updateCreditReqNum}) => {
     const [activeTab, setActiveTab] = useState('');
     const tabs = Array ()
     for (let i = 0; i < courses.length; i++) {
@@ -24,13 +24,13 @@ const CoursesChosen = ({courses, refresher, setRefresher, updateCreditReqNum}) =
         updateCreditReqNum()
     }
 
-    const filterChosen = (coursesList) => {
+    const filterNotChosen = (coursesList) => {
         var chosenCourses = Array()
         for (let i = 0; i < coursesList.length; i++) {
             for (let j = 0; j < coursesList[i].courses.length; j++) {
                 
                 // console.log("Checking Course " + coursesList[i].courses[j].courseName)
-                if(coursesList[i].courses[j].chosen) {
+                if(!coursesList[i].courses[j].chosen) {
                     // console.log(coursesList[i].courseName + " is Chosen!")
                     chosenCourses.push(coursesList[i].courses[j])
                 }
@@ -41,8 +41,8 @@ const CoursesChosen = ({courses, refresher, setRefresher, updateCreditReqNum}) =
 
     return (
     <div style={{ display: 'flex' }}>
-      <CourseTable data={filterChosen(courses)} onRowClick={toggleChosen} activeTab={'nofilter'} downloadable={false} colors={{'header':'#F9E79F', 'row':'#F9FFAB'}}/>
-      {/* <div style={{ display: 'flex', flexDirection: 'column' }}>
+      <CourseTable data={filterNotChosen(courses)} onRowClick={toggleChosen} activeTab={activeTab} downloadable={false} colors={{'header':'#F9E79F', 'row':'#F9FFAB'}}/>
+      <div style={{ display: 'flex', flexDirection: 'column' }}>
         {tabs.map((tab, index) => (
           <TabsSidebar
             key={index}
@@ -51,9 +51,9 @@ const CoursesChosen = ({courses, refresher, setRefresher, updateCreditReqNum}) =
             onTabClick={handleTabClick}
           />
         ))}
-      </div> */}
+      </div>
     </div>
   );
 }
 
-export default CoursesChosen
+export default CoursesPool
