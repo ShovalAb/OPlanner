@@ -1,6 +1,7 @@
 import React from "react";
 import ChosenCourse from "./ChosenCourse";
 import CourseTable from "../coursetable/CourseTable";
+import { blue } from "@mui/material/colors";
 
 const CoursesChosen = ({courses, refresher, setRefresher, updateCreditReqNum}) => {
 
@@ -28,7 +29,7 @@ const CoursesChosen = ({courses, refresher, setRefresher, updateCreditReqNum}) =
     }
 
     return (
-        <CourseTable data={filterChosen(courses)} onRowClick={toggleChosen} downloadable={false}/>
+        <CourseTable data={filterChosen(courses)} onRowClick={toggleChosen} downloadable={false} colors={{'header':'#F9E79F', 'row':'#F9FFAB'}}/>
     )
 }
 
