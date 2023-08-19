@@ -1,9 +1,20 @@
 import React from "react";
+import { useState } from "react";
 import ChosenCourse from "./ChosenCourse";
 import CourseTable from "../coursetable/CourseTable";
 import { blue } from "@mui/material/colors";
+import TabsSidebar from "../coursetable/TabsSideBar";
 
 const CoursesChosen = ({courses, refresher, setRefresher, updateCreditReqNum}) => {
+    const [activeTab, setActiveTab] = useState('');
+    const tabs = Array ()
+    for (let i = 0; i < courses.length; i++) {
+        tabs.push({label: courses[i].creditsType, value: courses[i].creditsType});
+    }
+
+    const handleTabClick = (tabValue) => {
+        setActiveTab(tabValue);
+    };
 
     const toggleChosen = (course) => {
         // console.log(event)
@@ -29,8 +40,20 @@ const CoursesChosen = ({courses, refresher, setRefresher, updateCreditReqNum}) =
     }
 
     return (
-        <CourseTable data={filterChosen(courses)} onRowClick={toggleChosen} downloadable={false} colors={{'header':'#F9E79F', 'row':'#F9FFAB'}}/>
-    )
+    <div style={{ display: 'flex' }}>
+      <CourseTable data={filterChosen(courses)} onRowClick={toggleChosen} activeTab={activeTab} downloadable={false} colors={{'header':'#F9E79F', 'row':'#F9FFAB'}}/>
+      <div style={{ display: 'flex', flexDirection: 'column' }}>
+        {tabs.map((tab, index) => (
+          <TabsSidebar
+            key={index}
+            tabs={[tab]}
+            activeTab={activeTab}
+            onTabClick={handleTabClick}
+          />
+        ))}
+      </div>
+    </div>
+  );
 }
 
 export default CoursesChosen

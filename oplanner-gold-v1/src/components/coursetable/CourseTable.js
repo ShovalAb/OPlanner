@@ -1,18 +1,25 @@
 import React from 'react';
 import { Table, TableBody, TableCell, TableContainer, TableHead, TableRow, Paper, colors } from '@mui/material';
 
-const CourseTable = ({ data, onRowClick, downloadable, colors }) => {
+const CourseTable = ({ data, onRowClick, activeTab, downloadable, colors }) => {
   const maxHeight = 600; // Set the desired fixed height
   const rowHeight = 60; // Set the height of a single row (adjust as needed)
   const headRowHeight = 70;
 
-  const shouldRenderEmptySpace = data.length * rowHeight + headRowHeight< maxHeight;
+  if (activeTab == "nofilter" || activeTab == '') {
+    var filteredData = data
+  } else {
+    var filteredData = data.filter(course => course.creditsType === activeTab);
+  }
+
+
+  const shouldRenderEmptySpace = filteredData.length * rowHeight + headRowHeight< maxHeight;
 
   const headerColor = colors.header
   const rowColor = colors.row
 
   const convertToCSV = (data) => {
-    const header = ['Course Name', 'Coures Number', 'Credits Number'];
+    const header = ['Course Name', 'Course Number', 'Credits Number'];
     const rows = data.map(row => ['"' + row.courseName + '"', '"' + row.courseNumber + '"', '"' + row.creditsNumber + '"']);
 
     const csvContent = [
@@ -34,7 +41,7 @@ const CourseTable = ({ data, onRowClick, downloadable, colors }) => {
   };
 
   const handleDownloadCSV = () => {
-    const csvContent = convertToCSV(data);
+    const csvContent = convertToCSV(filteredData);
     const filename = 'study_plan.csv';
     downloadCSV(csvContent, filename);
   };
@@ -42,28 +49,28 @@ const CourseTable = ({ data, onRowClick, downloadable, colors }) => {
 
   return (
     <div>
-    <Paper style={{ maxHeight: `${maxHeight}px`, overflowY: 'auto' }}>
-      <Table aria-label="Beautiful Table">
+    <Paper style={{ maxHeight: `${maxHeight}px`, overflowY: 'auto' , direction: 'rtl' }}>
+      <Table aria-label="Beautiful Table" style={{ tableLayout: 'fixed', width: '100%' }}>
         <TableHead>
           <TableRow style={{position: 'sticky', top: 0, zIndex: 1, height: `${headRowHeight}px`, background: headerColor}}>
-            <TableCell style={{ color: '#333', fontWeight: 'bold' }}>Course Name</TableCell>
-            <TableCell style={{ color: '#333', fontWeight: 'bold' }}>Course Number</TableCell>
-            <TableCell style={{ color: '#333', fontWeight: 'bold' }}>Credits Number</TableCell>
+            <TableCell style={{ color: '#333', fontWeight: 'bold' , textAlign: 'right', width: '60%'  }}>קורס</TableCell>
+            <TableCell style={{ color: '#333', fontWeight: 'bold' , textAlign: 'right', width: '20%'   }}>מספר קורס</TableCell>
+            <TableCell style={{ color: '#333', fontWeight: 'bold' , textAlign: 'right', width: '20%'   }}>נק"ז</TableCell>
           </TableRow>
         </TableHead>
         <TableBody>
-          {data.map((row, index) => (
+          {filteredData.map((row, index) => (
             <TableRow key={index} onClick={() => onRowClick(row)} style={{height: `${rowHeight}px`, background: index % 2 === 0 ? rowColor : 'white'}}>
-              <TableCell>{row.courseName}</TableCell>
-              <TableCell>{row.courseNumber}</TableCell>
-              <TableCell>{row.creditsNumber}</TableCell>
+              <TableCell style={{ textAlign: 'right', wordWrap: 'break-word', width: '60%' }}>{row.courseName}</TableCell>
+              <TableCell style={{ textAlign: 'right', wordWrap: 'break-word', width: '20%' }}>{row.courseNumber}</TableCell>
+              <TableCell style={{ textAlign: 'right', wordWrap: 'break-word', width: '20%' }}>{row.creditsNumber}</TableCell>
             </TableRow>
           ))}
         </TableBody>
       </Table>
       {/* Conditionally render empty space only if needed */}
       {shouldRenderEmptySpace && (
-        <div style={{ height: `${maxHeight - headRowHeight - (data.length * rowHeight)}px` }} />
+        <div style={{ height: `${maxHeight - headRowHeight - (filteredData.length * rowHeight)}px` }} />
       )}
 
     </Paper>
