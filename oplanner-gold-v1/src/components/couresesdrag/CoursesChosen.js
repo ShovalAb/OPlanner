@@ -41,7 +41,7 @@ const CoursesChosen = ({courses, refresher, setRefresher, updateCreditReqNum}) =
 
     return (
     <div style={{ display: 'flex' }}>
-      <CourseTable data={filterChosen(courses)} onRowClick={toggleChosen} activeTab={'nofilter'} downloadable={false} colors={{'header':'#F9E79F', 'row':'#F9FFAB'}}/>
+      <CourseTable data={filterChosen(courses)} onRowClick={toggleChosen} activeTab={'nofilter'} downloadable={false} colors={{'header':'lightblue', 'row':'#ABFFF0'}}/>
       {/* <div style={{ display: 'flex', flexDirection: 'column' }}>
         {tabs.map((tab, index) => (
           <TabsSidebar

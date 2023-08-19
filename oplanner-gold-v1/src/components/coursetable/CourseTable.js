@@ -1,5 +1,6 @@
 import React from 'react';
 import { Table, TableBody, TableCell, TableContainer, TableHead, TableRow, Paper, colors } from '@mui/material';
+import excelImage from "../../resources/excel.png"
 
 const CourseTable = ({ data, onRowClick, activeTab, downloadable, colors }) => {
   const maxHeight = 600; // Set the desired fixed height
@@ -75,7 +76,14 @@ const CourseTable = ({ data, onRowClick, activeTab, downloadable, colors }) => {
 
     </Paper>
     {downloadable && (
-      <button onClick={handleDownloadCSV}>Download CSV</button>
+      <div style={{ display: 'flex', justifyContent: 'flex-end', padding: '10px' , height: '100px'}}>
+        <img
+          src={excelImage}
+          alt="Download CSV"
+          style={{ cursor: 'pointer' }}
+          onClick={handleDownloadCSV}
+        />
+      </div>
     )}
     </div>
   );

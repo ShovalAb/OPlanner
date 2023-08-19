@@ -6,8 +6,11 @@ import { blue } from "@mui/material/colors";
 import TabsSidebar from "../coursetable/TabsSideBar";
 
 const CoursesPool = ({courses, refresher, setRefresher, updateCreditReqNum}) => {
-    const [activeTab, setActiveTab] = useState('');
+    const allTab = {label: 'הכל', value: 'nofilter'}
+    const [activeTab, setActiveTab] = useState(allTab.value);
+
     const tabs = Array ()
+    tabs.push(allTab)
     for (let i = 0; i < courses.length; i++) {
         tabs.push({label: courses[i].creditsType, value: courses[i].creditsType});
     }
@@ -41,7 +44,8 @@ const CoursesPool = ({courses, refresher, setRefresher, updateCreditReqNum}) => 
 
     return (
     <div style={{ display: 'flex' }}>
-      <CourseTable data={filterNotChosen(courses)} onRowClick={toggleChosen} activeTab={activeTab} downloadable={false} colors={{'header':'#F9E79F', 'row':'#F9FFAB'}}/>
+      <CourseTable data={filterNotChosen(courses)} onRowClick={toggleChosen} activeTab={activeTab} downloadable={false} colors={{'header':'lightblue', 'row':'#ABFFF0'}}/>
+      {/* <CourseTable data={filterNotChosen(courses)} onRowClick={toggleChosen} activeTab={activeTab} downloadable={false} colors={{'header':'#F9E79F', 'row':'#F9FFAB'}}/> */}
       <div style={{ display: 'flex', flexDirection: 'column' }}>
         {tabs.map((tab, index) => (
           <TabsSidebar
