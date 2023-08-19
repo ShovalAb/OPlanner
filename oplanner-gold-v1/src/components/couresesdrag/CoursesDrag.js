@@ -22,15 +22,15 @@ const CoursesDrag = ({courses, updateCreditReqNum}) => {
 
     if (courses != null) {
         return (
-            <div className="plan-page-courses-drag">
-                <div>
+            <div style={{ display: 'flex', justifyContent: 'center', marginTop: '20px' }}>
+                 <div style={{ maxWidth: '800px', width: '50%', padding: '0 20px' }}>
                     <table>
                         <tbody>
                             {courses.map(createCoursesClass)}
                         </tbody>
                     </table>
                 </div>
-                <div>
+                <div style={{ maxWidth: '800px', width: '50%', padding: '0 20px' }}>
                       <CoursesChosen courses={courses} refresher={refresher} setRefresher={refresh} updateCreditReqNum={updateCreditReqNum}></CoursesChosen>
                 </div>
             </div>

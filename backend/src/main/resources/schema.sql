@@ -1,6 +1,7 @@
 
 -- Study plan
 DROP TABLE IF EXISTS Study_Plan;
+DROP TABLE IF EXISTS study_plan;
 
 CREATE TABLE  study_plan(
   id int auto_increment primary key NOT NULL,
