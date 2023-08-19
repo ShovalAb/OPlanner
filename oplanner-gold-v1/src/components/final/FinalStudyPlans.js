@@ -10,7 +10,7 @@ const FinalStudyPlan = () => {
             <h1>Final Study Plan</h1>
             <div style={{ display: 'flex', justifyContent: 'center', marginTop: '20px' }}>
                 <div style={{ maxWidth: '800px', width: '100%', padding: '0 20px' }}>
-                    <CourseTable data={chosenCourses} onRowClick={doNothing}/>
+                    <CourseTable data={chosenCourses} onRowClick={doNothing} downloadable={true}/>
                 </div>
             </div>
         </div>

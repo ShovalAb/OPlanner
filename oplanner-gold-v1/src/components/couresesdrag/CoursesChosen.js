@@ -3,15 +3,6 @@ import ChosenCourse from "./ChosenCourse";
 import CourseTable from "../coursetable/CourseTable";
 
 const CoursesChosen = ({courses, refresher, setRefresher, updateCreditReqNum}) => {
-    // console.log("My courses - " + Object.getOwnPropertyNames(courses[0]))
-    // const createChosenCourse = (course) => {
-    //     if (course.chosen) {
-    //         return (
-    //             <ChosenCourse key={course.courseNumber} course={course} refresher={refresher} setRefresher={setRefresher} updateCreditReqNum={updateCreditReqNum}></ChosenCourse>
-    //         )
-    //     }
-    //     return null;
-    // }
 
     const toggleChosen = (course) => {
         // console.log(event)
@@ -20,14 +11,6 @@ const CoursesChosen = ({courses, refresher, setRefresher, updateCreditReqNum}) =
         setRefresher(refresher + 1)
         updateCreditReqNum()
     }
-
-    // const displayChosenCourses = (coursesClass) => {
-    //     return (
-    //         <React.Fragment key={coursesClass.creditsType}>
-    //             {coursesClass.courses.map(createChosenCourse)}
-    //         </React.Fragment>
-    //     )
-    // }
 
     const filterChosen = (coursesList) => {
         var chosenCourses = Array()
@@ -45,18 +28,8 @@ const CoursesChosen = ({courses, refresher, setRefresher, updateCreditReqNum}) =
     }
 
     return (
-        <CourseTable data={filterChosen(courses)} onRowClick={toggleChosen}/>
+        <CourseTable data={filterChosen(courses)} onRowClick={toggleChosen} downloadable={false}/>
     )
-
-    // return (
-    //     <div>
-    //         <table className="chosenTable">
-    //             <tbody>
-    //                 {courses.map(displayChosenCourses)}
-    //             </tbody>
-    //         </table>
-    //     </div>
-    // )
 }
 
 export default CoursesChosen

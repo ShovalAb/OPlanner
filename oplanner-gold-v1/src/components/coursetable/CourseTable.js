@@ -1,14 +1,44 @@
 import React from 'react';
 import { Table, TableBody, TableCell, TableContainer, TableHead, TableRow, Paper, colors } from '@mui/material';
 
-const CourseTable = ({ data, onRowClick }) => {
-  const maxHeight = 200; // Set the desired fixed height
+const CourseTable = ({ data, onRowClick, downloadable }) => {
+  const maxHeight = 600; // Set the desired fixed height
   const rowHeight = 60; // Set the height of a single row (adjust as needed)
   const headRowHeight = 70;
 
   const shouldRenderEmptySpace = data.length * rowHeight + headRowHeight< maxHeight;
 
+  const convertToCSV = (data) => {
+    const header = ['Course Name', 'Coures Number', 'Credits Number'];
+    const rows = data.map(row => ['"' + row.courseName + '"', '"' + row.courseNumber + '"', '"' + row.creditsNumber + '"']);
+
+    const csvContent = [
+      header.join(','),
+      ...rows.map(row => row.join(','))
+    ].join('\n');
+
+    return csvContent;
+  };
+
+  const downloadCSV = (csvContent, filename) => {
+    const blob = new Blob([csvContent], { type: 'text/csv' });
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement('a');
+    a.href = url;
+    a.download = filename;
+    a.click();
+    URL.revokeObjectURL(url);
+  };
+
+  const handleDownloadCSV = () => {
+    const csvContent = convertToCSV(data);
+    const filename = 'study_plan.csv';
+    downloadCSV(csvContent, filename);
+  };
+
+
   return (
+    <div>
     <Paper style={{ maxHeight: `${maxHeight}px`, overflowY: 'auto' }}>
       <Table aria-label="Beautiful Table">
         <TableHead>
@@ -32,7 +62,12 @@ const CourseTable = ({ data, onRowClick }) => {
       {shouldRenderEmptySpace && (
         <div style={{ height: `${maxHeight - headRowHeight - (data.length * rowHeight)}px` }} />
       )}
+
     </Paper>
+    {downloadable && (
+      <button onClick={handleDownloadCSV}>Download CSV</button>
+    )}
+    </div>
   );
 }
 
