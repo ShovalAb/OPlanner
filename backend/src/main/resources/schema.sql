@@ -62,7 +62,7 @@ DROP TABLE IF EXISTS credit_types;
 CREATE TABLE  credit_types(
   id int auto_increment primary key NOT NULL,
   credits_type VARCHAR(100) NOT NULL,
-  sub_type VARCHAR(100) NOT NULL
+  sub_type VARCHAR(1000) NOT NULL
 );
 
 

@@ -59,7 +59,7 @@ public class CheckStudyPlan {
         return res;
     }
 
-    public int checkIfallCreditsReqValid (List <CreditsReqResponse> creditsReqResponses)
+    public int checkIfAllCreditsReqValid (List <CreditsReqResponse> creditsReqResponses)
     {
         for (CreditsReqResponse creditReq : creditsReqResponses)
         {
@@ -69,15 +69,15 @@ public class CheckStudyPlan {
             }
             if (creditReq.getCurrentCredits() < creditReq.getNeededCredits())
             {
-                return OK;
+                return notOk;
             }
         }
-        return notOk;
+        return OK;
     }
 
     public int checkIfPlanOK (List<Integer> mandatoryReq, List<DependencyResponse> dep, List <CreditsReqResponse> creditsReq)
     {
-        int temp = checkIfallCreditsReqValid(creditsReq);
+        int temp = checkIfAllCreditsReqValid(creditsReq);
         if (temp == notValid)
         {
             return notValid;
