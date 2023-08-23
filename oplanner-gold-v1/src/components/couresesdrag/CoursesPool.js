@@ -46,7 +46,8 @@ const CoursesPool = ({courses, refresher, setRefresher, updateCreditReqNum}) => 
     <div style={{ display: 'flex' }}>
       <CourseTable data={filterNotChosen(courses)} onRowClick={toggleChosen} activeTab={activeTab} downloadable={false} colors={{'header':'lightblue', 'row':'#ABFFF0'}}/>
       {/* <CourseTable data={filterNotChosen(courses)} onRowClick={toggleChosen} activeTab={activeTab} downloadable={false} colors={{'header':'#F9E79F', 'row':'#F9FFAB'}}/> */}
-      <div style={{ display: 'flex', flexDirection: 'column' }}>
+      <div style={{width:'25000px', backgroundColor: "lightblue"}}></div>
+      <div style={{ display: 'flex', flexDirection: 'column', marginTop: '70px' }}>
         {tabs.map((tab, index) => (
           <TabsSidebar
             key={index}
