@@ -1,9 +1,8 @@
 import React from "react";
 import { useState } from "react";
-import ChosenCourse from "./ChosenCourse";
 import CourseTable from "../coursetable/CourseTable";
-import { blue } from "@mui/material/colors";
 import TabsSidebar from "../coursetable/TabsSideBar";
+import { tableBGColor, tableHeaderColor, tableRowEvenColor, tableRowOddColor } from "../colors";
 
 const CoursesPool = ({courses, refresher, setRefresher, updateCreditReqNum}) => {
     const allTab = {label: 'הכל', value: 'nofilter'}
@@ -44,9 +43,9 @@ const CoursesPool = ({courses, refresher, setRefresher, updateCreditReqNum}) => 
 
     return (
     <div style={{ display: 'flex' }}>
-      <CourseTable data={filterNotChosen(courses)} onRowClick={toggleChosen} activeTab={activeTab} downloadable={false} colors={{'header':'lightblue', 'row':'#ABFFF0'}}/>
+      <CourseTable data={filterNotChosen(courses)} onRowClick={toggleChosen} activeTab={activeTab} downloadable={false} colors={{'header':tableHeaderColor, 'row':tableRowEvenColor}}/>
       {/* <CourseTable data={filterNotChosen(courses)} onRowClick={toggleChosen} activeTab={activeTab} downloadable={false} colors={{'header':'#F9E79F', 'row':'#F9FFAB'}}/> */}
-      <div style={{width:'25000px', backgroundColor: "lightblue"}}></div>
+      <div style={{width:'25000px', backgroundColor: tableHeaderColor}}></div>
       <div style={{ display: 'flex', flexDirection: 'column', marginTop: '70px' }}>
         {tabs.map((tab, index) => (
           <TabsSidebar

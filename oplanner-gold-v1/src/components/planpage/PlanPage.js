@@ -5,6 +5,7 @@ import CoursesDrag from '../couresesdrag/CoursesDrag'
 import MissingCourses from "../missingcourses/MissingCourses";
 import SummaryButton from "./SummaryButton";
 import CreditReqTable from "./CreditReqTable";
+import { headlineTextColor } from "../colors";
 
 const PlanPage = () => {
     console.log("D")
@@ -133,7 +134,7 @@ const PlanPage = () => {
     return (
         <div>
             <div>
-                <h1>Planning Study Plan #{routeParams.studyPlanId}</h1>
+                <h1 style={{color: headlineTextColor}}>Planning Study Plan #{routeParams.studyPlanId}</h1>
             </div>
             <CoursesDrag courses={courses} updateCreditReqNum={updateCreditReqNum}></CoursesDrag>
             <button className="buttonValidate" onClick={e => validateCourses(routeParams.studyPlanId,courses)}>Validate Study Plan</button>

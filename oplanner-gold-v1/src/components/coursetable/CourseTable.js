@@ -1,6 +1,7 @@
 import React from 'react';
 import { Table, TableBody, TableCell, TableContainer, TableHead, TableRow, Paper, colors } from '@mui/material';
 import excelImage from "../../resources/excel.png"
+import {tableBGColor, tableHeaderColor, tableRowEvenColor, tableRowOddColor, tableTextColor } from '../colors';
 
 const CourseTable = ({ data, onRowClick, activeTab, downloadable, colors }) => {
   const maxHeight = 600; // Set the desired fixed height
@@ -50,21 +51,21 @@ const CourseTable = ({ data, onRowClick, activeTab, downloadable, colors }) => {
 
   return (
     <div>
-    <Paper style={{ maxHeight: `${maxHeight}px`, overflowY: 'auto' , direction: 'rtl' }}>
+    <Paper style={{ maxHeight: `${maxHeight}px`, overflowY: 'auto' , direction: 'rtl', borderRadius: '0px' }}>
       <Table aria-label="Beautiful Table" style={{ tableLayout: 'fixed', width: '100%' }}>
         <TableHead>
           <TableRow style={{position: 'sticky', top: 0, zIndex: 1, height: `${headRowHeight}px`, background: headerColor}}>
-            <TableCell style={{ color: '#333', fontWeight: 'bold' , textAlign: 'right', width: '60%'  }}>קורס</TableCell>
-            <TableCell style={{ color: '#333', fontWeight: 'bold' , textAlign: 'right', width: '20%'   }}>מספר קורס</TableCell>
-            <TableCell style={{ color: '#333', fontWeight: 'bold' , textAlign: 'right', width: '20%'   }}>נק"ז</TableCell>
+            <TableCell style={{ color: tableTextColor, fontWeight: 'bold' , textAlign: 'right', width: '60%'  }}>קורס</TableCell>
+            <TableCell style={{ color: tableTextColor, fontWeight: 'bold' , textAlign: 'right', width: '20%'   }}>מספר קורס</TableCell>
+            <TableCell style={{ color: tableTextColor, fontWeight: 'bold' , textAlign: 'right', width: '20%'   }}>נק"ז</TableCell>
           </TableRow>
         </TableHead>
         <TableBody>
           {filteredData.map((row, index) => (
-            <TableRow key={index} onClick={() => onRowClick(row)} style={{height: `${rowHeight}px`, background: index % 2 === 0 ? rowColor : 'white'}}>
-              <TableCell style={{ textAlign: 'right', wordWrap: 'break-word', width: '60%' }}>{row.courseName}</TableCell>
-              <TableCell style={{ textAlign: 'right', wordWrap: 'break-word', width: '20%' }}>{row.courseNumber}</TableCell>
-              <TableCell style={{ textAlign: 'right', wordWrap: 'break-word', width: '20%' }}>{row.creditsNumber}</TableCell>
+            <TableRow key={index} onClick={() => onRowClick(row)} style={{height: `${rowHeight}px`, background: index % 2 === 0 ? rowColor : tableRowOddColor}}>
+              <TableCell style={{ textAlign: 'right', wordWrap: 'break-word', width: '60%' , color: tableTextColor}}>{row.courseName}</TableCell>
+              <TableCell style={{ textAlign: 'right', wordWrap: 'break-word', width: '20%', color: tableTextColor }}>{row.courseNumber}</TableCell>
+              <TableCell style={{ textAlign: 'right', wordWrap: 'break-word', width: '20%', color: tableTextColor }}>{row.creditsNumber}</TableCell>
             </TableRow>
           ))}
         </TableBody>
