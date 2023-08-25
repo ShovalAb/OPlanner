@@ -23,6 +23,10 @@ export const tabSidebarBGActiveColor = '#468faf'
 export const tabSidebarTextColor = '#ffffff'
 export const tableTextColor = '#012a4a'
 export const headlineTextColor = '#012a4a'
+export const creditReqBadColor = '#ed6890'
+export const creditReqGoodColor = '#68ed90'
+export const creditReqHeaderColor = '#e0e0e0'
+
 
 // export const tableRowEvenColor = '#d9e4ec'
 // export const tableRowOddColor = '#b7cfdc'

@@ -8,7 +8,6 @@ import CreditReqTable from "./CreditReqTable";
 import { headlineTextColor } from "../colors";
 
 const PlanPage = () => {
-    console.log("D")
     const routeParams = useParams();
     const [courses, setCourses] = useState();
     const [coursesMust, setCoursesMust] = useState();
@@ -140,10 +139,10 @@ const PlanPage = () => {
             <button className="buttonValidate" onClick={e => validateCourses(routeParams.studyPlanId,courses)} style={{marginTop:'50px'}}>Validate Study Plan</button>
             <SummaryButton planReady={planReady} courses={collectChosenCourses()}></SummaryButton>
             <div style={{ display: 'flex', justifyContent: 'center', marginTop: '20px' }}>
-                <div style={{ maxWidth: '800px', width: '50%', padding: '0 20px' }}>
+                <div style={{ maxWidth: '800px', width: '45%', padding: '0 20px' , marginRight: '5%'}}>
                     <CreditReqTable creditReq={nakazReq}></CreditReqTable>
                 </div>
-                <div style={{ maxWidth: '800px', width: '50%', padding: '0 20px' }}>
+                <div style={{ maxWidth: '800px', width: '45%', padding: '0 20px' , marginLeft: '5%'}}>
                     <MissingCourses coursesDepen={coursesDepen} coursesMust={coursesMust} nakazReq={nakazReq} getCourseByNumber={getCourseByNumber}></MissingCourses>
                 </div>
             </div>

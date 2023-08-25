@@ -1,30 +1,38 @@
+import { Paper, TableBody, TableCell, TableHead, TableRow } from "@mui/material";
 import React from "react";
-
-const CreditReqRow = (creditReq) => {
-    return (
-        <tr key={creditReq.creditsType}>
-            <td>{creditReq.creditsType}</td>
-            <td>{creditReq.neededCredits}</td>
-            <td>{creditReq.currentCredits}</td>
-        </tr>
-    )
-}
+import { Table } from "react-bootstrap";
+import { creditReqBadColor, creditReqGoodColor, creditReqHeaderColor} from "../colors";
 
 const CreditReqTable = ({creditReq}) => {
+    const whatColor = (cReq) => {
+        if (cReq.neededCredits > cReq.currentCredits) {
+            return (creditReqBadColor)
+        }
+        return (creditReqGoodColor)
+    }
+
     if (creditReq != undefined){
         return (
-            <table>
-                <thead>
-                    <tr>
-                        <th>Credits Type</th>
-                        <th>Credits Needed</th>
-                        <th>Credits Current</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    {creditReq.map(CreditReqRow)}
-                </tbody>
-            </table>
+            <Paper style={{direction: 'rtl'}}>
+                <Table style={{textAlign: 'right', border: '1px solid black'}}>
+                    <TableHead>
+                        <TableRow>
+                            <TableCell style={{textAlign: 'right', background: creditReqHeaderColor, border: '1px solid black'}}>סוג נק"ז</TableCell>
+                            <TableCell style={{textAlign: 'right', background: creditReqHeaderColor, border: '1px solid black'}}>כמות נדרשת</TableCell>
+                            <TableCell style={{textAlign: 'right', background: creditReqHeaderColor, border: '1px solid black'}}>כמות בתוכנית הנוכחית</TableCell>
+                        </TableRow>
+                    </TableHead>
+                    <TableBody>
+                        {creditReq.map((row, index) => (
+                            <TableRow key={index}>
+                                <TableCell style={{textAlign: 'right', background: whatColor(row), border: '1px solid black'}}>{row.creditsType}</TableCell>
+                                <TableCell style={{textAlign: 'right', background: whatColor(row), border: '1px solid black'}}>{row.neededCredits}</TableCell>
+                                <TableCell style={{textAlign: 'right', background: whatColor(row), border: '1px solid black'}}>{row.currentCredits}</TableCell>
+                            </TableRow>
+                        ))}
+                    </TableBody>
+                </Table>
+            </Paper>
         )
     }
     return null;
