@@ -2,8 +2,6 @@ package oplanner.Oplanner.Model;
 
 import lombok.Data;
 import java.util.Objects;
-
-import org.springframework.boot.autoconfigure.domain.EntityScan;
 import org.springframework.data.annotation.Id;
 
 @Data

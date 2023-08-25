@@ -1,17 +1,14 @@
 package oplanner.Oplanner.Logic;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 
-import org.apache.tomcat.util.digester.SystemPropertySource;
 
 import oplanner.Oplanner.Model.Course;
 import oplanner.Oplanner.Model.CreditType;
 import oplanner.Oplanner.Model.CreditsRequirement;
 import oplanner.Oplanner.Model.Dependency;
 import oplanner.Oplanner.Model.MandatoryRequirement;
-import oplanner.Oplanner.Model.StudyPlan;
 import oplanner.Oplanner.Response.CheckStudyPlanRespone;
 import oplanner.Oplanner.Response.CreditsReqResponse;
 import oplanner.Oplanner.Response.DependencyResponse;
@@ -19,13 +16,10 @@ import oplanner.Oplanner.repository.CourseRepository;
 import oplanner.Oplanner.repository.CreditTypesRepository;
 import oplanner.Oplanner.repository.CreditsRequirementRepository;
 import oplanner.Oplanner.repository.MandatoryRequirementRepository;
-import oplanner.Oplanner.repository.StudyPlanRepository;
 import oplanner.Oplanner.repository.DependencyRepository;
 
 public class CheckStudyPlan {
 
-    private final int studyPlanId;
-    private final List <Course>  courses;
     private final MandatoryRequirementRepository mrRepository;
     private final CourseRepository courseRepository;
     private final DependencyRepository depRepository;
@@ -38,10 +32,9 @@ public class CheckStudyPlan {
 
 
 
-    public CheckStudyPlan(int studyPlanId, List <Course> courses, MandatoryRequirementRepository mrRepository, CourseRepository courseRepository, DependencyRepository depRepository, CreditsRequirementRepository creditsRepository, CreditTypesRepository creditTypesRepository)
+    public CheckStudyPlan(MandatoryRequirementRepository mrRepository, CourseRepository courseRepository, DependencyRepository depRepository, CreditsRequirementRepository creditsRepository, CreditTypesRepository creditTypesRepository)
     {
-        this.studyPlanId = studyPlanId;
-        this.courses = courses;
+
         this.mrRepository = mrRepository;
         this.courseRepository = courseRepository;
         this.depRepository = depRepository;
@@ -49,11 +42,11 @@ public class CheckStudyPlan {
         this.creditTypesRepository = creditTypesRepository;
     }
 
-    public CheckStudyPlanRespone checkStudyPlanRespone ()
+    public CheckStudyPlanRespone checkStudyPlanRespone (int studyPlanId, List <Course>  courses)
     {
-        List<Integer>  a = checkMandatoryRequirement();
-        List<DependencyResponse>  b = checkDependencies();
-        List <CreditsReqResponse> c = checkCredits();
+        List<Integer>  a = checkMandatoryRequirement(studyPlanId, courses);
+        List<DependencyResponse>  b = checkDependencies(studyPlanId, courses);
+        List <CreditsReqResponse> c = checkCredits(studyPlanId, courses);
         int ok = checkIfPlanOK(a, b, c);
         CheckStudyPlanRespone res = new CheckStudyPlanRespone(ok, a, b, c);
         return res;
@@ -92,7 +85,7 @@ public class CheckStudyPlan {
         }
     }
 
-    public List<Integer> checkMandatoryRequirement ()
+    public List<Integer> checkMandatoryRequirement (int studyPlanId, List <Course>  courses)
     {
         MandatoryRequirement [] mandatoryReq = mrRepository.findByPlanId(studyPlanId);
         List<Integer> missingCourses = new ArrayList<Integer> ();
@@ -117,7 +110,7 @@ public class CheckStudyPlan {
         return missingCourses;
     }
 
-    public List<DependencyResponse> checkDependencies ()
+    public List<DependencyResponse> checkDependencies (int studyPlanId, List <Course>  courses)
     {
         List<DependencyResponse> missingDependencies = new ArrayList<DependencyResponse> ();
         List<Integer> missingDependenciesForSpecificCourse = new ArrayList<Integer> ();
@@ -150,7 +143,7 @@ public class CheckStudyPlan {
         return missingDependencies;
     }
 
-    public List <CreditsReqResponse> checkCredits ()
+    public List <CreditsReqResponse> checkCredits (int studyPlanId, List <Course>  courses)
     {
         List<CreditsReqResponse> creditsReqResponse = new ArrayList <CreditsReqResponse> ();
         CreditsRequirement[] creditsRequirements = creditsRepository.findByPlanId(studyPlanId);
