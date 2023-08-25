@@ -1,11 +1,9 @@
 package oplanner.Oplanner.repository;
 
-import oplanner.Oplanner.Model.Course;
 import oplanner.Oplanner.Model.CreditType;
 
 import org.springframework.data.jdbc.repository.query.Query;
 import org.springframework.data.repository.CrudRepository;
-import java.util.*;
 
 public interface CreditTypesRepository extends CrudRepository<CreditType, Integer> {
     @Query("""

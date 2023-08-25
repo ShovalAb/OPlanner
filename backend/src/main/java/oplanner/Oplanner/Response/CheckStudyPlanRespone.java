@@ -1,10 +1,7 @@
 package oplanner.Oplanner.Response;
-import oplanner.Oplanner.Model.Dependency;
-import oplanner.Oplanner.Model.MandatoryRequirement;
+
 
 import java.util.List;
-
-import oplanner.Oplanner.Model.Course;
 
 
 public class CheckStudyPlanRespone {

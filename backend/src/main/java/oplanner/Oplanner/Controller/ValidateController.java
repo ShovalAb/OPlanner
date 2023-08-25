@@ -24,11 +24,12 @@ import java.util.*;
 @RequestMapping("/api/verifyPlan")
 public class ValidateController {
     private Logic logic = new Logic();
+    private final CheckStudyPlan checkStudyPlanObj;
     private final CourseRepository courseRepository;
-    private final MandatoryRequirementRepository mandatoryRequirementRepository;
-    private final DependencyRepository dependencyRepository;
-    private final CreditsRequirementRepository creditsRepository;
-    private final CreditTypesRepository creditTypesRepository;
+    // private final MandatoryRequirementRepository mandatoryRequirementRepository;
+    // private final DependencyRepository dependencyRepository;
+    // private final CreditsRequirementRepository creditsRepository;
+    // private final CreditTypesRepository creditTypesRepository;
     
     public ValidateController (
             CourseRepository courseRepository, 
@@ -36,11 +37,12 @@ public class ValidateController {
             DependencyRepository dependencyRepository,
             CreditsRequirementRepository creditsRepository,
             CreditTypesRepository creditTypesRepository) {
+        this.checkStudyPlanObj = new CheckStudyPlan(mandatoryRequirementRepository, courseRepository, dependencyRepository, creditsRepository, creditTypesRepository);
         this.courseRepository = courseRepository;
-        this.mandatoryRequirementRepository = mandatoryRequirementRepository;
-        this.dependencyRepository = dependencyRepository;
-        this.creditsRepository = creditsRepository;
-        this.creditTypesRepository = creditTypesRepository;
+        // this.mandatoryRequirementRepository = mandatoryRequirementRepository;
+        // this.dependencyRepository = dependencyRepository;
+        // this.creditsRepository = creditsRepository;
+        // this.creditTypesRepository = creditTypesRepository;
     }
 
     /**
@@ -57,8 +59,7 @@ public class ValidateController {
         for (int number : coursesNumber){
             courses.add(courseRepository.findByNumber(number));
         }
-        CheckStudyPlan checkStudyPlan = new CheckStudyPlan(
-            id, courses, mandatoryRequirementRepository, courseRepository, dependencyRepository, creditsRepository, creditTypesRepository);
-        return checkStudyPlan.checkStudyPlanRespone();
+        // CheckStudyPlan checkStudyPlan = new CheckStudyPlan(mandatoryRequirementRepository, courseRepository, dependencyRepository, creditsRepository, creditTypesRepository);
+        return checkStudyPlanObj.checkStudyPlanRespone(id, courses);
     }
 }

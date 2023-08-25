@@ -2,7 +2,6 @@ package oplanner.Oplanner.Model;
 
 import java.util.Objects;
 import org.springframework.data.annotation.Id;
-import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class Course {
     @Id
