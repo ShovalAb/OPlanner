@@ -137,7 +137,7 @@ const PlanPage = () => {
                 <h1 style={{color: headlineTextColor}}>Planning Study Plan #{routeParams.studyPlanId}</h1>
             </div>
             <CoursesDrag courses={courses} updateCreditReqNum={updateCreditReqNum}></CoursesDrag>
-            <button className="buttonValidate" onClick={e => validateCourses(routeParams.studyPlanId,courses)}>Validate Study Plan</button>
+            <button className="buttonValidate" onClick={e => validateCourses(routeParams.studyPlanId,courses)} style={{marginTop:'50px'}}>Validate Study Plan</button>
             <CreditReqTable creditReq={nakazReq}></CreditReqTable>
             <MissingCourses coursesDepen={coursesDepen} coursesMust={coursesMust} nakazReq={nakazReq} getCourseByNumber={getCourseByNumber}></MissingCourses>
             <SummaryButton planReady={planReady} courses={collectChosenCourses()}></SummaryButton>
