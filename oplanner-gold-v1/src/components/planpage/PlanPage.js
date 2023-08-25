@@ -138,9 +138,15 @@ const PlanPage = () => {
             </div>
             <CoursesDrag courses={courses} updateCreditReqNum={updateCreditReqNum}></CoursesDrag>
             <button className="buttonValidate" onClick={e => validateCourses(routeParams.studyPlanId,courses)} style={{marginTop:'50px'}}>Validate Study Plan</button>
-            <CreditReqTable creditReq={nakazReq}></CreditReqTable>
-            <MissingCourses coursesDepen={coursesDepen} coursesMust={coursesMust} nakazReq={nakazReq} getCourseByNumber={getCourseByNumber}></MissingCourses>
             <SummaryButton planReady={planReady} courses={collectChosenCourses()}></SummaryButton>
+            <div style={{ display: 'flex', justifyContent: 'center', marginTop: '20px' }}>
+                <div style={{ maxWidth: '800px', width: '50%', padding: '0 20px' }}>
+                    <CreditReqTable creditReq={nakazReq}></CreditReqTable>
+                </div>
+                <div style={{ maxWidth: '800px', width: '50%', padding: '0 20px' }}>
+                    <MissingCourses coursesDepen={coursesDepen} coursesMust={coursesMust} nakazReq={nakazReq} getCourseByNumber={getCourseByNumber}></MissingCourses>
+                </div>
+            </div>
         </div>
     )
 }
