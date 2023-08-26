@@ -5,7 +5,7 @@ import CoursesDrag from '../couresesdrag/CoursesDrag'
 import MissingCourses from "../missingcourses/MissingCourses";
 import SummaryButton from "./SummaryButton";
 import CreditReqTable from "./CreditReqTable";
-import { headlineTextColor } from "../colors";
+import { headlineTextColor , planpageBGColor} from "../colors";
 
 const PlanPage = () => {
     const routeParams = useParams();
@@ -131,16 +131,16 @@ const PlanPage = () => {
     }
 
     return (
-        <div>
+        <div style={{background: planpageBGColor}}>
             <div>
                 <h1 style={{color: headlineTextColor}}>Planning Study Plan #{routeParams.studyPlanId}</h1>
             </div>
             <CoursesDrag courses={courses} updateCreditReqNum={updateCreditReqNum}></CoursesDrag>
             <button className="buttonValidate" onClick={e => validateCourses(routeParams.studyPlanId,courses)} style={{marginTop:'50px'}}>Validate Study Plan</button>
-            <SummaryButton planReady={planReady} courses={collectChosenCourses()}></SummaryButton>
             <div style={{ display: 'flex', justifyContent: 'center', marginTop: '20px' }}>
                 <div style={{ maxWidth: '800px', width: '45%', padding: '0 20px' , marginRight: '5%'}}>
                     <CreditReqTable creditReq={nakazReq}></CreditReqTable>
+                    <SummaryButton planReady={planReady} courses={collectChosenCourses()}></SummaryButton>
                 </div>
                 <div style={{ maxWidth: '800px', width: '45%', padding: '0 20px' , marginLeft: '5%'}}>
                     <MissingCourses coursesDepen={coursesDepen} coursesMust={coursesMust} nakazReq={nakazReq} getCourseByNumber={getCourseByNumber}></MissingCourses>
