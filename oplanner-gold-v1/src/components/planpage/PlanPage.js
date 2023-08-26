@@ -117,12 +117,11 @@ const PlanPage = () => {
             setCoursesDepen(response.data["coursesDepen"])
             setNakazReq(response.data["creditsReqResponse"])
             
-            if (response.data.ok) {
+            if (response.data.ok == 1) {
                 // ok = 1, the program is validated
-                console.log("Yay, the program is valid!")
                 setPlanReady(true)
             } else {
-                console.log("Ooof, the program is invalid!")
+                // ok = 0 OR -1, the program is not validated
                 setPlanReady(false)
             }
 
