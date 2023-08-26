@@ -6,6 +6,7 @@ import MissingCourses from "../missingcourses/MissingCourses";
 import SummaryButton from "./SummaryButton";
 import CreditReqTable from "./CreditReqTable";
 import { headlineTextColor , planpageBGColor} from "../colors";
+import ProgressBar from "../progressbar/ProgressBar";
 
 const PlanPage = () => {
     const routeParams = useParams();
@@ -59,6 +60,7 @@ const PlanPage = () => {
 
     useEffect(() => {
         getCourses(routeParams.studyPlanId);
+        updateCreditReqNum();
     },[])
     
     const collectChosenCourses = () => {
@@ -98,9 +100,8 @@ const PlanPage = () => {
         // console.log("HEREEEE")
         try {
             const coursesChosen = collectChosenCoursesNumbers();
-            const response = await api.post('/api/creditsReq', {'planId':routeParams.studyPlanId, 'courses':coursesChosen})
-            console.log(response.data)
-            setNakazReq(response.data["creditsReqResponse"])
+            const response = await api.post('/api/verifyPlan/creditsReq', {'planId':routeParams.studyPlanId, 'courses':coursesChosen})
+            setNakazReq(response.data)
             
         } catch (error) {
             console.log(error)
@@ -132,18 +133,21 @@ const PlanPage = () => {
 
     return (
         <div style={{background: planpageBGColor}}>
+            {/* <div style={{marginTop: '20px'}}> */}
+               <ProgressBar stepNumber={2}></ProgressBar>
+            {/* </div> */}
             <div>
                 <h1 style={{color: headlineTextColor}}>Planning Study Plan #{routeParams.studyPlanId}</h1>
             </div>
             <CoursesDrag courses={courses} updateCreditReqNum={updateCreditReqNum}></CoursesDrag>
-            <button className="buttonValidate" onClick={e => validateCourses(routeParams.studyPlanId,courses)} style={{marginTop:'50px'}}>Validate Study Plan</button>
+            <button className="buttonValidate" onClick={e => validateCourses(routeParams.studyPlanId,courses)} style={{marginTop:'50px'}}>בדיקת תוכנית לימודים</button>
             <div style={{ display: 'flex', justifyContent: 'center', marginTop: '20px' }}>
                 <div style={{ maxWidth: '800px', width: '45%', padding: '0 20px' , marginRight: '5%'}}>
                     <CreditReqTable creditReq={nakazReq}></CreditReqTable>
-                    <SummaryButton planReady={planReady} courses={collectChosenCourses()}></SummaryButton>
                 </div>
                 <div style={{ maxWidth: '800px', width: '45%', padding: '0 20px' , marginLeft: '5%'}}>
-                    <MissingCourses coursesDepen={coursesDepen} coursesMust={coursesMust} nakazReq={nakazReq} getCourseByNumber={getCourseByNumber}></MissingCourses>
+                    <MissingCourses coursesDepen={coursesDepen} coursesMust={coursesMust} getCourseByNumber={getCourseByNumber}></MissingCourses>
+                    <SummaryButton planReady={planReady} courses={collectChosenCourses()}></SummaryButton>
                 </div>
             </div>
         </div>

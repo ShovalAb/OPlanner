@@ -11,7 +11,7 @@ const SummaryButton = ({planReady, courses}) => {
     if (planReady) {
         return (
             <Link to="/finalstudyplan">
-                <Button onClick={saveCourses}>PLAN READY!!</Button>
+                <Button onClick={saveCourses} style={{background: 'lightgreen', borderColor: 'black', color: 'black', width: '50%', height: '50%', fontSize: '30px', marginTop: '20px'}}>!התוכנית מוכנה <br /> לחץ לסיום</Button>
             </Link>
         )
     }
