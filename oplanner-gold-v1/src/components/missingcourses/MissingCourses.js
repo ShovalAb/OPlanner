@@ -81,7 +81,7 @@ const MissingCourses = ({coursesMust, coursesDepen, getCourseByNumber}) => {
         }
         return (
             <div style={{textAlign: 'center'}}>
-                <h2 className="validateOK">!אין קורסים חסרים</h2>
+                <h2 style={{color: headlineTextColor}}>!אין קורסים חובה או תלויות חסרים</h2>
             </div>
         )
     }
