@@ -81,7 +81,8 @@ const CourseTable = ({ data, onRowClick, activeTab, downloadable, colors, number
 
     </Paper>
     {downloadable && (
-      <div style={{ display: 'flex', justifyContent: 'flex-end', padding: '10px' , height: '100px'}}>
+      <div style={{ display: 'flex', justifyContent: 'center', padding: '10px' , height: '100px', direction: 'rtl'}}>
+        <p style={{color: 'green', fontSize: '30px', marginTop: '15px', marginLeft: '10px'}}>להורדה</p>
         <img
           src={excelImage}
           alt="Download CSV"
