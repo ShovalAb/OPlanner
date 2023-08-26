@@ -1,9 +1,10 @@
 import React from "react";
+import { headlineTextColor } from "../colors"; 
 
-const MissingCourses = ({coursesMust, coursesDepen, nakazReq, getCourseByNumber}) => {
+const MissingCourses = ({coursesMust, coursesDepen, getCourseByNumber}) => {
     const missingMustCourse = (course) => {
         return (
-            <p key={course.courseNumber}><b>{course.courseName} ({course.courseNumber})</b></p>
+            <li key={course.courseNumber}><b>{course.courseName} ({course.courseNumber})</b></li>
         )
     }
 
@@ -19,14 +20,22 @@ const MissingCourses = ({coursesMust, coursesDepen, nakazReq, getCourseByNumber}
     const preCoursesdetails = (preCourses) => {
         const coursesDetails = Array()
         for (let i = 0; i < preCourses.length; i++) {
-            coursesDetails.push(preCourses[i].courseName + "(" + preCourses[i].courseNumber + ")")
+            coursesDetails.push(preCourses[i].courseName + " (" + preCourses[i].courseNumber + ")")
         }
         return coursesDetails.join(", ")
     }    
 
     const missingDepenCourses = (courseDep, preCourses) => {
+        var plural = true
+        if (preCourses.length == 1) {
+            plural = false
+        }
         return (
-            <p key={courseDep.courseNumber}><b>{courseDep.courseName}({courseDep.courseNumber})</b> needs the courses <b>{preCoursesdetails(preCourses)}</b>!</p>
+            <li key={courseDep.courseNumber}><b style={{color: 'green'}}>{courseDep.courseName} ({courseDep.courseNumber})</b>
+            {!plural && (" תלוי בקורס: ")}
+            {plural && (" תלוי בקורסים: ")}
+             <b>{preCoursesdetails(preCourses)}</b>
+             </li>
         )
     }
 
@@ -51,39 +60,22 @@ const MissingCourses = ({coursesMust, coursesDepen, nakazReq, getCourseByNumber}
         return null;
     }
 
-    const allMissingNakazReq = (nakazReqIssue) => {
-        if (nakazReqIssue.neededCredits > nakazReqIssue.currentCredits) {
-            
+    if (coursesMust && coursesDepen) {
+        if (coursesMust.length > 0 || coursesDepen.length > 0 ) {
             return (
-                <div key={nakazReqIssue["creditsType"]}>
-                <p><b>{nakazReqIssue["neededCredits"]}</b> nakaz of <b>{nakazReqIssue["creditsType"]}</b> are needed, In your plan there are only <b>{nakazReqIssue["currentCredits"]}</b></p>
-                </div>
-            )
-        }
-        return (
-            <React.Fragment key={nakazReqIssue.creditsType}></React.Fragment>
-        );
-    }
-
-    const creditsReqUnsat = (creditsReq) => {
-        for (let i = 0; i < creditsReq.length; i++) {
-            if(creditsReq[i].neededCredits > creditsReq[i].currentCredits) {
-                return true
-            }
-        }
-        return false
-    }
-
-    if (coursesMust && coursesDepen && nakazReq) {
-        if (coursesMust.length > 0 || coursesDepen.length > 0 || creditsReqUnsat(nakazReq)) {
-            return (
-                <div>
-                    <h2>Must</h2>
-                    <>{coursesMust.map(allMissingMustCourses)}</>
-                    <h2>Dependencies</h2>
-                    <>{coursesDepen.map(allMissingDepenCourses)}</>
-                    <h2>Credit Requirements</h2>
-                    <>{nakazReq.map(allMissingNakazReq)}</>
+                <div style={{direction: 'rtl', textAlign: 'right'}}>
+                    <h2 style={{color: headlineTextColor}}>קורסי חובה חסרים</h2>
+                    <div>
+                        <ul>
+                            <>{coursesMust.map(allMissingMustCourses)}</>
+                        </ul>
+                    </div>
+                    <h2 style={{color: headlineTextColor}}>קורסי תלות חסרים</h2>
+                    <div>
+                        <ul>
+                            <>{coursesDepen.map(allMissingDepenCourses)}</>
+                        </ul>
+                    </div>
                 </div>
             )
         }
