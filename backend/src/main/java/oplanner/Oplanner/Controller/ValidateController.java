@@ -16,7 +16,6 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 
 import oplanner.Oplanner.Logic.CheckStudyPlan;
-import oplanner.Oplanner.Logic.Logic;
 import java.util.*;
 
 
@@ -24,7 +23,6 @@ import java.util.*;
 @CrossOrigin(allowedHeaders = "*", origins = "*")
 @RequestMapping("/api/verifyPlan")
 public class ValidateController {
-    private Logic logic = new Logic();
     private final CheckStudyPlan checkStudyPlanObj;
     private final CourseRepository courseRepository;
     // private final MandatoryRequirementRepository mandatoryRequirementRepository;
