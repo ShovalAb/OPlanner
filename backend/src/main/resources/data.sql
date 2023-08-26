@@ -2,6 +2,10 @@
 
 -- Insert data into StudyPlan table
 INSERT INTO study_plan (plan_name) VALUES ("מדעי המחשב");
+INSERT INTO study_plan (plan_name) VALUES ("מדעי המחשב - אבטחת המרחב המקוון");
+INSERT INTO study_plan (plan_name) VALUES ("מדעי המחשב - מדעי הנתונים");
+INSERT INTO study_plan (plan_name) VALUES ("מדעים בהדגשת מדעי המחשב");
+
 
 -- Insert data into Course table
 Insert INTO Course (name, number, credits_type, credits_number) VALUES ("מתמטיקה בדידה: תורת הקבוצות, קומבינטוריקה ותורת הגרפים",  20476, "מתמטיקה", 4);
@@ -71,6 +75,28 @@ Insert INTO Course (name, number, credits_type, credits_number) VALUES ("סדנ�
 Insert INTO Course (name, number, credits_type, credits_number) VALUES ("סדנה במדעי הנתונים",  20936, "מדעי המחשב מתקדם סמינריוני סדנה", 3);
 Insert INTO Course (name, number, credits_type, credits_number) VALUES ("סדנה באבטחת מידע",  20931, "מדעי המחשב מתקדם סמינריוני סדנה", 3);
 Insert INTO Course (name, number, credits_type, credits_number) VALUES ("סדנה בטכנולוגיות לפיתוח אפליקציות לענן ולרשת",  20995, "מדעי המחשב מתקדם סמינריוני סדנה", 3);
+Insert INTO Course (name, number, credits_type, credits_number) VALUES ("מבוא לראייה ממוחשבת",  22928, "מדעי המחשב מתקדם", 4);
+Insert INTO Course (name, number, credits_type, credits_number) VALUES ("נושאים מתקדמים באבטחת המרחב המקוון",  22939, "מדעי המחשב מתקדם", 4);
+Insert INTO Course (name, number, credits_type, credits_number) VALUES ("אבטחת מערכות תוכנה",  22923, "מדעי המחשב מתקדם", 4);
+Insert INTO Course (name, number, credits_type, credits_number) VALUES ("הסקה סטטיסטית",  30204, "מתמטיקה", 4);
+Insert INTO Course (name, number, credits_type, credits_number) VALUES ("למידה עמוקה",  22961, "מדעי המחשב מתקדם", 4);
+Insert INTO Course (name, number, credits_type, credits_number) VALUES ("עיבוד תמונה",  22913, "מדעי המחשב מתקדם", 4);
+Insert INTO Course (name, number, credits_type, credits_number) VALUES ("ארכיטקטורות חישוב בהשראת המוח",  22960, "מדעי המחשב מתקדם", 4);
+Insert INTO Course (name, number, credits_type, credits_number) VALUES ("אלגוריתמים לנתוני עתק",  22934, "מדעי המחשב מתקדם", 4);
+Insert INTO Course (name, number, credits_type, credits_number) VALUES ("מבוא לסטטיסטיקה ולהסתברות למדעים",  30203, "מתמטיקה", 3);
+Insert INTO Course (name, number, credits_type, credits_number) VALUES ("תורת ההסתברות",  20416, "מתמטיקה", 5);
+Insert INTO Course (name, number, credits_type, credits_number) VALUES ("חשבון דיפרנציאלי ואינטגלי א׳",  20406, "מתמטיקה", 6);
+Insert INTO Course (name, number, credits_type, credits_number) VALUES ("חשבון דיפרנציאלי ואינטגלי ב׳",  20423, "מתמטיקה", 6);
+Insert INTO Course (name, number, credits_type, credits_number) VALUES ("אלגברה ליניארית לתלמידי מדעים",  20430, "מתמטיקה", 4);
+Insert INTO Course (name, number, credits_type, credits_number) VALUES ("מבוא למחשבת ישראל",  10809, "מדעי הרוח", 6);
+Insert INTO Course (name, number, credits_type, credits_number) VALUES ("מבוא לארכיאולוגיה של ארץ ישראל",  10140, "מדעי הרוח", 6);
+Insert INTO Course (name, number, credits_type, credits_number) VALUES ("מבוא למוסיקה א׳",  10148, "מדעי הרוח", 6);
+Insert INTO Course (name, number, credits_type, credits_number) VALUES ("מבוא למיקרוכלכלה",  10131, "כלכלה", 4);
+Insert INTO Course (name, number, credits_type, credits_number) VALUES ("מבוא למקרוכלכלה",  10126, "כלכלה", 4);
+Insert INTO Course (name, number, credits_type, credits_number) VALUES ("מבוא לפסיכולוגיה",  10136, "פסיכולוגיה", 6);
+Insert INTO Course (name, number, credits_type, credits_number) VALUES ("יסודות הפיסיקה א׳",  20113, "פיסיקה", 3);
+Insert INTO Course (name, number, credits_type, credits_number) VALUES ("יסודות הפיסיקה ",  20125, "פיסיקה", 6);
+Insert INTO Course (name, number, credits_type, credits_number) VALUES ("יסודות הפיסיקה לביולוגים א׳",  20123, "פיסיקה", 3);
 
 -- Insert data into Dependency table
 INSERT INTO Dependency (dependent_course, base_course) VALUES (20229, "20109");
@@ -170,6 +196,14 @@ INSERT INTO Dependency (dependent_course, base_course) VALUES (20931, "20940");
 INSERT INTO Dependency (dependent_course, base_course) VALUES (20995, "20417");
 INSERT INTO Dependency (dependent_course, base_course) VALUES (20995, "20465");
 INSERT INTO Dependency (dependent_course, base_course) VALUES (20995, "20594");
+INSERT INTO Dependency (dependent_course, base_course) VALUES (22939, "20580, 20940, 22923");
+INSERT INTO Dependency (dependent_course, base_course) VALUES (22923, "20277");
+INSERT INTO Dependency (dependent_course, base_course) VALUES (22923, "20594");
+INSERT INTO Dependency (dependent_course, base_course) VALUES (30204, "30203, 20425, 20416");
+INSERT INTO Dependency (dependent_course, base_course) VALUES (20416, "20474, 20406");
+INSERT INTO Dependency (dependent_course, base_course) VALUES (20416, "20475, 20423");
+INSERT INTO Dependency (dependent_course, base_course) VALUES (20423, "20406, 20492");
+INSERT INTO Dependency (dependent_course, base_course) VALUES (22961, "20595");
 
 
 -- Insert data into Mandatory_Requirement table
@@ -191,6 +225,66 @@ INSERT INTO mandatory_requirement (plan_id, course_number) VALUES (1, 20466);
 INSERT INTO mandatory_requirement (plan_id, course_number) VALUES (1, 20594);
 INSERT INTO mandatory_requirement (plan_id, course_number) VALUES (1, 20905);
 
+-- Plan #2
+INSERT INTO mandatory_requirement (plan_id, course_number) VALUES (2, 20476);
+INSERT INTO mandatory_requirement (plan_id, course_number) VALUES (2, 20109);
+INSERT INTO mandatory_requirement (plan_id, course_number) VALUES (2, 20229);
+INSERT INTO mandatory_requirement (plan_id, course_number) VALUES (2, 20474);
+INSERT INTO mandatory_requirement (plan_id, course_number) VALUES (2, 20475);
+INSERT INTO mandatory_requirement (plan_id, course_number) VALUES (2, 20425);
+INSERT INTO mandatory_requirement (plan_id, course_number) VALUES (2, 20441);
+INSERT INTO mandatory_requirement (plan_id, course_number) VALUES (2, 20407);
+INSERT INTO mandatory_requirement (plan_id, course_number) VALUES (2, 20417);
+INSERT INTO mandatory_requirement (plan_id, course_number) VALUES (2, 20465);
+INSERT INTO mandatory_requirement (plan_id, course_number) VALUES (2, 20440);
+INSERT INTO mandatory_requirement (plan_id, course_number) VALUES (2, 20585);
+INSERT INTO mandatory_requirement (plan_id, course_number) VALUES (2, 20471);
+INSERT INTO mandatory_requirement (plan_id, course_number) VALUES (2, 20466);
+INSERT INTO mandatory_requirement (plan_id, course_number) VALUES (2, 20594);
+INSERT INTO mandatory_requirement (plan_id, course_number) VALUES (2, 20905);
+INSERT INTO mandatory_requirement (plan_id, course_number) VALUES (2, 20580);
+INSERT INTO mandatory_requirement (plan_id, course_number) VALUES (2, 20582);
+INSERT INTO mandatory_requirement (plan_id, course_number) VALUES (2, 20937);
+INSERT INTO mandatory_requirement (plan_id, course_number) VALUES (2, 20940);
+INSERT INTO mandatory_requirement (plan_id, course_number) VALUES (2, "20927, 20954");
+INSERT INTO mandatory_requirement (plan_id, course_number) VALUES (2, 20931);
+
+-- Plan #3
+INSERT INTO mandatory_requirement (plan_id, course_number) VALUES (3, 20476);
+INSERT INTO mandatory_requirement (plan_id, course_number) VALUES (3, 20109);
+INSERT INTO mandatory_requirement (plan_id, course_number) VALUES (3, 20229);
+INSERT INTO mandatory_requirement (plan_id, course_number) VALUES (3, 20474);
+INSERT INTO mandatory_requirement (plan_id, course_number) VALUES (3, 20475);
+INSERT INTO mandatory_requirement (plan_id, course_number) VALUES (3, 20425);
+INSERT INTO mandatory_requirement (plan_id, course_number) VALUES (3, 20441);
+INSERT INTO mandatory_requirement (plan_id, course_number) VALUES (3, 20407);
+INSERT INTO mandatory_requirement (plan_id, course_number) VALUES (3, 20417);
+INSERT INTO mandatory_requirement (plan_id, course_number) VALUES (3, 20465);
+INSERT INTO mandatory_requirement (plan_id, course_number) VALUES (3, 20440);
+INSERT INTO mandatory_requirement (plan_id, course_number) VALUES (3, 20585);
+INSERT INTO mandatory_requirement (plan_id, course_number) VALUES (3, 20471);
+INSERT INTO mandatory_requirement (plan_id, course_number) VALUES (3, 20466);
+INSERT INTO mandatory_requirement (plan_id, course_number) VALUES (3, 20594);
+INSERT INTO mandatory_requirement (plan_id, course_number) VALUES (3, 20905);
+INSERT INTO mandatory_requirement (plan_id, course_number) VALUES (3, 30204);
+INSERT INTO mandatory_requirement (plan_id, course_number) VALUES (3, 20277);
+INSERT INTO mandatory_requirement (plan_id, course_number) VALUES (3, 20942);
+INSERT INTO mandatory_requirement (plan_id, course_number) VALUES (3, 20595);
+INSERT INTO mandatory_requirement (plan_id, course_number) VALUES (3, 22961);
+INSERT INTO mandatory_requirement (plan_id, course_number) VALUES (3, "20372, 20375, 20922, 20954");
+INSERT INTO mandatory_requirement (plan_id, course_number) VALUES (3, 20936);
+
+-- Plan #4
+INSERT INTO mandatory_requirement (plan_id, course_number) VALUES (4, "20406, 20474");
+INSERT INTO mandatory_requirement (plan_id, course_number) VALUES (4, "20423, 20475");
+INSERT INTO mandatory_requirement (plan_id, course_number) VALUES (4, "20430, 20109");
+INSERT INTO mandatory_requirement (plan_id, course_number) VALUES (4, 20476);
+INSERT INTO mandatory_requirement (plan_id, course_number) VALUES (4, "30203, 20425");
+INSERT INTO mandatory_requirement (plan_id, course_number) VALUES (4, 20441);
+INSERT INTO mandatory_requirement (plan_id, course_number) VALUES (4, 20407);
+INSERT INTO mandatory_requirement (plan_id, course_number) VALUES (4, 20417);
+INSERT INTO mandatory_requirement (plan_id, course_number) VALUES (4, 20466);
+
 -- Insert data into Credits_Requirement table
 -- Plan #1
 INSERT INTO credits_requirement (plan_id, credits_type, credits_number) VALUES (1, "מתמטיקה", 35);
@@ -199,84 +293,154 @@ INSERT INTO credits_requirement (plan_id, credits_type, credits_number) VALUES (
 INSERT INTO credits_requirement (plan_id, credits_type, credits_number) VALUES (1, "מדעים", 111);
 INSERT INTO credits_requirement (plan_id, credits_type, credits_number) VALUES (1, "מדעי המחשב מתקדם סמינריוני סדנה", 3);
 INSERT INTO credits_requirement (plan_id, credits_type, credits_number) VALUES (1, "מדעי המחשב מתקדם סמינריוני סמינר", 3);
+INSERT INTO credits_requirement (plan_id, credits_type, credits_number) VALUES (1, "כללי", 120);
+
+-- Plan #2
+INSERT INTO credits_requirement (plan_id, credits_type, credits_number) VALUES (2, "מתמטיקה", 35);
+INSERT INTO credits_requirement (plan_id, credits_type, credits_number) VALUES (2, "מדעי המחשב", 76);
+INSERT INTO credits_requirement (plan_id, credits_type, credits_number) VALUES (2, "מדעי המחשב מתקדם", 40);
+INSERT INTO credits_requirement (plan_id, credits_type, credits_number) VALUES (2, "מדעים", 111);
+INSERT INTO credits_requirement (plan_id, credits_type, credits_number) VALUES (2, "מדעי המחשב מתקדם סמינריוני סדנה", 3);
+INSERT INTO credits_requirement (plan_id, credits_type, credits_number) VALUES (2, "מדעי המחשב מתקדם סמינריוני סמינר", 3);
+INSERT INTO credits_requirement (plan_id, credits_type, credits_number) VALUES (2, "כללי", 120);
+
+-- Plan #3
+INSERT INTO credits_requirement (plan_id, credits_type, credits_number) VALUES (3, "מתמטיקה", 35);
+INSERT INTO credits_requirement (plan_id, credits_type, credits_number) VALUES (3, "מדעי המחשב", 80);
+INSERT INTO credits_requirement (plan_id, credits_type, credits_number) VALUES (3, "מדעי המחשב מתקדם", 39);
+INSERT INTO credits_requirement (plan_id, credits_type, credits_number) VALUES (3, "מדעים", 115);
+INSERT INTO credits_requirement (plan_id, credits_type, credits_number) VALUES (3, "מדעי המחשב מתקדם סמינריוני סדנה", 3);
+INSERT INTO credits_requirement (plan_id, credits_type, credits_number) VALUES (3, "מדעי המחשב מתקדם סמינריוני סמינר", 3);
+INSERT INTO credits_requirement (plan_id, credits_type, credits_number) VALUES (3, "כללי", 121);
+
+-- Plan #4
+INSERT INTO credits_requirement (plan_id, credits_type, credits_number) VALUES (4, "מתמטיקה", 35);
+INSERT INTO credits_requirement (plan_id, credits_type, credits_number) VALUES (4, "מדעי המחשב", 61);
+INSERT INTO credits_requirement (plan_id, credits_type, credits_number) VALUES (4, "מדעי המחשב מתקדם", 23);
+INSERT INTO credits_requirement (plan_id, credits_type, credits_number) VALUES (4, "מדעים", 96);
+INSERT INTO credits_requirement (plan_id, credits_type, credits_number) VALUES (4, "פיסיקה", 3);
+INSERT INTO credits_requirement (plan_id, credits_type, credits_number) VALUES (4, "מדעים מתקדם", 27);
+INSERT INTO credits_requirement (plan_id, credits_type, credits_number) VALUES (4, "מרחיב דעת", 3);
+INSERT INTO credits_requirement (plan_id, credits_type, credits_number) VALUES (4, "סמינריונית", 3);
+INSERT INTO credits_requirement (plan_id, credits_type, credits_number) VALUES (4, "כללי", 120);
 
 
 -- Insert data into Course_In_Study_Plan table
 -- Plan #1
-INSERT INTO course_in_study_plan (course_number, plan_id) VALUES (20476, 1);
-INSERT INTO course_in_study_plan (course_number, plan_id) VALUES (20109, 1);
-INSERT INTO course_in_study_plan (course_number, plan_id) VALUES (20229, 1);
-INSERT INTO course_in_study_plan (course_number, plan_id) VALUES (20474, 1);
-INSERT INTO course_in_study_plan (course_number, plan_id) VALUES (20475, 1);
-INSERT INTO course_in_study_plan (course_number, plan_id) VALUES (20425, 1);
-INSERT INTO course_in_study_plan (course_number, plan_id) VALUES (20441, 1);
-INSERT INTO course_in_study_plan (course_number, plan_id) VALUES (20407, 1);
-INSERT INTO course_in_study_plan (course_number, plan_id) VALUES (20417, 1);
-INSERT INTO course_in_study_plan (course_number, plan_id) VALUES (20465, 1);
-INSERT INTO course_in_study_plan (course_number, plan_id) VALUES (20440, 1);
-INSERT INTO course_in_study_plan (course_number, plan_id) VALUES (20585, 1);
-INSERT INTO course_in_study_plan (course_number, plan_id) VALUES (20471, 1);
-INSERT INTO course_in_study_plan (course_number, plan_id) VALUES (20466, 1);
-INSERT INTO course_in_study_plan (course_number, plan_id) VALUES (20594, 1);
-INSERT INTO course_in_study_plan (course_number, plan_id) VALUES (20905, 1);
-INSERT INTO course_in_study_plan (course_number, plan_id) VALUES (20277, 1);
-INSERT INTO course_in_study_plan (course_number, plan_id) VALUES (20436, 1);
-INSERT INTO course_in_study_plan (course_number, plan_id) VALUES (20296, 1);
-INSERT INTO course_in_study_plan (course_number, plan_id) VALUES (20462, 1);
-INSERT INTO course_in_study_plan (course_number, plan_id) VALUES (20551, 1);
-INSERT INTO course_in_study_plan (course_number, plan_id) VALUES (20554, 1);
-INSERT INTO course_in_study_plan (course_number, plan_id) VALUES (20582, 1);
-INSERT INTO course_in_study_plan (course_number, plan_id) VALUES (20937, 1);
-INSERT INTO course_in_study_plan (course_number, plan_id) VALUES (20562, 1);
-INSERT INTO course_in_study_plan (course_number, plan_id) VALUES (20580, 1);
-INSERT INTO course_in_study_plan (course_number, plan_id) VALUES (20364, 1);
-INSERT INTO course_in_study_plan (course_number, plan_id) VALUES (20906, 1);
-INSERT INTO course_in_study_plan (course_number, plan_id) VALUES (20574, 1);
-INSERT INTO course_in_study_plan (course_number, plan_id) VALUES (20581, 1);
-INSERT INTO course_in_study_plan (course_number, plan_id) VALUES (20595, 1);
-INSERT INTO course_in_study_plan (course_number, plan_id) VALUES (20900, 1);
-INSERT INTO course_in_study_plan (course_number, plan_id) VALUES (20942, 1);
-INSERT INTO course_in_study_plan (course_number, plan_id) VALUES (20944, 1);
-INSERT INTO course_in_study_plan (course_number, plan_id) VALUES (20940, 1);
-INSERT INTO course_in_study_plan (course_number, plan_id) VALUES (20946, 1);
-INSERT INTO course_in_study_plan (course_number, plan_id) VALUES (20945, 1);
-INSERT INTO course_in_study_plan (course_number, plan_id) VALUES (20996, 1);
-INSERT INTO course_in_study_plan (course_number, plan_id) VALUES (20997, 1);
-INSERT INTO course_in_study_plan (course_number, plan_id) VALUES (20998, 1);
-INSERT INTO course_in_study_plan (course_number, plan_id) VALUES (20999, 1);
-INSERT INTO course_in_study_plan (course_number, plan_id) VALUES (20368, 1);
-INSERT INTO course_in_study_plan (course_number, plan_id) VALUES (20369, 1);
-INSERT INTO course_in_study_plan (course_number, plan_id) VALUES (20370, 1);
-INSERT INTO course_in_study_plan (course_number, plan_id) VALUES (20371, 1);
-INSERT INTO course_in_study_plan (course_number, plan_id) VALUES (20372, 1);
-INSERT INTO course_in_study_plan (course_number, plan_id) VALUES (20374, 1);
-INSERT INTO course_in_study_plan (course_number, plan_id) VALUES (20375, 1);
-INSERT INTO course_in_study_plan (course_number, plan_id) VALUES (20388, 1);
-INSERT INTO course_in_study_plan (course_number, plan_id) VALUES (20389, 1);
-INSERT INTO course_in_study_plan (course_number, plan_id) VALUES (20390, 1);
-INSERT INTO course_in_study_plan (course_number, plan_id) VALUES (20552, 1);
-INSERT INTO course_in_study_plan (course_number, plan_id) VALUES (20560, 1);
-INSERT INTO course_in_study_plan (course_number, plan_id) VALUES (20583, 1);
-INSERT INTO course_in_study_plan (course_number, plan_id) VALUES (20921, 1);
-INSERT INTO course_in_study_plan (course_number, plan_id) VALUES (20373, 1);
-INSERT INTO course_in_study_plan (course_number, plan_id) VALUES (20927, 1);
-INSERT INTO course_in_study_plan (course_number, plan_id) VALUES (20922, 1);
-INSERT INTO course_in_study_plan (course_number, plan_id) VALUES (20954, 1);
-INSERT INTO course_in_study_plan (course_number, plan_id) VALUES (20586, 1);
-INSERT INTO course_in_study_plan (course_number, plan_id) VALUES (20503, 1);
-INSERT INTO course_in_study_plan (course_number, plan_id) VALUES (20563, 1);
-INSERT INTO course_in_study_plan (course_number, plan_id) VALUES (20587, 1);
-INSERT INTO course_in_study_plan (course_number, plan_id) VALUES (20588, 1);
-INSERT INTO course_in_study_plan (course_number, plan_id) VALUES (20936, 1);
-INSERT INTO course_in_study_plan (course_number, plan_id) VALUES (20931, 1);
-INSERT INTO course_in_study_plan (course_number, plan_id) VALUES (20995, 1);
+-- INSERT INTO course_in_study_plan (course_number, plan_id) VALUES (20476, 1);
+-- INSERT INTO course_in_study_plan (course_number, plan_id) VALUES (20109, 1);
+-- INSERT INTO course_in_study_plan (course_number, plan_id) VALUES (20229, 1);
+-- INSERT INTO course_in_study_plan (course_number, plan_id) VALUES (20474, 1);
+-- INSERT INTO course_in_study_plan (course_number, plan_id) VALUES (20475, 1);
+-- INSERT INTO course_in_study_plan (course_number, plan_id) VALUES (20425, 1);
+-- INSERT INTO course_in_study_plan (course_number, plan_id) VALUES (20441, 1);
+-- INSERT INTO course_in_study_plan (course_number, plan_id) VALUES (20407, 1);
+-- INSERT INTO course_in_study_plan (course_number, plan_id) VALUES (20417, 1);
+-- INSERT INTO course_in_study_plan (course_number, plan_id) VALUES (20465, 1);
+-- INSERT INTO course_in_study_plan (course_number, plan_id) VALUES (20440, 1);
+-- INSERT INTO course_in_study_plan (course_number, plan_id) VALUES (20585, 1);
+-- INSERT INTO course_in_study_plan (course_number, plan_id) VALUES (20471, 1);
+-- INSERT INTO course_in_study_plan (course_number, plan_id) VALUES (20466, 1);
+-- INSERT INTO course_in_study_plan (course_number, plan_id) VALUES (20594, 1);
+-- INSERT INTO course_in_study_plan (course_number, plan_id) VALUES (20905, 1);
+-- INSERT INTO course_in_study_plan (course_number, plan_id) VALUES (20277, 1);
+-- INSERT INTO course_in_study_plan (course_number, plan_id) VALUES (20436, 1);
+-- INSERT INTO course_in_study_plan (course_number, plan_id) VALUES (20296, 1);
+-- INSERT INTO course_in_study_plan (course_number, plan_id) VALUES (20462, 1);
+-- INSERT INTO course_in_study_plan (course_number, plan_id) VALUES (20551, 1);
+-- INSERT INTO course_in_study_plan (course_number, plan_id) VALUES (20554, 1);
+-- INSERT INTO course_in_study_plan (course_number, plan_id) VALUES (20582, 1);
+-- INSERT INTO course_in_study_plan (course_number, plan_id) VALUES (20937, 1);
+-- INSERT INTO course_in_study_plan (course_number, plan_id) VALUES (20562, 1);
+-- INSERT INTO course_in_study_plan (course_number, plan_id) VALUES (20580, 1);
+-- INSERT INTO course_in_study_plan (course_number, plan_id) VALUES (20364, 1);
+-- INSERT INTO course_in_study_plan (course_number, plan_id) VALUES (20906, 1);
+-- INSERT INTO course_in_study_plan (course_number, plan_id) VALUES (20574, 1);
+-- INSERT INTO course_in_study_plan (course_number, plan_id) VALUES (20581, 1);
+-- INSERT INTO course_in_study_plan (course_number, plan_id) VALUES (20595, 1);
+-- INSERT INTO course_in_study_plan (course_number, plan_id) VALUES (20900, 1);
+-- INSERT INTO course_in_study_plan (course_number, plan_id) VALUES (20942, 1);
+-- INSERT INTO course_in_study_plan (course_number, plan_id) VALUES (20944, 1);
+-- INSERT INTO course_in_study_plan (course_number, plan_id) VALUES (20940, 1);
+-- INSERT INTO course_in_study_plan (course_number, plan_id) VALUES (20946, 1);
+-- INSERT INTO course_in_study_plan (course_number, plan_id) VALUES (20945, 1);
+-- INSERT INTO course_in_study_plan (course_number, plan_id) VALUES (20996, 1);
+-- INSERT INTO course_in_study_plan (course_number, plan_id) VALUES (20997, 1);
+-- INSERT INTO course_in_study_plan (course_number, plan_id) VALUES (20998, 1);
+-- INSERT INTO course_in_study_plan (course_number, plan_id) VALUES (20999, 1);
+-- INSERT INTO course_in_study_plan (course_number, plan_id) VALUES (20368, 1);
+-- INSERT INTO course_in_study_plan (course_number, plan_id) VALUES (20369, 1);
+-- INSERT INTO course_in_study_plan (course_number, plan_id) VALUES (20370, 1);
+-- INSERT INTO course_in_study_plan (course_number, plan_id) VALUES (20371, 1);
+-- INSERT INTO course_in_study_plan (course_number, plan_id) VALUES (20372, 1);
+-- INSERT INTO course_in_study_plan (course_number, plan_id) VALUES (20374, 1);
+-- INSERT INTO course_in_study_plan (course_number, plan_id) VALUES (20375, 1);
+-- INSERT INTO course_in_study_plan (course_number, plan_id) VALUES (20388, 1);
+-- INSERT INTO course_in_study_plan (course_number, plan_id) VALUES (20389, 1);
+-- INSERT INTO course_in_study_plan (course_number, plan_id) VALUES (20390, 1);
+-- INSERT INTO course_in_study_plan (course_number, plan_id) VALUES (20552, 1);
+-- INSERT INTO course_in_study_plan (course_number, plan_id) VALUES (20560, 1);
+-- INSERT INTO course_in_study_plan (course_number, plan_id) VALUES (20583, 1);
+-- INSERT INTO course_in_study_plan (course_number, plan_id) VALUES (20921, 1);
+-- INSERT INTO course_in_study_plan (course_number, plan_id) VALUES (20373, 1);
+-- INSERT INTO course_in_study_plan (course_number, plan_id) VALUES (20927, 1);
+-- INSERT INTO course_in_study_plan (course_number, plan_id) VALUES (20922, 1);
+-- INSERT INTO course_in_study_plan (course_number, plan_id) VALUES (20954, 1);
+-- INSERT INTO course_in_study_plan (course_number, plan_id) VALUES (20586, 1);
+-- INSERT INTO course_in_study_plan (course_number, plan_id) VALUES (20503, 1);
+-- INSERT INTO course_in_study_plan (course_number, plan_id) VALUES (20563, 1);
+-- INSERT INTO course_in_study_plan (course_number, plan_id) VALUES (20587, 1);
+-- INSERT INTO course_in_study_plan (course_number, plan_id) VALUES (20588, 1);
+-- INSERT INTO course_in_study_plan (course_number, plan_id) VALUES (20936, 1);
+-- INSERT INTO course_in_study_plan (course_number, plan_id) VALUES (20931, 1);
+-- INSERT INTO course_in_study_plan (course_number, plan_id) VALUES (20995, 1);
+
+-- -- Plan #2
+-- INSERT INTO course_in_study_plan (course_number, plan_id) VALUES (20476, 2);
+-- INSERT INTO course_in_study_plan (course_number, plan_id) VALUES (20109, 2);
+-- INSERT INTO course_in_study_plan (course_number, plan_id) VALUES (20229, 2);
+-- INSERT INTO course_in_study_plan (course_number, plan_id) VALUES (20474, 2);
+-- INSERT INTO course_in_study_plan (course_number, plan_id) VALUES (20475, 2);
+-- INSERT INTO course_in_study_plan (course_number, plan_id) VALUES (20425, 2);
+-- INSERT INTO course_in_study_plan (course_number, plan_id) VALUES (20441, 2);
+-- INSERT INTO course_in_study_plan (course_number, plan_id) VALUES (20407, 2);
+-- INSERT INTO course_in_study_plan (course_number, plan_id) VALUES (20417, 2);
+-- INSERT INTO course_in_study_plan (course_number, plan_id) VALUES (20465, 2);
+-- INSERT INTO course_in_study_plan (course_number, plan_id) VALUES (20440, 2);
+-- INSERT INTO course_in_study_plan (course_number, plan_id) VALUES (20585, 2);
+-- INSERT INTO course_in_study_plan (course_number, plan_id) VALUES (20471, 2);
+-- INSERT INTO course_in_study_plan (course_number, plan_id) VALUES (20466, 2);
+-- INSERT INTO course_in_study_plan (course_number, plan_id) VALUES (20594, 2);
+-- INSERT INTO course_in_study_plan (course_number, plan_id) VALUES (20905, 2);
+-- INSERT INTO course_in_study_plan (course_number, plan_id) VALUES (20580, 2);
+-- INSERT INTO course_in_study_plan (course_number, plan_id) VALUES (20582, 2);
+-- INSERT INTO course_in_study_plan (course_number, plan_id) VALUES (20937, 2);
+-- INSERT INTO course_in_study_plan (course_number, plan_id) VALUES (20940, 2);
+-- INSERT INTO course_in_study_plan (course_number, plan_id) VALUES (20551, 2);
+-- INSERT INTO course_in_study_plan (course_number, plan_id) VALUES (20554, 2);
+-- INSERT INTO course_in_study_plan (course_number, plan_id) VALUES (20277, 2);
+-- INSERT INTO course_in_study_plan (course_number, plan_id) VALUES (20906, 2);
+-- INSERT INTO course_in_study_plan (course_number, plan_id) VALUES (20595, 2);
+-- INSERT INTO course_in_study_plan (course_number, plan_id) VALUES (20946, 2);
+-- INSERT INTO course_in_study_plan (course_number, plan_id) VALUES (22928, 2);
+-- INSERT INTO course_in_study_plan (course_number, plan_id) VALUES (22939, 2);
+-- INSERT INTO course_in_study_plan (course_number, plan_id) VALUES (20927, 2);
+-- INSERT INTO course_in_study_plan (course_number, plan_id) VALUES (20954, 2);
+-- INSERT INTO course_in_study_plan (course_number, plan_id) VALUES (20931, 2);
+
 
 -- Insert data into Credit_Types table
 INSERT INTO credit_types (credits_type, sub_type) VALUES ("מדעי המחשב","מדעי המחשב, מדעי המחשב מתקדם");
-INSERT INTO credit_types (credits_type, sub_type) VALUES ("מדעים", "פיזיקה, מתמטיקה, מדעי המחשב, מדעי המחשב מתקדם, מדעי המחשב מתקדם סמינריוני סדנה, מדעי המחשב מתקדם סמינריוני סמינר");
+INSERT INTO credit_types (credits_type, sub_type) VALUES ("מדעים", "פיסיקה, מתמטיקה, מדעי המחשב, מדעי המחשב מתקדם, מדעי המחשב מתקדם סמינריוני סדנה, מדעי המחשב מתקדם סמינריוני סמינר, מדעים מתקדם");
 INSERT INTO credit_types (credits_type, sub_type) VALUES ("מדעי המחשב מתקדם סמינריוני סמינר", "מדעי המחשב מתקדם סמינריוני סמינר");
 INSERT INTO credit_types (credits_type, sub_type) VALUES ("מדעי המחשב מתקדם סמינריוני סדנה", "מדעי המחשב מתקדם סמינריוני סדנה");
 INSERT INTO credit_types (credits_type, sub_type) VALUES ("מדעי המחשב מתקדם","מדעי המחשב מתקדם");
 INSERT INTO credit_types (credits_type, sub_type) VALUES ("מתמטיקה","מתמטיקה");
+INSERT INTO credit_types (credits_type, sub_type) VALUES ("מדעים מתקדם","מדעי המחשב מתקדם");
+INSERT INTO credit_types (credits_type, sub_type) VALUES ("סמינריונית","מדעי המחשב מתקדם סמינריוני סדנה, מדעי המחשב מתקדם סמינריוני סמינר");
+INSERT INTO credit_types (credits_type, sub_type) VALUES ("פיסיקה","פיסיקה");
+INSERT INTO credit_types (credits_type, sub_type) VALUES ("מרחיב דעת","כלכלה, פסיכולוגיה, מדעי הרוח");
+INSERT INTO credit_types (credits_type, sub_type) VALUES ("כללי","פיסיקה, מתמטיקה, מדעי המחשב, מדעי המחשב מתקדם, מדעי המחשב מתקדם סמינריוני סדנה, מדעי המחשב מתקדם סמינריוני סמינר, מדעים מתקדם, כללי, כלכלה, פסיכולוגיה, מדעי הרוח");
+
 
 
