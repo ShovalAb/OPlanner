@@ -4,7 +4,7 @@ import api from '../../api/axiosConfig';
 import SubmitButton from "../studyplans/SubmitButton";
 import backgroundImage from '../../images/firstBG.png'
 import {tabSidebarBGInactiveColor, tabSidebarTextColor} from "../colors";
-
+import ProgressBar from "../progressbar/ProgressBar";
 
 const Home = () => {
 
@@ -74,13 +74,17 @@ const Home = () => {
                 display: 'flex',
                 flexDirection: 'column',
                 alignItems: 'center', // Center horizontally
-                justifyContent: 'center', // Center vertically
+                // justifyContent: 'center', // Center vertically
+                // marginTop: '20px'
             }}>
-                <h1 style={{ fontWeight: 'bold' }}>ברוכים הבאים למערכת לתכנון תוכנית לימודים</h1>
-                {getInstructions()} 
-                <StudyPlans studyPlans={studyPlans} setSelectedStudyPlan={setSelectedStudyPlan}></StudyPlans>
-                <div style={{ marginTop: '20px' }}>
-                <SubmitButton selectedStudyPlan={selectedStudyPlan}></SubmitButton>
+                <div>
+                    <ProgressBar stepNumber={1}></ProgressBar>
+                    <h1 style={{ fontWeight: 'bold' }}>ברוכים הבאים למערכת לתכנון תוכנית לימודים</h1>
+                    {getInstructions()} 
+                    <StudyPlans studyPlans={studyPlans} setSelectedStudyPlan={setSelectedStudyPlan}></StudyPlans>
+                    <div style={{ marginTop: '20px' }}>
+                        <SubmitButton selectedStudyPlan={selectedStudyPlan}></SubmitButton>
+                    </div>
                 </div>
             </div>
         </div>

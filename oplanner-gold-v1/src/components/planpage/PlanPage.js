@@ -133,9 +133,9 @@ const PlanPage = () => {
 
     return (
         <div style={{background: planpageBGColor}}>
-            <div style={{marginTop: '20px'}}>
+            {/* <div style={{marginTop: '20px'}}> */}
                <ProgressBar stepNumber={2}></ProgressBar>
-            </div>
+            {/* </div> */}
             <div>
                 <h1 style={{color: headlineTextColor}}>Planning Study Plan #{routeParams.studyPlanId}</h1>
             </div>
