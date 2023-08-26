@@ -98,9 +98,8 @@ const PlanPage = () => {
         // console.log("HEREEEE")
         try {
             const coursesChosen = collectChosenCoursesNumbers();
-            const response = await api.post('/api/creditsReq', {'planId':routeParams.studyPlanId, 'courses':coursesChosen})
-            console.log(response.data)
-            setNakazReq(response.data["creditsReqResponse"])
+            const response = await api.post('/api/verifyPlan/creditsReq', {'planId':routeParams.studyPlanId, 'courses':coursesChosen})
+            setNakazReq(response.data)
             
         } catch (error) {
             console.log(error)
