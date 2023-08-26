@@ -59,6 +59,7 @@ const PlanPage = () => {
 
     useEffect(() => {
         getCourses(routeParams.studyPlanId);
+        updateCreditReqNum();
     },[])
     
     const collectChosenCourses = () => {
