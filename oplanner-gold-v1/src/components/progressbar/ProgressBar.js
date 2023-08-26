@@ -3,7 +3,12 @@ import { Button } from "react-bootstrap";
 import { ProgressBarCurrentColor, ProgressBarDoneColor, ProgressBarNotyetColor } from "../colors";
 import { Link } from "react-router-dom";
 
-const ProgressBar = ({stepNumber}) => {
+const ProgressBar = ({stepNumber, studyPlanId}) => {
+
+    var studyPlanUrl = "/"
+    if (studyPlanId > 0) {
+        studyPlanUrl = "/plan/" + studyPlanId
+    }
 
     const buttonStyle = (buttonNumber) => {
         var buttonColor = ProgressBarNotyetColor;
@@ -61,7 +66,9 @@ const ProgressBar = ({stepNumber}) => {
                 <Button style={buttonStyle(1)}>1</Button>
             </Link>
             <div style={lineStyle(1)}></div>
-            <Button style={buttonStyle(2)}>2</Button>
+            <Link to={studyPlanUrl}>
+                <Button style={buttonStyle(2)}>2</Button>
+            </Link>
             <div style={lineStyle(2)}></div>
             <Button style={buttonStyle(3)}>3</Button>
         </div>

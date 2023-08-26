@@ -15,7 +15,21 @@ const PlanPage = () => {
     const [coursesDepen, setCoursesDepen] = useState();
     const [nakazReq, setNakazReq] = useState();
     const [planReady, setPlanReady] = useState(false);
+    const [studyPlanName, setStudyPlanName] = useState("");
 
+    const getStudyPlanNameByPlanId = async (planId) => {
+        const params = {
+                planId : planId,
+            }
+        try{
+            const response = await api.get("/api/studyplan", {params})
+            console.log("resppp - " + response)
+            return response.data.planName
+        } catch (error) {
+            console.log(error)
+            return ""
+        }
+    }
 
     const getCourseByNumber = (courseNumber) => {
         // console.log("Trying to find - " + courseNumber)
@@ -58,7 +72,14 @@ const PlanPage = () => {
         }
     }
 
+    async function fetchStudyPlanName (planId) {
+        const name = await getStudyPlanNameByPlanId(planId)
+        console.log("gotttt - " + name)
+        setStudyPlanName(name)
+    }
+
     useEffect(() => {
+        fetchStudyPlanName(routeParams.studyPlanId)
         getCourses(routeParams.studyPlanId);
         updateCreditReqNum();
     },[])
@@ -132,11 +153,9 @@ const PlanPage = () => {
 
     return (
         <div style={{background: planpageBGColor}}>
-            {/* <div style={{marginTop: '20px'}}> */}
-               <ProgressBar stepNumber={2}></ProgressBar>
-            {/* </div> */}
+            <ProgressBar stepNumber={2} studyPlanId={routeParams.studyPlanId}></ProgressBar>
             <div>
-                <h1 style={{color: headlineTextColor}}>Planning Study Plan #{routeParams.studyPlanId}</h1>
+                <h1 style={{color: headlineTextColor, fontWeight: 'bold'}}>"תכנון תוכנית לימודים "{studyPlanName}</h1>
             </div>
             <CoursesDrag courses={courses} updateCreditReqNum={updateCreditReqNum}></CoursesDrag>
             <button className="buttonValidate" onClick={e => validateCourses(routeParams.studyPlanId,courses)} style={{marginTop:'50px'}}>בדיקת תוכנית לימודים</button>
@@ -146,7 +165,7 @@ const PlanPage = () => {
                 </div>
                 <div style={{ maxWidth: '800px', width: '45%', padding: '0 20px' , marginLeft: '5%'}}>
                     <MissingCourses coursesDepen={coursesDepen} coursesMust={coursesMust} getCourseByNumber={getCourseByNumber}></MissingCourses>
-                    <SummaryButton planReady={planReady} courses={collectChosenCourses()}></SummaryButton>
+                    <SummaryButton planReady={planReady} courses={collectChosenCourses()} studyPlanName={studyPlanName} studyPlanId={routeParams.studyPlanId}></SummaryButton>
                 </div>
             </div>
         </div>
