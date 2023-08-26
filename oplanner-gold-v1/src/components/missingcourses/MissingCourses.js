@@ -80,8 +80,8 @@ const MissingCourses = ({coursesMust, coursesDepen, getCourseByNumber}) => {
             )
         }
         return (
-            <div>
-                <h2 className="validateOK">All good! your plan match all of the criteria!</h2>
+            <div style={{textAlign: 'center'}}>
+                <h2 className="validateOK">!אין קורסים חסרים</h2>
             </div>
         )
     }

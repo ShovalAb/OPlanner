@@ -139,10 +139,10 @@ const PlanPage = () => {
             <div style={{ display: 'flex', justifyContent: 'center', marginTop: '20px' }}>
                 <div style={{ maxWidth: '800px', width: '45%', padding: '0 20px' , marginRight: '5%'}}>
                     <CreditReqTable creditReq={nakazReq}></CreditReqTable>
-                    <SummaryButton planReady={planReady} courses={collectChosenCourses()}></SummaryButton>
                 </div>
                 <div style={{ maxWidth: '800px', width: '45%', padding: '0 20px' , marginLeft: '5%'}}>
                     <MissingCourses coursesDepen={coursesDepen} coursesMust={coursesMust} getCourseByNumber={getCourseByNumber}></MissingCourses>
+                    <SummaryButton planReady={planReady} courses={collectChosenCourses()}></SummaryButton>
                 </div>
             </div>
         </div>
