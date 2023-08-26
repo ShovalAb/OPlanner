@@ -3,6 +3,7 @@ package oplanner.Oplanner.Controller;
 import org.springframework.web.bind.annotation.RestController;
 import oplanner.Oplanner.Model.Course;
 import oplanner.Oplanner.Response.CheckStudyPlanRespone;
+import oplanner.Oplanner.Response.CreditsReqResponse;
 import oplanner.Oplanner.repository.CourseRepository;
 import oplanner.Oplanner.repository.CreditTypesRepository;
 import oplanner.Oplanner.repository.CreditsRequirementRepository;
@@ -61,5 +62,23 @@ public class ValidateController {
         }
         // CheckStudyPlan checkStudyPlan = new CheckStudyPlan(mandatoryRequirementRepository, courseRepository, dependencyRepository, creditsRepository, creditTypesRepository);
         return checkStudyPlanObj.checkStudyPlanRespone(id, courses);
+    }
+    
+    /**
+     * Validate credits Requirements.
+     *
+     * @param selectedCourses Map containing planId and courses list.
+     * @return CheckStudyPlanRespone containing validation results.
+     */
+    @PostMapping("/creditsReq")
+    public List<CreditsReqResponse> validateStudyPlan2 (@RequestBody Map<String, Object> selectedCourses) {
+        int id = Integer.parseInt(selectedCourses.get("planId").toString());
+        List<Course> courses = new ArrayList<>();
+        List<Integer> coursesNumber = (List<Integer>) selectedCourses.get("courses");
+        for (int number : coursesNumber){
+            courses.add(courseRepository.findByNumber(number));
+        }
+        // CheckStudyPlan checkStudyPlan = new CheckStudyPlan(mandatoryRequirementRepository, courseRepository, dependencyRepository, creditsRepository, creditTypesRepository);
+        return checkStudyPlanObj.checkCredits(id, courses);
     }
 }
