@@ -49,7 +49,8 @@ public class ValidateController {
  * @param selectedCourses Map containing planId and courses list.
  * @return CheckStudyPlanRespone containing validation results.
  */
-@PostMapping("/validateStudyPlan")
+@CrossOrigin(allowedHeaders = "*", origins = "*")
+@PostMapping()
 public CheckStudyPlanRespone validateStudyPlan(@RequestBody Map<String, Object> selectedCourses) {
     int id;
     List<Course> courses = new ArrayList<>();
@@ -57,13 +58,13 @@ public CheckStudyPlanRespone validateStudyPlan(@RequestBody Map<String, Object> 
     Object planIdObj = selectedCourses.get("planId");
     Object coursesObj = selectedCourses.get("courses");
 
-    if (!(planIdObj instanceof Integer) || !(coursesObj instanceof List)) {
+    if (!(planIdObj instanceof String) || !(coursesObj instanceof List)) {
         // Handle invalid input data
         // Return a CheckStudyPlanRespone object with -1 status
         return new CheckStudyPlanRespone(-1,null,null,null);
     }
 
-    id = (Integer) planIdObj;
+    id = Integer.parseInt((String) planIdObj);
 
     List<?> coursesList = (List<?>) coursesObj;
     for (Object courseNumberObj : coursesList) {
@@ -95,13 +96,13 @@ public List<CreditsReqResponse> validateStudyPlan2(@RequestBody Map<String, Obje
     Object planIdObj = selectedCourses.get("planId");
     Object coursesObj = selectedCourses.get("courses");
     
-    if (!(planIdObj instanceof Integer) || !(coursesObj instanceof List)) {
+    if (!(planIdObj instanceof String) || !(coursesObj instanceof List)) {
         // Handle invalid input data
         // Return an empty list
         return Collections.emptyList(); 
     }
     
-    id = (Integer) planIdObj;
+    id = Integer.parseInt((String) planIdObj);
     
     List<?> coursesList = (List<?>) coursesObj;
     for (Object courseNumberObj : coursesList) {
