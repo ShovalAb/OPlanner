@@ -33,7 +33,7 @@ const CoursesChosen = ({courses, refresher, setRefresher, updateCreditReqNum}) =
 
     return (
     <div style={{ display: 'flex' }}>
-      <CourseTable data={filterChosen(courses)} onRowClick={toggleChosen} activeTab={'nofilter'} downloadable={false} colors={{'header':tableHeaderColor, 'row':tableRowEvenColor}}/>
+      <CourseTable data={filterChosen(courses)} onRowClick={toggleChosen} activeTab={'nofilter'} downloadable={false} colors={{'header':tableHeaderColor, 'row':tableRowEvenColor}} numberOfTabs={tabs.length + 1}/>
     </div>
   );
 }

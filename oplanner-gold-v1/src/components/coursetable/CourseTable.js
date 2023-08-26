@@ -3,10 +3,14 @@ import { Table, TableBody, TableCell, TableContainer, TableHead, TableRow, Paper
 import excelImage from "../../resources/excel.png"
 import {tableBGColor, tableHeaderColor, tableRowEvenColor, tableRowOddColor, tableTextColor } from '../colors';
 
-const CourseTable = ({ data, onRowClick, activeTab, downloadable, colors }) => {
-  const maxHeight = 600; // Set the desired fixed height
+const CourseTable = ({ data, onRowClick, activeTab, downloadable, colors, numberOfTabs }) => {
+  var maxHeight = 600; // Set the desired fixed height
   const rowHeight = 60; // Set the height of a single row (adjust as needed)
   const headRowHeight = 70;
+
+  if (((numberOfTabs * rowHeight) + headRowHeight) > maxHeight) {
+    maxHeight = (numberOfTabs * rowHeight) + headRowHeight
+  }
 
   if (activeTab == "nofilter" || activeTab == '') {
     var filteredData = data
