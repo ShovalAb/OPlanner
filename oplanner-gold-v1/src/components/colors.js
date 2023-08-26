@@ -27,7 +27,9 @@ export const creditReqBadColor = '#ed6890'
 export const creditReqGoodColor = '#68ed90'
 export const creditReqHeaderColor = '#e0e0e0'
 export const planpageBGColor = '#e1f5ff'
-
+export const ProgressBarCurrentColor = '#2a6f97'
+export const ProgressBarDoneColor = 'green'
+export const ProgressBarNotyetColor = 'gray'
 
 // export const tableRowEvenColor = '#d9e4ec'
 // export const tableRowOddColor = '#b7cfdc'

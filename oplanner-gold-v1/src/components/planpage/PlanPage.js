@@ -6,6 +6,7 @@ import MissingCourses from "../missingcourses/MissingCourses";
 import SummaryButton from "./SummaryButton";
 import CreditReqTable from "./CreditReqTable";
 import { headlineTextColor , planpageBGColor} from "../colors";
+import ProgressBar from "../progressbar/ProgressBar";
 
 const PlanPage = () => {
     const routeParams = useParams();
@@ -132,6 +133,9 @@ const PlanPage = () => {
 
     return (
         <div style={{background: planpageBGColor}}>
+            <div style={{marginTop: '20px'}}>
+               <ProgressBar stepNumber={2}></ProgressBar>
+            </div>
             <div>
                 <h1 style={{color: headlineTextColor}}>Planning Study Plan #{routeParams.studyPlanId}</h1>
             </div>
