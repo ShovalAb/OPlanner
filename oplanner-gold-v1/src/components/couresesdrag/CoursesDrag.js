@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import CoursesChosen from "./CoursesChosen";
 import CoursesPool from "./CoursesPool";
-import arrowImage from '../../images/arrows.jpeg'
+import arrowImage from '../../images/arrowsnobg.png'
 
 const CoursesDrag = ({courses, updateCreditReqNum}) => {
     const [refresher, setRefresher] = useState(0);
