@@ -2,14 +2,16 @@ import React from "react";
 import { headlineTextColor } from "../colors"; 
 
 const MissingCourses = ({coursesMust, coursesDepen, getCourseByNumber}) => {
+
+    // missing must course element
     const missingMustCourse = (course) => {
         return (
             <li key={course.courseNumber}><b>{course.courseName} ({course.courseNumber})</b></li>
         )
     }
 
+    // wrapper function for all missing must courses
     const allMissingMustCourses = (courseMustNumber) => {
-        // console.log("Course Must number - " + courseMustNumber)
         const course = getCourseByNumber(courseMustNumber)
         if (course != null) {
             return (missingMustCourse(course))
@@ -17,6 +19,7 @@ const MissingCourses = ({coursesMust, coursesDepen, getCourseByNumber}) => {
         return null;
     }
 
+    // Gets the details of a preCourse
     const preCoursesdetails = (preCourses) => {
         const coursesDetails = Array()
         for (let i = 0; i < preCourses.length; i++) {
@@ -25,6 +28,7 @@ const MissingCourses = ({coursesMust, coursesDepen, getCourseByNumber}) => {
         return coursesDetails.join(", ")
     }    
 
+    // missing dependency course element
     const missingDepenCourses = (courseDep, preCourses) => {
         var plural = true
         if (preCourses.length == 1) {
@@ -39,6 +43,7 @@ const MissingCourses = ({coursesMust, coursesDepen, getCourseByNumber}) => {
         )
     }
 
+    // Wrapper function for all missing dependency courses
     const allMissingDepenCourses = (depObj) => {
         const courseDepNum = depObj.course
         const courseNums = depObj.dep
@@ -60,6 +65,7 @@ const MissingCourses = ({coursesMust, coursesDepen, getCourseByNumber}) => {
         return null;
     }
 
+    // Rendering
     if (coursesMust && coursesDepen) {
         if (coursesMust.length > 0 || coursesDepen.length > 0 ) {
             return (

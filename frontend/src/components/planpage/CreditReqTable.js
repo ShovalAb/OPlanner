@@ -4,6 +4,8 @@ import { Table } from "react-bootstrap";
 import { creditReqBadColor, creditReqGoodColor, creditReqHeaderColor} from "../colors";
 
 const CreditReqTable = ({creditReq}) => {
+
+    // Decide color line based on current credits number
     const whatColor = (cReq) => {
         if (cReq.neededCredits > cReq.currentCredits) {
             return (creditReqBadColor)

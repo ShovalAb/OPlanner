@@ -4,14 +4,16 @@ import excelImage from "../../resources/excel.png"
 import {tableBGColor, tableHeaderColor, tableRowEvenColor, tableRowOddColor, tableTextColor } from '../colors';
 
 const CourseTable = ({ data, onRowClick, activeTab, downloadable, colors, numberOfTabs }) => {
-  var maxHeight = 600; // Set the desired fixed height
-  const rowHeight = 60; // Set the height of a single row (adjust as needed)
+  var maxHeight = 600; 
+  const rowHeight = 60; 
   const headRowHeight = 70;
 
+  // Set maximum height to be the same as the tabs side bar height
   if (((numberOfTabs * rowHeight) + headRowHeight) > maxHeight) {
     maxHeight = (numberOfTabs * rowHeight) + headRowHeight
   }
 
+  // filter courses
   if (activeTab == "nofilter" || activeTab == '') {
     var filteredData = data
   } else {
@@ -24,6 +26,7 @@ const CourseTable = ({ data, onRowClick, activeTab, downloadable, colors, number
   const headerColor = colors.header
   const rowColor = colors.row
 
+  // Function for creating CSV data
   const convertToCSV = (data) => {
     const header = ['Course Name', 'Course Number', 'Credits Number'];
     const rows = data.map(row => ['"' + row.courseName + '"', '"' + row.courseNumber + '"', '"' + row.creditsNumber + '"']);
@@ -36,6 +39,7 @@ const CourseTable = ({ data, onRowClick, activeTab, downloadable, colors, number
     return csvContent;
   };
 
+  // Function for downloading the CSV file
   const downloadCSV = (csvContent, filename) => {
     const blob = new Blob([csvContent], { type: 'text/csv' });
     const url = URL.createObjectURL(blob);
@@ -46,6 +50,7 @@ const CourseTable = ({ data, onRowClick, activeTab, downloadable, colors, number
     URL.revokeObjectURL(url);
   };
 
+  // Handles the download csv
   const handleDownloadCSV = () => {
     const csvContent = convertToCSV(filteredData);
     const filename = 'study_plan.csv';

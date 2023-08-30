@@ -5,9 +5,11 @@ import ProgressBar from "../progressbar/ProgressBar";
 import {headlineTextColor ,tableHeaderColor, tableRowEvenColor } from "../colors";
 
 const FinalStudyPlan = () => {
+    // Get the elements from the previous page
     const chosenCourses = JSON.parse(localStorage.getItem('chosenCourses'));
     const studyPlanName = JSON.parse(localStorage.getItem('studyPlanName'));
     const studyPlanId = JSON.parse(localStorage.getItem('studyPlanId'));
+
     const doNothing = (row) => {}
 
     return (
@@ -16,7 +18,7 @@ const FinalStudyPlan = () => {
         backgroundSize: 'cover',
         backgroundPosition: 'center',
         backgroundRepeat: 'no-repeat',
-        minHeight: '100vh', // Ensure the background covers the entire viewport height
+        minHeight: '100vh', 
       }}>
             <ProgressBar stepNumber={3} studyPlanId={studyPlanId}></ProgressBar>
             <h1 style={{color:headlineTextColor, fontWeight: 'bold'}}>!התכנית שלך לתואר "{studyPlanName}" מוכנה</h1>

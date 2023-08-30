@@ -14,7 +14,6 @@ const Home = () => {
     const getStudyPlans = async () => {
         try {
             const response = await api.get('/api/studyplan')
-            console.log('GOTT - ' + response.data)
             setStudyPlans(response.data)
         } catch (error) {
             console.log(error)
@@ -30,8 +29,8 @@ const Home = () => {
             padding: "10px",
             border: "1px solid #ccc",
             borderRadius: "5px",
-            margin: "10px auto", // Center the text box horizontally
-            width: "50%", // Adjust this value to make the text box narrower or wider
+            margin: "10px auto", 
+            width: "50%", 
             direction: "rtl", // Set the direction to right-to-left
             textAlign: "right", // Align the text from right to left
         };
@@ -70,12 +69,10 @@ const Home = () => {
                 backgroundSize: 'cover',
                 backgroundPosition: 'center',
                 backgroundRepeat: 'no-repeat',
-                minHeight: '100vh', // Ensure the background covers the entire viewport height
+                minHeight: '100vh', 
                 display: 'flex',
                 flexDirection: 'column',
-                alignItems: 'center', // Center horizontally
-                // justifyContent: 'center', // Center vertically
-                // marginTop: '20px'
+                alignItems: 'center',
             }}>
                 <div>
                     <ProgressBar stepNumber={1}></ProgressBar>

@@ -5,7 +5,6 @@ import {useEffect, useState} from 'react';
 import Layout from './components/Layout';
 import { Route, Routes } from 'react-router-dom';
 import Home from './components/home/Home';
-import Header from './components/header/Header';
 import FinalStudyPlan from './components/final/FinalStudyPlans';
 import PlanPage from './components/planpage/PlanPage';
 
