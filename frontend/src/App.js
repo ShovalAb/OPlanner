@@ -10,26 +10,6 @@ import PlanPage from './components/planpage/PlanPage';
 
 function App() {
 
-  const [studyPlan, setStudyPlan] =useState();
-
-  const getStudyPlan = async() =>{
-      try{
-          const response = await api.get("/api/studyplan");
-          console.log(response.data);
-
-          setStudyPlan(response.data);
-      }
-      catch(err){
-          console.log(err);
-      }
-
-  }
-
-  useEffect(() => {
-    getStudyPlan();
-  }, [])
-
-
   return (
     <div className="App">
       <Routes>
