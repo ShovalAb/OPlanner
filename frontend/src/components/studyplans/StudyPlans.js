@@ -6,6 +6,7 @@ const StudyPlans = ({ studyPlans, setSelectedStudyPlan }) => {
         padding: "10px",
     };
 
+    // Option element
     const Option = (opt) => {
         return <option key={opt.id} value={opt.id}>{opt.planName}</option>;
     };
@@ -14,6 +15,7 @@ const StudyPlans = ({ studyPlans, setSelectedStudyPlan }) => {
         setSelectedStudyPlan(event.target.value);
     };
 
+    // Rendering
     if (studyPlans !== undefined) {
         return (
             <select style={selectStyle} onChange={handleChange} dir="rtl">

@@ -3,7 +3,6 @@ import { Link } from 'react-router-dom'
 import {tabSidebarBGInactiveColor, tabSidebarTextColor} from "../colors";
 
 const SubmitButton = ({ selectedStudyPlan }) => {
-    console.log(selectedStudyPlan);
     if (selectedStudyPlan !== undefined && selectedStudyPlan !== "-1") {
         const buttonStyle = {
             direction: "rtl", 

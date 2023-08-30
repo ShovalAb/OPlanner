@@ -22,8 +22,6 @@ const ProgressBar = ({stepNumber, studyPlanId}) => {
                 borderRadius: '100%',
                 background: buttonColor,
                 borderColor: "white",
-                // width: "50%",
-                // margin: "0 3%"
             }
         )
     }
@@ -44,7 +42,6 @@ const ProgressBar = ({stepNumber, studyPlanId}) => {
     }
 
     return (
-        // <div style={{ display: 'flex', justifyContent: 'center', width: '100%', alignItems: "center"}}>
         <div
       style={{
         display: "flex",
@@ -56,7 +53,7 @@ const ProgressBar = ({stepNumber, studyPlanId}) => {
       <div
         style={{
           display: "flex",
-          width: "50%", // Set the container width to 50%
+          width: "50%", 
           justifyContent: "space-between",
           alignItems: "center",
           direction: 'rtl'

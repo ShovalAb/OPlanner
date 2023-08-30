@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 
 const SummaryButton = ({planReady, courses, studyPlanName, studyPlanId}) => {
 
+    // Saves the data for the next page
     const saveData = () => {
         localStorage.setItem('chosenCourses', JSON.stringify(courses));
         localStorage.setItem('studyPlanName', JSON.stringify(studyPlanName));

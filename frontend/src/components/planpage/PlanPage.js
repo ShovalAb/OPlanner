@@ -126,6 +126,7 @@ const PlanPage = () => {
         }
     }
 
+    // Verify the study plan with the server
     const validateCourses = async (studyPlanId, courses) => {
         try {
             const coursesChosen = collectChosenCoursesNumbers();
