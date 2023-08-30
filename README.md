@@ -23,7 +23,7 @@ Before you begin, ensure you have the following prerequisites:
 - one terminal for the fronend
 	- npm start
 
-## Configuration
+## DB Configuration
 1. Open your MySQL command-line interface or a MySQL client like phpMyAdmin.
 2. Create a new database named oplanner:
 bash
