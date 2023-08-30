@@ -47,15 +47,6 @@ CREATE TABLE  credits_requirement(
   credits_number int NOT NULL
 );
 
--- Course In Study Plan
-DROP TABLE IF EXISTS course_in_study_plan;
-
-CREATE TABLE  course_in_study_plan(
-  id int auto_increment primary key NOT NULL,
-  course_number int NOT NULL,
-  plan_Id int NOT NULL
-);
-
 -- Credits types
 DROP TABLE IF EXISTS credit_types;
 
