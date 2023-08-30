@@ -59,11 +59,11 @@ public class CheckStudyPlan {
      */
     public CheckStudyPlanRespone checkStudyPlanRespone (int studyPlanId, List <Course>  courses)
     {
-        List<Integer>  a = checkMandatoryRequirement(studyPlanId, courses);
-        List<DependencyResponse>  b = checkDependencies(studyPlanId, courses);
-        List <CreditsReqResponse> c = checkCredits(studyPlanId, courses);
-        int ok = checkIfPlanOK(a, b, c);
-        CheckStudyPlanRespone res = new CheckStudyPlanRespone(ok, a, b, c);
+        List<Integer>  mandatoryCheck = checkMandatoryRequirement(studyPlanId, courses);
+        List<DependencyResponse>  dependencyCheck = checkDependencies(studyPlanId, courses);
+        List <CreditsReqResponse> creditsCheck = checkCredits(studyPlanId, courses);
+        int isPlanOK = checkIfPlanOK(mandatoryCheck, dependencyCheck, creditsCheck);
+        CheckStudyPlanRespone res = new CheckStudyPlanRespone(isPlanOK, mandatoryCheck, dependencyCheck, creditsCheck);
         return res;
     }
 
@@ -80,11 +80,14 @@ public class CheckStudyPlan {
     {
         for (CreditsReqResponse creditReq : creditsReqResponses)
         {
-            if (creditReq.getCurrentCredits() == notValid)
+            int currentCredits = creditReq.getCurrentCredits();
+            int neededCredits = creditReq.getNeededCredits();
+
+            if (currentCredits == notValid)
             {
                 return notValid;
             }
-            if (creditReq.getCurrentCredits() < creditReq.getNeededCredits())
+            if (currentCredits < neededCredits)
             {
                 return notOk;
             }
@@ -106,12 +109,13 @@ public class CheckStudyPlan {
      */    
     public int checkIfPlanOK (List<Integer> mandatoryReq, List<DependencyResponse> dep, List <CreditsReqResponse> creditsReq)
     {
-        int temp = checkIfAllCreditsReqValid(creditsReq);
-        if (temp == notValid)
+        int creditsValidationResult = checkIfAllCreditsReqValid(creditsReq);
+
+        if (creditsValidationResult  == notValid)
         {
             return notValid;
         }
-        if (mandatoryReq.isEmpty() && dep.isEmpty() && temp == OK)
+        if (mandatoryReq.isEmpty() && dep.isEmpty() && creditsValidationResult  == OK)
         {
             return OK;
         }
@@ -130,12 +134,19 @@ public class CheckStudyPlan {
      */
     public List<Integer> checkMandatoryRequirement (int studyPlanId, List <Course>  courses)
     {
-        MandatoryRequirement [] mandatoryReq = mrRepository.findByPlanId(studyPlanId);
+        MandatoryRequirement[] mandatoryReq = null;
+        try {
+            mandatoryReq = mrRepository.findByPlanId(studyPlanId);
+        } catch (Exception e) {
+            return new ArrayList<>();
+        }
+
         List<Integer> missingCourses = new ArrayList<Integer> ();
-        boolean found = false;
+        
         for (MandatoryRequirement req : mandatoryReq)
         {
-            found = false;
+            boolean found = false;
+            
             for (int optionReq : req.getCourseId())
             {
                 for (Course c : courses)
@@ -144,7 +155,7 @@ public class CheckStudyPlan {
                         found = true;
                 }   
             }
-            if (found == false)
+            if (!found)
             {
                 missingCourses.add(req.getCourseId()[0]);
 
@@ -164,27 +175,46 @@ public class CheckStudyPlan {
     {
         List<DependencyResponse> missingDependencies = new ArrayList<DependencyResponse> ();
         List<Integer> missingDependenciesForSpecificCourse = new ArrayList<Integer> ();
+
         boolean foundDep = false;
         boolean courseMissingDep = false;
+
         for (Course course : courses)
         {
             courseMissingDep = false;
-            Dependency[] depForThisCourse = depRepository.findByCourseId(course.getCourseNumber());
+
+            Dependency[] depForThisCourse;
+            try {
+                depForThisCourse = depRepository.findByCourseId(course.getCourseNumber());
+            } catch (Exception e) {
+                continue; // Skip this course and proceed to the next one
+            }
+
             for (Dependency dep : depForThisCourse)
             {
                 foundDep = false;
                 for (int option : dep.getBaseCourse()){
-                    if (courses.contains(courseRepository.findByNumber(option))){
+                    
+                    Course baseCourse = null;
+                    try {
+                        baseCourse = courseRepository.findByNumber(option);
+                    } catch (Exception e) {
+                        // Handle the exception here, you might want to log it or take appropriate action
+                        e.printStackTrace();
+                    }
+                    
+                    if (baseCourse != null && courses.contains(baseCourse)){
                         foundDep = true;
                     }
                 }
-                if (foundDep == false){
+                if (!foundDep){
                     missingDependenciesForSpecificCourse.add(dep.getBaseCourse().get(0));
                     courseMissingDep = true;
                 } 
             }
-            if (courseMissingDep == true){
-                DependencyResponse d = new DependencyResponse (course.getCourseNumber(),missingDependenciesForSpecificCourse );
+
+            if (courseMissingDep){
+                DependencyResponse d = new DependencyResponse (course.getCourseNumber(), missingDependenciesForSpecificCourse);
                 missingDependencies.add(d);
                 missingDependenciesForSpecificCourse = new ArrayList<Integer> ();
             }
@@ -203,15 +233,29 @@ public class CheckStudyPlan {
     public List <CreditsReqResponse> checkCredits (int studyPlanId, List <Course>  courses)
     {
         List<CreditsReqResponse> creditsReqResponse = new ArrayList <CreditsReqResponse> ();
-        CreditsRequirement[] creditsRequirements = creditsRepository.findByPlanId(studyPlanId);
+
+        CreditsRequirement[] creditsRequirements;
+        try {
+            creditsRequirements = creditsRepository.findByPlanId(studyPlanId);
+        } catch (Exception e) {
+            return creditsReqResponse;
+        }
+
         int sumCurrentCredits;
         for (CreditsRequirement req : creditsRequirements)
         {
             sumCurrentCredits = 0;
-            CreditType creditsType = creditTypesRepository.findByCreditType(req.getCreditsType());
+            
+            CreditType creditsType = null;
+            try {
+                creditsType = creditTypesRepository.findByCreditType(req.getCreditsType());
+            } catch (Exception e) {
+                continue;
+            }
+
             if (creditsType == null)
             {
-                CreditsReqResponse response = new CreditsReqResponse(req.getCreditsType(), -1, req.getCreditsNumber());
+                CreditsReqResponse response = new CreditsReqResponse(req.getCreditsType(), notValid, req.getCreditsNumber());
                 creditsReqResponse.add(response);
             }
             else 
