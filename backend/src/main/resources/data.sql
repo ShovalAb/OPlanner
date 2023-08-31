@@ -314,7 +314,7 @@ INSERT INTO credits_requirement (plan_id, credits_type, credits_number) VALUES (
 INSERT INTO credits_requirement (plan_id, credits_type, credits_number) VALUES (3, "כללי", 121);
 
 -- Plan #4
-INSERT INTO credits_requirement (plan_id, credits_type, credits_number) VALUES (4, "מתמטיקה", 35);
+INSERT INTO credits_requirement (plan_id, credits_type, credits_number) VALUES (4, "מתמטיקה", 23);
 INSERT INTO credits_requirement (plan_id, credits_type, credits_number) VALUES (4, "מדעי המחשב", 61);
 INSERT INTO credits_requirement (plan_id, credits_type, credits_number) VALUES (4, "מדעי המחשב מתקדם", 23);
 INSERT INTO credits_requirement (plan_id, credits_type, credits_number) VALUES (4, "מדעים", 96);
